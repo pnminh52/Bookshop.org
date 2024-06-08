@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "title": "LOL",
+      "price": 100,
+      "category": "Laptop",
+      "id": 1
+    }
+  ],
+  "users": []
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <a class="nav-link" href="/addproduct">ProductsAdd</a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">category</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of products; track product.id) {
+      <tr>
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.title }}</td>
+        <td>{{ product.category }}</td>
+        <a [routerLink]="['/edit', product.id]">Edit</a>
+        <button (click)="handleDelete(product.id)">Delete</button>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

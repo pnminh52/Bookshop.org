@@ -1,0 +1,37 @@
+<form [formGroup]="addForm"(ngSubmit)="handleSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title"  placeholder="title" formControlName="title">
+    <small class="text-danger text-small"
+    *ngIf="addForm.controls['title'].errors?.['required'] && addForm.controls['title'].touched">
+    Title is Required
+  </small>
+  </div>
+  <div class="form-group">
+    <label for="text">Price</label>
+    <input type="price" class="form-control" id="price"  placeholder="price" formControlName="price">
+    <small class="text-danger text-small"
+    *ngIf="addForm.controls['price'].errors?.['required'] && addForm.controls['price'].touched">
+    price is Required
+  </small>
+  <small class="text-danger text-small" *ngIf="addForm.controls['price'].errors?.['min'] && addForm.controls['price'].touched">
+    k để giá âm
+   </small>
+  </div>
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select class="form-control" id="category" formControlName="category">
+      <option value="">Select Category</option>
+      <option value="Laptop">Laptop</option>
+      <option value="PC">PC</option>
+    </select>
+    <small class="text-danger text-small" *ngIf="addForm.controls['category'].errors?.['required'] && addForm.controls['category'].touched">
+      Category is Required
+    </small>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary"[disabled]="addForm.invalid">Submit</button>
+</form>
