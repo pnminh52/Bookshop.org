@@ -8,7 +8,7 @@
       "category": "Fiction",
       "author": "Tác giả B",
       "description": "Mô tả sách 2",
-      "image_url": "https://images-us.bookshop.org/ingram/9781250872524.jpg?height=250&v=v2-c30869c3322e8fa9a107c7c4c2de87e2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781640096714.jpg?width=384&v=v2",
       "rating": 4,
       "reviews": [
         {
@@ -35,7 +35,7 @@
       "category": "History",
       "author": "Tác giả B",
       "description": "Mô tả sách 2",
-      "image_url": "https://images-us.bookshop.org/ingram/9781580058070.jpg?height=250&v=v2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781668082430.jpg?width=384&v=v2",
       "rating": 4,
       "reviews": [
         {
@@ -62,7 +62,7 @@
       "category": "Economics",
       "author": "Tác giả C",
       "description": "Mô tả sách 3",
-      "image_url": "https://images-us.bookshop.org/ingram/9780735211735.jpg?height=250&v=v2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781639368037.jpg?width=384&v=v2",
       "rating": 4.8,
       "reviews": [
         {
@@ -89,7 +89,7 @@
       "category": "Psychology",
       "author": "Tác giả D",
       "description": "Mô tả sách 4",
-      "image_url": "https://images-us.bookshop.org/ingram/9780593712993.jpg?width=384&v=v2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781250288226.jpg?width=384&v=v2",
       "rating": 4.3,
       "reviews": [
         {
@@ -137,13 +137,13 @@
     },
     {
       "id": "6",
-      "title": "Sách 4",
+      "title": "Sách 6",
       "price": 30.00,
       "price_after_discount": 25.00,
       "category": "Horror",
       "author": "Tác giả D",
       "description": "Mô tả sách 4",
-      "image_url": "https://images-us.bookshop.org/ingram/9780143130727.jpg?height=250&v=v2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781250848338.jpg?width=384&v=v2",
       "rating": 4.3,
       "reviews": [
         {
@@ -164,7 +164,7 @@
     },
     {
       "id": "7",
-      "title": "Sách 6",
+      "title": "Sách 7",
       "price": 25.00,
       "price_after_discount": 22.00,
       "category": "Action",
@@ -191,7 +191,7 @@
     },
     {
       "id": "8",
-      "title": "Sách 4",
+      "title": "Sách 8",
       "price": 30.00,
       "price_after_discount": 25.00,
       "category": "Fantasy",
