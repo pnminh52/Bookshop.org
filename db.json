@@ -4,14 +4,14 @@
       "title": "sach 1",
       "price": "1000",
       "category": "Laptop",
-      "id": 2
+      "id": "2"
     }
   ],
   "users": [
     {
-      "email": "1@gmail.com",
-      "password": "111111",
-      "id": 1
+      "id": "87fa",
+      "email": "phamnhatminhsuzumoe52@gmail.com",
+      "password": "111111"
     }
   ]
 }

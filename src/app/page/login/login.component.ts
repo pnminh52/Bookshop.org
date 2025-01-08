@@ -21,15 +21,23 @@ export class LoginComponent {
   });
 
   handleSubmit() {
-
-    this.authService.register(this.loginForm.value).subscribe({
-      next: () => {
-        if (window.confirm('Đăng ký thành công!')) {
+    if (this.loginForm.invalid) {
+      alert('Vui lòng điền đầy đủ thông tin!');
+      return;
+    }
+  
+    this.authService.login(this.loginForm.value).subscribe({
+      next: (response) => {
+        if (response.length > 0) {
+          alert('Đăng nhập thành công!');
           this.router.navigate(['/list']);
+        } else {
+          alert('Tài khoản hoặc mật khẩu không đúng!');
         }
       },
       error: (err: any) => {
         console.log(err);
+        alert('Đã xảy ra lỗi, vui lòng thử lại!');
       }
     });
   }

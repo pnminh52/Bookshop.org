@@ -1,23 +1,23 @@
 <div class="container">
   <h2 class="text-center">đăng nhập</h2>
   <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" formControlName="email" placeholder="email">
-      <small class="text-danger text-small" *ngIf="loginForm.controls['email'].errors?.['required'] && loginForm.controls['email'].touched">
-        email is Required
-      </small>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" required>
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        <small>Email không hợp lệ.</small>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" formControlName="password" placeholder="password">
-      <small class="text-danger text-small" *ngIf="loginForm.controls['password'].errors?.['required'] && loginForm.controls['password'].touched">
-        password is Required
-      </small>
+    
+    <div>
+      <label for="password">Mật khẩu:</label>
+      <input id="password" formControlName="password" type="password" required>
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <small>Mật khẩu là bắt buộc.</small>
+      </div>
     </div>
-
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+    
+    <button type="submit" [disabled]="loginForm.invalid">Đăng nhập</button>
   </form>
 </div>
 
