@@ -36,9 +36,9 @@ export class LoginComponent {
 
           // Kiểm tra role và điều hướng
           if (user.role === 'admin') {
-            this.router.navigate(['/list']); // Điều hướng đến trang list cho admin
+            this.router.navigate(['/list']); 
           } else {
-            this.router.navigate(['/home']); // Điều hướng đến trang home cho user thường
+            this.router.navigate(['/']); 
           }
         } else {
           alert('Tài khoản hoặc mật khẩu không đúng!');
