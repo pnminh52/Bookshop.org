@@ -43,7 +43,7 @@ export class EditComponent {
     this.productService.edit(this.productId, this.addForm.value).subscribe({
       next: () => {
         if (window.confirm('Product added successfully')) {
-          this.router.navigate(['/list']);
+          this.router.navigate(['/admin/list']);
         }
       },
     });

@@ -22,8 +22,8 @@
     <label for="category">Category</label>
     <select class="form-control" id="category" formControlName="category">
       <option value="">Select Category</option>
-      <option value="Laptop">Laptop</option>
-      <option value="PC">PC</option>
+      <option value="Tiểu thuyết">Tiểu thuyết</option>
+      <option value="Tâm lý">Tâm lý</option>
     </select>
     <small class="text-danger text-small" *ngIf="addForm.controls['category'].errors?.['required'] && addForm.controls['category'].touched">
       Category is Required
