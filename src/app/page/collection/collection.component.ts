@@ -26,12 +26,12 @@ export class CollectionComponent {
   renderProduct(): void {
     this.productService.getAll().subscribe({
       next: (data) => {
-        this.products = data;
-        this.sortProducts(); // Sort products initially
+        this.products = data; // Lưu tất cả sản phẩm
+        this.filteredProducts = this.products; // Hiển thị tất cả sản phẩm ban đầu
       },
       error: (err) => {
         console.error('Error fetching products:', err);
-      }
+      },
     });
   }
 
