@@ -10,9 +10,15 @@
   "users": [
     {
       "id": "87fa",
-      "email": "phamnhatminhsuzumoe52@gmail.com",
+      "email": "elyz.thedev@gmail.com",
       "password": "111111",
       "role": "admin"
+    },
+    {
+      "id": "11e2",
+      "email": "1@gmail.com",
+      "password": "111111",
+      "role": "user"
     }
   ]
 }

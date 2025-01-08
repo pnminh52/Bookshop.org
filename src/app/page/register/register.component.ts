@@ -21,16 +21,23 @@ export class RegisterComponent {
   });
 
   handleSubmit() {
-
-    this.authService.register(this.registerForm.value).subscribe({
+    const formData = { ...this.registerForm.value, role: 'user' };
+  
+    this.authService.register(formData).subscribe({
       next: () => {
         if (window.confirm('Đăng ký thành công!')) {
           this.router.navigate(['/login']);
         }
       },
       error: (err: any) => {
-        console.log(err);
+        // Hiển thị cảnh báo nếu email đã tồn tại
+        if (err.message === 'Email đã được sử dụng!') {
+          alert('Email này đã được đăng ký. Vui lòng chọn email khác.');
+        } else {
+          console.log(err);
+        }
       }
     });
   }
+  
 }
