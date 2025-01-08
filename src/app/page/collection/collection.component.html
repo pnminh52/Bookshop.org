@@ -17,10 +17,17 @@
     
     
   </div>
-
+  <!-- Dropdown để chọn thể loại -->
+  <div class="mb-4">
+    <label for="category" class="mr-2">Filter by Category:</label>
+    <select id="category" (change)="onCategoryChange($event)">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
   <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
     <div
-      *ngFor="let product of products"
+      *ngFor="let product of filteredProducts"
       class="cursor-pointer p-2"
       [routerLink]="['/productDetails', product.id]"
     >

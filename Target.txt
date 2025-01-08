@@ -1,0 +1,36 @@
+Thiết kế website bán sách online - Sử dụng framework angular
+
+
+Yêu cầu chức năng cơ bản:
+
+Trang chủ: Hiển thị các sách nổi bật, khuyến mãi, và nút tìm kiếm.
+Danh mục sách: Cho phép người dùng duyệt sách theo danh mục.
+Tìm kiếm sách: Cung cấp chức năng tìm kiếm dựa trên tên sách, tác giả, thể loại, v.v.
+Chi tiết sách: Trang chi tiết sách cung cấp thông tin chi tiết về một cuốn sách, bao gồm hình ảnh, mô tả, tác giả, giá cả, và đánh giá.
+Giỏ hàng: Cho phép người dùng thêm sách vào giỏ hàng và xem giỏ hàng của họ.
+Thanh toán: Cung cấp hình thức thanh toán an toàn cho việc mua sách.
+Quản lý tài khoản: Cho phép người dùng đăng nhập, đăng ký, và quản lý thông tin cá nhân.
+
+Giao diện người dùng (UI):
+
+Thiết kế giao diện thân thiện, dễ sử dụng, và thúc đẩy sự quan tâm của người dùng.
+Tối ưu hóa giao diện cho thiết bị di động để đảm bảo trải nghiệm đáng tin cậy trên điện thoại di động và máy tính bảng.
+Sử dụng hình ảnh và biểu đồ để tạo hiệu ứng hấp dẫn và thúc đẩy mua sắm.
+
+Quản lý dữ liệu:
+
+Tích hợp cơ sở dữ liệu để lưu trữ thông tin sách, thông tin người dùng, và các giao dịch mua sắm.
+Bảo mật dữ liệu của người dùng bằng cách sử dụng mã hóa và các biện pháp bảo mật khác.
+Chức năng đặc biệt:
+
+Đánh giá và bình luận sách: Cho phép người dùng đánh giá và viết bình luận về sách.
+Tích hợp hệ thống tìm kiếm thông minh để đề xuất sách dựa trên lịch sử mua sắm và sở thích của người dùng.
+Hệ thống giảm giá và khuyến mãi: Tạo các ưu đãi và khuyến mãi để tăng doanh số bán hàng.
+Quản lý đơn hàng: Cho phép người dùng theo dõi và quản lý đơn hàng đã đặt.
+
+Quản lý trạng thái đơn hàng:
+
+Cung cấp thông tin về trạng thái của đơn hàng cho người dùng (đã nhận đơn, đang giao hàng, đã hoàn thành).
+Tích hợp xác thực và bảo mật:
+
+Đảm bảo rằng chỉ người dùng đã đăng nhập mới có thể thực hiện đặt hàng và truy cập các tính năng quản lý tài khoản.

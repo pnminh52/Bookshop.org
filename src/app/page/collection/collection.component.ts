@@ -14,7 +14,9 @@ import { CommonModule } from '@angular/common';
 export class CollectionComponent {
   products: Product[] = [];
   sortOrder: 'asc' | 'desc' = 'asc'; // Default sort order
-
+  selectedCategory: string = '';
+  filteredProducts: Product[] = [];
+  categories: string[] = ['Fiction', 'History', 'Economics', 'Psychology', 'Romance', 'Horror', 'Action', 'Fantasy']; // Danh sách thể loại
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
@@ -49,5 +51,18 @@ export class CollectionComponent {
     this.sortOrder = order;
     this.sortProducts();
   }
-  
+  onCategoryChange(event: any): void {
+    const category = event.target.value;
+    this.selectedCategory = category;
+
+    if (category) {
+      // Lọc sản phẩm theo thể loại đã chọn
+      this.filteredProducts = this.products.filter(product =>
+        product.category.toLowerCase() === category.toLowerCase()
+      );
+    } else {
+      // Nếu không chọn thể loại, hiển thị tất cả sản phẩm
+      this.filteredProducts = this.products;
+    }
+  }
 }

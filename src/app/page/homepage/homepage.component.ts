@@ -32,7 +32,7 @@ export class HomepageComponent implements OnInit {
     this.productService.getAll().subscribe({
       next: (data) => {
         this.products = data;
-        this.limitedProducts = this.products.slice(0, 4);
+        this.limitedProducts = this.products.slice(0,5);
         this.filterNovelCategory();
       },
       error: (err) => {
@@ -42,7 +42,7 @@ export class HomepageComponent implements OnInit {
   }
 
   filterNovelCategory(): void {
-    this.novelCategory = this.products.filter(product => product.category === 'Tiểu thuyết');
+    this.novelCategory = this.products.filter(product => product.category === 'Fiction');
   }
 
   startSlider(): void {
