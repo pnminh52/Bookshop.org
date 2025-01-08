@@ -14,7 +14,7 @@
 }
 
 </style>
-<div class="slider">
+<div class="slider cursor-pointer">
   <img title="slider" *ngFor="let image of sliderImages; let i = index" [src]="image" [class.hidden]="i !== currentIndex" class="slider-img">
 </div>
 
@@ -24,7 +24,7 @@
     <h1 class="text-2xl mb-4">President Jimmy Carter (1924-2024)</h1>
     <!-- Render danh sách sản phẩm thuộc thể loại "Tiểu thuyết" -->
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-  <div *ngFor="let product of novelCategory" class="p-4 border border-gray-300">
+  <div *ngFor="let product of novelCategory" class=" cursor-pointer p-4 border border-gray-300">
     <img
       [src]="product.image_url"
       alt="{{ product.title }}"
@@ -48,7 +48,7 @@
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
       <!-- Lặp qua mảng limitedProducts và hiển thị 4 sản phẩm -->
-      <div *ngFor="let product of limitedProducts" class="p-4 border border-gray-300">
+      <div *ngFor="let product of limitedProducts" class="cursor-pointer p-4 border border-gray-300">
         <img
           [src]="product.image_url"
           alt="{{ product.title }}"
