@@ -1,11 +1,17 @@
 {
   "products": [
     {
-      "title": "LOL",
-      "price": 100,
+      "title": "sach 1",
+      "price": "1000",
       "category": "Laptop",
-      "id": 1
+      "id": 2
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "1@gmail.com",
+      "password": "111111",
+      "id": 1
+    }
+  ]
 }

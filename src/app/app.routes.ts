@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { ListComponent } from './pase/list/list.component';
-import { AddComponent } from './pase/add/add.component';
-import { EditComponent } from './pase/edit/edit.component';
-// import { RegisterComponent } from './pase/register/register.component';
-// import { LoginComponent } from './pase/login/login.component';
+import { ListComponent } from './page/list/list.component';
+import { AddComponent } from './page/add/add.component';
+import { EditComponent } from './page/edit/edit.component';
+import { RegisterComponent } from './page/register/register.component';
+import { LoginComponent } from './page/login/login.component';
 
 export const routes: Routes = [
   {
@@ -18,12 +18,12 @@ export const routes: Routes = [
     path: 'edit/:id',
     component: EditComponent,
   },
-  // {
-  //   path:'register',
-  //   component:RegisterComponent,
-  // },
-  // {
-  //   path:'login',
-  //   component:LoginComponent,
-  // }
+  {
+    path:'register',
+    component:RegisterComponent,
+  },
+  {
+    path:'login',
+    component:LoginComponent,
+  }
 ];

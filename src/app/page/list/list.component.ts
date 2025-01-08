@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../../product.service';
-import { Product } from '../../tye/Products';
+import { Product } from '../../type/Products';
 import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 
