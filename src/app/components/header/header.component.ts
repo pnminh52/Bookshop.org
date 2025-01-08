@@ -25,11 +25,7 @@ export class HeaderComponent implements OnInit {
   // Phương thức logout
   logout(): void {
     this.authService.logout().subscribe(() => {
-      // Hiển thị thông báo đăng xuất thành công
-      alert('Đăng xuất thành công!');
-      
-      // Điều hướng về trang chủ sau khi logout
-      this.router.navigate(['/']);
+
     });
   }
 

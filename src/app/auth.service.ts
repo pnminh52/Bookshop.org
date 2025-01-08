@@ -52,7 +52,7 @@ export class AuthService {
     
     // Cập nhật trạng thái đăng nhập
     this.isLoggedInSubject.next(false);
-
+    alert('Đăng xuất thành công!');
     return EMPTY; // Trả về Observable rỗng
   }
 }
