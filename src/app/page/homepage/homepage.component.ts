@@ -11,22 +11,28 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  products: Product[] = []; // Mảng để lưu trữ danh sách sản phẩm
+  products: Product[] = [];
   limitedProducts: Product[] = [];
-  novelCategory: Product[] = []; // Khai báo thuộc tính novelCategory
-  
+  novelCategory: Product[] = [];
+  sliderImages: string[] = [
+    'https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/310/original/Herod_BookshopAds_2048x600.gif?1736265886',
+    'https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/311/original/DARKMOTHERLAND_2048x600.jpg?1736265945'
+  ];
+  currentIndex: number = 0;
+
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.loadProducts(); // Gọi hàm để lấy dữ liệu khi component được khởi tạo
+    this.loadProducts();
+    this.startSlider();
   }
 
   loadProducts(): void {
     this.productService.getAll().subscribe({
       next: (data) => {
         this.products = data;
-        this.limitedProducts = this.products.slice(0, 4); // Lấy 4 sản phẩm đầu tiên
-        this.filterNovelCategory(); // Lọc sản phẩm theo thể loại "Tiểu thuyết"
+        this.limitedProducts = this.products.slice(0, 4);
+        this.filterNovelCategory();
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -34,10 +40,13 @@ export class HomepageComponent implements OnInit {
     });
   }
 
-  // Hàm lọc các sản phẩm có thể loại "Tiểu thuyết"
   filterNovelCategory(): void {
-    // Nếu product.category là một đối tượng Category, truy cập vào thuộc tính name
     this.novelCategory = this.products.filter(product => product.category === 'Tiểu thuyết');
   }
-  
+
+  startSlider(): void {
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.sliderImages.length;
+    }, 3000);
+  }
 }
