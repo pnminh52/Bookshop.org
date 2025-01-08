@@ -1,20 +1,41 @@
 {
   "products": [
     {
-      "title": "Sách 1",
-      "price": "$20.00",
-      "category": "Tâm lý",
-      "id": "2"
+      "id": "1",
+      "title": "Sách 2",
+      "price": 15.00,
+      "price_after_discount": 11.00,
+      "category": "Tiểu thuyết",
+      "author": "Tác giả B",
+      "description": "Mô tả sách 2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781250872524.jpg?height=250&v=v2-c30869c3322e8fa9a107c7c4c2de87e2",
+      "rating": 4,
+      "reviews": [
+        {
+          "user_id": "87fa",
+          "comment": "Học rất bổ ích.",
+          "rating": 4
+        },
+        {
+          "user_id": "11e2",
+          "comment": "Rất dễ hiểu.",
+          "rating": 5
+        }
+      ],
+      "discount": 20,
+      "stock": 30,
+      "category_id": "2",
+      "publish_date": "2023-12-15"
     },
     {
       "id": "3",
       "title": "Sách 2",
-      "price": "$15.00",
-      "price_after_discount": "$12.00",
+      "price": 16.00,
+      "price_after_discount": 12.00,
       "category": "Tiểu thuyết",
       "author": "Tác giả B",
       "description": "Mô tả sách 2",
-      "image_url": "url_ảnh_sách_2.jpg",
+      "image_url": "https://images-us.bookshop.org/ingram/9781580058070.jpg?height=250&v=v2",
       "rating": 4,
       "reviews": [
         {
@@ -36,12 +57,12 @@
     {
       "id": "4",
       "title": "Sách 3",
-      "price": "$25.00",
-      "price_after_discount": "$22.00",
+      "price": 25.00,
+      "price_after_discount": 22.00,
       "category": "Khoa học",
       "author": "Tác giả C",
       "description": "Mô tả sách 3",
-      "image_url": "url_ảnh_sách_3.jpg",
+      "image_url": "https://images-us.bookshop.org/ingram/9780735211735.jpg?height=250&v=v2",
       "rating": 4.8,
       "reviews": [
         {
@@ -63,12 +84,12 @@
     {
       "id": "5",
       "title": "Sách 4",
-      "price": "$30.00",
-      "price_after_discount": "$25.00",
+      "price": 30.00,
+      "price_after_discount": 25.00,
       "category": "Tiểu thuyết",
       "author": "Tác giả D",
       "description": "Mô tả sách 4",
-      "image_url": "url_ảnh_sách_4.jpg",
+      "image_url": "https://images-us.bookshop.org/ingram/9780143130727.jpg?height=250&v=v2",
       "rating": 4.3,
       "reviews": [
         {

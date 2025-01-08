@@ -1,1 +1,43 @@
-<p>collection works!</p>
+<style>
+  h1 {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
+<div class="container max-w-screen-xl mx-auto p-4">
+  <h1 class="text-2xl mb-4 mt-3">Our books collection</h1>
+
+  <div class="mb-4">
+    <label for="sortOrder" class="mr-2">Sort by price:</label>
+    <select id="sortOrder" (change)="onSortOrderChange($event)">
+      <option value="asc">Low to High</option>
+      <option value="desc">High to Low</option>
+    </select>
+    
+    
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div
+      *ngFor="let product of products"
+      class="cursor-pointer p-2"
+      [routerLink]="['/productDetails', product.id]"
+    >
+      <img
+        [src]="product.image_url"
+        alt="{{ product.title }}"
+        class="w-auto h-auto object-cover mb-4"
+      />
+      <h2 class="text-xl font-semibold">{{ product.title }}</h2>
+      <p class="text-md font-medium">{{ product.author }}</p>
+      <div class="flex gap-2">
+        <p class="text-xl font-semibold">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-semibold text-red-500">
+          <s>{{ product.price }}$</s>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+

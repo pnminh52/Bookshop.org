@@ -1,0 +1,2 @@
+8/1 : Xây dựng CRUD, giao diện trang chủ, render dữ liệu ra trang chủ
+9/1 : Xây dựng trang chi tiết sản phẩm 

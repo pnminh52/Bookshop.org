@@ -1,7 +1,7 @@
 <style>
   h1 {
     font-family: "Prata", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
   }
   .slider-img {
@@ -21,14 +21,14 @@
 <div class="container max-w-screen-xl mx-auto p-4">
 
   <div>
-    <h1 class="text-2xl mb-4">President Jimmy Carter (1924-2024)</h1>
+    <h1 class="text-2xl mb-4 mt-3">President Jimmy Carter (1924-2024)</h1>
     <!-- Render danh sách sản phẩm thuộc thể loại "Tiểu thuyết" -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-  <div *ngFor="let product of novelCategory" class=" cursor-pointer p-4 border border-gray-300">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-2">
+  <div *ngFor="let product of novelCategory"  class=" cursor-pointer p-2 " [routerLink]="['/productDetails', product.id]">
     <img
       [src]="product.image_url"
       alt="{{ product.title }}"
-      class="w-full h-48 object-cover mb-4"
+      class="w-auto h-auto object-cover mb-4"
     />
     <h2 class="text-xl font-semibold">{{ product.title }}</h2>
     <p class="text-md font-medium">{{ product.author }}</p>
@@ -43,16 +43,16 @@
 
   </div>
   <div>
-    <h1 class="text-2xl mb-4">
+    <h1 class="text-2xl mb-4 mt-3">
       Our Top Non-Fiction Books to Kickstart 2025
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
       <!-- Lặp qua mảng limitedProducts và hiển thị 4 sản phẩm -->
-      <div *ngFor="let product of limitedProducts" class="cursor-pointer p-4 border border-gray-300">
+      <div *ngFor="let product of limitedProducts" class="cursor-pointer p-2 " [routerLink]="['/productDetails', product.id]">
         <img
           [src]="product.image_url"
           alt="{{ product.title }}"
-          class="w-full h-48 object-cover mb-4"
+          class="w-auto h-auto object-cover mb-4"
         />
         <h2 class="text-xl font-semibold">{{ product.title }}</h2>
         <p class="text-md font-medium">{{ product.author }}</p>
