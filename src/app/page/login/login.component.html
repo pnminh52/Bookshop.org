@@ -4,7 +4,7 @@
     <div>
       <label for="email">Email:</label>
       <input id="email" formControlName="email" type="email" required>
-      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email') ?.touched">
         <small>Email không hợp lệ.</small>
       </div>
     </div>

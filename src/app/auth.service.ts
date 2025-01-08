@@ -14,8 +14,8 @@ export class AuthService {
     return this.http.post(`${this.apiUrl}/register`, data);
   }
 
-// AuthService
-login(credentials: { email: string, password: string }): Observable<any> {
-  return this.http.get(`${this.apiUrl}/users?email=${credentials.email}&password=${credentials.password}`);
-}
+  // Phương thức đăng nhập
+  login(email: string, password: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/users?email=${email}&password=${password}`);
+  }
 }

@@ -11,7 +11,8 @@
     {
       "id": "87fa",
       "email": "phamnhatminhsuzumoe52@gmail.com",
-      "password": "111111"
+      "password": "111111",
+      "role": "admin"
     }
   ]
 }
