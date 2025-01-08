@@ -25,20 +25,22 @@ export class LoginComponent {
       alert('Vui lòng điền đầy đủ thông tin!');
       return;
     }
-
+  
     const { email, password } = this.loginForm.value;
-
+  
     this.authService.login(email, password).subscribe({
       next: (response) => {
         if (response.length > 0) {
-          const user = response[0]; // Lấy thông tin người dùng đầu tiên
+          const user = response[0];
           alert('Đăng nhập thành công!');
-
-          // Kiểm tra role và điều hướng
+  
+          // Lưu thông tin người dùng vào localStorage (hoặc sessionStorage)
+          localStorage.setItem('user', JSON.stringify(user));
+  
           if (user.role === 'admin') {
-            this.router.navigate(['/admin/list']); 
+            this.router.navigate(['/admin/list']);
           } else {
-            this.router.navigate(['/']); 
+            this.router.navigate(['/']);
           }
         } else {
           alert('Tài khoản hoặc mật khẩu không đúng!');
@@ -50,4 +52,5 @@ export class LoginComponent {
       }
     });
   }
+  
 }

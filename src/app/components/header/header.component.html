@@ -83,7 +83,11 @@
           >
             <a href="/login" class="cursor-pointer hover:text-black">Profile</a>
             <a href="/login" class="cursor-pointer hover:text-black">Order</a>
-            <a href="/login" class="cursor-pointer hover:text-black">Login</a>
+            <!-- Nếu chưa đăng nhập, hiển thị nút Login -->
+<a *ngIf="!isLoggedIn" href="/login" class="cursor-pointer hover:text-black">Login</a>
+
+<!-- Nếu đã đăng nhập, hiển thị nút Logout -->
+<a *ngIf="isLoggedIn" (click)="logout()" class="cursor-pointer hover:text-black">Logout</a>
           </div>
         </div>
       </div>
