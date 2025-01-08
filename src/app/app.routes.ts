@@ -8,27 +8,32 @@ import { HomepageComponent } from './page/homepage/homepage.component';
 
 export const routes: Routes = [
   {
+    path: 'admin',
+    children: [
+      {
+        path: 'list',
+        component: ListComponent,
+      },
+      {
+        path: 'addproduct',
+        component: AddComponent,
+      },
+      {
+        path: 'edit/:id',
+        component: EditComponent,
+      },
+    ],
+  },
+  {
     path: '',
     component: HomepageComponent,
   },
   {
-    path: 'list',
-    component: ListComponent,
+    path: 'register',
+    component: RegisterComponent,
   },
   {
-    path: 'addproduct',
-    component: AddComponent,
+    path: 'login',
+    component: LoginComponent,
   },
-  {
-    path: 'edit/:id',
-    component: EditComponent,
-  },
-  {
-    path:'register',
-    component:RegisterComponent,
-  },
-  {
-    path:'login',
-    component:LoginComponent,
-  }
 ];

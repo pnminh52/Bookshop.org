@@ -36,7 +36,7 @@ export class LoginComponent {
 
           // Kiểm tra role và điều hướng
           if (user.role === 'admin') {
-            this.router.navigate(['/list']); 
+            this.router.navigate(['/admin/list']); 
           } else {
             this.router.navigate(['/']); 
           }
