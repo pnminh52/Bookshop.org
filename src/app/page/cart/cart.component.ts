@@ -17,12 +17,23 @@ export class CartComponent {
     this.cartItems = this.cartService.getCartItems(); // Lấy danh sách sản phẩm từ service
   }
 
+  
   removeFromCart(product: Product): void {
-    this.cartService.removeFromCart(product); // Gọi service để xóa sản phẩm
-    this.cartItems = this.cartService.getCartItems(); // Cập nhật danh sách sản phẩm
+    this.cartService.removeFromCart(product);
+    this.cartItems = this.cartService.getCartItems();
+  }
+
+  increaseQuantity(product: Product): void {
+    this.cartService.increaseQuantity(product);
+    this.cartItems = this.cartService.getCartItems();
+  }
+
+  decreaseQuantity(product: Product): void {
+    this.cartService.decreaseQuantity(product);
+    this.cartItems = this.cartService.getCartItems();
   }
 
   getTotal(): number {
-    return this.cartService.getTotal(); // Lấy tổng giá trị từ service
+    return this.cartService.getTotal();
   }
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
+import { CartService } from '../../cart.service';
+import { Product } from '../../type/Products';
 
 @Component({
   selector: 'app-header',
@@ -11,9 +13,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  cartItemCount: number =0;
   isLoggedIn: boolean = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private cartService: CartService) {
+
+    this.cartItemCount = this.cartService.getCartItemCount();
+
+    // Theo dõi thay đổi trong giỏ hàng
+    this.cartService.getCartItemsObservable().subscribe((cartItems: Product[]) => {
+      this.cartItemCount = cartItems.length;
+    });
+  }
 
   ngOnInit(): void {
     // Theo dõi trạng thái đăng nhập từ AuthService

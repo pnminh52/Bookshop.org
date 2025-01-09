@@ -17,4 +17,5 @@ export interface Product {
   stock: number;
   category_id: string;
   publish_date: string;
+  quantity:number
 }

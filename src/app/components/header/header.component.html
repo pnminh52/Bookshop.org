@@ -1,5 +1,5 @@
 <style>
-  * {
+  p,h1 {
     font-family: "Prata", serif;
     font-weight: 400;
     font-style: normal;
@@ -80,15 +80,12 @@
           >
             <a href="/login" class="cursor-pointer hover:text-black">Profile</a>
             <a href="/login" class="cursor-pointer hover:text-black">Order</a>
-            <!-- Nếu chưa đăng nhập, hiển thị nút Login -->
             <a
               *ngIf="!isLoggedIn"
               href="/login"
               class="cursor-pointer hover:text-black"
               >Login</a
             >
-
-            <!-- Nếu đã đăng nhập, hiển thị nút Logout -->
             <a
               *ngIf="isLoggedIn"
               (click)="logout()"
@@ -98,7 +95,6 @@
           </div>
         </div>
       </div>
-
       <!-- Search Icon (SVG) -->
       <div class="cursor-pointer">
         <svg
@@ -131,9 +127,9 @@
 
         <!-- Number Circle -->
         <span
-          class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-medium rounded-full h-4 w-4 flex items-center text-center justify-center"
+          class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-thin rounded-full h-4 w-4 flex items-center text-center justify-center"
         >
-          3
+          {{cartItemCount}}
         </span>
       </div>
       <!-- Heart Icon -->
