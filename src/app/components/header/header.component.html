@@ -7,57 +7,54 @@
 </style>
 <header>
   <div class="bg-[#FFF1E6] cursor-pointer">
-    <p class="flex mx-auto items-center justify-center text-sm underline h-12">Every purchase financially supports local independent bookstores!</p>
+    <p class="flex mx-auto items-center justify-center text-sm underline h-12">
+      Every purchase financially supports local independent bookstores!
+    </p>
   </div>
   <div
-    class=" container max-w-screen-xl mx-auto flex items-center justify-between py-3 font-medium"
+    class="container max-w-screen-xl mx-auto flex items-center justify-between py-3 font-medium"
   >
-  <a title="Link" href="/">
-    <img class="w-40 h-auto cursor-pointer" src="
+    <a title="Link" href="/">
+      <img
+        class="w-40 h-auto cursor-pointer"
+        src="
     https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
-    " alt="">
-  </a>
-    
+    "
+        alt=""
+      />
+    </a>
+
     <ul class="hidden sm:flex gap-5 text-sm text-gray-700">
       <li>
         <a href="/" class="flex flex-col items-center gap-1">
           <p>Home</p>
-           
         </a>
       </li>
       <li>
         <a href="/collection" class="flex flex-col items-center gap-1">
           <p>Collection</p>
-           
         </a>
       </li>
       <li>
         <a href="/new" class="flex flex-col items-center gap-1">
           <p>New Books</p>
-           
         </a>
       </li>
       <li>
         <a href="/best" class="flex flex-col items-center gap-1">
           <p>Best Sellers</p>
-           
         </a>
       </li>
       <li>
         <a href="/about" class="flex flex-col items-center gap-1">
           <p>About Us</p>
-           
         </a>
       </li>
       <li>
         <a href="/contact" class="flex flex-col items-center gap-1">
           <p>Contact</p>
-           
         </a>
       </li>
-
-      
-      
     </ul>
     <div class="flex items-center gap-5">
       <!-- Profile Icon (SVG) -->
@@ -84,10 +81,20 @@
             <a href="/login" class="cursor-pointer hover:text-black">Profile</a>
             <a href="/login" class="cursor-pointer hover:text-black">Order</a>
             <!-- Nếu chưa đăng nhập, hiển thị nút Login -->
-<a *ngIf="!isLoggedIn" href="/login" class="cursor-pointer hover:text-black">Login</a>
+            <a
+              *ngIf="!isLoggedIn"
+              href="/login"
+              class="cursor-pointer hover:text-black"
+              >Login</a
+            >
 
-<!-- Nếu đã đăng nhập, hiển thị nút Logout -->
-<a *ngIf="isLoggedIn" (click)="logout()" class="cursor-pointer hover:text-black">Logout</a>
+            <!-- Nếu đã đăng nhập, hiển thị nút Logout -->
+            <a
+              *ngIf="isLoggedIn"
+              (click)="logout()"
+              class="cursor-pointer hover:text-black"
+              >Logout</a
+            >
           </div>
         </div>
       </div>
@@ -126,25 +133,24 @@
         >
           3
         </span>
-        
       </div>
-        <!-- Heart Icon -->
-  <svg
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
-  class="w-[24px] h-[24px] cursor-pointer"
->
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-    stroke="#000000"
-    stroke-width="1.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  ></path>
-</svg>
+      <!-- Heart Icon -->
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-[24px] h-[24px] cursor-pointer"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+          stroke="#000000"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
 
       <!-- Hamburger Icon (Visible only on small screens) -->
       <div class="sm:hidden cursor-pointer">
@@ -162,7 +168,9 @@
     </div>
   </div>
   <div class="bg-white border-gray-300 border cursor-pointer">
-    <h1 class="flex mx-auto items-center justify-center h-12"> <p class="text-indigo-700 font-bold mr-1">$35,377,191.30</p> raised for local bookstores</h1>
+    <h1 class="flex mx-auto items-center justify-center h-12">
+      <p class="text-indigo-700 font-bold mr-1">$35,377,191.30</p>
+      raised for local bookstores
+    </h1>
   </div>
-
 </header>
