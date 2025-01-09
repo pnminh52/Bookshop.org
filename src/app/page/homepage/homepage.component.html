@@ -21,45 +21,52 @@
 <div class="container max-w-screen-xl mx-auto p-4">
 
   <div>
-    <h1 class="text-2xl mb-4 mt-3">President Jimmy Carter (1924-2024)</h1>
+    <h1 class="text-2xl mb-4 mt-3 flex justify-center">President Jimmy Carter (1924-2024)</h1>
     <!-- Render danh sách sản phẩm thuộc thể loại "Tiểu thuyết" -->
-<div class="grid grid-cols-2 md:grid-cols-5 gap-2">
-  <div *ngFor="let product of novelCategory"  class=" cursor-pointer p-2 " [routerLink]="['/productDetails', product.id]">
-    <img
-      [src]="product.image_url"
-      alt="{{ product.title }}"
-      class="w-auto h-auto object-cover mb-4"
-    />
-    <h2 class="text-xl font-semibold">{{ product.title }}</h2>
-    <p class="text-md font-medium">{{ product.author }}</p>
-    <div class="flex gap-2">
-      <p class="text-xl font-semibold">{{ product.price_after_discount }}</p>
-      <p class="text-md font-semibold text-red-500">
-        <s>{{ product.price }}</s>
-      </p>
-    </div>
-  </div>
-</div>
-
-  </div>
-  <div>
-    <h1 class="text-2xl mb-4 mt-3">
-      Our Top Non-Fiction Books to Kickstart 2025
-    </h1>
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-      <!-- Lặp qua mảng limitedProducts và hiển thị 4 sản phẩm -->
-      <div *ngFor="let product of limitedProducts" class="cursor-pointer p-2 " [routerLink]="['/productDetails', product.id]">
+    <div class="grid grid-cols-2 md:grid-cols-6">
+      <div
+        *ngFor="let product of novelCategory"
+        class="cursor-pointer p-2"
+        [routerLink]="['/productDetails', product.id]"
+      >
         <img
           [src]="product.image_url"
           alt="{{ product.title }}"
-          class="w-auto h-auto object-cover mb-4"
+          class=" w-auto h-auto object-cover mb-2"
         />
         <h2 class="text-xl font-semibold">{{ product.title }}</h2>
         <p class="text-md font-medium">{{ product.author }}</p>
         <div class="flex gap-2">
-          <p class="text-xl font-semibold">{{ product.price_after_discount }}</p>
+          <p class="text-xl font-semibold">{{ product.price_after_discount }}$</p>
           <p class="text-md font-semibold text-red-500">
-            <s>{{ product.price }}</s>
+            <s>{{ product.price }}$</s>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <h1 class="text-2xl mb-4 mt-3 flex justify-center">
+      Our Top Non-Fiction Books to Kickstart 2025
+    </h1>
+    <div class="grid grid-cols-2 md:grid-cols-6">
+      <div
+        *ngFor="let product of limitedProducts"
+        class="cursor-pointer p-2"
+        [routerLink]="['/productDetails', product.id]"
+      >
+        <img
+          [src]="product.image_url"
+          alt="{{ product.title }}"
+          class=" w-auto h-auto object-cover mb-2"
+        />
+        <h2 class="text-xl font-semibold">{{ product.title }}</h2>
+        <p class="text-md font-medium">{{ product.author }}</p>
+        <div class="flex gap-2">
+          <p class="text-xl font-semibold">{{ product.price_after_discount }}$</p>
+          <p class="text-md font-semibold text-red-500">
+            <s>{{ product.price }}$</s>
           </p>
         </div>
       </div>
