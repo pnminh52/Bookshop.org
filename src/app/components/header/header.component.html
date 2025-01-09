@@ -1,5 +1,7 @@
 <style>
-  p,h1 {
+  p,
+  h1,
+  a {
     font-family: "Prata", serif;
     font-weight: 400;
     font-style: normal;
@@ -78,18 +80,18 @@
           <div
             class="flex flex-col gap-2 w-40 py-2 px-5 bg-slate-100 text-gray-500 rounded"
           >
-            <a href="/login" class="cursor-pointer hover:text-black">Profile</a>
-            <a href="/login" class="cursor-pointer hover:text-black">Order</a>
+            <a href="/login" class="cursor-pointer ">Profile</a>
+            <a href="/login" class="cursor-pointer ">Order</a>
             <a
               *ngIf="!isLoggedIn"
               href="/login"
-              class="cursor-pointer hover:text-black"
+              class="cursor-pointer "
               >Login</a
             >
             <a
               *ngIf="isLoggedIn"
               (click)="logout()"
-              class="cursor-pointer hover:text-black"
+              class="cursor-pointer "
               >Logout</a
             >
           </div>
@@ -112,46 +114,54 @@
         <!-- Cart Icon -->
         <a title="cart" href="/cart">
           <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          class="w-[24px] h-[24px]"
-        >
-          <path d="M6 6h15l-1.5 9H6z"></path>
-          <circle cx="9" cy="21" r="1"></circle>
-          <circle cx="18" cy="21" r="1"></circle>
-        </svg>
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            class="w-[24px] h-[24px]"
+          >
+            <path d="M6 6h15l-1.5 9H6z"></path>
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="18" cy="21" r="1"></circle>
+          </svg>
         </a>
 
         <!-- Number Circle -->
         <span
           class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-thin rounded-full h-4 w-4 flex items-center text-center justify-center"
         >
-          {{cartItemCount}}
+          {{ cartItemCount }}
         </span>
       </div>
-      <!-- Heart Icon -->
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-[24px] h-[24px] cursor-pointer"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-          stroke="#000000"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></path>
-      </svg>
+      <div class="relative cursor-pointer">
+        <!-- Heart Icon -->
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-[24px] h-[24px] cursor-pointer"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        <!-- Number Circle -->
+        <span
+          class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-thin rounded-full h-4 w-4 flex items-center text-center justify-center"
+        >
+          8
+        </span>
+      </div>
 
       <!-- Hamburger Icon (Visible only on small screens) -->
-      <div class="sm:hidden cursor-pointer">
+      <div class="sm:hidden cursor-pointer" (click)="toggleSidebar()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -163,12 +173,93 @@
           <path d="M3 6h18M3 12h18M3 18h18"></path>
         </svg>
       </div>
+      <!-- Sidebar -->
+      <div
+        [ngClass]="{
+          'fixed top-0 left-0 bg-white w-1/2 h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
+          'transform-none': isSidebarVisible,
+          'transform -translate-x-full': !isSidebarVisible
+        }"
+      >
+        <ul class="mt-4 ml-4 space-y-6">
+          <li>
+            <a title="Link" href="/">
+              <img
+                class="w-48 h-auto cursor-pointer"
+                src="
+                https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
+                "
+                alt=""
+              />
+            </a>
+          </li>
+          <li>
+            <button
+              title="closeSidebar"
+              class="flex p-2 flex-col border border-black rounded-full text-gray-700"
+              (click)="closeSidebar()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="w-6 h-6"
+              >
+                <path d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </li>
+     
+          <li>
+            <a href="/collection" class="  w-full h-12">
+              <p>Collection</p>
+            </a>
+          </li>
+          <li>
+            <a href="/new" class=" w-full h-12">
+              <p>New Books</p>
+            </a>
+          </li>
+          <li>
+            <a href="/best" class=" w-full h-12">
+              <p>Best Sellers</p>
+            </a>
+          </li>
+          <li>
+            <a href="/about" class=" w-full h-12">
+              <p>About Us</p>
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class=" w-full h-12">
+              <p>Contact</p>
+            </a>
+          </li>
+          <li>
+            <a
+            *ngIf="!isLoggedIn"
+            href="/login"
+            class="cursor-pointer "
+            >Login</a
+          >
+          <a
+            *ngIf="isLoggedIn"
+            (click)="logout()"
+            class="cursor-pointer "
+            >Logout</a
+          >
+          </li>
+      
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="bg-white border-gray-300 border cursor-pointer">
-    <h1 class="flex mx-auto items-center justify-center h-12">
-      <p class="text-indigo-700 font-bold mr-1">$35,377,191.30</p>
-      raised for local bookstores
-    </h1>
-  </div>
 </header>
+<div class="bg-white  border-t border-gray-400 cursor-pointer">
+  <h1 class="flex mx-auto items-center justify-center h-12">
+    <p class="text-indigo-700 font-bold mr-1">$35,377,191.30</p>
+    raised for local bookstores
+  </h1>
+</div>

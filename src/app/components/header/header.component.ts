@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener  } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
@@ -15,6 +15,7 @@ import { Product } from '../../type/Products';
 export class HeaderComponent implements OnInit {
   cartItemCount: number =0;
   isLoggedIn: boolean = false;
+  isSidebarVisible = false;
 
   constructor(private authService: AuthService, private router: Router, private cartService: CartService) {
 
@@ -36,9 +37,13 @@ export class HeaderComponent implements OnInit {
   // Phương thức logout
   logout(): void {
     this.authService.logout().subscribe(() => {
-
     });
   }
 
-
+  toggleSidebar(){
+    this.isSidebarVisible = !this.isSidebarVisible
+  }
+closeSidebar(){
+  this.isSidebarVisible = false
+}
 }

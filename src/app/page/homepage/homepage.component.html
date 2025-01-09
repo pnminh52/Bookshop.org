@@ -1,55 +1,191 @@
 <style>
-  h1 {
+  h1,
+  p {
     font-family: "Prata", serif;
     font-weight: 400;
     font-style: normal;
   }
   .slider-img {
-  width: 100%;
-  height: auto;
-}
-
-.hidden {
-  display: none;
-}
-
+    width: 100%;
+    height: auto;
+  }
+  .hidden {
+    display: none;
+  }
 </style>
-<div class="slider cursor-pointer">
-  <img title="slider" *ngFor="let image of sliderImages; let i = index" [src]="image" [class.hidden]="i !== currentIndex" class="slider-img">
-</div>
-
-<div class="container max-w-screen-xl mx-auto p-4">
-
-  <div>
-    <h1 class="text-2xl mb-4 mt-3 flex justify-center">President Jimmy Carter (1924-2024)</h1>
-    <!-- Render danh sách sản phẩm thuộc thể loại "Tiểu thuyết" -->
-    <div class="grid grid-cols-2 md:grid-cols-6">
-      <div
-        *ngFor="let product of novelCategory"
-        class="cursor-pointer p-2"
-        [routerLink]="['/productDetails', product.id]"
-      >
+  <!-- \end{code} -->
+<div id="globalNavBanner" class="noncpn image flex justify-center">
+  <div class="globalNavBanner globalBannerWrap primary loaded">
+    <a class="globalNavBannerLink" href=""
+      ><picture
+        ><source
+          media="(max-width: 600px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24-mobile.jpg
+          " />
+        <source
+          media="(min-width: 601px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg
+          " />
         <img
-          [src]="product.image_url"
-          alt="{{ product.title }}"
-          class=" w-auto h-auto object-cover mb-2"
-        />
-        <h2 class="text-xl font-semibold">{{ product.title }}</h2>
-        <p class="text-md font-medium">{{ product.author }}</p>
-        <div class="flex gap-2">
-          <p class="text-xl font-semibold">{{ product.price_after_discount }}$</p>
-          <p class="text-md font-semibold text-red-500">
-            <s>{{ product.price }}$</s>
-          </p>
-        </div>
-      </div>
-    </div>
-
+          src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg"
+          class="globalNavBannerImg"
+          alt="Limited Time Only, 50% Off Thousands of Hardcover Books. See page for details.  Shop Now " /></picture
+    ></a>
   </div>
-  <div>
-    <h1 class="text-2xl mb-4 mt-3 flex justify-center">
-      Our Top Non-Fiction Books to Kickstart 2025
-    </h1>
+  <script type="text/javascript">
+    (function () {
+      var secondBanner = true;
+      var thisPathName = window.location.pathname;
+      $(".globalNavBanner:not(.loaded)").each(function (index) {
+        if (
+          thisPathName !== "/h/coupons-deals" &&
+          thisPathName !== "/h/copyright-policy"
+        ) {
+          if (46 > 1) {
+            $("a.globalNavBannerLink").attr(
+              "href",
+              "https://www.barnesandnoble.com/h/coupons-deals"
+            );
+          } else {
+            $("a.globalNavBannerLink").addClass("nolink");
+          }
+          if (46 > 1 && "same" === "modal") {
+            $("a.globalNavBannerLink")
+              .attr("target", "_blank")
+              .attr("data-modal-class", "BN.Modal.External.Link")
+              .attr("data-modal-scrolling", "yes")
+              .attr("data-modal-title", "");
+          } else if (46 > 1 && "same" === "new") {
+            $("a.globalNavBannerLink").attr("target", "_blank");
+          }
+          $(this)
+            .addClass("primary loaded")
+            .parents("#globalNavBanner")
+            .addClass("noncpn image");
+          var msgElem;
+
+          msgElem = `<picture><source media="(max-width: 600px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24-mobile.jpg"><source media="(min-width: 601px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg"><img src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg" class="globalNavBannerImg" alt="Limited Time Only, 50% Off Thousands of Hardcover Books. See page for details.  Shop Now "></picture>`;
+
+          $("a.globalNavBannerLink").html(msgElem);
+          $("a.globalNavBanner").on("click", function () {
+            set_cookie(
+              "globalNavBanner_limited-time-only-50-off-thousands-of-hardcover-books.-see-page-for-details.--shop-now_na_text"
+            );
+          });
+          $(this).removeClass("hidden");
+        } else if (
+          secondBanner &&
+          (thisPathName === "/h/coupons-deals" ||
+            thisPathName === "/h/copyright-policy")
+        ) {
+          if (76 > 1) {
+            $("a.globalNavBannerLink").attr(
+              "href",
+              "https://www.barnesandnoble.com/b/the-most-anticipated-books-of-2025/_/N-310h"
+            );
+          } else {
+            $("a.globalNavBannerLink").addClass("nolink");
+          }
+          if (76 > 1 && "same" === "modal") {
+            $("a.globalNavBannerLink")
+              .attr("target", "_blank")
+              .attr("data-modal-class", "BN.Modal.External.Link")
+              .attr("data-modal-scrolling", "yes")
+              .attr("data-modal-title", "");
+          } else if (76 > 1 && "same" === "new") {
+            $("a.globalNavBannerLink").attr("target", "_blank");
+          }
+          $(this)
+            .addClass("secondary loaded")
+            .parents("#globalNavBanner")
+            .addClass("noncpn image ");
+          var msgElem2;
+
+          msgElem2 = `<picture><source media="(max-width: 600px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24-mobile.jpg"><source media="(min-width: 601px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24.jpg"><img src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24.jpg" class="globalNavBannerImg" alt= "The Most Anticipated Books of 2025. Premium Members Save 10% Every Day. See page for details.  Pre-Order Now " /></picture>`;
+
+          $("a.globalNavBannerLink").html(msgElem2);
+          $("a.globalNavBanner").on("click", function () {
+            set_cookie(
+              "globalNavBanner_the-most-anticipated-books-of-2025.-premium-members-save-10-every-day.-see-page-for-details.--pre-order-now_na_text"
+            );
+          });
+          $(this).removeClass("hidden");
+        } else {
+          $(".cqGlobalNavBanner").hide();
+        }
+      });
+    })();
+    $(function () {
+      if (window.location.href.indexOf("barnesandnoble.com/w/") > -1) {
+        var pCategory = digitalData.product[0].category.primaryCategory
+          .replace(/[^a-z0-9\s]/gi, "")
+          .replace(/[_\s]/g, "-")
+          .toLowerCase();
+        if (pCategory.length > 0) {
+          sessionStorage.setItem("optPrimaryCategory", pCategory);
+          sessionStorage.setItem("optDDprimaryCategory", pCategory);
+        } else {
+          sessionStorage.setItem("optPrimaryCategory", "none");
+          sessionStorage.setItem("optDDprimaryCategory", "none");
+        }
+        var optDDproductType = digitalData.product[0].category.productType
+          .replace(/[^a-z0-9\s]/gi, "")
+          .replace(/[_\s]/g, "-")
+          .toLowerCase();
+        if (optDDproductType.length > 0) {
+          sessionStorage.setItem("optDDproductType", optDDproductType);
+        } else {
+          sessionStorage.setItem("optDDproductType", "none");
+        }
+      }
+    });
+  </script>
+</div>
+  <!-- \end{code} -->
+<div class="skinny-hero">
+  <a
+    class="skinny-hero-link"
+    href=""
+    onclick="set_cookie('hpskinny-heroN3_new-year-new-you_na_imagetext');"
+  >
+    <picture>
+      <source
+        media="(max-width: 640px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24-mobile.jpg
+        "
+      />
+      <source
+        media="(min-width: 641px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg
+        "
+      />
+      <img
+        class="lp-lazy ResolveComplete"
+        src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+        data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg"
+        alt="Start Your Next Chapter - New Year, New You - Shop Now "
+        id="resolve_11"
+      />
+      <noscript
+        ><img
+          src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg"
+          alt="Start Your Next Chapter - New Year, New You - Shop Now"
+      /></noscript>
+    </picture>
+  </a>
+</div>
+  <!-- \end{code} -->
+<div class="container max-w-screen-xl mx-auto mt-2">
+  <!-- \end{code} -->
+  <div class="mt-4">
+    <div class="text-center justify-center mb-2">
+      <h1 class="text-lg">Best seller - Spring 2025</h1>
+      <p>Number of books with highest sales as of January 2025</p>
+    </div>
     <div class="grid grid-cols-2 md:grid-cols-6">
       <div
         *ngFor="let product of limitedProducts"
@@ -59,12 +195,14 @@
         <img
           [src]="product.image_url"
           alt="{{ product.title }}"
-          class=" w-auto h-auto object-cover mb-2"
+          class="w-auto h-auto object-cover mb-2"
         />
         <h2 class="text-xl font-semibold">{{ product.title }}</h2>
         <p class="text-md font-medium">{{ product.author }}</p>
         <div class="flex gap-2">
-          <p class="text-xl font-semibold">{{ product.price_after_discount }}$</p>
+          <p class="text-xl font-semibold">
+            {{ product.price_after_discount }}$
+          </p>
           <p class="text-md font-semibold text-red-500">
             <s>{{ product.price }}$</s>
           </p>
@@ -72,6 +210,136 @@
       </div>
     </div>
   </div>
-
-
+  <!-- \end{code} -->
+  <div class="skinny-hero focus">
+    <a
+      class="skinny-hero-link"
+      href=""
+      onclick="set_cookie('hpskinny-heroN1_most-anticipated-books-2025_na_imagetext');"
+    >
+      <picture>
+        <source
+          media="(max-width: 640px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24-mobile.jpg
+          "
+        />
+        <source
+          media="(min-width: 641px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg
+          "
+        />
+        <img
+          class="lp-lazy ResolveComplete"
+          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg"
+          alt="The Most Anticipated Books of 2025 - Pre-Order Now "
+          id="resolve_1"
+        />
+        <noscript
+          ><img
+            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg"
+            alt="The Most Anticipated Books of 2025 - Pre-Order Now"
+        /></noscript>
+      </picture>
+    </a>
+  </div>
+  <!-- \end{code} -->
+  <div class="mt-4">
+    <div class="text-center justify-center mb-2">
+      <h1 class="text-lg">Best seller - Spring 2025</h1>
+      <p>Number of books with highest sales as of January 2025</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-6">
+      <div
+        *ngFor="let product of limitedProducts"
+        class="cursor-pointer p-2"
+        [routerLink]="['/productDetails', product.id]"
+      >
+        <img
+          [src]="product.image_url"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover mb-2"
+        />
+        <h2 class="text-xl font-semibold">{{ product.title }}</h2>
+        <p class="text-md font-medium">{{ product.author }}</p>
+        <div class="flex gap-2">
+          <p class="text-xl font-semibold">
+            {{ product.price_after_discount }}$
+          </p>
+          <p class="text-md font-semibold text-red-500">
+            <s>{{ product.price }}$</s>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- \end{code} -->
+  <div class="skinny-hero">
+    <a
+      class="skinny-hero-link"
+      href=""
+      onclick="set_cookie('hpskinny-heroN2_powerful-lauren-roberts-preorder_na_imagetext');"
+    >
+      <picture>
+        <source
+          media="(max-width: 640px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25-mobile.jpg
+          "
+        />
+        <source
+          media="(min-width: 641px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg
+          "
+        />
+        <img
+          class="lp-lazy ResolveComplete"
+          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg"
+          alt="Just Announced: Deluxe Edition of Powerful by Lauren Roberts - Pre-Order Now "
+          id="resolve_8"
+        />
+        <noscript
+          ><img
+            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg"
+            alt="Just Announced: Deluxe Edition of Powerful by Lauren Roberts - Pre-Order Now"
+        /></noscript>
+      </picture>
+    </a>
+  </div>
+  <!-- \end{code} -->
+  <div class="mt-4">
+    <div class="text-center justify-center mb-2">
+      <h1 class="text-lg">Best seller - Spring 2025</h1>
+      <p>Number of books with highest sales as of January 2025</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-6">
+      <div
+        *ngFor="let product of limitedProducts"
+        class="cursor-pointer p-2"
+        [routerLink]="['/productDetails', product.id]"
+      >
+        <img
+          [src]="product.image_url"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover mb-2"
+        />
+        <h2 class="text-xl font-semibold">{{ product.title }}</h2>
+        <p class="text-md font-medium">{{ product.author }}</p>
+        <div class="flex gap-2">
+          <p class="text-xl font-semibold">
+            {{ product.price_after_discount }}$
+          </p>
+          <p class="text-md font-semibold text-red-500">
+            <s>{{ product.price }}$</s>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- \end{code} -->
 </div>
+  <!-- \end{code} -->

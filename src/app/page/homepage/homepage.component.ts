@@ -32,8 +32,8 @@ export class HomepageComponent implements OnInit {
     this.productService.getAll().subscribe({
       next: (data) => {
         this.products = data;
-        this.limitedProducts = this.products.slice(0,5);
-        this.filterNovelCategory();
+        this.limitedProducts = this.products.slice(0,6);
+        // this.filterNovelCategory();
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -41,9 +41,9 @@ export class HomepageComponent implements OnInit {
     });
   }
 
-  filterNovelCategory(): void {
-    this.novelCategory = this.products.filter(product => product.category === 'Fiction');
-  }
+  // filterNovelCategory(): void {
+  //   this.novelCategory = this.products.filter(product => product.category === 'Fiction');
+  // }
 
   startSlider(): void {
     setInterval(() => {
