@@ -47,12 +47,9 @@ export class AuthService {
 
   // Phương thức logout
   logout(): Observable<void> {
-    // Xóa thông tin người dùng trong localStorage
     localStorage.removeItem('user');
-    
-    // Cập nhật trạng thái đăng nhập
     this.isLoggedInSubject.next(false);
     alert('Đăng xuất thành công!');
-    return EMPTY; // Trả về Observable rỗng
+    return EMPTY; 
   }
 }
