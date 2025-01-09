@@ -7,7 +7,7 @@ import { NgFor, NgIf } from '@angular/common';
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [RouterLink,NgIf,NgFor],
+  imports: [RouterLink],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
