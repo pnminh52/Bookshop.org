@@ -275,6 +275,42 @@
           "total": 33,
           "date": "2025-01-09T19:55:59.027Z",
           "status": "completed"
+        },
+        {
+          "userId": "11e2",
+          "items": [
+            {
+              "id": "3",
+              "title": "Sách 3",
+              "price": 25,
+              "price_after_discount": 22,
+              "category": "Economics",
+              "author": "Tác giả C",
+              "description": "Mô tả sách 3",
+              "image_url": "https://images-us.bookshop.org/ingram/9781639368037.jpg?width=384&v=v2",
+              "rating": 4.8,
+              "reviews": [
+                {
+                  "user_id": "87fa",
+                  "comment": "Cực kỳ thú vị!",
+                  "rating": 5
+                },
+                {
+                  "user_id": "11e2",
+                  "comment": "Một cuốn sách đáng đọc.",
+                  "rating": 5
+                }
+              ],
+              "discount": 12,
+              "stock": 20,
+              "category_id": "3",
+              "publish_date": "2024-02-10",
+              "quantity": 1
+            }
+          ],
+          "total": 22,
+          "date": "2025-01-09T22:42:15.793Z",
+          "status": "completed"
         }
       ]
     }
@@ -315,6 +351,43 @@
       ],
       "total": 33,
       "date": "2025-01-09T19:55:59.027Z",
+      "status": "Pending"
+    },
+    {
+      "id": "e99a",
+      "userId": "11e2",
+      "items": [
+        {
+          "id": "3",
+          "title": "Sách 3",
+          "price": 25,
+          "price_after_discount": 22,
+          "category": "Economics",
+          "author": "Tác giả C",
+          "description": "Mô tả sách 3",
+          "image_url": "https://images-us.bookshop.org/ingram/9781639368037.jpg?width=384&v=v2",
+          "rating": 4.8,
+          "reviews": [
+            {
+              "user_id": "87fa",
+              "comment": "Cực kỳ thú vị!",
+              "rating": 5
+            },
+            {
+              "user_id": "11e2",
+              "comment": "Một cuốn sách đáng đọc.",
+              "rating": 5
+            }
+          ],
+          "discount": 12,
+          "stock": 20,
+          "category_id": "3",
+          "publish_date": "2024-02-10",
+          "quantity": 1
+        }
+      ],
+      "total": 22,
+      "date": "2025-01-09T22:42:15.793Z",
       "status": "Pending"
     }
   ]

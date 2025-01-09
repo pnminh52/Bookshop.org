@@ -15,6 +15,7 @@ import { CartComponent } from './page/cart/cart.component';
 import { CheckoutComponent } from './page/checkout/checkout.component';
 import { OrderComponent } from './page/order/order.component';
 import { SearchComponent } from './page/search/search.component';
+import { WishListComponent } from './page/wishlist/wishlist.component';
 export const routes: Routes = [
   {
     path: 'admin',
@@ -84,5 +85,9 @@ export const routes: Routes = [
   {
     path:'search',
     component: SearchComponent
+  },
+  {
+    path:'wishlist',
+    component: WishListComponent
   }
 ];

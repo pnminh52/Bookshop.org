@@ -15,9 +15,14 @@
           <p class="text-2xl font-semibold">{{ product.price_after_discount }}</p>
           <p class="text-lg text-red-500 line-through">{{ product.price }}</p>
         </div>
-        <button (click)="addToCart()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
-          Add to Cart
-        </button>
+        <div class="flex gap-4">
+          <button (click)="addToCart()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+            Add to Cart
+          </button>
+          <button (click)="addToWishlist()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+            Add to Wishlist
+          </button>
+        </div>
       </div>
     </div>
   </div>
