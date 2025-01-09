@@ -1,9 +1,10 @@
+// checkout.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartService } from '../../cart.service'; // Import CartService
+import { CartService } from '../../cart.service';
 import { Product } from '../../type/Products';
 import { RouterLink } from '@angular/router';
-import { OrderService } from '../../order.service'; 
+import { OrderService } from '../../order.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,35 +17,43 @@ import { Router } from '@angular/router';
 export class CheckoutComponent {
   cartItems: Product[] = [];
   total: number = 0;
-  user: any = null; // Thông tin người dùng
+  user: any = null;
 
   constructor(
     private cartService: CartService,
     private orderService: OrderService,
-    private router:Router
+    private router: Router
   ) {
-    this.cartItems = this.cartService.getCartItems(); // Lấy danh sách sản phẩm từ service
-    this.total = this.cartService.getTotal(); // Lấy tổng tiền
-    // Lấy thông tin người dùng từ localStorage hoặc service
+    this.cartItems = this.cartService.getCartItems();
+    this.total = this.cartService.getTotal();
     this.user = JSON.parse(localStorage.getItem('user') || '{}');
   }
 
   // Hàm thanh toán
   checkout(): void {
     const order = {
-      userId: this.user.id, // ID người dùng
-      items: this.cartItems, // Danh sách sản phẩm
-      total: this.total, // Tổng tiền
-      date: new Date().toISOString(), // Ngày đặt hàng
-      status: 'completed', // Trạng thái đơn hàng
+      userId: this.user.id,
+      items: this.cartItems,
+      total: this.total,
+      date: new Date().toISOString(),
+      status: 'completed',
     };
 
     // Gửi yêu cầu thêm đơn hàng
     this.orderService.addOrder(order).subscribe({
       next: (response) => {
-        alert('Thanh toán thành công!');
-        this.router.navigate(['/']);
-        this.cartService.clearCart(); // Xóa giỏ hàng sau khi thanh toán
+        // Cập nhật orderHistory của người dùng
+        this.orderService.updateUserOrderHistory(this.user.id, order).subscribe({
+          next: (userResponse) => {
+            alert('Thanh toán thành công!');
+            this.router.navigate(['/']);
+            this.cartService.clearCart();
+          },
+          error: (userError) => {
+            console.error('Lỗi khi cập nhật orderHistory:', userError);
+            alert('Có lỗi xảy ra khi cập nhật lịch sử đơn hàng.');
+          },
+        });
       },
       error: (error) => {
         console.error('Lỗi khi thêm đơn hàng:', error);
