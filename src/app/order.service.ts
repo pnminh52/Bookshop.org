@@ -14,7 +14,11 @@ export class OrderService {
 
   // Hàm thêm đơn hàng
   addOrder(order: any): Observable<any> {
-    return this.http.post(this.apiUrl, order);
+    const defaultOrder = {
+      ...order,
+      status: 'Pending', // Thêm trạng thái mặc định
+    };
+    return this.http.post(this.apiUrl, defaultOrder);
   }
 
   // Hàm cập nhật orderHistory của người dùng
@@ -32,5 +36,9 @@ export class OrderService {
       })
     );
   }
+  // order.service.ts
+getUserOrders(userId: string): Observable<any> {
+  return this.http.get(`${this.apiUrl}?userId=${userId}`);
+}
 
 }

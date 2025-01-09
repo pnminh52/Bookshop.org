@@ -240,10 +240,82 @@
       },
       "paymentMethod": "Credit Card",
       "orderHistory": [
+        {
+          "userId": "11e2",
+          "items": [
+            {
+              "id": "1",
+              "title": "Sách 1",
+              "price": 15,
+              "price_after_discount": 11,
+              "category": "Fiction",
+              "author": "Tác giả B",
+              "description": "Mô tả sách 2",
+              "image_url": "https://images-us.bookshop.org/ingram/9781640096714.jpg?width=384&v=v2",
+              "rating": 4,
+              "reviews": [
+                {
+                  "user_id": "87fa",
+                  "comment": "Học rất bổ ích.",
+                  "rating": 4
+                },
+                {
+                  "user_id": "11e2",
+                  "comment": "Rất dễ hiểu.",
+                  "rating": 5
+                }
+              ],
+              "discount": 20,
+              "stock": 30,
+              "category_id": "2",
+              "publish_date": "2023-12-15",
+              "quantity": 3
+            }
+          ],
+          "total": 33,
+          "date": "2025-01-09T19:55:59.027Z",
+          "status": "completed"
+        }
       ]
     }
   ],
   "orders": [
-
+    {
+      "id": "dd88",
+      "userId": "11e2",
+      "items": [
+        {
+          "id": "1",
+          "title": "Sách 1",
+          "price": 15,
+          "price_after_discount": 11,
+          "category": "Fiction",
+          "author": "Tác giả B",
+          "description": "Mô tả sách 2",
+          "image_url": "https://images-us.bookshop.org/ingram/9781640096714.jpg?width=384&v=v2",
+          "rating": 4,
+          "reviews": [
+            {
+              "user_id": "87fa",
+              "comment": "Học rất bổ ích.",
+              "rating": 4
+            },
+            {
+              "user_id": "11e2",
+              "comment": "Rất dễ hiểu.",
+              "rating": 5
+            }
+          ],
+          "discount": 20,
+          "stock": 30,
+          "category_id": "2",
+          "publish_date": "2023-12-15",
+          "quantity": 3
+        }
+      ],
+      "total": 33,
+      "date": "2025-01-09T19:55:59.027Z",
+      "status": "Pending"
+    }
   ]
 }
