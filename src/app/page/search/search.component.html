@@ -1,0 +1,23 @@
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search for products..."
+  />
+  
+  <button (click)="search()">Submit</button> <!-- Nút Submit -->
+  <div *ngIf="products.length > 0" class="product-list">
+    <div *ngFor="let product of products" class="product-item">
+      <a [routerLink]="['/productDetails', product.id]">
+        <img [src]="product.image_url" alt="Product Image" />
+        <h3>{{ product.title }}</h3>
+      </a>
+      <p>{{ product.description }}</p>
+      <p>Price: ${{ product.price_after_discount }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="products.length === 0" class="no-results">
+    No products found.
+  </div>
+</div>

@@ -116,7 +116,7 @@ export class CartService {
         localStorage.setItem('userKey', this.userKey); 
         this.loadCartForUser(this.userKey); 
       } else {
-        console.error('User ID is missing!');
+        // console.error('User ID is missing!');
       }
     }
   }

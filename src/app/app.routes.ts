@@ -14,6 +14,7 @@ import {ProductDetailComponent} from './page/product-detail/product-detail.compo
 import { CartComponent } from './page/cart/cart.component';
 import { CheckoutComponent } from './page/checkout/checkout.component';
 import { OrderComponent } from './page/order/order.component';
+import { SearchComponent } from './page/search/search.component';
 export const routes: Routes = [
   {
     path: 'admin',
@@ -79,7 +80,9 @@ export const routes: Routes = [
   {
     path: 'order',
     component: OrderComponent
+  },
+  {
+    path:'search',
+    component: SearchComponent
   }
-
-
 ];
