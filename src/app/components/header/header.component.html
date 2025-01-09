@@ -176,41 +176,41 @@
       <!-- Sidebar -->
       <div
         [ngClass]="{
-          'fixed top-0 left-0 bg-white w-1/2 h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
+          'fixed top-0 left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
           'transform-none': isSidebarVisible,
           'transform -translate-x-full': !isSidebarVisible
         }"
       >
+      <div class="flex  items-center justify-between w-full">
+        <a title="Link" href="/">
+          <img
+            class="w-36 ml-4 mt-2 h-auto cursor-pointer"
+            src="
+            https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
+            "
+            alt=""
+          />
+        </a>
+        <button
+        title="closeSidebar"
+        class="flex p-1 mt-2 mr-2 flex-col border border-black rounded-md text-gray-700"
+        (click)="closeSidebar()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          class="w-6 h-6"
+        >
+          <path d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      </div>
         <ul class="mt-4 ml-4 space-y-6">
-          <li>
-            <a title="Link" href="/">
-              <img
-                class="w-48 h-auto cursor-pointer"
-                src="
-                https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
-                "
-                alt=""
-              />
-            </a>
-          </li>
-          <li>
-            <button
-              title="closeSidebar"
-              class="flex p-2 flex-col border border-black rounded-full text-gray-700"
-              (click)="closeSidebar()"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                class="w-6 h-6"
-              >
-                <path d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </li>
+       
+    
      
           <li>
             <a href="/collection" class="  w-full h-12">
