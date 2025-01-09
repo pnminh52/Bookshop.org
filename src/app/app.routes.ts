@@ -11,6 +11,7 @@ import { BestComponent } from './page/best/best.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { AboutComponent } from './page/about/about.component';
 import {ProductDetailComponent} from './page/product-detail/product-detail.component'
+import { CartComponent } from './page/cart/cart.component';
 export const routes: Routes = [
   {
     path: 'admin',
@@ -64,6 +65,10 @@ export const routes: Routes = [
   {
     path: 'productDetails/:id',
     component: ProductDetailComponent
+  },
+  {
+    path: 'cart',
+    component: CartComponent
   }
 
 

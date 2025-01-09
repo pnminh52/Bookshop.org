@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../product.service';
 import { Product } from '../../type/Products';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../cart.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -16,7 +17,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private cartService: CartService
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +36,11 @@ export class ProductDetailComponent implements OnInit {
           console.error('Error fetching product details:', err);
         }
       });
+    }
+  }
+  addToCart(): void {
+    if (this.product) {
+      this.cartService.addToCart(this.product); // Gọi service để thêm sản phẩm vào giỏ hàng
     }
   }
 }
