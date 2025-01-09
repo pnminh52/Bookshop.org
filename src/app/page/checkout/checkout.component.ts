@@ -52,13 +52,11 @@ export class CheckoutComponent {
 
           },
           error: (userError) => {
-            console.error('Lỗi khi cập nhật orderHistory:', userError);
             alert('Có lỗi xảy ra khi cập nhật lịch sử đơn hàng.');
           },
         });
       },
       error: (error) => {
-        console.error('Lỗi khi thêm đơn hàng:', error);
         alert('Có lỗi xảy ra khi thanh toán. Vui lòng thử lại.');
       },
     });

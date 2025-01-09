@@ -124,9 +124,14 @@ export class CartService {
 
 
 
-clearCart(): void {
-  this.cartItems = []; 
-  this.cartItemsSubject.next(this.cartItems); 
-}
+  clearCart(): void {
+    this.cartItems = []; 
+    this.cartItemsSubject.next(this.cartItems); 
+    const userKey = localStorage.getItem('userKey');
+    if (userKey) {
+      localStorage.removeItem(`cart_${userKey}`);  // Xóa giỏ hàng khỏi localStorage
+    }
+  }
+  
 
 }
