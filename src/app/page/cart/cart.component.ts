@@ -12,7 +12,6 @@ import { Product } from '../../type/Products';
 })
 export class CartComponent {
   cartItems: Product[] = [];
-  
 
   constructor(private cartService: CartService) {
     this.cartItems = this.cartService.getCartItems(); // Lấy danh sách sản phẩm từ service
