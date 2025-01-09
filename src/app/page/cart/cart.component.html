@@ -27,8 +27,8 @@
       </div>
       <div class="mt-8">
         <p class="text-2xl font-bold">Total: {{ getTotal() | currency }}</p>
-        <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 mt-4">
-          Checkout
+        <button (click)="proceedToCheckout()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 mt-4">
+          Proceed to checkout
         </button>
       </div>
     </div>
