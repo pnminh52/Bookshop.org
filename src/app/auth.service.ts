@@ -2,7 +2,9 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, EMPTY } from 'rxjs';
 import { throwError } from 'rxjs';
-import { switchMap, map } from 'rxjs/operators'; // Thêm map vào đây
+import { switchMap, map } from 'rxjs/operators'; 
+import { CartService } from './cart.service'; 
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,12 @@ export class AuthService {
   private isLoggedInSubject = new BehaviorSubject<boolean>(this.checkLoginStatus());
   isLoggedIn$ = this.isLoggedInSubject.asObservable();
 
-  // Phương thức đăng ký
+  constructor(
+    private cartService: CartService, 
+    private router: Router 
+  ) {}
+
+
   register(data: any): Observable<any> {
     return this.http.get<any[]>(`${this.apiUrl}/users?email=${data.email}`).pipe(
       switchMap((existingUsers) => {
@@ -27,29 +34,33 @@ export class AuthService {
     );
   }
 
-  // Phương thức đăng nhập
+
   login(email: string, password: string): Observable<any> {
     return this.http.get<any[]>(`${this.apiUrl}/users?email=${email}&password=${password}`).pipe(
       map(users => {
         if (users.length > 0) {
-          localStorage.setItem('user', JSON.stringify(users[0])); // Lưu thông tin người dùng
-          this.isLoggedInSubject.next(true); // Cập nhật trạng thái đăng nhập
+          const user = users[0];
+          localStorage.setItem('user', JSON.stringify(user));
+          this.isLoggedInSubject.next(true); 
+          this.cartService.loadCartOnLogin(); 
         }
         return users;
       })
     );
   }
 
-  // Kiểm tra xem người dùng có đăng nhập hay không
+
   private checkLoginStatus(): boolean {
     return !!localStorage.getItem('user');
   }
 
-  // Phương thức logout
   logout(): Observable<void> {
-    localStorage.removeItem('user');
-    this.isLoggedInSubject.next(false);
+    localStorage.removeItem('user'); 
+    this.isLoggedInSubject.next(false); 
+    this.cartService.clearCart(); 
+    this.router.navigate(['/']); 
     alert('Đăng xuất thành công!');
     return EMPTY; 
   }
+  
 }

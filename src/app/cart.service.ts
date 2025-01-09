@@ -4,39 +4,41 @@ import { BehaviorSubject } from 'rxjs';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root', // Service sẽ được cung cấp ở root level
+  providedIn: 'root',
 })
 export class CartService {
   private cartItems: Product[] = [];
   private cartItemsSubject = new BehaviorSubject<Product[]>([]);
+  private userKey: string | null = null;
 
   constructor() {
-    // Load cart items from localStorage khi service khởi tạo
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-      this.cartItems = JSON.parse(savedCart);
-      this.cartItemsSubject.next(this.cartItems);
+
+    const savedUserKey = localStorage.getItem('userKey');
+    if (savedUserKey) {
+      this.userKey = savedUserKey;
+      this.loadCartForUser(savedUserKey);
     }
   }
 
-  // Lấy danh sách sản phẩm trong giỏ hàng
+
   getCartItems(): Product[] {
     return this.cartItems;
   }
+
 
   addToCart(product: Product): void {
     const existingProduct = this.cartItems.find((item) => item.id === product.id);
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
-      product.quantity = product.quantity || 1; // Mặc định quantity là 1 nếu không được truyền vào
+      product.quantity = 1; 
       this.cartItems.push(product);
     }
     this.cartItemsSubject.next(this.cartItems);
-    this.saveCart();
+    this.saveCart(); 
   }
 
-  // Xóa sản phẩm khỏi giỏ hàng
+
   removeFromCart(product: Product): void {
     const existingProduct = this.cartItems.find((item) => item.id === product.id);
     if (existingProduct) {
@@ -47,10 +49,10 @@ export class CartService {
       }
     }
     this.cartItemsSubject.next(this.cartItems);
-    this.saveCart();
+    this.saveCart(); 
   }
 
-  // Tính tổng giá trị giỏ hàng
+
   getTotal(): number {
     return this.cartItems.reduce((total, item) => total + item.price_after_discount * item.quantity, 0);
   }
@@ -58,9 +60,11 @@ export class CartService {
   getCartItemCount(): number {
     return this.cartItems.length;
   }
+
   getCartItemsObservable(): Observable<Product[]> {
     return this.cartItemsSubject.asObservable();
   }
+
 
   increaseQuantity(product: Product): void {
     const existingProduct = this.cartItems.find((item) => item.id === product.id);
@@ -81,10 +85,48 @@ export class CartService {
       }
     }
     this.cartItemsSubject.next(this.cartItems);
-    this.saveCart();
+    this.saveCart(); 
   }
 
   private saveCart(): void {
-    localStorage.setItem('cart', JSON.stringify(this.cartItems));
+    if (this.userKey) {
+      localStorage.setItem(`cart_${this.userKey}`, JSON.stringify(this.cartItems)); 
+    }
   }
+  
+
+  loadCartForUser(userId: string): void {
+    if (userId) {
+      const savedCart = localStorage.getItem(`cart_${userId}`); 
+      if (savedCart) {
+        this.cartItems = JSON.parse(savedCart);
+        this.cartItemsSubject.next(this.cartItems);
+      }
+    } else {
+      console.error('User ID is required to load the cart');
+    }
+  }
+  
+
+  loadCartOnLogin(): void {
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    if (user && user.id) {
+      this.userKey = user.id;
+      if (this.userKey) {
+        localStorage.setItem('userKey', this.userKey); 
+        this.loadCartForUser(this.userKey); 
+      } else {
+        console.error('User ID is missing!');
+      }
+    }
+  }
+  
+
+
+
+clearCart(): void {
+  this.cartItems = []; 
+  this.cartItemsSubject.next(this.cartItems); 
+}
+
 }
