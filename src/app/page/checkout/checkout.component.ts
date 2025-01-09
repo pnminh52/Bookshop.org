@@ -48,6 +48,8 @@ export class CheckoutComponent {
             alert('Thanh toán thành công!');
             this.router.navigate(['/']);
             this.cartService.clearCart();
+            
+
           },
           error: (userError) => {
             console.error('Lỗi khi cập nhật orderHistory:', userError);

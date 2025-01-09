@@ -13,6 +13,7 @@ import { AboutComponent } from './page/about/about.component';
 import {ProductDetailComponent} from './page/product-detail/product-detail.component'
 import { CartComponent } from './page/cart/cart.component';
 import { CheckoutComponent } from './page/checkout/checkout.component';
+import { OrderComponent } from './page/order/order.component';
 export const routes: Routes = [
   {
     path: 'admin',
@@ -74,6 +75,10 @@ export const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutComponent
+  },
+  {
+    path: 'order',
+    component: OrderComponent
   }
 
 

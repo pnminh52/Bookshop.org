@@ -124,9 +124,13 @@ export class CartService {
 
 
 
-clearCart(): void {
-  this.cartItems = []; 
-  this.cartItemsSubject.next(this.cartItems); 
-}
+  clearCart(): void {
+    this.cartItems = []; 
+    this.cartItemsSubject.next(this.cartItems); 
+    if (this.userKey) {
+      localStorage.removeItem(`cart_${this.userKey}`);
+    }
+  }
+  
 
 }
