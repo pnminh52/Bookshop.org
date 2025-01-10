@@ -18,8 +18,3 @@ html::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
-.success-snackbar {
-  background-color: #4CAF50 !important;  /* Màu nền xanh lá */
-  color: white !important;                /* Màu chữ trắng */
-}
-

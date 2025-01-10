@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../order.service';
 import { CommonModule } from '@angular/common';
-import { MatSnackBar } from '@angular/material/snack-bar'; // Import MatSnackBar
-
+import { PopupComponent } from '../../components/popup/popup.component'; // Import PopupComponent
+import { MatDialog } from '@angular/material/dialog'; // Import MatDialog
 @Component({
   standalone: true,
   selector: 'app-order',
-  imports: [CommonModule],
+  imports: [CommonModule, PopupComponent], // Đảm bảo bạn đã import PopupComponent
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
@@ -14,7 +14,10 @@ export class OrderComponent implements OnInit {
   orders: any[] = [];
   user: any = null;
 
-  constructor(private orderService: OrderService, private snackBar: MatSnackBar) {}
+  constructor(
+    private orderService: OrderService, 
+    private dialog: MatDialog // Inject MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem('user') || '{}');
@@ -31,22 +34,25 @@ export class OrderComponent implements OnInit {
   }
 
   cancelOrder(orderId: string) {
-    this.orderService.updateOrderStatus(orderId, 'Cancelled').subscribe({
-      next: () => {
-        // Cập nhật lại danh sách đơn hàng sau khi hủy
-        this.orders = this.orders.map(order => 
-          order.id === orderId ? { ...order, status: 'Cancelled' } : order
-        );
-        this.snackBar.open('Đơn hàng đã được hủy thành công!', 'Đóng', {
-          verticalPosition: 'top',
-          horizontalPosition: 'center',
-          duration: 3000,
-          panelClass: ['success-snackbar'] // Áp dụng class tùy chỉnh
+    this.dialog.open(PopupComponent, { // Mở Popup khi bấm hủy đơn hàng
+      data: {
+        message: 'Bạn có chắc chắn muốn hủy đơn hàng này?'
+      }
+    }).afterClosed().subscribe(result => {
+      if (result === 'confirm') {
+        // Nếu người dùng xác nhận, hủy đơn hàng
+        this.orderService.updateOrderStatus(orderId, 'Cancelled').subscribe({
+          next: () => {
+            this.orders = this.orders.map(order =>
+              order.id === orderId ? { ...order, status: 'Cancelled' } : order
+            );
+            alert('Đơn hàng đã được hủy thành công!');
+          },
+          error: (error) => {
+            // console.error('Lỗi khi hủy đơn hàng:', error);
+            alert('Có lỗi xảy ra khi hủy đơn hàng.');
+          }
         });
-      },
-      error: (error) => {
-        console.error('Lỗi khi hủy đơn hàng:', error);
-        this.snackBar.open('Có lỗi xảy ra khi hủy đơn hàng. Vui lòng thử lại.', 'Đóng', { duration: 3000 });
       }
     });
   }
