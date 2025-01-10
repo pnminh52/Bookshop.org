@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-wishlist',
+  standalone: true,
   templateUrl: './wishlist.component.html',
   imports: [CommonModule],
   styleUrls: ['./wishlist.component.css']
