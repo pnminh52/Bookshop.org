@@ -13,8 +13,9 @@
       Every purchase financially supports local independent bookstores!
     </p>
   </div> -->
-  <div
-    class="container max-w-screen-xl mx-auto flex items-center justify-between py-3 font-medium"
+  <div class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <div
+    class="container max-w-screen-xl h-16 mx-auto flex items-center justify-between py-3 font-medium"
   >
     <a title="Link" href="/">
       <img
@@ -160,6 +161,7 @@
       <!-- Hamburger Icon (Visible only on small screens) -->
       <div class="sm:hidden cursor-pointer" (click)="toggleSidebar()">
         <svg
+        *ngIf="!isSidebarVisible"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
@@ -169,19 +171,30 @@
         >
           <path d="M3 6h18M3 12h18M3 18h18"></path>
         </svg>
+        <svg
+        *ngIf="isSidebarVisible"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        class="w-[24px] h-[24px]"
+      >
+        <path d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
       </div>
       <!-- Sidebar -->
       <div
         [ngClass]="{
-          'fixed top-0 left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
+          'fixed top-16 left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
           'transform-none': isSidebarVisible,
           'transform -translate-x-full': !isSidebarVisible
         }"
       >
-      <div class="flex  items-center justify-between w-full">
+      <!-- <div class="flex  items-center justify-between w-full">
         <a title="Link" href="/">
           <img
-            class="w-36 ml-4 mt-2 h-auto cursor-pointer"
+            class="w-40 ml-4 mt-2 h-auto cursor-pointer"
             src="
             https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
             "
@@ -204,8 +217,8 @@
           <path d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      </div>
-        <ul class="mt-4 ml-4 space-y-6">
+      </div> -->
+        <ul class="mt-4 ml-3 space-y-6">
        
     
      
@@ -253,5 +266,7 @@
       </div>
     </div>
   </div>
+  </div>
+
 </header>
 
