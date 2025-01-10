@@ -28,20 +28,4 @@ export class OrderComponent implements OnInit {
       });
     }
   }
-  // order.component.ts
-cancelOrder(orderId: string) {
-  this.orderService.updateOrderStatus(orderId, 'Cancelled').subscribe({
-    next: () => {
-      // Cập nhật lại danh sách đơn hàng sau khi hủy
-      this.orders = this.orders.map(order => 
-        order.id === orderId ? { ...order, status: 'Cancelled' } : order
-      );
-      alert('Đơn hàng đã được hủy thành công.');
-    },
-    error: (error) => {
-      console.error('Lỗi khi hủy đơn hàng:', error);
-      alert('Có lỗi xảy ra khi hủy đơn hàng.');
-    }
-  });
-}
 }
