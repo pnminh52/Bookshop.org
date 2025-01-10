@@ -30,21 +30,24 @@ export class OrderComponent implements OnInit {
     }
   }
 
-    // order.component.ts
-cancelOrder(orderId: string) {
-  this.orderService.updateOrderStatus(orderId, 'Cancelled').subscribe({
-    next: () => {
-      // Cập nhật lại danh sách đơn hàng sau khi hủy
-      this.orders = this.orders.map(order => 
-        order.id === orderId ? { ...order, status: 'Cancelled' } : order
-      );
-      alert('Đơn hàng đã được hủy thành công.');
-    },
-    error: (error) => {
-      console.error('Lỗi khi hủy đơn hàng:', error);
-      alert('Có lỗi xảy ra khi hủy đơn hàng.');
-    }
-  });
-}
-
+  cancelOrder(orderId: string) {
+    this.orderService.updateOrderStatus(orderId, 'Cancelled').subscribe({
+      next: () => {
+        // Cập nhật lại danh sách đơn hàng sau khi hủy
+        this.orders = this.orders.map(order => 
+          order.id === orderId ? { ...order, status: 'Cancelled' } : order
+        );
+        this.snackBar.open('Đơn hàng đã được hủy thành công!', 'Đóng', {
+          verticalPosition: 'top',
+          horizontalPosition: 'center',
+          duration: 3000,
+          panelClass: ['success-snackbar'] // Áp dụng class tùy chỉnh
+        });
+      },
+      error: (error) => {
+        console.error('Lỗi khi hủy đơn hàng:', error);
+        this.snackBar.open('Có lỗi xảy ra khi hủy đơn hàng. Vui lòng thử lại.', 'Đóng', { duration: 3000 });
+      }
+    });
+  }
 }
