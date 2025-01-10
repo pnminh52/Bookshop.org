@@ -8,11 +8,11 @@
   } */
 </style>
 <header>
-  <div class="bg-[#FFF1E6] cursor-pointer">
+  <!-- <div class="bg-[#FFF1E6] cursor-pointer">
     <p class="flex mx-auto items-center justify-center text-sm underline h-12">
       Every purchase financially supports local independent bookstores!
     </p>
-  </div>
+  </div> -->
   <div
     class="container max-w-screen-xl mx-auto flex items-center justify-between py-3 font-medium"
   >
@@ -26,38 +26,29 @@
       />
     </a>
 
-    <ul class="hidden sm:flex gap-5 text-sm text-gray-700">
-      <li>
-        <a href="/" class="hover:no-underline hover:text-inherit flex flex-col items-center gap-1">
-          <p>Home</p>
-        </a>
-      </li>
-      <li>
-        <a href="/collection" class="hover:no-underline hover:text-inherit flex flex-col items-center gap-1">
-          <p>Collection</p>
-        </a>
-      </li>
-      <li>
-        <a href="/new" class="hover:no-underline hover:text-inherit flex flex-col items-center gap-1">
-          <p>New Books</p>
-        </a>
-      </li>
-      <li>
-        <a href="/best" class="hover:no-underline hover:text-inherit flex flex-col items-center gap-1">
-          <p>Best Sellers</p>
-        </a>
-      </li>
-      <li>
-        <a href="/about" class="hover:no-underline hover:text-inherit flex flex-col items-center gap-1">
-          <p>About Us</p>
-        </a>
-      </li>
-      <li>
-        <a href="/contact" class="hover:no-underline hover:text-inherit flex flex-col items-center gap-1">
-          <p>Contact</p>
-        </a>
-      </li>
-    </ul>
+    <div class="flex justify-center items-center gap-5">
+      <a href="/" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+        Home
+      </a>
+      <a href="/collection" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+        Collection
+      </a>
+      <a href="/new" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+        New Books
+      </a>
+      <a href="/best" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+        Best Sellers
+      </a>
+      <a href="/about" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+        About Us
+      </a>
+      <a href="/contact" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+        Contact
+      </a>
+    </div>
+    
+    
+   
     <div class="flex items-center gap-5">
       <!-- Profile Icon (SVG) -->
       <div class="group relative">
@@ -80,8 +71,14 @@
           <div
             class="flex flex-col gap-2 w-40 py-2 px-5 bg-slate-100 text-gray-500 rounded"
           >
-            <a href="/login" class="cursor-pointer hover:no-underline hover:text-inherit">Profile</a>
-            <a (click)="checkLoginBeforeNavigate('/order', $event)" href="/order" class="cursor-pointer hover:no-underline hover:text-inherit ">Order</a>
+            <a *ngIf="isLoggedIn" href="/login" class="cursor-pointer hover:no-underline hover:text-inherit">Profile</a>
+            <a *ngIf="isLoggedIn" href="/order" class="cursor-pointer hover:no-underline hover:text-inherit ">Order</a>
+            <a
+              *ngIf="!isLoggedIn"
+              href="/register"
+              class="cursor-pointer "
+              >Register</a
+            >
             <a
               *ngIf="!isLoggedIn"
               href="/login"
@@ -257,9 +254,4 @@
     </div>
   </div>
 </header>
-<div class="bg-white  border-t border-gray-400 ">
-  <h1 class="cursor-pointer flex mx-auto items-center justify-center h-12">
-    <p class="text-indigo-700 font-bold mr-1">$35,377,191.30</p>
-    raised for local bookstores
-  </h1>
-</div>
+

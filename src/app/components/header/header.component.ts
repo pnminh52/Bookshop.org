@@ -59,15 +59,6 @@ export class HeaderComponent implements OnInit {
 closeSidebar(){
   this.isSidebarVisible = false
 }
-// header.component.ts
-checkLoginBeforeNavigate(route: string, event: Event): void {
-  event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-  if (!this.isLoggedIn) {
-    alert('Vui lòng đăng nhập để truy cập trang này.');
-    this.router.navigate(['/login']);
-  } else {
-    this.router.navigate([route]);
-  }
-}
+
 
 }
