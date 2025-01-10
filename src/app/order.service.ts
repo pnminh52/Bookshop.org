@@ -37,8 +37,14 @@ export class OrderService {
     );
   }
   // order.service.ts
-getUserOrders(userId: string): Observable<any> {
-  return this.http.get(`${this.apiUrl}?userId=${userId}`);
-}
+  getUserOrders(userId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}?userId=${userId}`);
+  }
+  // order.service.ts
+  updateOrderStatus(orderId: string, newStatus: string): Observable<any> {
+    const url = `${this.apiUrl}/${orderId}`;
+    return this.http.patch(url, { status: newStatus });
+  }
+  
 
 }
