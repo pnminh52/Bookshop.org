@@ -186,7 +186,7 @@
       <!-- Sidebar -->
       <div
         [ngClass]="{
-          'fixed top-16 left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
+          'fixed top-12 left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
           'transform-none': isSidebarVisible,
           'transform -translate-x-full': !isSidebarVisible
         }"
@@ -249,6 +249,38 @@
           </li>
           <li>
             <a
+            *ngIf="isLoggedIn"
+            href="/search"
+            class="cursor-pointer "
+            >Search</a
+          >
+          </li>
+          <li>
+            <a
+            *ngIf="isLoggedIn"
+            href="/cart"
+            class="cursor-pointer "
+            >Cart</a
+          >
+          </li>
+          <li>
+            <a
+            *ngIf="isLoggedIn"
+            href="/order"
+            class="cursor-pointer "
+            >Order</a
+          >
+          </li>
+          <li>
+            <a
+            *ngIf="isLoggedIn"
+            href="/prodile"
+            class="cursor-pointer "
+            >Profile</a
+          >
+          </li>
+          <li>
+            <a
             *ngIf="!isLoggedIn"
             href="/login"
             class="cursor-pointer "
@@ -261,6 +293,7 @@
             >Logout</a
           >
           </li>
+          
       
         </ul>
       </div>
