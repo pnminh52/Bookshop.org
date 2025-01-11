@@ -6,7 +6,7 @@ import { MatDialog } from '@angular/material/dialog'; // Import MatDialog
 @Component({
   standalone: true,
   selector: 'app-order',
-  imports: [CommonModule, PopupComponent], // Đảm bảo bạn đã import PopupComponent
+  imports: [CommonModule],
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })

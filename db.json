@@ -537,42 +537,14 @@
       },
       "paymentMethod": "Credit Card",
       "orderHistory": []
-    }
-  ],
-  "orders": [
-  ],
-  "wishlist": [
+    },
     {
-      "id": "6cba",
-      "userId": "11e2",
-      "product": {
-        "id": "1",
-        "title": "I'll Come to You",
-        "price": 17.49,
-        "price_after_discount": 13.99,
-        "category": "Fiction",
-        "author": "Rebecca Kauffman",
-        "description": "Mô tả sách 2",
-        "image_url": "https://images-us.bookshop.org/ingram/9781640096714.jpg?width=384&v=v2",
-        "rating": 4,
-        "reviews": [
-          {
-            "user_id": "87fa",
-            "comment": "Học rất bổ ích.",
-            "rating": 4
-          },
-          {
-            "user_id": "11e2",
-            "comment": "Rất dễ hiểu.",
-            "rating": 5
-          }
-        ],
-        "discount": 20,
-        "stock": 30,
-        "category_id": "2",
-        "publish_date": "2023-12-15"
-      }
+      "id": "49e6",
+      "email": "2@gmail.com",
+      "password": "111111",
+      "role": "user"
     }
-
-  ]
+  ],
+  "orders": [],
+  "wishlist": []
 }

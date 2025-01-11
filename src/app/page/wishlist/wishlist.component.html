@@ -1,8 +1,16 @@
+<!-- Thông báo khi xóa thành công sản phẩm -->
+<div *ngIf="successMessage" class="alert alert-success">
+  {{ successMessage }}
+</div>
+
+<!-- Danh sách sản phẩm trong wishlist -->
 <div *ngIf="wishlist.length > 0; else noWishlist">
   <h2>Wishlist</h2>
   <ul>
-    <li *ngFor="let product of wishlist">
-      {{ product.title }} ({{ product.price_after_discount }})
+    <li *ngFor="let item of wishlist">
+      <img class="w-1/2" src={{item.image_url}} alt="">
+      {{ item.title }} by {{ item.author }} ({{ item.price_after_discount }} USD)
+      <button (click)="removeFromWishlist(item.id)">Remove</button>  <!-- Xóa sản phẩm khỏi wishlist -->
     </li>
   </ul>
 </div>

@@ -4,21 +4,23 @@ import { Observable } from 'rxjs';
 import { Product } from '../app/type/Products';
 
 @Injectable({
-    providedIn: 'root'
-  })
-  export class WishlistService {
-    private apiUrl = 'http://localhost:3000/wishlist'; // Thay đổi endpoint
+  providedIn: 'root'
+})
+export class WishlistService {
+  private apiUrl = 'http://localhost:3000/wishlist';
 
-    getWishlist(userId: string): Observable<{ products: Product[] }> {
-      return this.http.get<{ products: Product[] }>(`${this.apiUrl}?userId=${userId}`);
-    } // Base URL
-  
-    constructor(private http: HttpClient) {}
-  
+  constructor(private http: HttpClient) {}
 
-  
-    addToWishlist(userId: string, product: Product): Observable<any> {
-      return this.http.post(`${this.apiUrl}/${userId}/wishlist`, { product });
-    }
+  getWishlist(userId: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiUrl}?userId=${userId}`);
+  }
+
+  addToWishlist(userId: string, product: Product): Observable<Product> {
+    return this.http.post<Product>(`${this.apiUrl}?userId=${userId}`, product);
+  }
+  removeFromWishlist(userId: string, productId: string): Observable<void> {
+    return this.http.delete<void>(`http://localhost:3000/wishlist/${productId}`);
   }
   
+  
+}
