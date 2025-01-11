@@ -16,6 +16,7 @@ export class HomepageComponent implements OnInit {
   limitedProducts: Product[] = [];
   novelCategory: Product[] = [];
   romanceCategory: Product[] = [];
+  fantasyCategory: Product[] = [];
 
   currentIndex: number = 0;
 
@@ -32,6 +33,7 @@ export class HomepageComponent implements OnInit {
         this.limitedProducts = this.products.slice(0,6);
         // this.filterNovelCategory();
         this.filterRomanceCategory();
+        this.filterFantasyCategory();
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -43,6 +45,9 @@ export class HomepageComponent implements OnInit {
   //   this.novelCategory = this.products.filter(product => product.category === 'Fiction');
   // }
   filterRomanceCategory(): void {
-    this.romanceCategory = this.products.filter(product => product.category === 'Romance');
+    this.romanceCategory = this.products.filter(product => product.category === 'Romance').slice(0,6);
+  }
+  filterFantasyCategory(): void {
+    this.fantasyCategory = this.products.filter(product => product.category === 'Fantasy').slice(0,6);
   }
 }

@@ -2,7 +2,7 @@
   .hidden {
     display: none;
   }
-/* 
+  /* 
 
   h1,
   p {
@@ -12,8 +12,8 @@
   } */
 </style>
 
-   <!-- \end{code} -->
-<div  id="globalNavBanner" class="noncpn image flex justify-center">
+<!-- \end{code} -->
+<div id="globalNavBanner" class="noncpn image flex justify-center">
   <div class="globalNavBanner globalBannerWrap primary loaded">
     <a class="globalNavBannerLink" href=""
       ><picture
@@ -142,7 +142,7 @@
     });
   </script>
 </div>
-  <!-- \end{code} -->
+<!-- \end{code} -->
 <div class="skinny-hero">
   <a
     class="skinny-hero-link"
@@ -177,38 +177,36 @@
     </picture>
   </a>
 </div>
-  <!-- \end{code} -->
+<!-- \end{code} -->
 <div class="container max-w-screen-xl mx-auto">
   <!-- \end{code} -->
-  <div class=" text-center md:text-left mt-4 mb-4">
-    <h1 class="mb-0">Best seller - Spring 2025</h1>
-    <p class="underline">Number of books with highest sales as of January 2025</p>
-   
+  <div class="md:text-left mt-4 mb-4">
+    <h1 class="mb-0 cursor-pointer">Best seller - Spring 2025</h1>
+    <p class="  cursor-pointer">
+      Number of books with highest sales as of January 2025
+    </p>
   </div>
-    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
-      <div
-        *ngFor="let product of limitedProducts"
-        class="cursor-pointer p-1"
-        [routerLink]="['/productDetails', product.id]"
-      >
-        <img
-          [src]="product.image_url"
-          alt="{{ product.title }}"
-          class="w-auto h-auto object-cover rounded-md mb-1"
-        />
-        <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
-        <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
-        <div class="flex gap-2 items-center">
-          <p class="text-xl font-medium">
-            {{ product.price_after_discount }}$
-          </p>
-          <p class="text-md font-medium text-red-500 self-center">
-            <s>{{ product.price }}$</s>
-          </p>
-        </div>
-        
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div
+      *ngFor="let product of limitedProducts"
+      class="cursor-pointer p-1"
+      [routerLink]="['/productDetails', product.id]"
+    >
+      <img
+        [src]="product.image_url"
+        alt="{{ product.title }}"
+        class="w-auto h-auto object-cover rounded-md mb-1"
+      />
+      <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-medium text-red-500 self-center">
+          <s>{{ product.price }}$</s>
+        </p>
       </div>
     </div>
+  </div>
 
   <!-- \end{code} -->
   <div class="skinny-hero focus">
@@ -246,35 +244,33 @@
     </a>
   </div>
   <!-- \end{code} -->
-  <div class=" text-center md:text-left mt-4 mb-4">
-    <h1 class="mb-0">Top Romance Reads - Spring 2025</h1>
-    <p class="underline">Dive into the world of love and passion with the most popular romance novels, capturing hearts and topping the charts in January 2025.</p>
-   
+  <div class="md:text-left mt-4 mb-4">
+    <h1 class="mb-0 cursor-pointer">Top Romance Reads - Spring 2025</h1>
+    <p class="cursor-pointer">
+      Dive into love with the top romance novels, capturing hearts in January 2025.
+    </p>
   </div>
-    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
-      <div
-        *ngFor="let product of romanceCategory"
-        class="cursor-pointer p-1"
-        [routerLink]="['/productDetails', product.id]"
-      >
-        <img
-          [src]="product.image_url"
-          alt="{{ product.title }}"
-          class="w-auto h-auto object-cover rounded-md mb-1"
-        />
-        <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
-        <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
-        <div class="flex gap-2 items-center">
-          <p class="text-xl font-medium">
-            {{ product.price_after_discount }}$
-          </p>
-          <p class="text-md font-medium text-red-500 self-center">
-            <s>{{ product.price }}$</s>
-          </p>
-        </div>
-        
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div
+      *ngFor="let product of romanceCategory"
+      class="cursor-pointer p-1"
+      [routerLink]="['/productDetails', product.id]"
+    >
+      <img
+        [src]="product.image_url"
+        alt="{{ product.title }}"
+        class="w-auto h-auto object-cover rounded-md mb-1"
+      />
+      <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-medium text-red-500 self-center">
+          <s>{{ product.price }}$</s>
+        </p>
       </div>
     </div>
+  </div>
   <!-- \end{code} -->
   <div class="skinny-hero">
     <a
@@ -311,7 +307,33 @@
     </a>
   </div>
   <!-- \end{code} -->
-  
+  <div class="md:text-left mt-4 mb-4">
+    <h1 class="mb-0 cursor-pointer">Top Fantasy Reads - Spring 2025</h1>
+    <p class="underline cursor-pointer">Unleash your imagination with the top fantasy novels of 2025.</p>
+
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div
+      *ngFor="let product of fantasyCategory"
+      class="cursor-pointer p-1"
+      [routerLink]="['/productDetails', product.id]"
+    >
+      <img
+        [src]="product.image_url"
+        alt="{{ product.title }}"
+        class="w-auto h-auto object-cover rounded-md mb-1"
+      />
+      <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-medium text-red-500 self-center">
+          <s>{{ product.price }}$</s>
+        </p>
+      </div>
+    </div>
+  </div>
   <!-- \end{code} -->
 </div>
-  <!-- \end{code} -->
+<!-- \end{code} -->
