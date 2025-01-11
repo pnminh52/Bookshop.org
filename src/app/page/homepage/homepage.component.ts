@@ -15,17 +15,14 @@ export class HomepageComponent implements OnInit {
   products: Product[] = [];
   limitedProducts: Product[] = [];
   novelCategory: Product[] = [];
-  sliderImages: string[] = [
-    'https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/310/original/Herod_BookshopAds_2048x600.gif?1736265886',
-    'https://images-production.bookshop.org/spree/promo_banner_slides/desktop_images/311/original/DARKMOTHERLAND_2048x600.jpg?1736265945'
-  ];
+  romanceCategory: Product[] = [];
+
   currentIndex: number = 0;
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.loadProducts();
-    this.startSlider();
   }
 
   loadProducts(): void {
@@ -34,6 +31,7 @@ export class HomepageComponent implements OnInit {
         this.products = data;
         this.limitedProducts = this.products.slice(0,6);
         // this.filterNovelCategory();
+        this.filterRomanceCategory();
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -44,10 +42,7 @@ export class HomepageComponent implements OnInit {
   // filterNovelCategory(): void {
   //   this.novelCategory = this.products.filter(product => product.category === 'Fiction');
   // }
-
-  startSlider(): void {
-    setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.sliderImages.length;
-    }, 3000);
+  filterRomanceCategory(): void {
+    this.romanceCategory = this.products.filter(product => product.category === 'Romance');
   }
 }

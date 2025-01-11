@@ -178,37 +178,38 @@
   </a>
 </div>
   <!-- \end{code} -->
-<div class="container max-w-screen-xl mx-auto mt-2">
+<div class="container max-w-screen-xl mx-auto">
   <!-- \end{code} -->
-  <div class="mt-4">
-    <div class="text-center justify-center mb-2">
-      <h1 class="text-lg">Best seller - Spring 2025</h1>
-      <p>Number of books with highest sales as of January 2025</p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-6">
+  <div class=" text-center md:text-left mt-4 mb-4">
+    <h1 class="mb-0">Best seller - Spring 2025</h1>
+    <p class="underline">Number of books with highest sales as of January 2025</p>
+   
+  </div>
+    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
       <div
         *ngFor="let product of limitedProducts"
-        class="cursor-pointer p-2"
+        class="cursor-pointer p-1"
         [routerLink]="['/productDetails', product.id]"
       >
         <img
           [src]="product.image_url"
           alt="{{ product.title }}"
-          class="w-auto h-auto object-cover mb-2"
+          class="w-auto h-auto object-cover rounded-md mb-1"
         />
-        <h2 class="text-xl font-semibold">{{ product.title }}</h2>
-        <p class="text-md font-medium">{{ product.author }}</p>
-        <div class="flex gap-2">
-          <p class="text-xl font-semibold">
+        <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+        <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+        <div class="flex gap-2 items-center">
+          <p class="text-xl font-medium">
             {{ product.price_after_discount }}$
           </p>
-          <p class="text-md font-semibold text-red-500">
+          <p class="text-md font-medium text-red-500 self-center">
             <s>{{ product.price }}$</s>
           </p>
         </div>
+        
       </div>
     </div>
-  </div>
+
   <!-- \end{code} -->
   <div class="skinny-hero focus">
     <a
@@ -245,35 +246,35 @@
     </a>
   </div>
   <!-- \end{code} -->
-  <div class="mt-4">
-    <div class="text-center justify-center mb-2">
-      <h1 class="text-lg">Best seller - Spring 2025</h1>
-      <p>Number of books with highest sales as of January 2025</p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-6">
+  <div class=" text-center md:text-left mt-4 mb-4">
+    <h1 class="mb-0">Top Romance Reads - Spring 2025</h1>
+    <p class="underline">Dive into the world of love and passion with the most popular romance novels, capturing hearts and topping the charts in January 2025.</p>
+   
+  </div>
+    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
       <div
-        *ngFor="let product of limitedProducts"
-        class="cursor-pointer p-2"
+        *ngFor="let product of romanceCategory"
+        class="cursor-pointer p-1"
         [routerLink]="['/productDetails', product.id]"
       >
         <img
           [src]="product.image_url"
           alt="{{ product.title }}"
-          class="w-auto h-auto object-cover mb-2"
+          class="w-auto h-auto object-cover rounded-md mb-1"
         />
-        <h2 class="text-xl font-semibold">{{ product.title }}</h2>
-        <p class="text-md font-medium">{{ product.author }}</p>
-        <div class="flex gap-2">
-          <p class="text-xl font-semibold">
+        <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+        <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+        <div class="flex gap-2 items-center">
+          <p class="text-xl font-medium">
             {{ product.price_after_discount }}$
           </p>
-          <p class="text-md font-semibold text-red-500">
+          <p class="text-md font-medium text-red-500 self-center">
             <s>{{ product.price }}$</s>
           </p>
         </div>
+        
       </div>
     </div>
-  </div>
   <!-- \end{code} -->
   <div class="skinny-hero">
     <a
@@ -310,35 +311,7 @@
     </a>
   </div>
   <!-- \end{code} -->
-  <div class="mt-4">
-    <div class="text-center justify-center mb-2">
-      <h1 class="text-lg">Best seller - Spring 2025</h1>
-      <p>Number of books with highest sales as of January 2025</p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-6">
-      <div
-        *ngFor="let product of limitedProducts"
-        class="cursor-pointer p-2"
-        [routerLink]="['/productDetails', product.id]"
-      >
-        <img
-          [src]="product.image_url"
-          alt="{{ product.title }}"
-          class="w-auto h-auto object-cover mb-2"
-        />
-        <h2 class="text-xl font-semibold">{{ product.title }}</h2>
-        <p class="text-md font-medium">{{ product.author }}</p>
-        <div class="flex gap-2">
-          <p class="text-xl font-semibold">
-            {{ product.price_after_discount }}$
-          </p>
-          <p class="text-md font-semibold text-red-500">
-            <s>{{ product.price }}$</s>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  
   <!-- \end{code} -->
 </div>
   <!-- \end{code} -->
