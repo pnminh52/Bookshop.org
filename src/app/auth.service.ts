@@ -41,6 +41,7 @@ export class AuthService {
         if (users.length > 0) {
           const user = users[0];
           localStorage.setItem('user', JSON.stringify(user));
+          localStorage.setItem('userId', user.id);
           this.isLoggedInSubject.next(true); 
           this.cartService.loadCartOnLogin(); 
         }
@@ -56,6 +57,7 @@ export class AuthService {
 
   logout(): Observable<void> {
     localStorage.removeItem('user'); 
+    localStorage.removeItem('userId');
     this.isLoggedInSubject.next(false); 
     this.cartService.clearCart(); 
     this.router.navigate(['/']); 

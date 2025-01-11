@@ -4,8 +4,7 @@ import { ProductService } from '../../product.service';
 import { Product } from '../../type/Products';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../cart.service';
-import { WishListService } from '../../wishlist.service';
-
+import { WishlistService } from '../../wishlist.service';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
@@ -15,16 +14,17 @@ import { WishListService } from '../../wishlist.service';
 })
 export class ProductDetailComponent implements OnInit {
   product: Product | undefined;
-
+  userId: string | null = null;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
     private cartService: CartService,
-    private wishListService: WishListService
+    private wishlistService: WishlistService
   ) {}
 
   ngOnInit(): void {
     this.loadProductDetails();
+    this.userId = localStorage.getItem('userId');
   }
 
   loadProductDetails(): void {
@@ -42,14 +42,27 @@ export class ProductDetailComponent implements OnInit {
   }
   addToCart(): void {
     if (this.product) {
-      this.cartService.addToCart(this.product); // Gọi service để thêm sản phẩm vào giỏ hàng
+      this.cartService.addToCart(this.product); 
     }
   }
   addToWishlist(): void {
-    if (this.product) {
-      this.wishListService.addProductToWishList(this.product);
+    if (this.product && this.userId) {
+      this.wishlistService.addToWishlist(this.userId, this.product).subscribe({
+        next: (response) => {
+          alert('Product added to wishlist:');
+        },
+        error: (err) => {
+          console.error('Error adding to wishlist:', err);
+        }
+      });
+    } else {
+      console.error('User  ID or Product is missing');
     }
   }
+  
+  
+
+
   
   
 }

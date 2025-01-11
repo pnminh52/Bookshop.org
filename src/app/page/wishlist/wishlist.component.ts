@@ -1,31 +1,43 @@
-// wishlist.component.ts
 import { Component, OnInit } from '@angular/core';
-import { WishListService } from '../../wishlist.service';
+import { WishlistService } from '../../wishlist.service';
 import { Product } from '../../type/Products';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-wishlist',
   standalone: true,
+  imports: [CommonModule ],
   templateUrl: './wishlist.component.html',
-  imports: [CommonModule],
   styleUrls: ['./wishlist.component.css']
 })
-export class WishListComponent implements OnInit {
-  wishList: Product[] = [];
+export class WishlistComponent implements OnInit {
+  userId: string | null = null;
+  wishlist: Product[] = [];
 
-  constructor(private wishListService: WishListService) {
-  }
-
+  constructor(private wishlistService: WishlistService) {}
   ngOnInit(): void {
-    // Subscribe để nhận dữ liệu từ BehaviorSubject
-    this.wishListService.getWishList().subscribe((wishList) => {
-      this.wishList = wishList;
-    });
+    this.userId = localStorage.getItem('userId');
+    console.log('User  ID:', this.userId); // Thêm dòng này để kiểm tra giá trị userId
+    this.loadWishlist();
   }
+  loadUserIdAndWishlist(): void {
+    this.userId = localStorage.getItem('userId');
+    if (this.userId) {
+      this.loadWishlist();
+    } else {
+      this.wishlist = []; // Nếu không có userId, xóa wishlist
+    }
+  }
+  loadWishlist(): void {
+    if (this.userId) {
+      this.wishlistService.getWishlist(this.userId).subscribe({
+        next: (data: any) => {
+          // Lọc ra các sản phẩm từ wishlist
+          this.wishlist = data.map((item: any) => item.product);
+        },
+        error: (err) => {
+          console.error('Error loading wishlist:', err);
+        }
+      });
+    }
 
-  // Xóa sản phẩm khỏi Wishlist
-  removeProductFromWishList(product: Product): void {
-    this.wishListService.removeProductFromWishList(product);
-  }
-}
+  }}

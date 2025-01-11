@@ -4,7 +4,7 @@ import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
 import { CartService } from '../../cart.service';
 import { Product } from '../../type/Products';
-import { WishListService } from '../../wishlist.service';
+
 
 @Component({
   selector: 'app-header',
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   isLoggedIn: boolean = false;
   isSidebarVisible = false;
 
-  constructor(private authService: AuthService, private router: Router, private cartService: CartService,  private wishlistService: WishListService) {
+  constructor(private authService: AuthService, private router: Router, private cartService: CartService) {
 
     this.cartItemCount = this.cartService.getCartItemCount();
 
@@ -33,11 +33,6 @@ export class HeaderComponent implements OnInit {
       this.cartItemCount = cartItems.length;
     });
 
-    // Theo dõi thay đổi trong wishlist
-    this.wishlistService.getWishList().subscribe((wishlistItems: Product[]) => {
-      this.wishlistItemCount = wishlistItems.length;
-    });
-    this.wishlistItemCount = this.wishlistService.getWishListCount();
   }
 
   ngOnInit(): void {

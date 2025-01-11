@@ -1,25 +1,12 @@
-<!-- wishlist.component.html -->
-<div class="container mx-auto p-4">
-    <h2 class="text-2xl font-bold mb-4">Your Wishlist</h2>
-  
-    <!-- Hiển thị thông báo nếu Wish List trống -->
-    <div *ngIf="wishList.length === 0" class="text-center text-gray-500">
-      <p>Your wishlist is empty. Start adding products!</p>
-    </div>
-  
-    <!-- Danh sách sản phẩm trong Wish List -->
-    <div *ngIf="wishList.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <div *ngFor="let product of wishList" class="border p-4 rounded-lg shadow-md">
-        <img title="image" [src]="product.image_url" [alt]="product.title" class="w-full h-48 object-cover mb-4 rounded-lg" />
-        <h3 class="text-lg font-semibold">{{ product.title }}</h3>
-        <p class="text-gray-600">{{ product.description }}</p>
-        <p class="text-blue-600 font-bold mt-2">${{ product.price }}</p>
-        <button
-          (click)="removeProductFromWishList(product)"
-          class="mt-4 w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
-        >
-          Remove from Wishlist
-        </button>
-      </div>
-    </div>
-  </div>
+<div *ngIf="wishlist.length > 0; else noWishlist">
+  <h2>Wishlist</h2>
+  <ul>
+    <li *ngFor="let product of wishlist">
+      {{ product.title }} ({{ product.price_after_discount }})
+    </li>
+  </ul>
+</div>
+
+<ng-template #noWishlist>
+  <p>No products in your wishlist.</p>
+</ng-template>
