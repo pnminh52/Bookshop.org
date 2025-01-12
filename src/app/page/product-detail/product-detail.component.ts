@@ -22,6 +22,8 @@ export class ProductDetailComponent implements OnInit {
   newComment: string = '';
   newRating: number = 0;
   newFullName: string = '';
+  successMessage: string | null = null;
+  alertMessage: string | null = null;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -52,16 +54,32 @@ export class ProductDetailComponent implements OnInit {
   addToCart(): void {
     if (this.product) {
       this.cartService.addToCart(this.product); 
+      this.successMessage = 'Product added to cart successfully!';  // Set success message
+                setTimeout(() => {
+                  this.successMessage = null; 
+                }, 3000);
     }
   }
   addToWishlist(): void {
     if (this.product && this.userId) {
-      this.wishlistService.addToWishlist(this.userId, this.product).subscribe({
-        next: (response) => {
-          alert('Product added to wishlist:');
-        },
-        error: (err) => {
-          console.error('Error adding to wishlist:', err);
+      this.wishlistService.getWishlist(this.userId).subscribe({
+        next: (wishlist) => {
+          const isProductInWishlist = wishlist.some(item => item.id === this.product?.id);
+          if (isProductInWishlist) {
+            this.alertMessage = 'This product are already in your wishlist!';  // Set success message
+            setTimeout(() => {
+              this.alertMessage = null; 
+            }, 3000);
+          } else {
+            this.wishlistService.addToWishlist(this.userId!, this.product!).subscribe({
+              next: (response) => {
+                this.successMessage = 'Product added to wishlist successfully!';  // Set success message
+                setTimeout(() => {
+                  this.successMessage = null; 
+                }, 3000);
+              }
+            });
+          }
         }
       });
     } else {
@@ -92,14 +110,13 @@ export class ProductDetailComponent implements OnInit {
         rating: this.newRating
       };
   
-      console.log('Adding comment:', comment); // Debug log
       this.commentService.addComment(comment).subscribe({
         next: (response) => {
           this.comments.push(response);
           this.newComment = '';
           this.newRating = 0;
         }
-      });
+      });     
     }
   }
   
