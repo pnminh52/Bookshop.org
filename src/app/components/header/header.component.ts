@@ -4,7 +4,7 @@ import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
 import { CartService } from '../../cart.service';
 import { Product } from '../../type/Products';
-
+import { WishlistService } from '../../wishlist.service';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   isLoggedIn: boolean = false;
   isSidebarVisible = false;
 
-  constructor(private authService: AuthService, private router: Router, private cartService: CartService) {
+  constructor(private wishlistService: WishlistService,private authService: AuthService, private router: Router, private cartService: CartService) {
 
     this.cartItemCount = this.cartService.getCartItemCount();
 
@@ -28,12 +28,13 @@ export class HeaderComponent implements OnInit {
       this.cartItemCount = cartItems.length;
     });
     
-    // Theo dõi thay đổi trong giỏ hàng
-    this.cartService.getCartItemsObservable().subscribe((cartItems: Product[]) => {
-      this.cartItemCount = cartItems.length;
-    });
-
-  }
+    // // Theo dõi thay đổi trong giỏ hàng
+    // this.cartService.getCartItemsObservable().subscribe((cartItems: Product[]) => {
+    //   this.cartItemCount = cartItems.length;
+    // });
+this.wishlistService.getWishlistItemsObservable().subscribe((wishlistItems: Product[]) => {
+  this.wishlistItemCount = wishlistItems.length;
+});  }
 
   ngOnInit(): void {
     // Theo dõi trạng thái đăng nhập từ AuthService
