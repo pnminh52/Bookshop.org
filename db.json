@@ -546,7 +546,35 @@
     }
   ],
   "orders": [],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "14",
+      "title": "The Book of Yokai, Expanded Second Edition: Mysterious Creatures of Japanese Folklore",
+      "price": 45,
+      "price_after_discount": 41.58,
+      "category": "Fantasy",
+      "author": "Michael Dylan Foster",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9780520389557.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "reviews": [
+        {
+          "user_id": "87fa",
+          "comment": "Câu chuyện rất cảm động.",
+          "rating": 4
+        },
+        {
+          "user_id": "11e2",
+          "comment": "Phần kết quá bất ngờ.",
+          "rating": 5
+        }
+      ],
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    }
+  ],
   "comments": [
     {
       "id": "a954",
