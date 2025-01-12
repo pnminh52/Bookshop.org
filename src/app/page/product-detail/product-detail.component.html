@@ -25,6 +25,22 @@
         </div>
       </div>
     </div>
+     <!-- Comments Section -->
+  <div class="mt-8">
+    <h2 class="text-xl font-semibold">Bình luận</h2>
+    <div *ngFor="let comment of comments" class="border-b py-2">
+      <p><strong>User {{ comment.userId }}:</strong> {{ comment.comment }}</p>
+      <p>Đánh giá: {{ comment.rating }} sao</p>
+    </div>
+
+    <!-- Add Comment Form -->
+    <div class="mt-4">
+      <h3 class="text-lg font-semibold">Thêm bình luận</h3>
+      <textarea [(ngModel)]="newComment" placeholder="Nhập bình luận của bạn" class="w-full border p-2"></textarea>
+      <input type="number" [(ngModel)]="newRating" min="1" max="5" placeholder="Đánh giá (1-5)" class="border p-2 mt-2" />
+      <button (click)="addComment()" class="bg-blue-500 text-white p-2 mt-2">Gửi bình luận</button>
+    </div>
+  </div>
   </div>
   
   <div *ngIf="!product" class="text-center py-8">

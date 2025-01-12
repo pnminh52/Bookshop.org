@@ -546,5 +546,21 @@
     }
   ],
   "orders": [],
-  "wishlist": []
+  "wishlist": [],
+  "comments": [
+    {
+      "id": "a954",
+      "productId": "1",
+      "userId": "11e2",
+      "comment": "aaaa",
+      "rating": 3
+    },
+    {
+      "id": "c838",
+      "productId": "1",
+      "userId": "11e2",
+      "comment": "âsas",
+      "rating": 5
+    }
+  ]
 }
