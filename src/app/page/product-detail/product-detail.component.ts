@@ -21,6 +21,7 @@ export class ProductDetailComponent implements OnInit {
   comments: Comment[] = [];
   newComment: string = '';
   newRating: number = 0;
+  newFullName: string = '';
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -82,10 +83,11 @@ export class ProductDetailComponent implements OnInit {
   
   
   addComment(): void {
-    if (this.product && this.userId && this.newComment && this.newRating > 0) {
+    if (this.product && this.userId && this.newComment && this.newFullName && this.newRating > 0) {
       const comment: Comment = {
         productId: this.product.id,
         userId: this.userId,
+        fullName: this.newFullName,
         comment: this.newComment,
         rating: this.newRating
       };
@@ -93,13 +95,9 @@ export class ProductDetailComponent implements OnInit {
       console.log('Adding comment:', comment); // Debug log
       this.commentService.addComment(comment).subscribe({
         next: (response) => {
-          console.log('Comment added:', response); // Debug log
           this.comments.push(response);
           this.newComment = '';
           this.newRating = 0;
-        },
-        error: (err) => {
-          console.error('Error adding comment:', err);
         }
       });
     }

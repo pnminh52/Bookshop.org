@@ -552,15 +552,9 @@
       "id": "a954",
       "productId": "1",
       "userId": "11e2",
+      "fullName":"John Doe",
       "comment": "aaaa",
       "rating": 3
-    },
-    {
-      "id": "c838",
-      "productId": "1",
-      "userId": "11e2",
-      "comment": "âsas",
-      "rating": 5
     }
   ]
 }

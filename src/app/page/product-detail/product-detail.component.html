@@ -29,8 +29,8 @@
   <div class="mt-8">
     <h2 class="text-xl font-semibold">Bình luận</h2>
     <div *ngFor="let comment of comments" class="border-b py-2">
-      <p><strong>User {{ comment.userId }}:</strong> {{ comment.comment }}</p>
-      <p>Đánh giá: {{ comment.rating }} sao</p>
+      <p> {{ comment.rating }} </p>
+      <p><strong> {{ comment.fullName }}:</strong> {{ comment.comment }}</p>
     </div>
 
     <!-- Add Comment Form -->

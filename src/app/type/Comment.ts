@@ -5,4 +5,5 @@ export interface Comment {
     comment: string;
     rating: number;
     createdAt?: Date;
+    fullName: string
   }
