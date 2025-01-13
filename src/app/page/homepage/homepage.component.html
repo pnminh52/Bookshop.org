@@ -192,11 +192,29 @@
       class="cursor-pointer p-1"
       [routerLink]="['/productDetails', product.id]"
     >
+    <div class="relative">
       <img
         [src]="product.image_url"
         alt="{{ product.title }}"
         class="w-auto h-auto object-cover rounded-md mb-1"
       />
+      <div class="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md">
+        <svg
+          class="w-5 h-5 text-gray-700"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-2.4 4M7 13l.4-2M7 13h.01M14 16a2 2 0 100 4 2 2 0 000-4zm-6 0a2 2 0 100 4 2 2 0 000-4z"
+          />
+        </svg>
+      </div>
+    </div>
       <p class="text-lg font-normal title mb-0 mt-2 truncate">{{ product.title }}</p>      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
       <div class="flex mt-1 mb-2">
         <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
