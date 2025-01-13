@@ -10,18 +10,6 @@
       "description": "Mô tả sách 2",
       "image_url": "https://images-us.bookshop.org/ingram/9781640096714.jpg?width=384&v=v2",
       "rating": 4,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Học rất bổ ích.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Rất dễ hiểu.",
-          "rating": 5
-        }
-      ],
       "discount": 20,
       "stock": 30,
       "category_id": "2",
@@ -37,18 +25,6 @@
       "description": "Mô tả sách 2",
       "image_url": "https://images-us.bookshop.org/ingram/9781668082430.jpg?width=384&v=v2",
       "rating": 4,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Học rất bổ ích.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Rất dễ hiểu.",
-          "rating": 5
-        }
-      ],
       "discount": 20,
       "stock": 30,
       "category_id": "2",
@@ -64,18 +40,6 @@
       "description": "Mô tả sách 3",
       "image_url": "https://images-us.bookshop.org/ingram/9781639368037.jpg?width=384&v=v2",
       "rating": 4.8,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Cực kỳ thú vị!",
-          "rating": 5
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Một cuốn sách đáng đọc.",
-          "rating": 5
-        }
-      ],
       "discount": 12,
       "stock": 20,
       "category_id": "3",
@@ -91,18 +55,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9781250288226.jpg?width=384&v=v2",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -118,18 +70,6 @@
       "description": "Mô tả sách 3",
       "image_url": "https://images-us.bookshop.org/ingram/9780593977149.jpg?width=384&v=v2",
       "rating": 4.8,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Cực kỳ thú vị!",
-          "rating": 5
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Một cuốn sách đáng đọc.",
-          "rating": 5
-        }
-      ],
       "discount": 12,
       "stock": 20,
       "category_id": "3",
@@ -145,18 +85,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9781250848338.jpg?width=384&v=v2",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -172,18 +100,6 @@
       "description": "Mô tả sách 3",
       "image_url": "https://images-us.bookshop.org/ingram/9780593598702.jpg?width=384&v=v2",
       "rating": 4.8,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Cực kỳ thú vị!",
-          "rating": 5
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Một cuốn sách đáng đọc.",
-          "rating": 5
-        }
-      ],
       "discount": 12,
       "stock": 20,
       "category_id": "3",
@@ -199,18 +115,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9780316574716.jpg?width=384&v=v2",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -226,18 +130,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9780063333949.jpg?width=384&v=v2",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -253,18 +145,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9780063045880.jpg?height=500&v=v2-f368f2ab0d268373091fbadd00000000",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -280,18 +160,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9780062665799.jpg?height=500&v=v2-9d5aa9f0098e6d84242d296366daf215",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -307,18 +175,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9780593550595.jpg?height=500&v=v2-57c899e7f69974a4b6f96cb0b16b531c",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -334,18 +190,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9781728248974.jpg?height=500&v=v2",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -361,18 +205,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9780520389557.jpg?height=1200&v=v2",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -388,18 +220,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9780593819791.jpg?height=1200&v=v2-096c8ea05098d51aab638d3228ac5a74",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -415,18 +235,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9781335458018.jpg?height=1200&v=v2-31a0b16489845c4493e0380022a492a3",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -442,18 +250,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9781639734481.jpg?height=1200&v=v2-9be63dc43d2f41394ee522f51112bf8b",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -469,18 +265,6 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9781668051238.jpg?height=1200&v=v2-3857f5a20f8cf48584d49c3008fa5ea2",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -496,18 +280,186 @@
       "description": "Mô tả sách 4",
       "image_url": "https://images-us.bookshop.org/ingram/9781668024959.jpg?height=1200&v=v2-c2430d5a6fa4b814026c31fe7732feb7",
       "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "20",
+      "title": "The Nurse's Secret: A Thrilling Historical Novel of the Dark Side of Gilded Age New York City",
+      "price": 16.95,
+      "price_after_discount": 15.76,
+      "category": "History",
+      "author": "Amanda Skenandore",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781496726537.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "21",
+      "title": "Last House Before the Mountain",
+      "price": 26.00,
+      "price_after_discount": 24.18,
+      "category": "History",
+      "author": "Monika Helfer",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781635579871.jpg?height=1200&v=v2-e8c0995a02ee4d96158435de788f8bc5",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "22",
+      "title": "Horseman, Pass by",
+      "price": 14.95,
+      "price_after_discount": 13.90,
+      "category": "History",
+      "author": "Larry McMurtry",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781631493553.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "22",
+      "title": "Hester",
+      "price": 27.99,
+      "price_after_discount": 26.03,
+      "category": "History",
+      "author": "Laurie Lico Albanese",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781250278555.jpg?height=1200&v=v2-ef40a2b502316d55fe448a48b7664074",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "23",
+      "title": "Kristin Lavransdatter: The Complete Trilogy",
+      "price": 39.99,
+      "price_after_discount": 36.03,
+      "category": "History",
+      "author": "Sigrid Undset",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781528717144.jpg?height=1200&v=v2-658b04b7b176d5f678ec4985e503d84a",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "24",
+      "title": "The Island of Sea Women",
+      "price": 18.00,
+      "price_after_discount": 16.74,
+      "category": "History",
+      "author": "Lisa See",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781501154867.jpg?height=1200&v=v2-37a993e1e9978b7ffb2398d7fc8a1ef3",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "25",
+      "title": "Teaching to Transgress: Education as the Practice of Freedom",
+      "price": 48.95,
+      "price_after_discount": 47.67,
+      "category": "Education",
+      "author": "Bell Hooks",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9780415908085.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "26",
+      "title": "The Teacher Wars: A History of America's Most Embattled Profession",
+      "price": 19.00,
+      "price_after_discount": 17.67,
+      "category": "Education",
+      "author": "Dana Goldstein",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9780345803627.jpg?height=1200&v=v2-94e987cf73f923065fa357b57b115c6c",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    }
+    ,
+    {
+      "id": "27",
+      "title": "Waiting for Superman: How We Can Save America's Failing Public Schools",
+      "price": 15.95,
+      "price_after_discount": 14.83,
+      "category": "Education",
+      "author": "Participant",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781586489274.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },    {
+      "id": "28",
+      "title": "Ghosts in the Schoolyard: Racism and School Closings on Chicago's South Side",
+      "price": 19.00,
+      "price_after_discount": 17.67,
+      "category": "Education",
+      "author": "Eve L Ewing",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9780226526164.jpg?height=1200&v=v2-4f1b071af75fe8eb3fbdcfc8998c66fc",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "29",
+      "title": "Radical Possibilities: Public Policy, Urban Education, and A New Social Movement",
+      "price": 65.49,
+      "price_after_discount": 64.00,
+      "category": "Education",
+      "author": "Jean Anyon",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9780415635585.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    },
+    {
+      "id": "30",
+      "title": "Other People's Children: Cultural Conflict in the Classroom",
+      "price": 17.95,
+      "price_after_discount": 16.69,
+      "category": "Education",
+      "author": "Lisa Delpit",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9781595580740.jpg?height=1200&v=v2",
+      "rating": 4.3,
       "discount": 15,
       "stock": 40,
       "category_id": "4",
@@ -548,31 +500,19 @@
   "orders": [],
   "wishlist": [
     {
-      "id": "14",
-      "title": "The Book of Yokai, Expanded Second Edition: Mysterious Creatures of Japanese Folklore",
-      "price": 45,
-      "price_after_discount": 41.58,
-      "category": "Fantasy",
-      "author": "Michael Dylan Foster",
-      "description": "Mô tả sách 4",
-      "image_url": "https://images-us.bookshop.org/ingram/9780520389557.jpg?height=1200&v=v2",
-      "rating": 4.3,
-      "reviews": [
-        {
-          "user_id": "87fa",
-          "comment": "Câu chuyện rất cảm động.",
-          "rating": 4
-        },
-        {
-          "user_id": "11e2",
-          "comment": "Phần kết quá bất ngờ.",
-          "rating": 5
-        }
-      ],
-      "discount": 15,
-      "stock": 40,
-      "category_id": "4",
-      "publish_date": "2024-01-20"
+      "id": "1",
+      "title": "I'll Come to You",
+      "price": 17.49,
+      "price_after_discount": 13.99,
+      "category": "Fiction",
+      "author": "Rebecca Kauffman",
+      "description": "Mô tả sách 2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781640096714.jpg?width=384&v=v2",
+      "rating": 4,
+      "discount": 20,
+      "stock": 30,
+      "category_id": "2",
+      "publish_date": "2023-12-15"
     }
   ],
   "comments": [

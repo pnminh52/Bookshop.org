@@ -2,14 +2,14 @@
   .hidden {
     display: none;
   }
-  /* 
+  
 
-  h1,
-  p {
+
+  .title {
     font-family: "Prata", serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-  } */
+  } 
 </style>
 
 <!-- \end{code} -->
@@ -197,8 +197,27 @@
         alt="{{ product.title }}"
         class="w-auto h-auto object-cover rounded-md mb-1"
       />
-      <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
-      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <p class="text-lg font-normal title mb-0 mt-2 truncate">{{ product.title }}</p>      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex mt-1 mb-2">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-500 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+          </svg>
+          <svg
+            *ngIf="product.rating < star"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+          </svg>
+        </ng-container>
+      </div>
       <div class="flex gap-2 items-center">
         <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
         <p class="text-md font-medium text-red-500 self-center">
@@ -228,8 +247,28 @@
         alt="{{ product.title }}"
         class="w-auto h-auto object-cover rounded-md mb-1"
       />
-      <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+      <p class="text-lg title font-semibold mb-0 mt-2 truncate">{{ product.title }}</p>
       <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex mt-1 mb-2">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-500 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+          </svg>
+          <svg
+            *ngIf="product.rating < star"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+          </svg>
+        </ng-container>
+      </div>
       <div class="flex gap-2 items-center">
         <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
         <p class="text-md font-medium text-red-500 self-center">
@@ -291,8 +330,28 @@
         alt="{{ product.title }}"
         class="w-auto h-auto object-cover rounded-md mb-1"
       />
-      <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+      <p class="text-lg title font-semibold mb-0 mt-2 truncate">{{ product.title }}</p>
       <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex mt-1 mb-2">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-500 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+          </svg>
+          <svg
+            *ngIf="product.rating < star"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+          </svg>
+        </ng-container>
+      </div>
       <div class="flex gap-2 items-center">
         <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
         <p class="text-md font-medium text-red-500 self-center">
@@ -309,14 +368,14 @@
     <div class="skinny-hero"><a class="skinny-hero-link" href="https://www.barnesandnoble.com/b/_/N-1z13vs7" onclick="set_cookie('hpskinny-heroN6_arrow-video-50-off_na_imagetext');"> <picture> <source media="(max-width: 640px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25-mobile.jpg"> <source media="(min-width: 641px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg"> <img class="lp-lazy ResolveComplete" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D" data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg" alt="50% Off Arrow Video - Shop Now " id="resolve_71"> <noscript><img src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg" alt="50% Off Arrow Video - Shop Now" /></noscript> </picture> </a> </div>
     <!-- \end{code} -->
     <div class="md:text-left mt-4 mb-4">
-      <h1 class="mb-0 cursor-pointer">Top Fantasy Reads - Spring 2025</h1>
-      <p class=" cursor-pointer">Unleash your imagination with the top fantasy novels of 2025.</p>
-  
+      <h1 class="mb-0 cursor-pointer">Top Historical Reads - Spring 2025</h1>
+      <p class="cursor-pointer">Dive into the past with the top historical novels of 2025.</p>
     </div>
+    
   
     <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
       <div
-        *ngFor="let product of fantasyCategory"
+        *ngFor="let product of historyCategory"
         class="cursor-pointer p-1"
         [routerLink]="['/productDetails', product.id]"
       >
@@ -325,8 +384,28 @@
           alt="{{ product.title }}"
           class="w-auto h-auto object-cover rounded-md mb-1"
         />
-        <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+        <p class="text-lg title font-semibold mb-0 mt-2 truncate">{{ product.title }}</p>
         <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+        <div class="flex mt-1 mb-2">
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <svg
+              *ngIf="product.rating >= star"
+              class="w-4 h-4 text-yellow-500 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+            </svg>
+            <svg
+              *ngIf="product.rating < star"
+              class="w-4 h-4 text-gray-300 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+            </svg>
+          </ng-container>
+        </div>
         <div class="flex gap-2 items-center">
           <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
           <p class="text-md font-medium text-red-500 self-center">
@@ -372,14 +451,14 @@
     </div>
     <!-- \end{code} -->
     <div class="md:text-left mt-4 mb-4">
-      <h1 class="mb-0 cursor-pointer">Top Fantasy Reads - Spring 2025</h1>
-      <p class=" cursor-pointer">Unleash your imagination with the top fantasy novels of 2025.</p>
-  
+      <h1 class="mb-0 cursor-pointer">Top Educational Reads - Spring 2025</h1>
+      <p class="cursor-pointer">Expand your knowledge with the top educational books of 2025.</p>
     </div>
+    
   
     <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
       <div
-        *ngFor="let product of fantasyCategory"
+        *ngFor="let product of educationCategory"
         class="cursor-pointer p-1"
         [routerLink]="['/productDetails', product.id]"
       >
@@ -388,8 +467,28 @@
           alt="{{ product.title }}"
           class="w-auto h-auto object-cover rounded-md mb-1"
         />
-        <h2 class="text-xl font-semibold mb-0 truncate">{{ product.title }}</h2>
+        <p class="title text-xl font-semibold mt-2 mb-0 truncate">{{ product.title }}</p>
         <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+        <div class="flex mt-1 mb-2">
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+            <svg
+              *ngIf="product.rating >= star"
+              class="w-4 h-4 text-yellow-500 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+            </svg>
+            <svg
+              *ngIf="product.rating < star"
+              class="w-4 h-4 text-gray-300 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
+            </svg>
+          </ng-container>
+        </div>
         <div class="flex gap-2 items-center">
           <p class="text-xl font-medium">{{ product.price_after_discount }}$</p>
           <p class="text-md font-medium text-red-500 self-center">
