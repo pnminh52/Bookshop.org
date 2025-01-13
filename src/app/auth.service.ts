@@ -49,7 +49,9 @@ export class AuthService {
       })
     );
   }
-
+  getUserId(): string | null {
+    return localStorage.getItem('userId');
+  }
 
   private checkLoginStatus(): boolean {
     return !!localStorage.getItem('user');

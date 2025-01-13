@@ -303,7 +303,7 @@
     {
       "id": "21",
       "title": "Last House Before the Mountain",
-      "price": 26.00,
+      "price": 26,
       "price_after_discount": 24.18,
       "category": "History",
       "author": "Monika Helfer",
@@ -319,7 +319,7 @@
       "id": "22",
       "title": "Horseman, Pass by",
       "price": 14.95,
-      "price_after_discount": 13.90,
+      "price_after_discount": 13.9,
       "category": "History",
       "author": "Larry McMurtry",
       "description": "Mô tả sách 4",
@@ -363,7 +363,7 @@
     {
       "id": "24",
       "title": "The Island of Sea Women",
-      "price": 18.00,
+      "price": 18,
       "price_after_discount": 16.74,
       "category": "History",
       "author": "Lisa See",
@@ -393,7 +393,7 @@
     {
       "id": "26",
       "title": "The Teacher Wars: A History of America's Most Embattled Profession",
-      "price": 19.00,
+      "price": 19,
       "price_after_discount": 17.67,
       "category": "Education",
       "author": "Dana Goldstein",
@@ -404,8 +404,7 @@
       "stock": 40,
       "category_id": "4",
       "publish_date": "2024-01-20"
-    }
-    ,
+    },
     {
       "id": "27",
       "title": "Waiting for Superman: How We Can Save America's Failing Public Schools",
@@ -420,10 +419,11 @@
       "stock": 40,
       "category_id": "4",
       "publish_date": "2024-01-20"
-    },    {
+    },
+    {
       "id": "28",
       "title": "Ghosts in the Schoolyard: Racism and School Closings on Chicago's South Side",
-      "price": 19.00,
+      "price": 19,
       "price_after_discount": 17.67,
       "category": "Education",
       "author": "Eve L Ewing",
@@ -439,7 +439,7 @@
       "id": "29",
       "title": "Radical Possibilities: Public Policy, Urban Education, and A New Social Movement",
       "price": 65.49,
-      "price_after_discount": 64.00,
+      "price_after_discount": 64,
       "category": "Education",
       "author": "Jean Anyon",
       "description": "Mô tả sách 4",
@@ -498,23 +498,7 @@
     }
   ],
   "orders": [],
-  "wishlist": [
-    {
-      "id": "1",
-      "title": "I'll Come to You",
-      "price": 17.49,
-      "price_after_discount": 13.99,
-      "category": "Fiction",
-      "author": "Rebecca Kauffman",
-      "description": "Mô tả sách 2",
-      "image_url": "https://images-us.bookshop.org/ingram/9781640096714.jpg?width=384&v=v2",
-      "rating": 4,
-      "discount": 20,
-      "stock": 30,
-      "category_id": "2",
-      "publish_date": "2023-12-15"
-    }
-  ],
+  "wishlist": [],
   "comments": [
     {
       "id": "a954",

@@ -12,6 +12,12 @@
   } 
 </style>
 
+<div *ngIf="successMessage" class="fixed bottom-4 right-4 bg-green-500 px-4 py-3 text-white rounded-md shadow-md z-50">
+  {{ successMessage }}
+</div>
+<div *ngIf="alertMessage" class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50">
+  {{ alertMessage }}
+</div>
 <!-- \end{code} -->
 <div id="globalNavBanner" class="noncpn image flex justify-center">
   <div class="globalNavBanner globalBannerWrap primary loaded">
@@ -190,19 +196,47 @@
     <div
       *ngFor="let product of limitedProducts"
       class="cursor-pointer p-1"
-      [routerLink]="['/productDetails', product.id]"
     >
+    <div class="relative inline-block group">
       <img
         [src]="product.image_url"
+        [routerLink]="['/productDetails', product.id]"
         alt="{{ product.title }}"
         class="w-auto h-auto object-cover rounded-md mb-1"
       />
-      <p class="text-lg font-normal title mb-0 mt-2 truncate">{{ product.title }}</p>      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
-      <div class="flex mt-1 mb-2">
+<div class="space-y-1">
+        <!-- Biểu tượng trái tim -->
+        <button (click)="addToWishlist(product)" class=" hidden group-hover:flex  transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[24px] h-[24px] cursor-pointer"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+      
+</div>
+    </div>
+    
+    
+    
+      <p class="text-lg font-normal title mb-0 mt-0 truncate">{{ product.title }}</p>     
+       <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex mt-0 mb-1">
         <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
           <svg
             *ngIf="product.rating >= star"
-            class="w-4 h-4 text-yellow-500 fill-current"
+            class="w-4 h-4 text-yellow-300 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >
@@ -216,6 +250,7 @@
           >
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"/>
           </svg>
+          
         </ng-container>
       </div>
       <div class="flex gap-2 items-center">
