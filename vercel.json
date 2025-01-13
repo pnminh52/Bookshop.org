@@ -9,14 +9,14 @@
         }
       },
       {
-        "src": "db.json",
-        "use": "@vercel/json-server"
+        "src": "server.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "/db.json"
+        "dest": "server.js"
       },
       {
         "src": "/(.*)",
