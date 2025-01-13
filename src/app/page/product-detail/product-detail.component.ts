@@ -8,6 +8,7 @@ import { WishlistService } from '../../wishlist.service';
 import { CommentService } from '../../comment.service';
 import { Comment } from '../../type/Comment';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../auth.service';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
@@ -29,12 +30,21 @@ export class ProductDetailComponent implements OnInit {
     private productService: ProductService,
     private cartService: CartService,
     private wishlistService: WishlistService,
-    private commentService: CommentService
+    private commentService: CommentService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
     this.loadProductDetails();
     this.userId = localStorage.getItem('userId');
+    this.authService.getUserInfo().subscribe({
+      next: (data) => {
+        this.newFullName = data.fullName;
+      },
+      error: (err) => {
+        console.error('Error fetching user info:', err);
+      }
+    });
   }
 
   loadProductDetails(): void {
@@ -101,11 +111,19 @@ export class ProductDetailComponent implements OnInit {
   
   
   addComment(): void {
-    if (this.product && this.userId && this.newComment && this.newFullName && this.newRating > 0) {
+    if (!this.product) {
+      alert('Sản phẩm không tồn tại');
+    } else if (!this.userId) {
+      alert('Người dùng không tồn tại');
+    } else if (!this.newComment) {
+      alert('Vui lòng nhập nội dung bình luận');
+    } else if (this.newRating <= 0) {
+      alert('Đánh giá phải lớn hơn 0');
+    } else {
       const comment: Comment = {
         productId: this.product.id,
         userId: this.userId,
-        fullName: this.newFullName,
+        fullName: this.newFullName, // Sử dụng giá trị newFullName từ localStorage
         comment: this.newComment,
         rating: this.newRating
       };
@@ -116,10 +134,10 @@ export class ProductDetailComponent implements OnInit {
           this.newComment = '';
           this.newRating = 0;
         }
-      });     
+      });
     }
   }
-  
+
 
 
   

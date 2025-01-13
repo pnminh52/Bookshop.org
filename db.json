@@ -498,15 +498,22 @@
     }
   ],
   "orders": [],
-  "wishlist": [],
-  "comments": [
+  "wishlist": [
     {
-      "id": "a954",
-      "productId": "1",
-      "userId": "11e2",
-      "fullName": "John Doe",
-      "comment": "aaaa",
-      "rating": 3
-    }
-  ]
+      "id": "2",
+      "title": "Rosarita",
+      "price": 20.46,
+      "price_after_discount": 22,
+      "category": "History",
+      "author": "Anita Desai",
+      "description": "Mô tả sách 2",
+      "image_url": "https://images-us.bookshop.org/ingram/9781668082430.jpg?width=384&v=v2",
+      "rating": 4,
+      "discount": 20,
+      "stock": 30,
+      "category_id": "2",
+      "publish_date": "2023-12-15",
+      "quantity": 1
+    }],
+  "comments": []
 }

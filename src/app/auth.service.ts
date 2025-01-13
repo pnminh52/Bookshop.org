@@ -33,8 +33,17 @@ export class AuthService {
       })
     );
   }
-
-
+  getUserInfo(): Observable<any> {
+    const userId = this.getUserId();
+    if (userId) {
+      return this.http.get(`${this.apiUrl}/users/${userId}`);
+    } else {
+      return EMPTY;
+    }
+  }
+  getUserId(): string | null {
+    return localStorage.getItem('userId');
+  }
   login(email: string, password: string): Observable<any> {
     return this.http.get<any[]>(`${this.apiUrl}/users?email=${email}&password=${password}`).pipe(
       map(users => {
@@ -49,9 +58,7 @@ export class AuthService {
       })
     );
   }
-  getUserId(): string | null {
-    return localStorage.getItem('userId');
-  }
+
 
   private checkLoginStatus(): boolean {
     return !!localStorage.getItem('user');
@@ -66,5 +73,5 @@ export class AuthService {
     alert('Đăng xuất thành công!');
     return EMPTY; 
   }
-  
+
 }
