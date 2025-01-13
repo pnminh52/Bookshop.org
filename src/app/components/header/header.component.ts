@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   wishlistItemCount: number = 0;
   isLoggedIn: boolean = false;
   isSidebarVisible = false;
+  alertMessage: string | null = null;
 
   constructor(private wishlistService: WishlistService,private authService: AuthService, private router: Router, private cartService: CartService) {
 
@@ -35,6 +36,21 @@ export class HeaderComponent implements OnInit {
 this.wishlistService.getWishlistItemsObservable().subscribe((wishlistItems: Product[]) => {
   this.wishlistItemCount = wishlistItems.length;
 });  }
+onItemClick(itemType: string): void {
+  if (!this.isLoggedIn) {
+    this.alertMessage = `You must be logged in to view your ${itemType}.`;  // Hiển thị thông báo chung
+    setTimeout(() => {
+      this.alertMessage = null;  // Ẩn thông báo sau 3 giây
+    }, 3000);
+  } else {
+    // Điều hướng tới trang phù hợp
+    if (itemType === 'cart') {
+      this.router.navigate(['/cart']);
+    } else if (itemType === 'wishlist') {
+      this.router.navigate(['/wishlist']);
+    }
+  }
+}
 
   ngOnInit(): void {
     // Theo dõi trạng thái đăng nhập từ AuthService

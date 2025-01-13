@@ -62,7 +62,7 @@ export class ProductDetailComponent implements OnInit {
     }
   }
   addToCart(): void {
-    if (this.product) {
+    if (this.checkLogin()&&this.product) {
       this.cartService.addToCart(this.product); 
       this.successMessage = 'Product added to cart successfully!';  // Set success message
                 setTimeout(() => {
@@ -70,8 +70,18 @@ export class ProductDetailComponent implements OnInit {
                 }, 3000);
     }
   }
+  checkLogin(): boolean {
+    if (!this.userId) {
+      this.alertMessage = 'You need to login to perform this action!';
+      setTimeout(() => {
+        this.alertMessage = null;
+      }, 3000);
+      return false;
+    }
+    return true;
+  }
   addToWishlist(): void {
-    if (this.product && this.userId) {
+    if (this.checkLogin()&& this.product && this.userId) {
       this.wishlistService.getWishlist(this.userId).subscribe({
         next: (wishlist) => {
           const isProductInWishlist = wishlist.some(item => item.id === this.product?.id);
@@ -114,7 +124,7 @@ export class ProductDetailComponent implements OnInit {
     if (!this.product) {
       alert('Sản phẩm không tồn tại');
     } else if (!this.userId) {
-      alert('Người dùng không tồn tại');
+      this.checkLogin()
     } else if (!this.newComment) {
       alert('Vui lòng nhập nội dung bình luận');
     } else if (this.newRating <= 0) {
