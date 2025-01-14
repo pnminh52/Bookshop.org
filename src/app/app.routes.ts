@@ -16,6 +16,7 @@ import { CheckoutComponent } from './page/checkout/checkout.component';
 import { OrderComponent } from './page/order/order.component';
 import { SearchComponent } from './page/search/search.component';
 import { WishlistComponent } from './page/wishlist/wishlist.component';
+import { ProfileComponent } from './page/profile/profile.component';
 
 export const routes: Routes = [
   {
@@ -90,5 +91,9 @@ export const routes: Routes = [
   {
     path:'wishlist',
     component: WishlistComponent
+  },
+  {
+    path:'profile',
+    component: ProfileComponent
   }
 ];

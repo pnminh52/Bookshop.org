@@ -21,33 +21,34 @@
     <div
     class="container max-w-screen-xl h-16 mx-auto flex items-center justify-between py-3 font-medium"
   >
-    <a title="Link" href="/">
+    
       <img
+      [routerLink]="['/']"   
         class="w-40 h-auto cursor-pointer"
         src="
     https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
     "
         alt=""
       />
-    </a>
+   
 
     <div class="flex justify-center items-center gap-5">
-      <a href="/" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
         Home
       </a>
-      <a href="/collection" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/collection" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
         Collection
       </a>
-      <a href="/new" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/new" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
         New Books
       </a>
-      <a href="/best" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/best" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
         Best Sellers
       </a>
-      <a href="/about" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/about" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
         About Us
       </a>
-      <a href="/contact" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/contact" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
         Contact
       </a>
     </div>
@@ -57,7 +58,7 @@
     <div class="flex items-center gap-5">
       <!-- Profile Icon (SVG) -->
       <div class="group relative">
-        <div class="cursor-pointer">
+        <div class="cursor-pointer hidden sm:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -76,17 +77,17 @@
           <div
             class="flex flex-col gap-2 w-40 py-2 px-5 bg-slate-100 text-gray-500 rounded"
           >
-            <a *ngIf="isLoggedIn" href="/login" class="cursor-pointer hover:no-underline hover:text-inherit">Profile</a>
-            <a *ngIf="isLoggedIn" href="/order" class="cursor-pointer hover:no-underline hover:text-inherit ">Order</a>
+            <a *ngIf="isLoggedIn" routerLink="/profile" class="cursor-pointer hover:no-underline hover:text-inherit">Profile</a>
+            <a *ngIf="isLoggedIn" routerLink="/order" class="cursor-pointer hover:no-underline hover:text-inherit ">Order</a>
             <a
               *ngIf="!isLoggedIn"
-              href="/register"
+              routerLink="/register"
               class="cursor-pointer "
               >Register</a
             >
             <a
               *ngIf="!isLoggedIn"
-              href="/login"
+              routerLink="/login"
               class="cursor-pointer "
               >Login</a
             >
@@ -101,7 +102,7 @@
       </div>
       <!-- Search Icon (SVG) -->
       <div class="cursor-pointer">
-        <a title="search" href="/search">
+        <a title="search" routerLink="/search">
           <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -301,9 +302,14 @@
           
       
         </ul>
-      </div>
+      </div>  
     </div>
   </div>
+  <!-- <div class="h-10 bg-[#FFF1E6] flex items-center justify-center underline cursor-pointer">
+  Every purchase financially supports local independent bookstores!
+  </div> -->
+  
+  
   </div>
 
 </header>

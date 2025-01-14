@@ -5,11 +5,12 @@ import { Router } from '@angular/router';
 import { CartService } from '../../cart.service';
 import { Product } from '../../type/Products';
 import { WishlistService } from '../../wishlist.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,  // Đảm bảo component này là standalone
-  imports: [CommonModule],  // Thêm CommonModule vào imports
+  imports: [CommonModule, RouterModule],  // Thêm CommonModule vào imports
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
