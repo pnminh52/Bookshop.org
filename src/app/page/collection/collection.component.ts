@@ -17,11 +17,11 @@ export class CollectionComponent {
   selectedCategory: string = '';
   filteredProducts: Product[] = [];
   categories: string[] = ['Fiction', 'History', 'Economics', 'Psychology', 'Romance', 'Horror', 'Action', 'Fantasy']; // Danh sách thể loại
+  
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.renderProduct();
-    this.sortProducts();
   }
 
   renderProduct(): void {
@@ -29,6 +29,7 @@ export class CollectionComponent {
       next: (data) => {
         this.products = data; // Lưu tất cả sản phẩm
         this.filteredProducts = this.products; // Hiển thị tất cả sản phẩm ban đầu
+        this.applyFiltersAndSort(); // Apply filters and sorting when products are fetched
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -36,35 +37,36 @@ export class CollectionComponent {
     });
   }
 
-  sortProducts(): void {
-    this.products.sort((a, b) => {
+  applyFiltersAndSort(): void {
+    // Lọc theo thể loại
+    let filtered = this.selectedCategory
+      ? this.products.filter(product => 
+          product.category.toLowerCase() === this.selectedCategory.toLowerCase())
+      : this.products;
+
+    // Sắp xếp theo giá
+    filtered.sort((a, b) => {
       if (this.sortOrder === 'asc') {
         return a.price_after_discount - b.price_after_discount;
       } else {
         return b.price_after_discount - a.price_after_discount;
       }
     });
+
+    // Cập nhật danh sách sản phẩm đã lọc và sắp xếp
+    this.filteredProducts = filtered;
   }
 
   onSortOrderChange(event: Event): void {
     const target = event.target as HTMLSelectElement;  // Typecast event target
     const order = target.value as 'asc' | 'desc';      // Ensure it's 'asc' or 'desc'
     this.sortOrder = order;
-    this.sortProducts();
+    this.applyFiltersAndSort();  // Áp dụng lại lọc và sắp xếp
   }
+
   onCategoryChange(event: any): void {
     const category = event.target.value;
     this.selectedCategory = category;
-  
-    if (category) {
-      // Lọc sản phẩm theo thể loại đã chọn (so sánh chữ thường để tránh phân biệt chữ hoa/thường)
-      this.filteredProducts = this.products.filter(product =>
-        product.category.toLowerCase() === category.toLowerCase()
-      );
-    } else {
-      // Nếu không chọn thể loại, hiển thị tất cả sản phẩm
-      this.filteredProducts = this.products;
-    }
-    this.sortProducts()
-  } 
+    this.applyFiltersAndSort();  // Áp dụng lại lọc và sắp xếp
+  }
 }

@@ -6,22 +6,25 @@
   }
 </style>
 <div class="container max-w-screen-xl mx-auto py-3 font-medium">
-  <h1 class="text-2xl mb-4 mt-3">Our books collection</h1>
-
-<div class="flex gap-2">
-  <div class="mb-4">
-    <label for="sortOrder" class="mr-2">Sort by price:</label>
-    <select id="sortOrder" (change)="onSortOrderChange($event)">
+  <div class="mb-4 mt-4">
+    <p class="text-2xl mb-0 title">Our books collection</p>
+    <p class="text-sm  font-normal text-gray-500">
+      Explore our diverse collection of books across various genres including Fiction, History, Economics, Psychology, Romance, and more. Whether you're a passionate reader or looking for the perfect gift, our carefully curated selection is sure to offer something for everyone. Dive into your next adventure today and discover stories that inspire, educate, and entertain!
+    </p>
+  </div>
+ 
+  
+<div class="flex gap-4">
+  <div class="mb-4 px-4 py-2 border-b border-black">
+    <select title="sortPrice" id="sortOrder" (change)="onSortOrderChange($event)">
       <option value="asc">Low to High</option>
       <option value="desc">High to Low</option>
     </select>
-    
-    
   </div>
+  
   <!-- Dropdown để chọn thể loại -->
-  <div class="mb-4">
-    <label for="category" class="mr-2">Filter by Category:</label>
-    <select id="category" (change)="onCategoryChange($event)">
+  <div class="mb-4 px-4 py-2 border-b border-black">
+    <select title="sortCategory" id="category" (change)="onCategoryChange($event)">
       <option value="">All Categories</option>
       <option *ngFor="let category of categories" [value]="category">{{ category }}</option>z
     </select>
@@ -111,6 +114,7 @@
       <p class="text-md font-normal text-red-500 self-center">
         <s>{{ product.price }}$</s>
       </p>
+      <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">-{{product.discount}}%</p>
     </div>
   </div>
 </div>
