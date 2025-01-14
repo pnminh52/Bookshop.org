@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class NewComponent {
   products: Product[] = [];
   filteredProducts: Product[] = [];
-  categories: string[] = ['Fiction', 'History', 'Economics', 'Psychology', 'Romance', 'Horror', 'Action', 'Fantasy']; // Danh sách thể loại
+  categories: string[] = ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy','Education']; 
   selectedCategory: string = '';
   sortOrder: 'asc' | 'desc' = 'asc';
 

@@ -13,10 +13,10 @@ import { CommonModule } from '@angular/common';
 })
 export class CollectionComponent {
   products: Product[] = [];
-  sortOrder: 'asc' | 'desc' = 'asc'; // Default sort order
+  sortOrder: 'asc' | 'desc' = 'asc'; 
   selectedCategory: string = '';
   filteredProducts: Product[] = [];
-  categories: string[] = ['Fiction', 'History', 'Manga', 'Psychology', 'Romance', 'Horror', 'Action', 'Fantasy']; // Danh sách thể loại
+  categories: string[] = ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy', 'Education']; 
   
   constructor(private productService: ProductService) {}
 

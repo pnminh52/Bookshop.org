@@ -7,7 +7,7 @@ import { NgFor, NgIf } from '@angular/common';
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, NgFor, NgIf],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -17,7 +17,7 @@ products:Product[]=[];
 ngOnInit() {
   this.productService.getAll().subscribe({
     next: (products) => {
-      this.products = products;
+      this.products = products.reverse()
     },
     error: (err) => {
       console.log(err);

@@ -60,7 +60,7 @@
     <label for="category">Category</label>
     <select class="form-control" id="category" formControlName="category">
       <option value="">Select Category</option>
-      <option *ngFor="let category of ['Fiction', 'History', 'Manga', 'Psychology', 'Romance', 'Horror', 'Action', 'Fantasy']" [value]="category">{{ category }}</option>
+      <option *ngFor="let category of ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy','Education']" [value]="category">{{ category }}</option>
     </select>
     <small class="text-danger text-small" 
       *ngIf="addForm.controls['category'].errors?.['required'] && addForm.controls['category'].touched">
