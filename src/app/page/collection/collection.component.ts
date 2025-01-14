@@ -16,7 +16,7 @@ export class CollectionComponent {
   sortOrder: 'asc' | 'desc' = 'asc'; // Default sort order
   selectedCategory: string = '';
   filteredProducts: Product[] = [];
-  categories: string[] = ['Fiction', 'History', 'Economics', 'Psychology', 'Romance', 'Horror', 'Action', 'Fantasy']; // Danh sách thể loại
+  categories: string[] = ['Fiction', 'History', 'Manga', 'Psychology', 'Romance', 'Horror', 'Action', 'Fantasy']; // Danh sách thể loại
   
   constructor(private productService: ProductService) {}
 
@@ -27,9 +27,9 @@ export class CollectionComponent {
   renderProduct(): void {
     this.productService.getAll().subscribe({
       next: (data) => {
-        this.products = data; // Lưu tất cả sản phẩm
-        this.filteredProducts = this.products; // Hiển thị tất cả sản phẩm ban đầu
-        this.applyFiltersAndSort(); // Apply filters and sorting when products are fetched
+        this.products = data; 
+        this.filteredProducts = this.products; 
+        this.applyFiltersAndSort(); 
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -38,7 +38,6 @@ export class CollectionComponent {
   }
 
   applyFiltersAndSort(): void {
-    // Lọc theo thể loại
     let filtered = this.selectedCategory
       ? this.products.filter(product => 
           product.category.toLowerCase() === this.selectedCategory.toLowerCase())

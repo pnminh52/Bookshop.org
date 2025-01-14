@@ -7,10 +7,26 @@
   </style>
   <div class="container max-w-screen-xl mx-auto py-3 font-medium">
     <div class="mb-2 mt-2">
-      <p class="text-2xl mb-0 title">Our New Book Collection</p>
+      <p class="text-2xl mb-0 title">Our New Books Collection</p>
       <p class="text-sm  font-normal text-gray-500">
-        Discover the latest additions to our book collection, featuring a wide range of genres including Fiction, History, Economics, Psychology, Romance, and more. Whether you're searching for an exciting new read or the perfect gift, our thoughtfully curated selection has something for every reader. Start exploring today and find your next great adventure—stories that inspire, educate, and entertain await you!
+        Discover the latest additions to our book collection. Whether you're searching for an exciting new read or the perfect gift, our thoughtfully curated selection has something for every reader. Start exploring today and find your next great adventure—stories that inspire, educate, and entertain await you!
       </p>
+    </div>
+    <div class="flex gap-4">
+      <div class="mb-4 font-normal py-2 border-b border-black">
+        <select title="sortPrice" id="sortOrder" (change)="onSortOrderChange($event)">
+          <option value="asc">Low to High</option>
+          <option value="desc">High to Low</option>
+        </select>
+      </div>
+      
+      <!-- Dropdown để chọn thể loại -->
+      <div class="mb-4 font-normal py-2 border-b border-black">
+        <select title="sortCategory" id="category" (change)="onCategoryChange($event)">
+          <option value="">All Categories</option>
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>z
+        </select>
+      </div>
     </div>
   <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
     <div *ngFor="let product of filteredProducts" class="cursor-pointer p-1">
