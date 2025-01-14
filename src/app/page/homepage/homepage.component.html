@@ -9,8 +9,9 @@
     font-style: normal;
   }
 </style>
-
-<div
+<ngx-skeleton-loader *ngIf="isLoading" class="flex text-center mx-auto justify-center items-center w-12 h-12 mt-6" count="1" appearance="circle"></ngx-skeleton-loader>
+<div *ngIf="!isLoading">
+  <div
   *ngIf="successMessage"
   class="fixed bottom-4 right-4 bg-green-500 px-4 py-3 text-white rounded-md shadow-md z-50"
 >
@@ -825,3 +826,5 @@
   </div>
 </div>
 <!-- \end{code} -->
+</div>
+

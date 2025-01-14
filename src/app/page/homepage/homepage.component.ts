@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { WishlistService } from '../../wishlist.service';
 import { AuthService } from '../../auth.service';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, NgxSkeletonLoaderModule],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })
@@ -26,6 +27,7 @@ export class HomepageComponent implements OnInit {
   successMessage: string | null = null;
   alertMessage: string | null = null;
   currentIndex: number = 0;
+  isLoading = true;
 
   constructor(
     private productService: ProductService,
@@ -36,6 +38,10 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.loadProducts();
     this.userId = localStorage.getItem('userId');
+    setTimeout(()=>{
+      this.isLoading=false;
+
+    },2000)
     
   }
 
