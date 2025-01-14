@@ -1,1 +1,100 @@
-<p>new works!</p>
+<style>
+    .title {
+      font-family: "Prata", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+  </style>
+  <div class="container max-w-screen-xl mx-auto py-3 font-medium">
+    <div class="mb-2 mt-2">
+      <p class="text-2xl mb-0 title">Our New Book Collection</p>
+      <p class="text-sm  font-normal text-gray-500">
+        Discover the latest additions to our book collection, featuring a wide range of genres including Fiction, History, Economics, Psychology, Romance, and more. Whether you're searching for an exciting new read or the perfect gift, our thoughtfully curated selection has something for every reader. Start exploring today and find your next great adventure—stories that inspire, educate, and entertain await you!
+      </p>
+    </div>
+   
+    
+  <div class="flex gap-4">
+    <div class="mb-4 font-normal py-2 border-b border-black">
+      <select title="sortPrice" id="sortOrder" (change)="onSortOrderChange($event)">
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+    </div>
+    
+    <!-- Dropdown để chọn thể loại -->
+    <div class="mb-4 font-normal py-2 border-b border-black">
+      <select title="sortCategory" id="category" (change)="onCategoryChange($event)">
+        <option value="">All Categories</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>z
+      </select>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div *ngFor="let product of filteredProducts" class="cursor-pointer p-1">
+      <div class="relative inline-block group">
+        <img
+          [src]="product.image_url"
+          [routerLink]="['/productDetails', product.id]"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover rounded-md mb-1"
+        />
+      </div>
+  
+      <p class="text-lg font-normal title mb-0 mt-0 truncate">
+        {{ product.title }}
+      </p>
+      <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
+      <div class="flex mt-1 mb-1">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <!-- Full Star -->
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+  
+          <!-- Half Star -->
+          <svg
+            *ngIf="product.rating >= star - 0.5 && product.rating < star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+  
+          <!-- Empty Star -->
+          <svg
+            *ngIf="product.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+        </ng-container>
+  
+        <a class="text-gray-400 font-thin ml-2">({{product.rating}}/5)</a>
+      </div>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-normal text-red-500 self-center">
+          <s>{{ product.price }}$</s>
+        </p>
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">-{{product.discount}}%</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
