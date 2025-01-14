@@ -26,8 +26,8 @@ export class HeaderComponent implements OnInit {
     this.cartItemCount = this.cartService.getCartItemCount();
 
     // Theo dõi thay đổi trong giỏ hàng
-    this.cartService.getCartItemsObservable().subscribe((cartItems: Product[]) => {
-      this.cartItemCount = cartItems.length;
+    this.wishlistService.getWishlistItemsObservable().subscribe((wishlistItems: Product[]) => {
+      this.wishlistItemCount = this.isLoggedIn ? wishlistItems.length : 0;
     });
     
     // // Theo dõi thay đổi trong giỏ hàng

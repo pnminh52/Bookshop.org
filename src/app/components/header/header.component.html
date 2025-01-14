@@ -177,7 +177,7 @@
         <span
           class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-thin rounded-full h-4 w-4 flex items-center text-center justify-center"
         >
-        {{ wishlistItemCount }}
+        {{ isLoggedIn? wishlistItemCount :0 }}
         </span>
       </div>
       <div class="sm:hidden cursor-pointer" (click)="toggleSidebar()">

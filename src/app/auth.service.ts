@@ -5,6 +5,7 @@ import { throwError } from 'rxjs';
 import { switchMap, map } from 'rxjs/operators'; 
 import { CartService } from './cart.service'; 
 import { Router } from '@angular/router';
+import { WishlistService } from './wishlist.service';
 
 @Injectable({
   providedIn: 'root'
