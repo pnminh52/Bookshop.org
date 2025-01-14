@@ -6,6 +6,10 @@
     font-weight: 400;
     font-style: normal;
   }
+  .active-link hr {
+   opacity: 1;
+}
+
 </style>
 <header>
   <!-- <div class="bg-[#FFF1E6] cursor-pointer">
@@ -13,7 +17,7 @@
       Every purchase financially supports local independent bookstores!
     </p>
   </div> -->
-  <div *ngIf="alertMessage" class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50">
+  <div *ngIf="alertMessage" class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-sm z-50">
     {{ alertMessage }}
   </div>
   
@@ -24,6 +28,7 @@
     
       <img
       [routerLink]="['/']"   
+      (click)="closeSidebar()"
         class="w-40 h-auto cursor-pointer"
         src="
     https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
@@ -33,23 +38,43 @@
    
 
     <div class="flex justify-center items-center gap-5">
-      <a routerLink="/" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
-        Home
-      </a>
-      <a routerLink="/collection" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/" 
+      class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
+      routerLinkActive="active-link" 
+      [routerLinkActiveOptions]="{exact: true}">
+      Home
+      <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-red-500 opacity-0 transition-opacity duration-300"/>
+   </a>
+   
+      <a routerLink="/collection" class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
+      routerLinkActive="active-link" 
+      [routerLinkActiveOptions]="{exact: true}">
         Collection
+        <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-red-500 opacity-0 transition-opacity duration-300"/>
       </a>
-      <a routerLink="/new" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/new" class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
+      routerLinkActive="active-link" 
+      [routerLinkActiveOptions]="{exact: true}">
         New Books
+      <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-red-500 opacity-0 transition-opacity duration-300"/>
       </a>
-      <a routerLink="/best" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/best" class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
+      routerLinkActive="active-link" 
+      [routerLinkActiveOptions]="{exact: true}">
         Best Sellers
+      <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-red-500 opacity-0 transition-opacity duration-300"/>
       </a>
-      <a routerLink="/about" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/about" class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
+      routerLinkActive="active-link" 
+      [routerLinkActiveOptions]="{exact: true}">
         About Us
+      <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-red-500 opacity-0 transition-opacity duration-300"/>
       </a>
-      <a routerLink="/contact" class="hidden sm:inline-block hover:no-underline hover:text-inherit">
+      <a routerLink="/contact" class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
+      routerLinkActive="active-link" 
+      [routerLinkActiveOptions]="{exact: true}">
         Contact
+        <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-red-500 opacity-0 transition-opacity duration-300"/>
       </a>
     </div>
     
@@ -102,7 +127,7 @@
       </div>
       <!-- Search Icon (SVG) -->
       <div class="cursor-pointer">
-        <a title="search" routerLink="/search">
+        <a title="search" routerLink="/search" (click)="closeSidebar()">
           <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -117,7 +142,7 @@
       </div>
       <div class="relative cursor-pointer">
         <!-- Cart Icon -->
-        <a title="cart" (click)="onItemClick('cart')">
+        <a title="cart" (click)="onItemClick('cart')" (click)="closeSidebar()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -140,7 +165,7 @@
         </span>
       </div>
       <div class="relative cursor-pointer">
-    <a title="wishlist" (click)="onItemClick('wishlist')">    <svg
+    <a title="wishlist" (click)="onItemClick('wishlist')" (click)="closeSidebar()">    <svg
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -307,9 +332,9 @@
       </div>  
     </div>
   </div>
-  <!-- <div class="h-10 bg-[#FFF1E6] flex items-center justify-center underline cursor-pointer">
+  <div class="h-10 bg-[#FFF1E6] flex items-center justify-center underline cursor-pointer">
   Every purchase financially supports local independent bookstores!
-  </div> -->
+  </div>
   
   
   </div>
