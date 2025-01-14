@@ -17,12 +17,11 @@ export class AddComponent {
   productService = inject(ProductService);
   router = inject(Router);
 
-  // Khai báo FormGroup
   addForm: FormGroup = new FormGroup({
     title: new FormControl('', [Validators.required]),
     price: new FormControl('', [Validators.required, Validators.min(0)]),
     price_after_discount: new FormControl('', [Validators.required, Validators.min(0)]),
-    category: new FormControl('', [Validators.required]),  // Mặc định là giá trị trống
+    category: new FormControl('', [Validators.required]),
     author: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
     image_url: new FormControl('', [Validators.required]),
