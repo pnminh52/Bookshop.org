@@ -21,6 +21,7 @@ export class CollectionComponent {
 
   ngOnInit(): void {
     this.renderProduct();
+    this.sortProducts();
   }
 
   renderProduct(): void {
@@ -54,9 +55,9 @@ export class CollectionComponent {
   onCategoryChange(event: any): void {
     const category = event.target.value;
     this.selectedCategory = category;
-
+  
     if (category) {
-      // Lọc sản phẩm theo thể loại đã chọn
+      // Lọc sản phẩm theo thể loại đã chọn (so sánh chữ thường để tránh phân biệt chữ hoa/thường)
       this.filteredProducts = this.products.filter(product =>
         product.category.toLowerCase() === category.toLowerCase()
       );
@@ -64,5 +65,6 @@ export class CollectionComponent {
       // Nếu không chọn thể loại, hiển thị tất cả sản phẩm
       this.filteredProducts = this.products;
     }
-  }
+    this.sortProducts()
+  } 
 }
