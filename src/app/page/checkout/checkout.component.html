@@ -28,8 +28,13 @@
           <p><strong>Tên:</strong> {{ user.fullName }}</p>
           <p><strong>Email:</strong> {{ user.email }}</p>
           <p><strong>Địa chỉ:</strong> {{ user.address.streetAddress }}, {{ user.address.city }}, {{ user.address.state }}, {{ user.address.postalCode }}</p>
-          <p><strong>Phương thức thanh toán:</strong> {{ user.paymentMethod }}</p>
-        </div>
+          <div class="mt-4">
+            <label class="block font-medium">Phương thức thanh toán</label>
+            <select title="paymentMethods" [(ngModel)]="selectedPaymentMethod">
+              <option *ngFor="let method of paymentMethods" [value]="method">{{ method }}</option>
+            </select>
+            
+          </div>        </div>
         <ng-template #noUser >
           <p class="text-red-500">Vui lòng đăng nhập để thanh toán.</p>
         </ng-template>

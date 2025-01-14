@@ -1,43 +1,51 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  standalone: true,
-  imports: [ReactiveFormsModule,NgIf],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  standalone: true,
+  styleUrls: ['./register.component.css'],
+  imports:[ReactiveFormsModule,CommonModule, RouterLink  ]
 })
 export class RegisterComponent {
-  authService = inject(AuthService);
-  router = inject(Router);
-
-  registerForm: FormGroup = new FormGroup({
+  registerForm = new FormGroup({
+    fullName: new FormControl('', Validators.required),
+    phoneNumber: new FormControl('', Validators.required),
+    address: new FormGroup({
+      streetAddress: new FormControl('', Validators.required),
+      city: new FormControl('', Validators.required),
+      state: new FormControl('', Validators.required),
+      postalCode: new FormControl('', Validators.required),
+      country: new FormControl('', Validators.required),
+    }),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required])
+    password: new FormControl('', Validators.required),
+    role: new FormControl('user', Validators.required)
   });
 
+  constructor(private authService: AuthService, private router: Router) {}
+
   handleSubmit() {
-    const formData = { ...this.registerForm.value, role: 'user' };
-  
-    this.authService.register(formData).subscribe({
-      next: () => {
-        if (window.confirm('Đăng ký thành công!')) {
+    if (this.registerForm.valid) {
+      const formData = this.registerForm.value;
+      formData.role="user";
+      this.authService.register(formData).subscribe({
+        next: () => {
+          alert('Registration successful!');
           this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          alert('Registration failed: ' + err.message);
         }
-      },
-      error: (err: any) => {
-        // Hiển thị cảnh báo nếu email đã tồn tại
-        if (err.message === 'Email đã được sử dụng!') {
-          alert('Email này đã được đăng ký. Vui lòng chọn email khác.');
-        } else {
-          console.log(err);
-        }
-      }
-    });
+      });
+    } else {
+      alert('Please fill out the form correctly.');
+    }
   }
-  
 }

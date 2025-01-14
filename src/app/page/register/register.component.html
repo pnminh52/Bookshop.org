@@ -1,22 +1,194 @@
-<div class="container">
-  <h2 class="text-center">đăng ký</h2>
-  <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" formControlName="email" placeholder="email">
-      <small class="text-danger text-small" *ngIf="registerForm.controls['email'].errors?.['required'] && registerForm.controls['email'].touched">
-        email is Required
-      </small>
+<style>
+  .title {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
+<div
+  class="container max-w-screen-xl mx-auto py-12 font-medium flex items-center justify-center"
+>
+  <div class="w-full max-w-md">
+    <div>
+      <p class="title text-center mb-0 text-2xl">
+        Create an Account and Join Rewards
+      </p>
+      <p class="text-center text-gray-500 font-normal">
+        Fill in the fields below to create a bn.com account and sign up for
+        Rewards. If you already have an account, please
+        <a class="text-[#573BAE]" [routerLink]="['/login']">Sign In</a>
+      </p>
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" formControlName="password" placeholder="password">
-      <small class="text-danger text-small" *ngIf="registerForm.controls['password'].errors?.['required'] && registerForm.controls['password'].touched">
-        password is Required
-      </small>
-    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+      <div class="space-y-4">
+        <input
+          placeholder="Full Name"
+          id="fullName"
+          formControlName="fullName"
+          type="text"
+          required
+          class="w-full font-normal p-2 py-3 border border-gray-300"
+        />
+        <div
+          *ngIf="
+            registerForm.get('fullName')?.invalid &&
+            registerForm.get('fullName')?.touched
+          "
+        >
+          <small class="text-red-500">Full Name is required</small>
+        </div>
 
+        <input
+          placeholder="Phone Number"
+          id="phoneNumber"
+          formControlName="phoneNumber"
+          type="tel"
+          required
+          class="w-full font-normal p-2 py-3 border border-gray-300"
+        />
+        <div
+          *ngIf="
+            registerForm.get('phoneNumber')?.invalid &&
+            registerForm.get('phoneNumber')?.touched
+          "
+        >
+          <small class="text-red-500">Phone Number is required</small>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+        <!-- Thêm formGroupName="address" để liên kết với FormGroup con -->
+        <div formGroupName="address" class="space-y-4">
+          <input
+            placeholder="Street Address"
+            id="streetAddress"
+            formControlName="streetAddress"
+            type="text"
+            required
+            class="w-full font-normal p-2 py-3 border border-gray-300"
+          />
+          <div
+            *ngIf="
+              registerForm.get('address.streetAddress')?.invalid &&
+              registerForm.get('address.streetAddress')?.touched
+            "
+          >
+            <small class="text-red-500">Street Address is required</small>
+          </div>
+
+          <input
+            placeholder="City"
+            id="city"
+            formControlName="city"
+            type="text"
+            required
+            class="w-full font-normal p-2 py-3 border border-gray-300"
+          />
+          <div
+            *ngIf="
+              registerForm.get('address.city')?.invalid &&
+              registerForm.get('address.city')?.touched
+            "
+          >
+            <small class="text-red-500">City is required</small>
+          </div>
+
+          <input
+            placeholder="State"
+            id="state"
+            formControlName="state"
+            type="text"
+            required
+            class="w-full font-normal p-2 py-3 border border-gray-300"
+          />
+          <div
+            *ngIf="
+              registerForm.get('address.state')?.invalid &&
+              registerForm.get('address.state')?.touched
+            "
+          >
+            <small class="text-red-500">State is required</small>
+          </div>
+
+          <input
+            placeholder="Postal Code"
+            id="postalCode"
+            formControlName="postalCode"
+            type=" text"
+            required
+            class="w-full font-normal p-2 py-3 border border-gray-300"
+          />
+          <div
+            *ngIf="
+              registerForm.get('address.postalCode')?.invalid &&
+              registerForm.get('address.postalCode')?.touched
+            "
+          >
+            <small class="text-red-500">Postal Code is required</small>
+          </div>
+
+          <input
+            placeholder="Country"
+            id="country"
+            formControlName="country"
+            type="text"
+            required
+            class="w-full font-normal p-2 py-3 border border-gray-300"
+          />
+          <div
+            *ngIf="
+              registerForm.get('address.country')?.invalid &&
+              registerForm.get('address.country')?.touched
+            "
+          >
+            <small class="text-red-500">Country is required</small>
+          </div>
+        </div>
+
+        <input
+          placeholder="Email"
+          id="email"
+          formControlName="email"
+          type="email"
+          required
+          class="w-full font-normal p-2 py-3 border border-gray-300"
+        />
+        <div
+          *ngIf="
+            registerForm.get('email')?.invalid &&
+            registerForm.get('email')?.touched
+          "
+        >
+          <small class="text-red-500">Valid Email is required</small>
+        </div>
+
+        <input
+          placeholder="Password"
+          id="password"
+          formControlName="password"
+          type="password"
+          required
+          class="w-full font-normal p-2 py-3 border border-gray-300"
+        />
+        <div
+          *ngIf="
+            registerForm.get('password')?.invalid &&
+            registerForm.get('password')?.touched
+          "
+        >
+          <small class="text-red-500">Password is required</small>
+        </div>
+
+        <button
+          type="submit"
+          [disabled]="registerForm.invalid"
+          class="w-full bg-[#573BAE] text-white py-3 p-2"
+        >
+          Register
+        </button>
+        <div class=" gap-2 flex justify-center items-center text-center  font-normal">
+        
+        <p class="underline text-black">Already have an Account?</p>   <p [routerLink]="['/login']" class="text-[#573BAE] cursor-pointer">Sign In now!</p>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

@@ -81,7 +81,6 @@
     
    
     <div class="flex items-center gap-5">
-      <!-- Profile Icon (SVG) -->
       <div class="group relative">
         <div class="cursor-pointer hidden sm:block">
           <svg
@@ -96,8 +95,6 @@
             <path d="M4 20c0-4 3-7 7-7h2c4 0 7 3 7 7"></path>
           </svg>
         </div>
-
-        <!-- Dropdown menu -->
         <div class="group-hover:block hidden absolute right-0 pt-2">
           <div
             class="flex flex-col gap-2 w-40 py-2 px-5 bg-slate-100 text-gray-500 rounded"
@@ -125,7 +122,6 @@
           </div>
         </div>
       </div>
-      <!-- Search Icon (SVG) -->
       <div class="cursor-pointer">
         <a title="search" routerLink="/search" (click)="closeSidebar()">
           <svg
@@ -141,7 +137,6 @@
         </a>
       </div>
       <div class="relative cursor-pointer">
-        <!-- Cart Icon -->
         <a title="cart" (click)="onItemClick('cart')" (click)="closeSidebar()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,8 +151,6 @@
             <circle cx="18" cy="21" r="1"></circle>
           </svg>
         </a>
-
-        <!-- Number Circle -->
         <span
           class="absolute top-1 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white text-xs font-thin rounded-full h-4 w-4 flex items-center text-center justify-center"
         >
@@ -187,8 +180,6 @@
         {{ wishlistItemCount }}
         </span>
       </div>
-
-      <!-- Hamburger Icon (Visible only on small screens) -->
       <div class="sm:hidden cursor-pointer" (click)="toggleSidebar()">
         <svg
         *ngIf="!isSidebarVisible"
@@ -213,7 +204,6 @@
         <path d="M6 18L18 6M6 6l12 12"></path>
       </svg>
       </div>
-      <!-- Sidebar -->
       <div
         [ngClass]="{
           'fixed top-16 left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
@@ -221,33 +211,6 @@
           'transform -translate-x-full': !isSidebarVisible
         }"
       >
-      <!-- <div class="flex  items-center justify-between w-full">
-        <a title="Link" href="/">
-          <img
-            class="w-40 ml-4 mt-2 h-auto cursor-pointer"
-            src="
-            https://rails-assets-us.bookshop.org/ds/images/registered-logo.feff201f7516c84bf6ac44d84c98126760594a80.svg
-            "
-            alt=""
-          />
-        </a>
-        <button
-        title="closeSidebar"
-        class="flex p-1 mt-2 mr-2 flex-col border border-black rounded-md text-gray-700"
-        (click)="closeSidebar()"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          class="w-6 h-6"
-        >
-          <path d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      </div> -->
         <ul class="mt-3 ml-3   space-y-6">
        
     
@@ -325,9 +288,14 @@
             >Logout</a>
           
           </li>
-         
-          
-      
+          <li class="w-full h-8">
+            <a
+            (click)="closeSidebar()"
+            *ngIf="!isLoggedIn"
+            routerLink="/register"
+            class="cursor-pointer "
+            >Register</a>
+          </li>
         </ul>
       </div>  
     </div>

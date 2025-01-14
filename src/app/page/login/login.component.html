@@ -1,23 +1,75 @@
-<div class="container">
-  <h2 class="text-center">đăng nhập</h2>
-  <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+<style>
+  .title {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
+<div
+  class="container max-w-screen-xl mx-auto py-12 font-medium flex items-center justify-center"
+>
+  <div class="w-full max-w-md">
     <div>
-      <label for="email">Email:</label>
-      <input id="email" formControlName="email" type="email" required>
-      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email') ?.touched">
-        <small>Email không hợp lệ.</small>
-      </div>
+      <p class="title text-center mb-0 text-2xl">
+        Sign in or Create an Account
+      </p>
+      <p class="text-center text-gray-500 font-normal">
+        Sign in or
+        <a class="text-[#573BAE] cursor-pointer" [routerLink]="['/register']"> Create a New Account</a> to
+        get started
+      </p>
     </div>
-    
-    <div>
-      <label for="password">Mật khẩu:</label>
-      <input id="password" formControlName="password" type="password" required>
-      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-        <small>Mật khẩu là bắt buộc.</small>
-      </div>
-    </div>
-    
-    <button type="submit" [disabled]="loginForm.invalid">Đăng nhập</button>
-  </form>
-</div>
+    <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+      <div class="space-y-4">
+        <input
+          placeholder="Email Address"
+          title="input"
+          id="email"
+          formControlName="email"
+          type="email"
+          required
+          class="w-full font-normal p-2 py-3 border border-gray-300"
+        />
+        <div
+          *ngIf="
+            loginForm.get('email')?.invalid && loginForm.get('email')?.touched
+          "
+        >
+          <small class="text-red-500">Your email is invalid</small>
+        </div>
 
+        <input
+          placeholder="Password"
+          title="input"
+          id="password"
+          formControlName="password"
+          type="password"
+          required
+          class="w-full font-normal p-2 py-3 border border-gray-300"
+        />
+        <div
+          *ngIf="
+            loginForm.get('password')?.invalid &&
+            loginForm.get('password')?.touched
+          "
+        >
+          <small class="text-red-500"
+            >The Password field must not be left blank</small
+          >
+        </div>
+        <button
+          type="submit"
+          [disabled]="loginForm.invalid"
+          class="w-full bg-[#573BAE] text-white py-3 p-2"
+        >
+          Sign In & Continue
+        </button>
+  
+        <div class=" gap-2 flex justify-center items-center text-center  font-normal">
+        
+          <p class="underline text-black">Don't have an Account?</p>   <p [routerLink]="['/register']" routerLinkActive="router-link-active"  class="text-[#573BAE] cursor-pointer">Register now!</p>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>

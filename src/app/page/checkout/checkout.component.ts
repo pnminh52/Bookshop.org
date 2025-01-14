@@ -3,18 +3,21 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../cart.service';
 import { Product } from '../../type/Products';
-import { RouterLink } from '@angular/router';
 import { OrderService } from '../../order.service';
 import { Router } from '@angular/router';
+import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, FormsModule],
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css'],
 })
 export class CheckoutComponent {
+  paymentMethods = ['Cash on Delivery','Credit Card', 'PayPal', 'Bank Transfer'];
+  selectedPaymentMethod = 'Cash on Delivery'; 
   cartItems: Product[] = [];
   total: number = 0;
   user: any = null;
@@ -35,6 +38,7 @@ export class CheckoutComponent {
       userId: this.user.id,
       items: this.cartItems,
       total: this.total,
+      paymentMethod: this.selectedPaymentMethod,
       date: new Date().toISOString(),
       status: 'completed',
     };
