@@ -7,7 +7,6 @@ import { LoginComponent } from './page/login/login.component';
 import { HomepageComponent } from './page/homepage/homepage.component';
 import { CollectionComponent } from './page/collection/collection.component';
 import { NewComponent } from './page/new/new.component';
-import { BestComponent } from './page/best/best.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { AboutComponent } from './page/about/about.component';
 import {ProductDetailComponent} from './page/product-detail/product-detail.component'
@@ -17,6 +16,7 @@ import { OrderComponent } from './page/order/order.component';
 import { SearchComponent } from './page/search/search.component';
 import { WishlistComponent } from './page/wishlist/wishlist.component';
 import { ProfileComponent } from './page/profile/profile.component';
+import { AudiobooksComponent } from './page/audiobooks/audiobooks.component';
 
 export const routes: Routes = [
   {
@@ -57,8 +57,8 @@ export const routes: Routes = [
     component: NewComponent
   },
   {
-    path: 'best',
-    component: BestComponent
+    path: 'audiobooks',
+    component: AudiobooksComponent
   },
   {
     path: 'contact',
