@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   wishlistItemCount: number = 0;
   isLoggedIn: boolean = false;
   isSidebarVisible = false;
-  alertMessage: string | null = null;
+    alertMessage: string | null = null;
 
   constructor(private wishlistService: WishlistService,private authService: AuthService, private router: Router, private cartService: CartService) {
 

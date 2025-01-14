@@ -70,7 +70,6 @@ export class AuthService {
     this.isLoggedInSubject.next(false); 
     this.cartService.clearCart(); 
     this.router.navigate(['/']); 
-    alert('Đăng xuất thành công!');
     return EMPTY; 
   }
 

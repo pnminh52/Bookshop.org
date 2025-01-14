@@ -16,6 +16,7 @@
   <div *ngIf="alertMessage" class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50">
     {{ alertMessage }}
   </div>
+  
   <div class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
     <div
     class="container max-w-screen-xl h-16 mx-auto flex items-center justify-between py-3 font-medium"
@@ -250,33 +251,33 @@
               Contact
             </a>
           </li>
-          <li class="border-b border-gray-400  w-full h-8">
+          <li  *ngIf="isLoggedIn" class="border-b border-gray-400  w-full h-8">
             <a
-            *ngIf="isLoggedIn"
+           
             href="/search"
             class="cursor-pointer "
             >Search</a
           >
           </li>
-          <li class="border-b border-gray-400  w-full h-8">
+          <li *ngIf="isLoggedIn" class="border-b border-gray-400  w-full h-8">
             <a
-            *ngIf="isLoggedIn"
+            
             href="/cart"
             class="cursor-pointer "
             >Cart</a
           >
           </li>
-          <li class="border-b border-gray-400  w-full h-8">
+          <li *ngIf="isLoggedIn" class="border-b border-gray-400  w-full h-8">
             <a
-            *ngIf="isLoggedIn"
+            
             href="/order"
             class="cursor-pointer "
             >Order</a
           >
           </li>
-          <li class="border-b border-gray-400  w-full h-8">
+          <li *ngIf="isLoggedIn" class="border-b border-gray-400  w-full h-8">
             <a
-            *ngIf="isLoggedIn"
+          
             href="/prodile"
             class="cursor-pointer "
             >Profile</a
@@ -290,12 +291,13 @@
             >Login</a
           >
           <a
-            *ngIf="isLoggedIn"
+          *ngIf="isLoggedIn"
             (click)="logout()"
             class="cursor-pointer "
-            >Logout</a
-          >
+            >Logout</a>
+          
           </li>
+         
           
       
         </ul>
