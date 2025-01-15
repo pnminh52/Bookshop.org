@@ -1,3 +1,5 @@
-<app-header></app-header>
+<app-admin-header *ngIf="isAdmin"></app-admin-header>
+<app-user-header *ngIf="!isAdmin"></app-user-header>
 <div class="min-h-screen pt-[104px]"><router-outlet></router-outlet></div>
-<app-footer></app-footer>
+<app-user-footer *ngIf="!isAdmin"></app-user-footer>
+<app-admin-footer *ngIf="isAdmin"></app-admin-footer> 

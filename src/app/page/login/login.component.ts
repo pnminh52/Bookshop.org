@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 export class LoginComponent {
   authService = inject(AuthService);
   router = inject(Router);
-
+isAdmin=false
   loginForm: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
@@ -36,6 +36,8 @@ export class LoginComponent {
           alert('Đăng nhập thành công!');
             localStorage.setItem('user', JSON.stringify(user));
           if (user.role === 'admin') {
+            localStorage.setItem('role', 'admin');
+            this.isAdmin = true;
             this.router.navigate(['/admin/']);
           } else {
             this.router.navigate(['/']);

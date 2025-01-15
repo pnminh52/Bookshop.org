@@ -1,0 +1,8 @@
+<!-- admin-header.component.html -->
+<p>admin-header works!</p>
+<button  *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+<button
+*ngIf="!isLoggedIn"
+routerLink="/login"
+class="cursor-pointer "
+>Login</button>

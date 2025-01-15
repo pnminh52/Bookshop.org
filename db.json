@@ -846,10 +846,80 @@
       },
       "email": "2@gmail.com",
       "password": "111111",
-      "role": "user"
+      "role": "user",
+      "orderHistory": [
+        {
+          "userId": "b53c",
+          "items": [
+            {
+              "id": "0241",
+              "title": "The Fragrant Flower Blooms with Dignity 3",
+              "price": 13.99,
+              "price_after_discount": 13.01,
+              "category": "Manga",
+              "author": "Saka Mikami",
+              "description": "Two rival schools stand next door to each other: one for elite ladies, one for good-for-nothing boys. But one of those boys might just be a naturally chivalrous diamond in the rough, and one of those girls might be a little more open-minded than is proper...\nThis cute and twisty manga spin on Romeo and Juliet is the latest hit in Japan, coming to print from a successful digital-first release!\nDespite the hostile rivalry between their schools, after spending time together, Rintaro and Kaoruko have begun to feel comfortable around each other. However, even with their growing bond, the barriers between the two schools are so high that Rintaro finds himself at a loss with his friends. The secret of his relationship is putting up walls between them. And so, Rintaro calls Kaoruko and her friend Subaru to a meeting, hoping to find a solution...",
+              "image_url": "https://images-us.bookshop.org/ingram/9798888771402.jpg?height=1200&v=v2-3c493626234f26d53f24783a87bd90e8",
+              "rating": 4.8,
+              "discount": 3,
+              "stock": 30,
+              "category_id": "3",
+              "publish_date": "2025-01-12",
+              "quantity": 3
+            }
+          ],
+          "total": 39.03,
+          "paymentMethod": "PayPal",
+          "date": "2025-01-15T09:58:39.913Z",
+          "status": "completed"
+        }
+      ]
     }
   ],
-  "orders": [],
-  "wishlist": [],
+  "orders": [
+    {
+      "userId": "b53c",
+      "items": [
+        {
+          "id": "0241",
+          "title": "The Fragrant Flower Blooms with Dignity 3",
+          "price": 13.99,
+          "price_after_discount": 13.01,
+          "category": "Manga",
+          "author": "Saka Mikami",
+          "description": "Two rival schools stand next door to each other: one for elite ladies, one for good-for-nothing boys. But one of those boys might just be a naturally chivalrous diamond in the rough, and one of those girls might be a little more open-minded than is proper...\nThis cute and twisty manga spin on Romeo and Juliet is the latest hit in Japan, coming to print from a successful digital-first release!\nDespite the hostile rivalry between their schools, after spending time together, Rintaro and Kaoruko have begun to feel comfortable around each other. However, even with their growing bond, the barriers between the two schools are so high that Rintaro finds himself at a loss with his friends. The secret of his relationship is putting up walls between them. And so, Rintaro calls Kaoruko and her friend Subaru to a meeting, hoping to find a solution...",
+          "image_url": "https://images-us.bookshop.org/ingram/9798888771402.jpg?height=1200&v=v2-3c493626234f26d53f24783a87bd90e8",
+          "rating": 4.8,
+          "discount": 3,
+          "stock": 30,
+          "category_id": "3",
+          "publish_date": "2025-01-12",
+          "quantity": 3
+        }
+      ],
+      "total": 39.03,
+      "paymentMethod": "PayPal",
+      "date": "2025-01-15T09:58:39.913Z",
+      "status": "Cancelled",
+      "id": 1
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "0241",
+      "title": "The Fragrant Flower Blooms with Dignity 3",
+      "price": 13.99,
+      "price_after_discount": 13.01,
+      "category": "Manga",
+      "author": "Saka Mikami",
+      "description": "Two rival schools stand next door to each other: one for elite ladies, one for good-for-nothing boys. But one of those boys might just be a naturally chivalrous diamond in the rough, and one of those girls might be a little more open-minded than is proper...\nThis cute and twisty manga spin on Romeo and Juliet is the latest hit in Japan, coming to print from a successful digital-first release!\nDespite the hostile rivalry between their schools, after spending time together, Rintaro and Kaoruko have begun to feel comfortable around each other. However, even with their growing bond, the barriers between the two schools are so high that Rintaro finds himself at a loss with his friends. The secret of his relationship is putting up walls between them. And so, Rintaro calls Kaoruko and her friend Subaru to a meeting, hoping to find a solution...",
+      "image_url": "https://images-us.bookshop.org/ingram/9798888771402.jpg?height=1200&v=v2-3c493626234f26d53f24783a87bd90e8",
+      "rating": 4.8,
+      "discount": 3,
+      "stock": 30,
+      "category_id": "3",
+      "publish_date": "2025-01-12"
+    }
+  ],
   "comments": []
 }

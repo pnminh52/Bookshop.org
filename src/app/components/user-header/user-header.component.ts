@@ -8,13 +8,13 @@ import { WishlistService } from '../../wishlist.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  standalone: true, 
-  imports: [CommonModule, RouterModule], 
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  selector: 'app-user-header',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
+  templateUrl: './user-header.component.html',
+  styleUrl: './user-header.component.css'
 })
-export class HeaderComponent implements OnInit {
+export class UserHeaderComponent {
   cartItemCount: number = 0;
   wishlistItemCount: number = 0;
   isLoggedIn: boolean = false;
