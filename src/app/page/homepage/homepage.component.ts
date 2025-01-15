@@ -18,12 +18,14 @@ export class HomepageComponent implements OnInit {
   product: Product | undefined;
   userId: string | null = null;
   products: Product[] = [];
-  limitedProducts: Product[] = [];
+  // limitedProducts: Product[] = [];
   novelCategory: Product[] = [];
   romanceCategory: Product[] = [];
   fantasyCategory: Product[] = [];
   historyCategory: Product[] = [];
   educationCategory: Product[] = [];
+  mangaCategory: Product[] = [];
+  fictionCategory: Product[]=[]
   successMessage: string | null = null;
   alertMessage: string | null = null;
   currentIndex: number = 0;
@@ -49,12 +51,14 @@ export class HomepageComponent implements OnInit {
     this.productService.getAll().subscribe({
       next: (data) => {
         this.products = data;
-        this.limitedProducts = this.products.slice(0, 6);
+        // this.limitedProducts = this.products.slice(0, 6);
         // this.filterNovelCategory();
         this.filterRomanceCategory();
         this.filterFantasyCategory();
         this.filterHistoryCategory();
         this.filterEducationCategory();
+        this.filterFictionCategory();
+        this.filterMangaCategory();
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -82,6 +86,16 @@ export class HomepageComponent implements OnInit {
   filterEducationCategory(): void {
     this.educationCategory = this.products
       .filter((product) => product.category === 'Education')
+      .slice(0, 6);
+  }
+  filterFictionCategory(): void {
+    this.fictionCategory = this.products
+      .filter((product) => product.category === 'Fiction')
+      .slice(0, 6);
+  }
+  filterMangaCategory(): void {
+    this.mangaCategory = this.products
+      .filter((product) => product.category === 'Manga')
       .slice(0, 6);
   }
 

@@ -1,11 +1,12 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { AuthService } from '../../auth.service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { CartService } from '../../cart.service';
 import { Product } from '../../type/Products';
 import { WishlistService } from '../../wishlist.service';
 import { RouterModule } from '@angular/router';
+import { BehaviorSubject, filter } from 'rxjs';
 
 @Component({
   selector: 'app-user-header',
@@ -40,6 +41,11 @@ export class UserHeaderComponent {
       .getCartItemsObservable()
       .subscribe((cartItems: Product[]) => {
         this.cartItemCount = cartItems.length;
+      });
+      this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe(() => {
+        window.scrollTo(0, 0);
       });
   }
   onItemClick(itemType: string): void {

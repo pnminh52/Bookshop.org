@@ -31,829 +31,965 @@
   ></div>
 </div> -->
 <!-- <div *ngIf="!isLoading"> -->
-  <div
-    *ngIf="successMessage"
-    class="fixed bottom-4 right-4 bg-green-500 px-4 py-3 text-white rounded-md shadow-md z-50"
-  >
-    {{ successMessage }}
+<div
+  *ngIf="successMessage"
+  class="fixed bottom-4 right-4 bg-green-500 px-4 py-3 text-white rounded-md shadow-md z-50"
+>
+  {{ successMessage }}
+</div>
+<div
+  *ngIf="alertMessage"
+  class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50"
+>
+  {{ alertMessage }}
+</div>
+<!-- \end{code} -->
+<div id="globalNavBanner" class="noncpn image flex justify-center">
+  <div class="globalNavBanner globalBannerWrap primary loaded">
+    <a class="globalNavBannerLink"
+      ><picture
+        ><source
+          media="(max-width: 600px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24-mobile.jpg
+          " />
+        <source
+          media="(min-width: 601px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg
+          " />
+        <img
+          src="http://dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg"
+          class="globalNavBannerImg"
+          alt="Limited Time Only, 50% Off Thousands of Hardcover Books. See page for details.  Shop Now " /></picture
+    ></a>
   </div>
-  <div
-    *ngIf="alertMessage"
-    class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50"
-  >
-    {{ alertMessage }}
-  </div>
-  <!-- \end{code} -->
-  <div id="globalNavBanner" class="noncpn image flex justify-center">
-    <div class="globalNavBanner globalBannerWrap primary loaded">
-      <a class="globalNavBannerLink"
-        ><picture
-          ><source
-            media="(max-width: 600px)"
-            srcset="
-              //dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24-mobile.jpg
-            " />
-          <source
-            media="(min-width: 601px)"
-            srcset="
-              //dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg
-            " />
-          <img
-            src="http://dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg"
-            class="globalNavBannerImg"
-            alt="Limited Time Only, 50% Off Thousands of Hardcover Books. See page for details.  Shop Now " /></picture
-      ></a>
-    </div>
-    <script type="text/javascript">
-      (function () {
-        var secondBanner = true;
-        var thisPathName = window.location.pathname;
-        $(".globalNavBanner:not(.loaded)").each(function (index) {
-          if (
-            thisPathName !== "/h/coupons-deals" &&
-            thisPathName !== "/h/copyright-policy"
-          ) {
-            if (46 > 1) {
-              $("a.globalNavBannerLink").attr(
-                "href",
-                "https://www.barnesandnoble.com/h/coupons-deals"
-              );
-            } else {
-              $("a.globalNavBannerLink").addClass("nolink");
-            }
-            if (46 > 1 && "same" === "modal") {
-              $("a.globalNavBannerLink")
-                .attr("target", "_blank")
-                .attr("data-modal-class", "BN.Modal.External.Link")
-                .attr("data-modal-scrolling", "yes")
-                .attr("data-modal-title", "");
-            } else if (46 > 1 && "same" === "new") {
-              $("a.globalNavBannerLink").attr("target", "_blank");
-            }
-            $(this)
-              .addClass("primary loaded")
-              .parents("#globalNavBanner")
-              .addClass("noncpn image");
-            var msgElem;
-
-            msgElem = `<picture><source media="(max-width: 600px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24-mobile.jpg"><source media="(min-width: 601px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg"><img src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg" class="globalNavBannerImg" alt="Limited Time Only, 50% Off Thousands of Hardcover Books. See page for details.  Shop Now "></picture>`;
-
-            $("a.globalNavBannerLink").html(msgElem);
-            $("a.globalNavBanner").on("click", function () {
-              set_cookie(
-                "globalNavBanner_limited-time-only-50-off-thousands-of-hardcover-books.-see-page-for-details.--shop-now_na_text"
-              );
-            });
-            $(this).removeClass("hidden");
-          } else if (
-            secondBanner &&
-            (thisPathName === "/h/coupons-deals" ||
-              thisPathName === "/h/copyright-policy")
-          ) {
-            if (76 > 1) {
-              $("a.globalNavBannerLink").attr(
-                "href",
-                "https://www.barnesandnoble.com/b/the-most-anticipated-books-of-2025/_/N-310h"
-              );
-            } else {
-              $("a.globalNavBannerLink").addClass("nolink");
-            }
-            if (76 > 1 && "same" === "modal") {
-              $("a.globalNavBannerLink")
-                .attr("target", "_blank")
-                .attr("data-modal-class", "BN.Modal.External.Link")
-                .attr("data-modal-scrolling", "yes")
-                .attr("data-modal-title", "");
-            } else if (76 > 1 && "same" === "new") {
-              $("a.globalNavBannerLink").attr("target", "_blank");
-            }
-            $(this)
-              .addClass("secondary loaded")
-              .parents("#globalNavBanner")
-              .addClass("noncpn image ");
-            var msgElem2;
-
-            msgElem2 = `<picture><source media="(max-width: 600px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24-mobile.jpg"><source media="(min-width: 601px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24.jpg"><img src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24.jpg" class="globalNavBannerImg" alt= "The Most Anticipated Books of 2025. Premium Members Save 10% Every Day. See page for details.  Pre-Order Now " /></picture>`;
-
-            $("a.globalNavBannerLink").html(msgElem2);
-            $("a.globalNavBanner").on("click", function () {
-              set_cookie(
-                "globalNavBanner_the-most-anticipated-books-of-2025.-premium-members-save-10-every-day.-see-page-for-details.--pre-order-now_na_text"
-              );
-            });
-            $(this).removeClass("hidden");
+  <script type="text/javascript">
+    (function () {
+      var secondBanner = true;
+      var thisPathName = window.location.pathname;
+      $(".globalNavBanner:not(.loaded)").each(function (index) {
+        if (
+          thisPathName !== "/h/coupons-deals" &&
+          thisPathName !== "/h/copyright-policy"
+        ) {
+          if (46 > 1) {
+            $("a.globalNavBannerLink").attr(
+              "href",
+              "https://www.barnesandnoble.com/h/coupons-deals"
+            );
           } else {
-            $(".cqGlobalNavBanner").hide();
+            $("a.globalNavBannerLink").addClass("nolink");
           }
-        });
-      })();
-      $(function () {
-        if (window.location.href.indexOf("barnesandnoble.com/w/") > -1) {
-          var pCategory = digitalData.product[0].category.primaryCategory
-            .replace(/[^a-z0-9\s]/gi, "")
-            .replace(/[_\s]/g, "-")
-            .toLowerCase();
-          if (pCategory.length > 0) {
-            sessionStorage.setItem("optPrimaryCategory", pCategory);
-            sessionStorage.setItem("optDDprimaryCategory", pCategory);
+          if (46 > 1 && "same" === "modal") {
+            $("a.globalNavBannerLink")
+              .attr("target", "_blank")
+              .attr("data-modal-class", "BN.Modal.External.Link")
+              .attr("data-modal-scrolling", "yes")
+              .attr("data-modal-title", "");
+          } else if (46 > 1 && "same" === "new") {
+            $("a.globalNavBannerLink").attr("target", "_blank");
+          }
+          $(this)
+            .addClass("primary loaded")
+            .parents("#globalNavBanner")
+            .addClass("noncpn image");
+          var msgElem;
+
+          msgElem = `<picture><source media="(max-width: 600px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24-mobile.jpg"><source media="(min-width: 601px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg"><img src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2025/01/31479_GlobalNav_PostHoliday50Off_12_30_24.jpg" class="globalNavBannerImg" alt="Limited Time Only, 50% Off Thousands of Hardcover Books. See page for details.  Shop Now "></picture>`;
+
+          $("a.globalNavBannerLink").html(msgElem);
+          $("a.globalNavBanner").on("click", function () {
+            set_cookie(
+              "globalNavBanner_limited-time-only-50-off-thousands-of-hardcover-books.-see-page-for-details.--shop-now_na_text"
+            );
+          });
+          $(this).removeClass("hidden");
+        } else if (
+          secondBanner &&
+          (thisPathName === "/h/coupons-deals" ||
+            thisPathName === "/h/copyright-policy")
+        ) {
+          if (76 > 1) {
+            $("a.globalNavBannerLink").attr(
+              "href",
+              "https://www.barnesandnoble.com/b/the-most-anticipated-books-of-2025/_/N-310h"
+            );
           } else {
-            sessionStorage.setItem("optPrimaryCategory", "none");
-            sessionStorage.setItem("optDDprimaryCategory", "none");
+            $("a.globalNavBannerLink").addClass("nolink");
           }
-          var optDDproductType = digitalData.product[0].category.productType
-            .replace(/[^a-z0-9\s]/gi, "")
-            .replace(/[_\s]/g, "-")
-            .toLowerCase();
-          if (optDDproductType.length > 0) {
-            sessionStorage.setItem("optDDproductType", optDDproductType);
-          } else {
-            sessionStorage.setItem("optDDproductType", "none");
+          if (76 > 1 && "same" === "modal") {
+            $("a.globalNavBannerLink")
+              .attr("target", "_blank")
+              .attr("data-modal-class", "BN.Modal.External.Link")
+              .attr("data-modal-scrolling", "yes")
+              .attr("data-modal-title", "");
+          } else if (76 > 1 && "same" === "new") {
+            $("a.globalNavBannerLink").attr("target", "_blank");
           }
+          $(this)
+            .addClass("secondary loaded")
+            .parents("#globalNavBanner")
+            .addClass("noncpn image ");
+          var msgElem2;
+
+          msgElem2 = `<picture><source media="(max-width: 600px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24-mobile.jpg"><source media="(min-width: 601px)" srcset="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24.jpg"><img src="//dispatch.barnesandnoble.com/content/dam/ccr/global/global-nav-banner/2024/12/31578_Global_Nav_MA_Books_of_2025_12_31_24.jpg" class="globalNavBannerImg" alt= "The Most Anticipated Books of 2025. Premium Members Save 10% Every Day. See page for details.  Pre-Order Now " /></picture>`;
+
+          $("a.globalNavBannerLink").html(msgElem2);
+          $("a.globalNavBanner").on("click", function () {
+            set_cookie(
+              "globalNavBanner_the-most-anticipated-books-of-2025.-premium-members-save-10-every-day.-see-page-for-details.--pre-order-now_na_text"
+            );
+          });
+          $(this).removeClass("hidden");
+        } else {
+          $(".cqGlobalNavBanner").hide();
         }
       });
-    </script>
-  </div>
-  <!-- \end{code} -->
-  <div class="skinny-hero flex justify-center">
-    <a
-      class="skinny-hero-link"
-      onclick="set_cookie('hpskinny-heroN3_new-year-new-you_na_imagetext');"
-    >
-      <picture>
-        <source
-          media="(max-width: 640px)"
-          srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24-mobile.jpg
-          "
-        />
-        <source
-          media="(min-width: 641px)"
-          srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg
-          "
-        />
+    })();
+    $(function () {
+      if (window.location.href.indexOf("barnesandnoble.com/w/") > -1) {
+        var pCategory = digitalData.product[0].category.primaryCategory
+          .replace(/[^a-z0-9\s]/gi, "")
+          .replace(/[_\s]/g, "-")
+          .toLowerCase();
+        if (pCategory.length > 0) {
+          sessionStorage.setItem("optPrimaryCategory", pCategory);
+          sessionStorage.setItem("optDDprimaryCategory", pCategory);
+        } else {
+          sessionStorage.setItem("optPrimaryCategory", "none");
+          sessionStorage.setItem("optDDprimaryCategory", "none");
+        }
+        var optDDproductType = digitalData.product[0].category.productType
+          .replace(/[^a-z0-9\s]/gi, "")
+          .replace(/[_\s]/g, "-")
+          .toLowerCase();
+        if (optDDproductType.length > 0) {
+          sessionStorage.setItem("optDDproductType", optDDproductType);
+        } else {
+          sessionStorage.setItem("optDDproductType", "none");
+        }
+      }
+    });
+  </script>
+</div>
+<!-- \end{code} -->
+<div class="skinny-hero flex justify-center">
+  <a
+    class="skinny-hero-link"
+    onclick="set_cookie('hpskinny-heroN3_new-year-new-you_na_imagetext');"
+  >
+    <picture>
+      <source
+        media="(max-width: 640px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24-mobile.jpg
+        "
+      />
+      <source
+        media="(min-width: 641px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg
+        "
+      />
+      <img
+        class="lp-lazy ResolveComplete"
+        src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+        data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg"
+        alt="Start Your Next Chapter - New Year, New You - Shop Now "
+        id="resolve_11"
+      />
+      <noscript
+        ><img
+          src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg"
+          alt="Start Your Next Chapter - New Year, New You - Shop Now"
+      /></noscript>
+    </picture>
+  </a>
+</div>
+<div class="container max-w-screen-xl mx-auto">
+<div class="md:text-left mt-4 mb-4">
+  <p class="mb-0 text-xl title cursor-pointer">Top Manga Picks - Spring 2025</p>
+  <p class="text-sm font-normal text-gray-500">
+    Discover the most popular manga titles as of January 2025.
+  </p>
+</div>
+
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div *ngFor="let product of mangaCategory" class="cursor-pointer p-1">
+      <div class="relative inline-block group">
         <img
-          class="lp-lazy ResolveComplete"
-          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
-          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg"
-          alt="Start Your Next Chapter - New Year, New You - Shop Now "
-          id="resolve_11"
+          [src]="product.image_url"
+          [routerLink]="['/productDetails', product.id]"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover rounded-md mb-1"
         />
-        <noscript
-          ><img
-            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_SkinnyHero_NYNY_12_26_24.jpg"
-            alt="Start Your Next Chapter - New Year, New You - Shop Now"
-        /></noscript>
-      </picture>
-    </a>
-  </div>
-  <div class="container max-w-screen-xl mx-auto">
-    <div class="md:text-left mt-4 mb-4">
-      <h1 class="mb-0 cursor-pointer">Best seller - Spring 2025</h1>
-      <p class="text-sm font-normal text-gray-500">
-        Number of books with highest sales as of January 2025
-      </p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
-      <div *ngFor="let product of limitedProducts" class="cursor-pointer p-1">
-        <div class="relative inline-block group">
-          <img
-            [src]="product.image_url"
-            [routerLink]="['/productDetails', product.id]"
-            alt="{{ product.title }}"
-            class="w-auto h-auto object-cover rounded-md mb-1"
-          />
-          <div class="space-y-1">
-            <!-- Biểu tượng trái tim -->
-            <button
-              (click)="addToWishlist(product)"
-              class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
+        <div class="space-y-1">
+          <!-- Biểu tượng trái tim -->
+          <button
+            (click)="addToWishlist(product)"
+            class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px] h-[24px] cursor-pointer"
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-[24px] h-[24px] cursor-pointer"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                  stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </button>
-            <!-- <div
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+          <!-- <div
           (click)="addToWishlist(product)"
           class="w-full object-cover hidden group-hover:flex transition ease-in-out duration-200 bg-white p-1 absolute bottom-0"
         >
         <button class="flex justify-center items-center text-center text-lg w-full h-full">Add to Cart</button>
       </div> -->
-          </div>
-        </div>
-
-        <p class="text-lg font-normal title mb-0 mt-0 truncate">
-          {{ product.title }}
-        </p>
-        <p class="text-md text-gray-500 font-normal mb-0">
-          {{ product.author }}
-        </p>
-        <div class="flex mt-1 mb-1">
-          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-            <!-- Full Star -->
-            <svg
-              *ngIf="product.rating >= star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Half Star -->
-            <svg
-              *ngIf="product.rating >= star - 0.5 && product.rating < star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Empty Star -->
-            <svg
-              *ngIf="product.rating < star - 0.5"
-              class="w-4 h-4 text-gray-300 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-          </ng-container>
-
-          <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-        </div>
-        <div class="flex gap-2 items-center">
-          <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
-          <p class="text-md font-normal text-red-500 self-center">
-            <s>{{ product.price }}$</s>
-          </p>
-          <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-            -{{ product.discount }}%
-          </p>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="hp-skinny-hero">
-    <div class="skinny-hero">
-      <a
-        class="skinny-hero-link"
-        onclick="set_cookie('hpskinny-heroN7_valentines-day-adult_na_imagetext');"
-      >
-        <picture>
-          <source
-            media="(max-width: 640px)"
-            srcset="
-              //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24-mobile.jpg
-            "
-          />
-          <source
-            media="(min-width: 641px)"
-            srcset="
-              //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg
-            "
-          />
-          <img
-            class="lp-lazy ResolveComplete"
-            src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
-            data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg"
-            alt="LOVE BOOKS - Shop Valentine's Day "
-            id="resolve_80"
-          />
-          <noscript
-            ><img
-              src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg"
-              alt="LOVE BOOKS - Shop Valentine's Day"
-          /></noscript>
-        </picture>
-      </a>
-    </div>
-  </div>
-  <div class="container max-w-screen-xl mx-auto">
-    <div class="md:text-left mt-4 mb-4">
-      <h1 class="mb-0 cursor-pointer">Top Romance Reads - Spring 2025</h1>
-      <p class="text-sm font-normal text-gray-500">
-        Dive into love with the top romance novels, capturing hearts in January
-        2025.
+
+      <p class="text-lg font-normal title mb-0 mt-0 truncate">
+        {{ product.title }}
       </p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
-      <div *ngFor="let product of romanceCategory" class="cursor-pointer p-1">
-        <div class="relative inline-block group">
-          <img
-            [src]="product.image_url"
-            [routerLink]="['/productDetails', product.id]"
-            alt="{{ product.title }}"
-            class="w-auto h-auto object-cover rounded-md mb-1"
-          />
-          <div class="space-y-1">
-            <!-- Biểu tượng trái tim -->
-            <button
-              (click)="addToWishlist(product)"
-              class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-[24px] h-[24px] cursor-pointer"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                  stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+      <p class="text-md text-gray-500 font-normal mb-0">
+        {{ product.author }} (Author)
+      </p>
+      <div class="flex mt-1 mb-1">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <!-- Full Star -->
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
 
-        <p class="text-lg title font-semibold mb-0 mt-0 truncate">
-          {{ product.title }}
+          <!-- Half Star -->
+          <svg
+            *ngIf="product.rating >= star - 0.5 && product.rating < star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Empty Star -->
+          <svg
+            *ngIf="product.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+        </ng-container>
+
+        <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+      </div>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-normal text-red-500 self-center">
+          <s>{{ product.price }}$</s>
         </p>
-        <p class="text-md text-gray-500 font-normal mb-0">
-          {{ product.author }}
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+          -{{ product.discount }}%
         </p>
-        <div class="flex mt-1 mb-1">
-          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-            <!-- Full Star -->
-            <svg
-              *ngIf="product.rating >= star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Half Star -->
-            <svg
-              *ngIf="product.rating >= star - 0.5 && product.rating < star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Empty Star -->
-            <svg
-              *ngIf="product.rating < star - 0.5"
-              class="w-4 h-4 text-gray-300 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-          </ng-container>
-
-          <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-        </div>
-        <div class="flex gap-2 items-center">
-          <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
-          <p class="text-md font-normal text-red-500 self-center">
-            <s>{{ product.price }}$</s>
-          </p>
-          <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-            -{{ product.discount }}%
-          </p>
-        </div>
       </div>
     </div>
   </div>
+</div>
+<div class="hp-skinny-hero">
   <div class="skinny-hero">
     <a
       class="skinny-hero-link"
-      onclick="set_cookie('hpskinny-heroN2_powerful-lauren-roberts-preorder_na_imagetext');"
+      onclick="set_cookie('hpskinny-heroN7_valentines-day-adult_na_imagetext');"
     >
       <picture>
         <source
           media="(max-width: 640px)"
           srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25-mobile.jpg
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24-mobile.jpg
           "
         />
         <source
           media="(min-width: 641px)"
           srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg
           "
         />
         <img
           class="lp-lazy ResolveComplete"
-          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
-          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg"
-          alt="Just Announced: Deluxe Edition of Powerful by Lauren Roberts - Pre-Order Now "
-          id="resolve_8"
+          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg"
+          alt="LOVE BOOKS - Shop Valentine's Day "
+          id="resolve_80"
         />
         <noscript
           ><img
-            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg"
-            alt="Just Announced: Deluxe Edition of Powerful by Lauren Roberts - Pre-Order Now"
+            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31553_SkinnyHero_ValentinesDayAdult_01_07_24.jpg"
+            alt="LOVE BOOKS - Shop Valentine's Day"
         /></noscript>
       </picture>
     </a>
   </div>
-  <div class="container max-w-screen-xl mx-auto">
-    <div class="md:text-left mt-4 mb-4">
-      <h1 class="mb-0 cursor-pointer">Top Fantasy Reads - Spring 2025</h1>
-      <p class="text-sm font-normal text-gray-500">
-        Unleash your imagination with the top fantasy novels of 2025.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
-      <div *ngFor="let product of fantasyCategory" class="cursor-pointer p-1">
-        <div class="relative inline-block group">
-          <img
-            [src]="product.image_url"
-            [routerLink]="['/productDetails', product.id]"
-            alt="{{ product.title }}"
-            class="w-auto h-auto object-cover rounded-md mb-1"
-          />
-          <div class="space-y-1">
-            <!-- Biểu tượng trái tim -->
-            <button
-              (click)="addToWishlist(product)"
-              class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-[24px] h-[24px] cursor-pointer"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                  stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <p class="text-lg title font-semibold mb-0 mt-0 truncate">
-          {{ product.title }}
-        </p>
-        <p class="text-md text-gray-500 font-normal mb-0">
-          {{ product.author }}
-        </p>
-        <div class="flex mt-1 mb-1">
-          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-            <!-- Full Star -->
-            <svg
-              *ngIf="product.rating >= star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Half Star -->
-            <svg
-              *ngIf="product.rating >= star - 0.5 && product.rating < star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Empty Star -->
-            <svg
-              *ngIf="product.rating < star - 0.5"
-              class="w-4 h-4 text-gray-300 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-          </ng-container>
-
-          <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-        </div>
-        <div class="flex gap-2 items-center">
-          <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
-          <p class="text-md font-normal text-red-500 self-center">
-            <s>{{ product.price }}$</s>
-          </p>
-          <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-            -{{ product.discount }}%
-          </p>
-        </div>
-      </div>
-    </div>
+</div>
+<div class="container max-w-screen-xl mx-auto">
+  <div class="md:text-left mt-4 mb-4">
+    <p class="mb-0 text-xl title cursor-pointer">Top Romance Reads - Spring 2025</p>
+    <p class="text-sm font-normal text-gray-500">
+      Dive into love with the top romance novels, capturing hearts in January
+      2025.
+    </p>
   </div>
-  <div class="skinny-hero">
-    <a
-      class="skinny-hero-link"
-      onclick="set_cookie('hpskinny-heroN6_arrow-video-50-off_na_imagetext');"
-    >
-      <picture>
-        <source
-          media="(max-width: 640px)"
-          srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25-mobile.jpg
-          "
-        />
-        <source
-          media="(min-width: 641px)"
-          srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg
-          "
-        />
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div *ngFor="let product of romanceCategory" class="cursor-pointer p-1">
+      <div class="relative inline-block group">
         <img
-          class="lp-lazy ResolveComplete"
-          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
-          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg"
-          alt="50% Off Arrow Video - Shop Now "
-          id="resolve_71"
+          [src]="product.image_url"
+          [routerLink]="['/productDetails', product.id]"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover rounded-md mb-1"
         />
-        <noscript
-          ><img
-            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg"
-            alt="50% Off Arrow Video - Shop Now"
-        /></noscript>
-      </picture>
-    </a>
-  </div>
-  <div class="container max-w-screen-xl mx-auto">
-    <div class="md:text-left mt-4 mb-4">
-      <h1 class="mb-0 cursor-pointer">Top Historical Reads - Spring 2025</h1>
-      <p class="text-sm font-normal text-gray-500">
-        Dive into the past with the top historical novels of 2025.
+        <div class="space-y-1">
+          <!-- Biểu tượng trái tim -->
+          <button
+            (click)="addToWishlist(product)"
+            class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px] h-[24px] cursor-pointer"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <p class="text-lg title font-semibold mb-0 mt-0 truncate">
+        {{ product.title }}
       </p>
-    </div>
+      <p class="text-md text-gray-500 font-normal mb-0">
+        {{ product.author }} (Author)
+      </p>
+      <div class="flex mt-1 mb-1">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <!-- Full Star -->
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
 
-    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
-      <div *ngFor="let product of historyCategory" class="cursor-pointer p-1">
-        <div class="relative inline-block group">
-          <img
-            [src]="product.image_url"
-            [routerLink]="['/productDetails', product.id]"
-            alt="{{ product.title }}"
-            class="w-auto h-auto object-cover rounded-md mb-1"
-          />
-          <div class="space-y-1">
-            <!-- Biểu tượng trái tim -->
-            <button
-              (click)="addToWishlist(product)"
-              class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-[24px] h-[24px] cursor-pointer"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                  stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+          <!-- Half Star -->
+          <svg
+            *ngIf="product.rating >= star - 0.5 && product.rating < star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
 
-        <p class="text-lg title font-semibold mb-0 mt-0 truncate">
-          {{ product.title }}
+          <!-- Empty Star -->
+          <svg
+            *ngIf="product.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+        </ng-container>
+
+        <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+      </div>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-normal text-red-500 self-center">
+          <s>{{ product.price }}$</s>
         </p>
-        <p class="text-md text-gray-500 font-normal mb-0">
-          {{ product.author }}
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+          -{{ product.discount }}%
         </p>
-        <div class="flex mt-1 mb-1">
-          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-            <!-- Full Star -->
-            <svg
-              *ngIf="product.rating >= star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Half Star -->
-            <svg
-              *ngIf="product.rating >= star - 0.5 && product.rating < star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Empty Star -->
-            <svg
-              *ngIf="product.rating < star - 0.5"
-              class="w-4 h-4 text-gray-300 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-          </ng-container>
-
-          <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-        </div>
-        <div class="flex gap-2 items-center">
-          <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
-          <p class="text-md font-normal text-red-500 self-center">
-            <s>{{ product.price }}$</s>
-          </p>
-          <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-            -{{ product.discount }}%
-          </p>
-        </div>
       </div>
     </div>
   </div>
-  <div class="skinny-hero focus">
-    <a
-      class="skinny-hero-link"
-      onclick="set_cookie('hpskinny-heroN1_most-anticipated-books-2025_na_imagetext');"
-    >
-      <picture>
-        <source
-          media="(max-width: 640px)"
-          srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24-mobile.jpg
-          "
-        />
-        <source
-          media="(min-width: 641px)"
-          srcset="
-            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg
-          "
-        />
+</div>
+<div class="skinny-hero">
+  <a
+    class="skinny-hero-link"
+    onclick="set_cookie('hpskinny-heroN2_powerful-lauren-roberts-preorder_na_imagetext');"
+  >
+    <picture>
+      <source
+        media="(max-width: 640px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25-mobile.jpg
+        "
+      />
+      <source
+        media="(min-width: 641px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg
+        "
+      />
+      <img
+        class="lp-lazy ResolveComplete"
+        src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+        data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg"
+        alt="Just Announced: Deluxe Edition of Powerful by Lauren Roberts - Pre-Order Now "
+        id="resolve_8"
+      />
+      <noscript
+        ><img
+          src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/06/31588_SkinnyHero_PowerfulAnnouncement_01_06_25.jpg"
+          alt="Just Announced: Deluxe Edition of Powerful by Lauren Roberts - Pre-Order Now"
+      /></noscript>
+    </picture>
+  </a>
+</div>
+<div class="container max-w-screen-xl mx-auto">
+  <div class="md:text-left mt-4 mb-4">
+    <p class="mb-0 text-xl title cursor-pointer">Top Fantasy Reads - Spring 2025</p>
+    <p class="text-sm font-normal text-gray-500">
+      Unleash your imagination with the top fantasy novels of 2025.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div *ngFor="let product of fantasyCategory" class="cursor-pointer p-1">
+      <div class="relative inline-block group">
         <img
-          class="lp-lazy ResolveComplete"
-          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
-          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg"
-          alt="The Most Anticipated Books of 2025 - Pre-Order Now "
-          id="resolve_1"
+          [src]="product.image_url"
+          [routerLink]="['/productDetails', product.id]"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover rounded-md mb-1"
         />
-        <noscript
-          ><img
-            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg"
-            alt="The Most Anticipated Books of 2025 - Pre-Order Now"
-        /></noscript>
-      </picture>
-    </a>
-  </div>
-  <div class="container max-w-screen-xl mx-auto">
-    <div class="md:text-left mt-4 mb-4">
-      <h1 class="mb-0 cursor-pointer">Top Educational Reads - Spring 2025</h1>
-      <p class="text-sm font-normal text-gray-500">
-        Expand your knowledge with the top educational books of 2025.
+        <div class="space-y-1">
+          <!-- Biểu tượng trái tim -->
+          <button
+            (click)="addToWishlist(product)"
+            class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px] h-[24px] cursor-pointer"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <p class="text-lg title font-semibold mb-0 mt-0 truncate">
+        {{ product.title }}
       </p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
-      <div *ngFor="let product of educationCategory" class="cursor-pointer p-1">
-        <div class="relative inline-block group">
-          <img
-            [src]="product.image_url"
-            [routerLink]="['/productDetails', product.id]"
-            alt="{{ product.title }}"
-            class="w-auto h-auto object-cover rounded-md mb-1"
-          />
-          <div class="space-y-1">
-            <!-- Biểu tượng trái tim -->
-            <button
-              (click)="addToWishlist(product)"
-              class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-[24px] h-[24px] cursor-pointer"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-                  stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+      <p class="text-md text-gray-500 font-normal mb-0">
+        {{ product.author }} (Author)
+      </p>
+      <div class="flex mt-1 mb-1">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <!-- Full Star -->
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
 
-        <p class="title text-xl font-semibold mt-0 mb-0 truncate">
-          {{ product.title }}
+          <!-- Half Star -->
+          <svg
+            *ngIf="product.rating >= star - 0.5 && product.rating < star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Empty Star -->
+          <svg
+            *ngIf="product.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+        </ng-container>
+
+        <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+      </div>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-normal text-red-500 self-center">
+          <s>{{ product.price }}$</s>
         </p>
-        <p class="text-md text-gray-500 font-normal mb-0">
-          {{ product.author }}
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+          -{{ product.discount }}%
         </p>
-        <div class="flex mt-1 mb-1">
-          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-            <!-- Full Star -->
-            <svg
-              *ngIf="product.rating >= star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Half Star -->
-            <svg
-              *ngIf="product.rating >= star - 0.5 && product.rating < star"
-              class="w-4 h-4 text-yellow-400 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-
-            <!-- Empty Star -->
-            <svg
-              *ngIf="product.rating < star - 0.5"
-              class="w-4 h-4 text-gray-300 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path
-                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-              />
-            </svg>
-          </ng-container>
-
-          <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-        </div>
-        <div class="flex gap-2 items-center">
-          <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
-          <p class="text-md font-normal text-red-500 self-center">
-            <s>{{ product.price }}$</s>
-          </p>
-          <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-            -{{ product.discount }}%
-          </p>
-        </div>
       </div>
     </div>
   </div>
-  <!-- \end{code} -->
+</div>
+<div class="skinny-hero">
+  <a
+    class="skinny-hero-link"
+    onclick="set_cookie('hpskinny-heroN6_arrow-video-50-off_na_imagetext');"
+  >
+    <picture>
+      <source
+        media="(max-width: 640px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25-mobile.jpg
+        "
+      />
+      <source
+        media="(min-width: 641px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg
+        "
+      />
+      <img
+        class="lp-lazy ResolveComplete"
+        src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+        data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg"
+        alt="50% Off Arrow Video - Shop Now "
+        id="resolve_71"
+      />
+      <noscript
+        ><img
+          src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_SkinnyHero_ArrowVideo_01_07_25.jpg"
+          alt="50% Off Arrow Video - Shop Now"
+      /></noscript>
+    </picture>
+  </a>
+</div>
+<div class="container max-w-screen-xl mx-auto">
+  <div class="md:text-left mt-4 mb-4">
+    <p class="mb-0 text-xl title cursor-pointer">Top Historical Reads - Spring 2025</p>
+    <p class="text-sm font-normal text-gray-500">
+      Dive into the past with the top historical novels of 2025.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div *ngFor="let product of historyCategory" class="cursor-pointer p-1">
+      <div class="relative inline-block group">
+        <img
+          [src]="product.image_url"
+          [routerLink]="['/productDetails', product.id]"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover rounded-md mb-1"
+        />
+        <div class="space-y-1">
+          <!-- Biểu tượng trái tim -->
+          <button
+            (click)="addToWishlist(product)"
+            class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px] h-[24px] cursor-pointer"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <p class="text-lg title font-semibold mb-0 mt-0 truncate">
+        {{ product.title }}
+      </p>
+      <p class="text-md text-gray-500 font-normal mb-0">
+        {{ product.author }} (Author)
+      </p>
+      <div class="flex mt-1 mb-1">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <!-- Full Star -->
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Half Star -->
+          <svg
+            *ngIf="product.rating >= star - 0.5 && product.rating < star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Empty Star -->
+          <svg
+            *ngIf="product.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+        </ng-container>
+
+        <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+      </div>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-normal text-red-500 self-center">
+          <s>{{ product.price }}$</s>
+        </p>
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+          -{{ product.discount }}%
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="skinny-hero focus">
+  <a
+    class="skinny-hero-link"
+    onclick="set_cookie('hpskinny-heroN1_most-anticipated-books-2025_na_imagetext');"
+  >
+    <picture>
+      <source
+        media="(max-width: 640px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24-mobile.jpg
+        "
+      />
+      <source
+        media="(min-width: 641px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg
+        "
+      />
+      <img
+        class="lp-lazy ResolveComplete"
+        src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+        data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg"
+        alt="The Most Anticipated Books of 2025 - Pre-Order Now "
+        id="resolve_1"
+      />
+      <noscript
+        ><img
+          src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/31/31573_Skinny_Hero_2_MostAnticipated_12_31_24.jpg"
+          alt="The Most Anticipated Books of 2025 - Pre-Order Now"
+      /></noscript>
+    </picture>
+  </a>
+</div>
+<div class="container max-w-screen-xl mx-auto">
+  <div class="md:text-left mt-4 mb-4">
+    <p class="mb-0 text-xl title cursor-pointer">Top Educational Reads - Spring 2025</p>
+    <p class="text-sm font-normal text-gray-500">
+      Expand your knowledge with the top educational books of 2025.
+    </p>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div *ngFor="let product of educationCategory" class="cursor-pointer p-1">
+      <div class="relative inline-block group">
+        <img
+          [src]="product.image_url"
+          [routerLink]="['/productDetails', product.id]"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover rounded-md mb-1"
+        />
+        <div class="space-y-1">
+          <!-- Biểu tượng trái tim -->
+          <button
+            (click)="addToWishlist(product)"
+            class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px] h-[24px] cursor-pointer"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <p class="title text-xl font-semibold mt-0 mb-0 truncate">
+        {{ product.title }}
+      </p>
+      <p class="text-md text-gray-500 font-normal mb-0">
+        {{ product.author }} (Author)
+      </p>
+      <div class="flex mt-1 mb-1">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <!-- Full Star -->
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Half Star -->
+          <svg
+            *ngIf="product.rating >= star - 0.5 && product.rating < star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Empty Star -->
+          <svg
+            *ngIf="product.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+        </ng-container>
+
+        <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+      </div>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-normal text-red-500 self-center">
+          <s>{{ product.price }}$</s>
+        </p>
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+          -{{ product.discount }}%
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="skinny-hero">
+  <a
+    class="skinny-hero-link"
+    href="https://www.barnesandnoble.com/b/books/_/N-1sZ29Z8q8"
+    onclick="set_cookie('hpskinny-heroN2_new-releases-this-month_na_imagetext');"
+  >
+    <picture>
+      <source
+        media="(max-width: 640px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_SkinnyHero_2_NewReleasesThisMonth_01_14_25-mobile.jpg
+        "
+      />
+      <source
+        media="(min-width: 641px)"
+        srcset="
+          //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_SkinnyHero_2_NewReleasesThisMonth_01_14_25.jpg
+        "
+      />
+      <img
+        class="lp-lazy ResolveComplete"
+        src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B1500%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_SkinnyHero_2_NewReleasesThisMonth_01_14_25.jpg%5D&amp;scale=options%5Blimit%5D,size%5B1500x10000%5D&amp;sink=format%5Bwebp%5D"
+        data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_SkinnyHero_2_NewReleasesThisMonth_01_14_25.jpg"
+        alt="New Releases This Month. Shop Now "
+        id="resolve_7"
+      />
+      <noscript
+        ><img
+          src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_SkinnyHero_2_NewReleasesThisMonth_01_14_25.jpg"
+          alt="New Releases This Month. Shop Now"
+      /></noscript>
+    </picture>
+  </a>
+</div>
+<div class="container max-w-screen-xl mx-auto">
+<div class="md:text-left mt-4 mb-4">
+  <p class="mb-0 text-xl title cursor-pointer">Top Fiction Reads - Spring 2025</p>
+  <p class="text-sm font-normal text-gray-500">
+    Immerse yourself in captivating stories with the top fiction books of 2025.
+  </p>
+</div>
+
+  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+    <div *ngFor="let product of fictionCategory" class="cursor-pointer p-1">
+      <div class="relative inline-block group">
+        <img
+          [src]="product.image_url"
+          [routerLink]="['/productDetails', product.id]"
+          alt="{{ product.title }}"
+          class="w-auto h-auto object-cover rounded-md mb-1"
+        />
+        <div class="space-y-1">
+          <!-- Biểu tượng trái tim -->
+          <button
+            (click)="addToWishlist(product)"
+            class="hidden group-hover:flex transition ease-in-out duration-200 bg-white rounded-full p-1 absolute top-2 left-2"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[24px] h-[24px] cursor-pointer"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <p class="title text-xl font-semibold mt-0 mb-0 truncate">
+        {{ product.title }}
+      </p>
+      <p class="text-md text-gray-500 font-normal mb-0">
+        {{ product.author }} (Author)
+      </p>
+      <div class="flex mt-1 mb-1">
+        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+          <!-- Full Star -->
+          <svg
+            *ngIf="product.rating >= star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Half Star -->
+          <svg
+            *ngIf="product.rating >= star - 0.5 && product.rating < star"
+            class="w-4 h-4 text-yellow-400 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+
+          <!-- Empty Star -->
+          <svg
+            *ngIf="product.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+        </ng-container>
+
+        <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+      </div>
+      <div class="flex gap-2 items-center">
+        <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+        <p class="text-md font-normal text-red-500 self-center">
+          <s>{{ product.price }}$</s>
+        </p>
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+          -{{ product.discount }}%
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- </div> -->
