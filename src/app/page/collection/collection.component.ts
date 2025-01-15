@@ -17,11 +17,14 @@ export class CollectionComponent {
   selectedCategory: string = '';
   filteredProducts: Product[] = [];
   categories: string[] = ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy', 'Education']; 
-  
+  isLoading =true
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.renderProduct();
+    setTimeout(()=>{
+      this.isLoading=false
+    },2000)
   }
 
   renderProduct(): void {
