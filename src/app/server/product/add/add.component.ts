@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ProductService } from '../../product.service';
+import { ProductService } from '../../../product.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgIf } from '@angular/common';

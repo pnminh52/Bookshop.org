@@ -34,12 +34,9 @@ export class LoginComponent {
         if (response.length > 0) {
           const user = response[0];
           alert('Đăng nhập thành công!');
-  
-          // Lưu thông tin người dùng vào localStorage (hoặc sessionStorage)
-          localStorage.setItem('user', JSON.stringify(user));
-  
+            localStorage.setItem('user', JSON.stringify(user));
           if (user.role === 'admin') {
-            this.router.navigate(['/admin/list']);
+            this.router.navigate(['/admin/']);
           } else {
             this.router.navigate(['/']);
           }

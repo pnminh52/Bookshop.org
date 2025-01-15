@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ProductService } from '../../product.service';
+import { ProductService } from '../../../product.service';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import {
   FormControl,
