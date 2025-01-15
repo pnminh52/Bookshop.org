@@ -41,151 +41,120 @@
   </div>
 
   <div class="mt-4 mb-4 space-y-4">
-    <div class="flex gap-4">
-      <div>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <div class="flex-1">
         <p class="text-sm font-normal text-black mb-1">Sort by Price</p>
-        <div class="font-normal py-1  border-b text-center border-black text-sm text-gray-500">
-          <select
-            title="sortPrice"
-            id="sortOrder"
-            (change)="onSortOrderChange($event)"
-          >
+        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
+          <select title="sortPrice" id="sortOrder" (change)="onSortOrderChange($event)">
             <option value="">Price</option>
-            <option value="asc" [selected]="sortOrder[0] === 'asc'">
-              Low to High
-            </option>
-            <option value="desc" [selected]="sortOrder[0] === 'desc'">
-              High to Low
-            </option>
+            <option value="asc" [selected]="sortOrder[0] === 'asc'">Low to High</option>
+            <option value="desc" [selected]="sortOrder[0] === 'desc'">High to Low</option>
           </select>
-          
         </div>
       </div>
-      <div>
+  
+      <div class="flex-1">
         <p class="text-sm font-normal text-black mb-1">Sort by Category</p>
-        <div class="font-normal py-1 border-b text-center border-black text-sm text-gray-500">
-          <select
-            title="sortCategory"
-            id="category"
-            (change)="onCategoryChange($event)"
-            [(ngModel)]="selectedCategory"
-          >
+        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
+          <select title="sortCategory" id="category" (change)="onCategoryChange($event)" [(ngModel)]="selectedCategory">
             <option value="">Categories</option>
-            <option *ngFor="let category of categories" [value]="category">
-              {{ category }}
-            </option>
+            <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
           </select>
         </div>
       </div>
-      <div>
+  
+      <div class="flex-1">
         <p class="text-sm font-normal text-black mb-1">Sort by Price range</p>
-        <div class="font-normal py-1  border-b text-center border-black text-sm text-gray-500">
-          <select
-            title="priceRange"
-            id="price-range"
-            name="price-range"
-            [(ngModel)]="selectedPriceRange"
-            (change)="onPriceRangeChange($event)"
-          >
+        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
+          <select title="priceRange" id="price-range" name="price-range" [(ngModel)]="selectedPriceRange" (change)="onPriceRangeChange($event)">
             <option value="">Price range</option>
-            <option *ngFor="let range of priceRanges" [value]="range.label">
-              {{ range.label }}
-            </option>
+            <option *ngFor="let range of priceRanges" [value]="range.label">{{ range.label }}</option>
           </select>
         </div>
       </div>
+  
+      <div class="flex-1">
+        <p class="text-sm font-normal text-black mb-1">Sort by Release Date</p>
+        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
+          <select title="releaseDate" id="release-date" name="release-date" [(ngModel)]="selectedRelease" (change)="onReleaseChange($event)">
+            <option value="">Release Date</option>
+            <option value="newest">Newest to Oldest</option>
+            <option value="oldest">Oldest to Newest</option>
+          </select>
+        </div>
+      </div>
+      <div  class="flex-1">
+        <p class="text-sm font-normal text-black mb-1">Sort by Stock</p>
+        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
+          <select title="sortStock" id="sortStock" (change)="onStockSortChange($event)">
+            <option value="">Stock</option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+          </select>
+        </div>
+      </div>
+      
     </div>
-    <div class="filters-summary flex items-center space-x-2">
-      <a
-        *ngIf="
-          getSelectedFilters().category ||
-          getSelectedFilters().priceRange ||
-          getSelectedFilters().sortOrder
-        "
-        class="text-sm font-normal text-black"
-      >
+  
+    <!-- Filters Summary -->
+    <div class="filters-summary flex flex-wrap gap-2 items-center mt-4">
+      <a *ngIf="getSelectedFilters().category || getSelectedFilters().priceRange || getSelectedFilters().sortOrder || getSelectedFilters().release" class="text-sm font-normal text-black">
         You have chosen:
       </a>
-
+  
       <!-- Category Filter -->
-      <div
-        *ngIf="getSelectedFilters().category"
-        class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5"
-      >
-        <span class="text-gray-700 font-normal text-sm">{{
-          getSelectedFilters().category
-        }}</span>
-        <button
-          title="cancelBtn"
-          (click)="resetFilter('category')"
-          class="text-red-500"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="w-[20px] h-[20px]"
-          >
+      <div *ngIf="getSelectedFilters().category" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
+        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().category }}</span>
+        <button title="cancelBtn" (click)="resetFilter('category')" class="text-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
             <path d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
-
+  
       <!-- Price Range Filter -->
-      <div
-        *ngIf="getSelectedFilters().priceRange"
-        class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5"
-      >
-        <span class="text-gray-700 font-normal text-sm">{{
-          getSelectedFilters().priceRange
-        }}</span>
-        <button
-          title="cancelBtn"
-          (click)="resetFilter('priceRange')"
-          class="text-red-500"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="w-[20px] h-[20px]"
-          >
+      <div *ngIf="getSelectedFilters().priceRange" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
+        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().priceRange }}</span>
+        <button title="cancelBtn" (click)="resetFilter('priceRange')" class="text-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
             <path d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
-
+  
       <!-- Sort Order Filter -->
-      <div
-        *ngIf="getSelectedFilters().sortOrder"
-        class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5 k"
-      >
-        <span class="text-gray-700 font-normal text-sm">{{
-          getSelectedFilters().sortOrder
-        }}</span>
-        <button
-          title="cancelBtn"
-          (click)="resetFilter('sortOrder')"
-          class="text-red-500"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="w-[20px] h-[20px]"
-          >
+      <div *ngIf="getSelectedFilters().sortOrder" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
+        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().sortOrder }}</span>
+        <button title="cancelBtn" (click)="resetFilter('sortOrder')" class="text-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
             <path d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
+  
+      <!-- Release Date Filter -->
+      <div *ngIf="getSelectedFilters().release" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
+        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().release }}</span>
+        <button title="cancelBtn" (click)="resetFilter('release')" class="text-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+<!-- Stock Filter -->
+<div *ngIf="getSelectedFilters().stock" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
+  <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().stock }}</span>
+  <button title="cancelBtn" (click)="resetFilter('stock')" class="text-red-500">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
+      <path d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</div>
+
+
     </div>
   </div>
+  
 
   <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
     <div *ngFor="let product of paginatedProducts" class="cursor-pointer p-1">

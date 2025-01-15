@@ -17,6 +17,8 @@ export class CollectionComponent {
   sortOrder: string[] = ['asc', 'desc']; 
   selectedCategory: string = '';
   selectedPriceRange: string = '';
+  selectedRelease: string = '';
+  selectedStock: string = ''; 
   filteredProducts: Product[] = [];
   categories: string[] = ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy', 'Education']; 
   priceRanges: { label: string, min: number, max: number }[] = [
@@ -45,13 +47,17 @@ export class CollectionComponent {
   }
 
   constructor(private productService: ProductService) {}
-
   ngOnInit(): void {
     this.renderProduct();
     setTimeout(() => {
       this.isLoading = false;
     }, 2000);
+  
+    if (!this.sortOrder.length) {
+      this.sortOrder = [];  
+    }
   }
+  
   onPriceRangeChange(event: any): void {
     this.selectedPriceRange = event.target.value;  
     this.applyFiltersAndSort(); 
@@ -95,16 +101,49 @@ export class CollectionComponent {
         }
       });
 
-
+      if (this.selectedRelease) {
+        filtered.sort((a, b) => {
+          const dateA = new Date(a.publish_date).getTime();
+          const dateB = new Date(b.publish_date).getTime();
+          return this.selectedRelease === 'oldest' ? dateA - dateB : dateB - dateA;
+        });
+      }
+      if (this.sortOrder[0] === 'asc' || this.sortOrder[0] === 'desc') {
+        this.selectionStock(this.sortOrder[0]);
+      }
     this.filteredProducts = filtered;
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage); 
     this.currentPage = 1; 
   }
+selectionStock(order: 'asc' | 'desc'): void {
+  this.filteredProducts.sort((a, b) => {
+    if (order === 'asc') {
+      return a.stock - b.stock; 
+    } else {
+      return b.stock - a.stock;  
+    }
+  });
+  this.currentPage = 1;  
+  this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);  // Cập nhật số trang
+}
+onStockSortChange(event: any): void {
+  const order = event.target.value as 'asc' | 'desc' | ''; 
+  this.selectedStock = order || ''; 
+  if (order) {
+    this.selectionStock(order);
+  }
+}
 
-  onSortOrderChange(event: Event): void {
-    const target = event.target as HTMLSelectElement;
-    const order = target.value as 'asc' | 'desc' | ''; 
-    this.sortOrder = order ? [order] : [];
+
+onSortOrderChange(event: Event): void {
+  const target = event.target as HTMLSelectElement;
+  const order = target.value as 'asc' | 'desc' | ''; 
+  this.sortOrder = order ? [order] : [];  // Đảm bảo không có giá trị mặc định
+  this.applyFiltersAndSort();
+}
+
+  onReleaseChange(event: any): void {
+    this.selectedRelease = event.target.value;
     this.applyFiltersAndSort();
   }
   
@@ -119,15 +158,26 @@ export class CollectionComponent {
   }
   
   
-  getSelectedFilters(): { category: string, priceRange: string, sortOrder: string } {
+  getSelectedFilters(): { category: string, priceRange: string, sortOrder: string, release: string, stock: string } {
     return {
       category: this.selectedCategory || '',
       priceRange: this.selectedPriceRange || '',
       sortOrder: this.sortOrder.length > 0 ? 
-        (this.sortOrder[0] === 'asc' ? 'Ascending' : 'Descending') 
-        : ''  
+        (this.sortOrder[0] === 'asc' ? 'Price increase' : 'Price decrease') 
+        : '',  
+      release: this.selectedRelease ? 
+        (this.selectedRelease === 'oldest' ? 'Oldest release' : 'Newest release') 
+        : '',
+      stock: this.selectedStock ? 
+        (this.selectedStock === 'asc' ? 'Stock increase' : 'Stock decrease') 
+        : '', 
     };
   }
+  
+  
+  
+  
+
   
   
   resetFilter(filter: string): void {
@@ -137,8 +187,13 @@ export class CollectionComponent {
       this.selectedPriceRange = '';
     } else if (filter === 'sortOrder') {
       this.sortOrder = [];  
+    } else if (filter === 'release') {
+      this.selectedRelease = '';
+    } else if (filter === 'stock') {
+      this.selectedStock = ''; 
     }
     this.applyFiltersAndSort();  
   }
+  
   
 }
