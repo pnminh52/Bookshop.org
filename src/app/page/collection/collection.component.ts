@@ -20,9 +20,11 @@ export class CollectionComponent {
   filteredProducts: Product[] = [];
   categories: string[] = ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy', 'Education']; 
   priceRanges: { label: string, min: number, max: number }[] = [
-    { label: '10$ - 30$', min: 10, max: 30 },
-    { label: '30$ - 60$', min: 30, max: 60 },
-    { label: '60$ - 90$', min: 60, max: 90 }
+    { label: '5$ - 15$', min: 5, max:15  },
+    { label: '15$ - 25$', min: 15, max:20  },
+    { label: '25$ - 35$', min: 25, max: 35 },
+    { label: '35$ - 40$', min: 35, max: 40 },
+    { label: '40$+', min: 40, max: 999 },
   ];
   isLoading = true;
   currentPage = 1;

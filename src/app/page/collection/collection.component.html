@@ -21,7 +21,9 @@
       transform: rotate(360deg);
     }
   }
+  
 </style>
+
 
 <!-- <div *ngIf="isLoading"> <div class="loader-spinner flex text-center mx-auto justify-center items-center mt-12"></div></div>
 
@@ -42,7 +44,7 @@
     <div class="flex gap-4">
       <div>
         <p class="text-sm font-normal text-black mb-1">Sort by Price</p>
-        <div class="font-normal py-1 border border-black text-sm text-gray-500">
+        <div class="font-normal py-1  border-b text-center border-black text-sm text-gray-500">
           <select
             title="sortPrice"
             id="sortOrder"
@@ -56,11 +58,12 @@
               High to Low
             </option>
           </select>
+          
         </div>
       </div>
       <div>
         <p class="text-sm font-normal text-black mb-1">Sort by Category</p>
-        <div class="font-normal py-1 border border-black text-sm text-gray-500">
+        <div class="font-normal py-1 border-b text-center border-black text-sm text-gray-500">
           <select
             title="sortCategory"
             id="category"
@@ -76,7 +79,7 @@
       </div>
       <div>
         <p class="text-sm font-normal text-black mb-1">Sort by Price range</p>
-        <div class="font-normal py-1 border border-black text-sm text-gray-500">
+        <div class="font-normal py-1  border-b text-center border-black text-sm text-gray-500">
           <select
             title="priceRange"
             id="price-range"
@@ -184,7 +187,7 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
+  <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
     <div *ngFor="let product of paginatedProducts" class="cursor-pointer p-1">
       <div class="relative inline-block group">
         <img
