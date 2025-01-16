@@ -21,9 +21,7 @@
       transform: rotate(360deg);
     }
   }
-  
 </style>
-
 
 <!-- <div *ngIf="isLoading"> <div class="loader-spinner flex text-center mx-auto justify-center items-center mt-12"></div></div>
 
@@ -41,120 +39,226 @@
   </div>
 
   <div class="mt-4 mb-4 space-y-4">
-    <div class="flex flex-col sm:flex-row gap-4">
-      <div class="flex-1">
-        <p class="text-sm font-normal text-black mb-1">Sort by Price</p>
-        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
-          <select title="sortPrice" id="sortOrder" (change)="onSortOrderChange($event)">
+
+     <div class="flex justify-between">
+      <div class="flex gap-4">
+        
+        <!-- <p class="text-sm font-normal text-black  mb-1">
+          Sort by Price
+        </p> -->
+        <div
+          class="font-normal border-b w-24  border-black text-sm text-gray-500"
+        >
+          <select
+            title="sortPrice"
+            id="sortOrder"
+            (change)="onSortOrderChange($event)"
+          >
             <option value="">Price</option>
-            <option value="asc" [selected]="sortOrder[0] === 'asc'">Low to High</option>
-            <option value="desc" [selected]="sortOrder[0] === 'desc'">High to Low</option>
+            <option value="asc" [selected]="sortOrder[0] === 'asc'">
+              Low to High
+            </option>
+            <option value="desc" [selected]="sortOrder[0] === 'desc'">
+              High to Low
+            </option>
           </select>
         </div>
-      </div>
-  
-      <div class="flex-1">
-        <p class="text-sm font-normal text-black mb-1">Sort by Category</p>
-        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
-          <select title="sortCategory" id="category" (change)="onCategoryChange($event)" [(ngModel)]="selectedCategory">
+     
+
+     
+        <!-- <p class="text-sm font-normal text-black  mb-1">
+          Sort by Category
+        </p> -->
+        <div
+          class="font-normal border-b w-24  border-black text-sm text-gray-500"
+        >
+          <select
+            title="sortCategory"
+            id="category"
+            (change)="onCategoryChange($event)"
+            [(ngModel)]="selectedCategory"
+          >
             <option value="">Categories</option>
-            <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+            <option *ngFor="let category of categories" [value]="category">
+              {{ category }}
+            </option>
           </select>
         </div>
-      </div>
-  
-      <div class="flex-1">
-        <p class="text-sm font-normal text-black mb-1">Sort by Price range</p>
-        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
-          <select title="priceRange" id="price-range" name="price-range" [(ngModel)]="selectedPriceRange" (change)="onPriceRangeChange($event)">
+      
+
+      
+        <!-- <p class="text-sm font-normal text-black  mb-1">
+          Sort by Price range
+        </p> -->
+        <div
+          class="font-normal border-b w-24 border-black text-sm text-gray-500"
+        >
+          <select
+            title="priceRange"
+            id="price-range"
+            name="price-range"
+            [(ngModel)]="selectedPriceRange"
+            (change)="onPriceRangeChange($event)"
+          >
             <option value="">Price range</option>
-            <option *ngFor="let range of priceRanges" [value]="range.label">{{ range.label }}</option>
+            <option *ngFor="let range of priceRanges" [value]="range.label">
+              {{ range.label }}
+            </option>
           </select>
         </div>
-      </div>
-  
-      <div class="flex-1">
-        <p class="text-sm font-normal text-black mb-1">Sort by Release Date</p>
-        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
-          <select title="releaseDate" id="release-date" name="release-date" [(ngModel)]="selectedRelease" (change)="onReleaseChange($event)">
+     
+
+      
+        <!-- <p class="text-sm font-normal text-black  mb-1">
+          Sort by Release Date
+        </p> -->
+        <div
+          class="font-normal border-b w-24 border-black text-sm text-gray-500"
+        >
+          <select
+            title="releaseDate"
+            id="release-date"
+            name="release-date"
+            [(ngModel)]="selectedRelease"
+            (change)="onReleaseChange($event)"
+          >
             <option value="">Release Date</option>
-            <option value="newest">Newest to Oldest</option>
-            <option value="oldest">Oldest to Newest</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
           </select>
         </div>
-      </div>
-      <div  class="flex-1">
-        <p class="text-sm font-normal text-black mb-1">Sort by Stock</p>
-        <div class="font-normal py-1 border text-center border-black text-sm text-gray-500">
-          <select title="sortStock" id="sortStock" (change)="onStockSortChange($event)">
-            <option value="">Stock</option>
-            <option value="asc">Low to High</option>
-            <option value="desc">High to Low</option>
-          </select>
-        </div>
-      </div>
       
     </div>
-  
-    <!-- Filters Summary -->
-    <div class="filters-summary flex flex-wrap gap-2 items-center mt-4">
-      <a *ngIf="getSelectedFilters().category || getSelectedFilters().priceRange || getSelectedFilters().sortOrder || getSelectedFilters().release" class="text-sm font-normal text-black">
-        You have chosen:
-      </a>
-  
-      <!-- Category Filter -->
-      <div *ngIf="getSelectedFilters().category" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
-        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().category }}</span>
-        <button title="cancelBtn" (click)="resetFilter('category')" class="text-red-500">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
-            <path d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
+    <div class="hidden sm:block">
+      <a class="text-sm font-normal text-black">(There is {{countBooks()}} books in collection)</a>
       </div>
-  
-      <!-- Price Range Filter -->
-      <div *ngIf="getSelectedFilters().priceRange" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
-        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().priceRange }}</span>
-        <button title="cancelBtn" (click)="resetFilter('priceRange')" class="text-red-500">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
-            <path d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-  
-      <!-- Sort Order Filter -->
-      <div *ngIf="getSelectedFilters().sortOrder" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
-        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().sortOrder }}</span>
-        <button title="cancelBtn" (click)="resetFilter('sortOrder')" class="text-red-500">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
-            <path d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-  
-      <!-- Release Date Filter -->
-      <div *ngIf="getSelectedFilters().release" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
-        <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().release }}</span>
-        <button title="cancelBtn" (click)="resetFilter('release')" class="text-red-500">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
-            <path d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-<!-- Stock Filter -->
-<div *ngIf="getSelectedFilters().stock" class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5">
-  <span class="text-gray-700 font-normal text-sm">{{ getSelectedFilters().stock }}</span>
-  <button title="cancelBtn" (click)="resetFilter('stock')" class="text-red-500">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[20px] h-[20px]">
+     </div>
+<div class="mt-4 space-y-1">
+  <div class="block sm:hidden">
+    <a class="text-sm font-normal text-black">(There is {{countBooks()}} books in collection)</a>
+    </div>
+<div class="flex justify-between items-center ">
+<div class="filters-summary flex flex-wrap gap-2 items-center">
+<a
+  *ngIf="
+    getSelectedFilters().category ||
+    getSelectedFilters().priceRange ||
+    getSelectedFilters().sortOrder ||
+    getSelectedFilters().release
+  "
+  class="text-sm font-normal text-black"
+>
+  You have chosen:
+</a>
+
+<!-- Category Filter -->
+<div
+  *ngIf="getSelectedFilters().category"
+  class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5"
+>
+  <span class="text-gray-700 font-normal text-sm">{{
+    getSelectedFilters().category
+  }}</span>
+  <button
+    title="cancelBtn"
+    (click)="resetFilter('category')"
+    class="text-red-500"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="w-[20px] h-[20px]"
+    >
       <path d="M6 18L18 6M6 6l12 12"></path>
     </svg>
   </button>
 </div>
 
+<!-- Price Range Filter -->
+<div
+  *ngIf="getSelectedFilters().priceRange"
+  class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5"
+>
+  <span class="text-gray-700 font-normal text-sm">{{
+    getSelectedFilters().priceRange
+  }}</span>
+  <button
+    title="cancelBtn"
+    (click)="resetFilter('priceRange')"
+    class="text-red-500"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="w-[20px] h-[20px]"
+    >
+      <path d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</div>
 
-    </div>
+<!-- Sort Order Filter -->
+<div
+  *ngIf="getSelectedFilters().sortOrder"
+  class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5"
+>
+  <span class="text-gray-700 font-normal text-sm">{{
+    getSelectedFilters().sortOrder
+  }}</span>
+  <button
+    title="cancelBtn"
+    (click)="resetFilter('sortOrder')"
+    class="text-red-500"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="w-[20px] h-[20px]"
+    >
+      <path d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</div>
+
+<!-- Release Date Filter -->
+<div
+  *ngIf="getSelectedFilters().release"
+  class="flex gap-1 bg-[#ffffff] justify-center items-center whitespace-nowrap rounded-full border-[1.5px] border-black px-2 py-0.5"
+>
+  <span class="text-gray-700 font-normal text-sm">{{
+    getSelectedFilters().release
+  }}</span>
+  <button
+    title="cancelBtn"
+    (click)="resetFilter('release')"
+    class="text-red-500"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="w-[20px] h-[20px]"
+    >
+      <path d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</div>
+</div>
+
+</div>
+</div>
   </div>
-  
 
   <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
     <div *ngFor="let product of paginatedProducts" class="cursor-pointer p-1">
@@ -247,37 +351,37 @@
       Page {{ currentPage }} of {{ totalPages }}
     </p>
   </div>
-  <div
-  *ngIf="filteredProducts.length === 0"
-  class="mt-24 justify-center items-center text-center gap-2 mb-2 flex flex-col"
->
-  <svg
-    fill="#6b7179"
-    version="1.1"
-    id="Capa_1"
-    stroke-width="1"
-    class="w-[100px] h-[100px]"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 106.059 106.059"
-    xml:space="preserve"
-  >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    <g
-      id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    ></g>
-    <g id="SVGRepo_iconCarrier">
-      <g>
-        <path
-          d="M90.546,15.518C69.858-5.172,36.199-5.172,15.515,15.513C-5.173,36.198-5.171,69.858,15.517,90.547 c20.682,20.684,54.341,20.684,75.027-0.004C111.23,69.858,111.229,36.2,90.546,15.518z M84.757,84.758 c-17.494,17.494-45.96,17.496-63.455,0.002c-17.498-17.497-17.496-45.966,0-63.46C38.796,3.807,67.261,3.805,84.759,21.302 C102.253,38.796,102.251,67.265,84.757,84.758z M77.017,74.001c0.658,1.521-0.042,3.286-1.562,3.943 c-1.521,0.66-3.286-0.042-3.944-1.562c-2.893-6.689-9.73-11.012-17.421-11.012c-7.868,0-14.747,4.319-17.522,11.004 c-0.479,1.154-1.596,1.851-2.771,1.851c-0.384,0-0.773-0.074-1.15-0.23c-1.53-0.636-2.255-2.392-1.62-3.921 c3.71-8.932,12.764-14.703,23.063-14.703C64.174,59.371,73.174,65.113,77.017,74.001z M33.24,38.671 c0-3.424,2.777-6.201,6.201-6.201c3.423,0,6.2,2.776,6.2,6.201c0,3.426-2.777,6.202-6.2,6.202 C36.017,44.873,33.24,42.097,33.24,38.671z M61.357,38.671c0-3.424,2.779-6.201,6.203-6.201c3.423,0,6.2,2.776,6.2,6.201 c0,3.426-2.776,6.202-6.2,6.202S61.357,42.097,61.357,38.671z"
-        ></path>
-      </g>
-    </g>
-  </svg>
-  <p class="text-[#6b7179] font-normal">No books available!</p>
-</div>
 
+  <div
+    *ngIf="filteredProducts.length === 0"
+    class="mt-24 justify-center items-center text-center gap-2 mb-2 flex flex-col"
+  >
+    <svg
+      fill="#6b7179"
+      version="1.1"
+      id="Capa_1"
+      stroke-width="1"
+      class="w-[100px] h-[100px]"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 106.059 106.059"
+      xml:space="preserve"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <g>
+          <path
+            d="M90.546,15.518C69.858-5.172,36.199-5.172,15.515,15.513C-5.173,36.198-5.171,69.858,15.517,90.547 c20.682,20.684,54.341,20.684,75.027-0.004C111.23,69.858,111.229,36.2,90.546,15.518z M84.757,84.758 c-17.494,17.494-45.96,17.496-63.455,0.002c-17.498-17.497-17.496-45.966,0-63.46C38.796,3.807,67.261,3.805,84.759,21.302 C102.253,38.796,102.251,67.265,84.757,84.758z M77.017,74.001c0.658,1.521-0.042,3.286-1.562,3.943 c-1.521,0.66-3.286-0.042-3.944-1.562c-2.893-6.689-9.73-11.012-17.421-11.012c-7.868,0-14.747,4.319-17.522,11.004 c-0.479,1.154-1.596,1.851-2.771,1.851c-0.384,0-0.773-0.074-1.15-0.23c-1.53-0.636-2.255-2.392-1.62-3.921 c3.71-8.932,12.764-14.703,23.063-14.703C64.174,59.371,73.174,65.113,77.017,74.001z M33.24,38.671 c0-3.424,2.777-6.201,6.201-6.201c3.423,0,6.2,2.776,6.2,6.201c0,3.426-2.777,6.202-6.2,6.202 C36.017,44.873,33.24,42.097,33.24,38.671z M61.357,38.671c0-3.424,2.779-6.201,6.203-6.201c3.423,0,6.2,2.776,6.2,6.201 c0,3.426-2.776,6.202-6.2,6.202S61.357,42.097,61.357,38.671z"
+          ></path>
+        </g>
+      </g>
+    </svg>
+    <p class="text-[#6b7179] font-normal">No books available!</p>
+  </div>
 </div>
 <!-- </div> -->

@@ -109,30 +109,12 @@ export class CollectionComponent {
         });
       }
       if (this.sortOrder[0] === 'asc' || this.sortOrder[0] === 'desc') {
-        this.selectionStock(this.sortOrder[0]);
       }
     this.filteredProducts = filtered;
     this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage); 
     this.currentPage = 1; 
   }
-selectionStock(order: 'asc' | 'desc'): void {
-  this.filteredProducts.sort((a, b) => {
-    if (order === 'asc') {
-      return a.stock - b.stock; 
-    } else {
-      return b.stock - a.stock;  
-    }
-  });
-  this.currentPage = 1;  
-  this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);  // Cập nhật số trang
-}
-onStockSortChange(event: any): void {
-  const order = event.target.value as 'asc' | 'desc' | ''; 
-  this.selectedStock = order || ''; 
-  if (order) {
-    this.selectionStock(order);
-  }
-}
+
 
 
 onSortOrderChange(event: Event): void {
@@ -158,7 +140,7 @@ onSortOrderChange(event: Event): void {
   }
   
   
-  getSelectedFilters(): { category: string, priceRange: string, sortOrder: string, release: string, stock: string } {
+  getSelectedFilters(): { category: string, priceRange: string, sortOrder: string, release: string } {
     return {
       category: this.selectedCategory || '',
       priceRange: this.selectedPriceRange || '',
@@ -168,9 +150,7 @@ onSortOrderChange(event: Event): void {
       release: this.selectedRelease ? 
         (this.selectedRelease === 'oldest' ? 'Oldest release' : 'Newest release') 
         : '',
-      stock: this.selectedStock ? 
-        (this.selectedStock === 'asc' ? 'Stock increase' : 'Stock decrease') 
-        : '', 
+  
     };
   }
   
@@ -189,11 +169,11 @@ onSortOrderChange(event: Event): void {
       this.sortOrder = [];  
     } else if (filter === 'release') {
       this.selectedRelease = '';
-    } else if (filter === 'stock') {
-      this.selectedStock = ''; 
-    }
+    } 
     this.applyFiltersAndSort();  
   }
-  
+  countBooks():number{
+    return this.filteredProducts.length
+  }
   
 }
