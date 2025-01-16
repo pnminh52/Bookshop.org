@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class CollectionComponent {
   products: Product[] = [];
-  sortOrder: string[] = ['asc', 'desc']; 
+  sortOrder: string[] = []; 
   selectedCategory: string = '';
   selectedPriceRange: string = '';
   selectedRelease: string = '';

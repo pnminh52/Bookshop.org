@@ -964,6 +964,14 @@
       "comment": "âsasa",
       "rating": 4,
       "id": 1
+    },
+    {
+      "productId": "9ed5",
+      "userId": "b53c",
+      "fullName": "Phạm Nhật Minh",
+      "comment": "âsa",
+      "rating": 2,
+      "id": 2
     }
   ]
 }
