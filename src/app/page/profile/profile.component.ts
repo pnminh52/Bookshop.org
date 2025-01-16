@@ -12,21 +12,21 @@ import { CommonModule, NgIf } from '@angular/common';
 })
 export class ProfileComponent implements OnInit {
   user = {
-    id: 'b53c',
-    fullName: 'Phạm Nhật Minh',
-    phoneNumber: '0934557882',
+    id: '',
+    fullName: '',
+    phoneNumber: '',
     address: {
-      streetAddress: 'Hà Nam',
-      city: 'Ha Noi',
-      state: 'California',
-      postalCode: '989898',
-      country: 'Việt Nam'
+      streetAddress: '',
+      city: '',
+      state: '',
+      postalCode: '',
+      country: ''
     },
-    email: '2@gmail.com',
-    password: '111111',
+    email: '',
+    password: '',
     role: 'user',
     orderHistory: [],
-    avatar: 'path_to_avatar_image'  // Initially set to a placeholder or default URL
+    avatar: 'https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg' 
   };
 
   isEditing = false;
@@ -38,7 +38,6 @@ export class ProfileComponent implements OnInit {
   }
 
   loadUserData() {
-    // Assuming you fetch the user data from a backend or localStorage
     const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
     if (storedUser) {
       this.user = { ...this.user, ...storedUser };
@@ -50,11 +49,10 @@ export class ProfileComponent implements OnInit {
   }
 
   saveChanges() {
-    // Update the user data on the backend (db.json in this case)
     this.http.put(`http://localhost:3000/users/${this.user.id}`, this.user).subscribe({
       next: (response) => {
         console.log('User updated successfully:', response);
-        localStorage.setItem('user', JSON.stringify(this.user));  // Save the updated data locally
+        localStorage.setItem('user', JSON.stringify(this.user));  
         this.isEditing = false;
       },
       error: (err) => {
@@ -65,6 +63,6 @@ export class ProfileComponent implements OnInit {
 
   cancelEditing() {
     this.isEditing = false;
-    this.loadUserData();  // Reset the form to the original data
+    this.loadUserData();  
   }
 }

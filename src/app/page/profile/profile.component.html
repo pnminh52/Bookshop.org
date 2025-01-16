@@ -6,7 +6,7 @@
   
     <div class="profile-info" *ngIf="!isEditing">
       <div class="avatar">
-        <img class="w-[300px] h-[300px] rounded-full object-cover" [src]="user.avatar || 'default-avatar.jpg'" alt="Avatar" />
+        <img class="w-[300px] h-[300px] rounded-full object-cover" [src]="user.avatar || 'https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg'" alt="Avatar" />
       </div>
       <div class="info">
         <p><strong>Full Name:</strong> {{ user.fullName }}</p>
@@ -21,7 +21,7 @@
         <input type="text" [(ngModel)]="user.avatar" placeholder="Enter avatar URL" />
         <div *ngIf="user.avatar">
           <p>Preview:</p>
-          <img [src]="user.avatar" alt="Preview" class="avatar-preview rounded-full w-[300px] h-[300px]" />
+          <img [src]="user.avatar || 'https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg'" alt="Preview" class="avatar-preview rounded-full w-[300px] h-[300px]" />
         </div>
       </div>
   

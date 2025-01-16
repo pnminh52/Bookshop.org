@@ -922,7 +922,23 @@
       "id": 2
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "25",
+      "title": "Teaching to Transgress: Education as the Practice of Freedom",
+      "price": 48.95,
+      "price_after_discount": 47.67,
+      "category": "Education",
+      "author": "Bell Hooks",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9780415908085.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "discount": 15,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2024-01-20"
+    }
+  ],
   "comments": [
     {
       "productId": "6b6a",
