@@ -130,13 +130,15 @@
       class="form-control" 
       id="discount" 
       formControlName="discount"
-      min="0" max="100"
+      [value]="addForm.get('discount')?.value"
+      readonly
     />
     <small class="text-danger text-small" 
       *ngIf="addForm.controls['discount'].errors?.['required'] && addForm.controls['discount'].touched">
       Discount is Required
     </small>
   </div>
+  
 
   <div class="form-group">
     <label for="stock">Stock</label>

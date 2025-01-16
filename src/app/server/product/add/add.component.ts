@@ -31,7 +31,26 @@ export class AddComponent {
     category_id: new FormControl('', [Validators.required]),
     publish_date: new FormControl('', [Validators.required])
   });
+  ngOnInit(): void {
+    this.addForm.get('price')?.valueChanges.subscribe(() => {
+      this.updateDiscount();
+    });
 
+    this.addForm.get('price_after_discount')?.valueChanges.subscribe(() => {
+      this.updateDiscount();
+    });
+  }
+  updateDiscount(): void {
+    const price = this.addForm.get('price')?.value;
+    const priceAfterDiscount = this.addForm.get('price_after_discount')?.value;
+
+    if (price && priceAfterDiscount) {
+      const discount = ((price - priceAfterDiscount) / price) * 100;
+      this.addForm.patchValue({
+        discount: discount.toFixed(2)
+      });
+    }
+  }
   handleSubmit() {
     if (this.addForm.valid) {
       this.productService.addProduct(this.addForm.value).subscribe({

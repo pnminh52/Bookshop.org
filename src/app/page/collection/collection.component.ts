@@ -30,7 +30,7 @@ export class CollectionComponent {
   ];
   isLoading = true;
   currentPage = 1;
-  itemsPerPage = 48;
+  itemsPerPage = 60;
   totalPages = 0;
 
   get paginatedProducts() {
