@@ -140,6 +140,7 @@ export class ProductDetailComponent implements OnInit {
           }
           return comment;
         });
+        this.comments = this.comments.map(comment => ({ ...comment, expanded: false }));
       },
       error: (err) => {
         console.error('Error fetching comments:', err);

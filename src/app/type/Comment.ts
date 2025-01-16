@@ -8,4 +8,5 @@ export interface Comment {
     fullName: string
     avatar: string
     imageUrl?: string;
+    expanded?: boolean;
   }

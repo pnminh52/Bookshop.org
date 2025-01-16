@@ -32,7 +32,7 @@
   <div class="mt-8">
     <h2 class="text-xl font-semibold">Comment section example: </h2>
     <div *ngFor="let comment of comments" class="border-b py-2">
-      <div class="flex items-center gap-4">
+      <div class="flex  gap-2">
         <img class="object-cover w-[50px] h-[50px] rounded-full" [src]="comment.avatar" alt="Avatar">
         <div class="space-y-1">
           <div class="flex">
@@ -61,7 +61,21 @@
           </ng-container>
           <a class="pl-3" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
         </div>
-          <div><strong>{{ comment.fullName }}:</strong> {{ comment.comment }}</div>
+          <div><strong>{{ comment.fullName }}:</strong> 
+            <div *ngIf="comment.comment.length <= 100">
+              {{ comment.comment }}
+            </div>
+            <div *ngIf="comment.comment.length > 100">
+              <div *ngIf="!comment.expanded">
+                {{ comment.comment | slice:0:100 }}...
+                <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
+              </div>
+              <div *ngIf="comment.expanded">
+                {{ comment.comment }}
+                <a (click)="comment.expanded = false" class="cursor-pointer font-semibold">Thu gọn</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
