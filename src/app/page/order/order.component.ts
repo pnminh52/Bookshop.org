@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../order.service';
 import { CommonModule } from '@angular/common';
-import { PopupComponent } from '../../components/popup/popup.component'; // Import PopupComponent
-import { MatDialog } from '@angular/material/dialog'; // Import MatDialog
+import { PopupComponent } from '../../components/popup/popup.component'; 
+import { MatDialog } from '@angular/material/dialog'; 
 @Component({
   standalone: true,
   selector: 'app-order',
@@ -16,7 +16,7 @@ export class OrderComponent implements OnInit {
 
   constructor(
     private orderService: OrderService, 
-    private dialog: MatDialog // Inject MatDialog
+    private dialog: MatDialog 
   ) {}
 
   ngOnInit(): void {
@@ -34,13 +34,12 @@ export class OrderComponent implements OnInit {
   }
 
   cancelOrder(orderId: string) {
-    this.dialog.open(PopupComponent, { // Mở Popup khi bấm hủy đơn hàng
+    this.dialog.open(PopupComponent, { 
       data: {
         message: 'Bạn có chắc chắn muốn hủy đơn hàng này?'
       }
     }).afterClosed().subscribe(result => {
       if (result === 'confirm') {
-        // Nếu người dùng xác nhận, hủy đơn hàng
         this.orderService.updateOrderStatus(orderId, 'Cancelled').subscribe({
           next: () => {
             this.orders = this.orders.map(order =>
@@ -49,7 +48,6 @@ export class OrderComponent implements OnInit {
             alert('Đơn hàng đã được hủy thành công!');
           },
           error: (error) => {
-            // console.error('Lỗi khi hủy đơn hàng:', error);
             alert('Có lỗi xảy ra khi hủy đơn hàng.');
           }
         });

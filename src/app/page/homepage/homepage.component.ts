@@ -18,7 +18,6 @@ export class HomepageComponent implements OnInit {
   product: Product | undefined;
   userId: string | null = null;
   products: Product[] = [];
-  // limitedProducts: Product[] = [];
   novelCategory: Product[] = [];
   romanceCategory: Product[] = [];
   fantasyCategory: Product[] = [];
@@ -51,8 +50,6 @@ export class HomepageComponent implements OnInit {
     this.productService.getAll().subscribe({
       next: (data) => {
         this.products = data;
-        // this.limitedProducts = this.products.slice(0, 6);
-        // this.filterNovelCategory();
         this.filterRomanceCategory();
         this.filterFantasyCategory();
         this.filterHistoryCategory();
@@ -65,9 +62,7 @@ export class HomepageComponent implements OnInit {
       },
     });
   }
-  // filterNovelCategory(): void {
-  //   this.novelCategory = this.products.filter(product => product.category === 'Fiction');
-  // }
+
   filterRomanceCategory(): void {
     this.romanceCategory = this.products
       .filter((product) => product.category === 'Romance')
@@ -102,7 +97,7 @@ export class HomepageComponent implements OnInit {
   addToWishlist(product: Product): void {
     this.authService.isLoggedIn$.subscribe((isLoggedIn) => {
       if (!isLoggedIn) {
-        this.alertMessage = 'You need to login to add product to wishlist!';  // Set success message
+        this.alertMessage = 'You need to login to add product to wishlist!'; 
         setTimeout(() => {
           this.alertMessage = null; 
         }, 3000);
@@ -118,7 +113,7 @@ export class HomepageComponent implements OnInit {
         next: (wishlist) => {
           const isProductInWishlist = wishlist.some(item => item.id === this.product?.id);
           if (isProductInWishlist) {
-            this.alertMessage = 'This product are already in your wishlist!';  // Set success message
+            this.alertMessage = 'This product are already in your wishlist!'; 
             setTimeout(() => {
               this.alertMessage = null; 
             }, 3000);

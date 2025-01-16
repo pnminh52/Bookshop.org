@@ -13,13 +13,13 @@ import { CommonModule } from '@angular/common';
 export class WishlistComponent implements OnInit {
   userId: string | null = null;
   wishlist: Product[] = [];
-  successMessage: string | null = null;  // Thông báo thành công
+  successMessage: string | null = null; 
 
   constructor(private wishlistService: WishlistService) {}
 
   ngOnInit(): void {
     this.userId = localStorage.getItem('userId');
-    console.log('User ID:', this.userId); // Kiểm tra giá trị userId
+    console.log('User ID:', this.userId); 
     this.loadWishlist();
   }
 
@@ -27,10 +27,10 @@ export class WishlistComponent implements OnInit {
     if (this.userId) {
       this.wishlistService.getWishlist(this.userId).subscribe({
         next: (data: any) => {
-          console.log('Raw Data:', data);  // Kiểm tra dữ liệu trả về
+          console.log('Raw Data:', data);  
           
           if (data && Array.isArray(data)) {
-            this.wishlist = data;  // Gán trực tiếp
+            this.wishlist = data; 
             console.log('Mapped Wishlist:', this.wishlist);
           } else {
             console.error('Dữ liệu không hợp lệ:', data);
@@ -47,11 +47,10 @@ export class WishlistComponent implements OnInit {
     if (this.userId) {
       this.wishlistService.removeFromWishlist(this.userId, productId).subscribe({
         next: () => {
-          // Xóa sản phẩm khỏi danh sách hiển thị
           this.wishlist = this.wishlist.filter(product => product.id !== productId);
-          this.successMessage = 'Product removed from wishlist successfully!';  // Hiển thị thông báo
+          this.successMessage = 'Product removed from wishlist successfully!'; 
           setTimeout(() => {
-            this.successMessage = null;  // Ẩn thông báo sau 3 giây
+            this.successMessage = null; 
           }, 3000);
         },
         error: (err) => {

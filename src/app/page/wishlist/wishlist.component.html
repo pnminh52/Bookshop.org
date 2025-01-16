@@ -3,14 +3,14 @@
   {{ successMessage }}
 </div>
 
-<!-- Danh sách sản phẩm trong wishlist -->
+
 <div *ngIf="wishlist.length > 0; else noWishlist">
   <h2>Wishlist</h2>
   <ul>
     <li *ngFor="let item of wishlist">
       <img class="w-[50%] h-auto" src={{item.image_url}} alt="">
       {{ item.title }} by {{ item.author }} ({{ item.price_after_discount }} USD)
-      <button (click)="removeFromWishlist(item.id)">Remove</button>  <!-- Xóa sản phẩm khỏi wishlist -->
+      <button (click)="removeFromWishlist(item.id)">Remove</button> 
     </li>
   </ul>
 </div>

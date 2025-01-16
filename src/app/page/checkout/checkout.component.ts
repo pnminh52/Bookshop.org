@@ -32,7 +32,6 @@ export class CheckoutComponent {
     this.user = JSON.parse(localStorage.getItem('user') || '{}');
   }
 
-  // Hàm thanh toán
   checkout(): void {
     const order = {
       userId: this.user.id,
@@ -43,7 +42,6 @@ export class CheckoutComponent {
       status: 'completed',
     };
 
-    // Gửi yêu cầu thêm đơn hàng
     this.orderService.addOrder(order).subscribe({
       next: (response) => {
         // Cập nhật orderHistory của người dùng

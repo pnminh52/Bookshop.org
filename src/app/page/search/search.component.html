@@ -5,7 +5,7 @@
     placeholder="Search for products..."
   />
   
-  <button (click)="search()">Submit</button> <!-- Nút Submit -->
+  <button (click)="search()">Submit</button> 
   <div *ngIf="products.length > 0" class="product-list">
     <div *ngFor="let product of products" class="product-item">
       <a [routerLink]="['/productDetails', product.id]">

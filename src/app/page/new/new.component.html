@@ -40,7 +40,6 @@
         </select>
       </div>
       
-      <!-- Dropdown để chọn thể loại -->
       <div class="mb-4 font-normal py-1 border-b border-black">
         <select title="sortCategory" id="category" (change)="onCategoryChange($event)">
           <option value="">All Categories</option>
@@ -64,7 +63,6 @@
       <p class="text-md text-gray-500 font-normal mb-0">{{ product.author }}</p>
       <div class="flex mt-1 mb-1">
         <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-          <!-- Full Star -->
           <svg
             *ngIf="product.rating >= star"
             class="w-4 h-4 text-yellow-400 fill-current"
@@ -76,7 +74,6 @@
             />
           </svg>
   
-          <!-- Half Star -->
           <svg
             *ngIf="product.rating >= star - 0.5 && product.rating < star"
             class="w-4 h-4 text-yellow-400 fill-current"
@@ -88,7 +85,6 @@
             />
           </svg>
   
-          <!-- Empty Star -->
           <svg
             *ngIf="product.rating < star - 0.5"
             class="w-4 h-4 text-gray-300 fill-current"

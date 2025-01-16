@@ -1,7 +1,6 @@
 <div class="container mx-auto p-4">
     <h1 class="text-3xl font-bold mb-8">Checkout</h1>
   
-    <!-- Thông tin giỏ hàng -->
     <div *ngIf="cartItems.length > 0; else emptyCart">
       <div *ngFor="let item of cartItems" class="border-b py-4">
         <div class="flex items-center justify-between">
@@ -16,12 +15,10 @@
         </div>
       </div>
   
-      <!-- Tổng tiền -->
       <div class="mt-8">
         <p class="text-2xl font-bold">Total: {{ total | currency }}</p>
       </div>
   
-      <!-- Thông tin người dùng -->
       <div class="mt-8">
         <h2 class="text-2xl font-bold mb-4">Thông tin thanh toán</h2>
         <div *ngIf="user; else noUser ">
@@ -40,13 +37,11 @@
         </ng-template>
       </div>
   
-      <!-- Nút thanh toán -->
       <button (click)="checkout()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 mt-4">
         Thanh toán
       </button>
     </div>
   
-    <!-- Giỏ hàng trống -->
     <ng-template #emptyCart>
       <p class="text -center text-lg">Giỏ hàng của bạn hiện đang trống. Vui lòng thêm sản phẩm vào giỏ hàng để tiếp tục.</p>
     </ng-template>

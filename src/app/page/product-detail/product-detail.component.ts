@@ -67,7 +67,7 @@ export class ProductDetailComponent implements OnInit {
   addToCart(): void {
     if (this.checkLogin() && this.product) {
       this.cartService.addToCart(this.product);
-      this.successMessage = 'Product added to cart successfully!'; // Set success message
+      this.successMessage = 'Product added to cart successfully!';
       setTimeout(() => {
         this.successMessage = null;
       }, 3000);

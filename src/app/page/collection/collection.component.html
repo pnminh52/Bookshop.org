@@ -279,7 +279,6 @@
       </p>
       <div class="flex mt-1 mb-1">
         <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-          <!-- Full Star -->
           <svg
             *ngIf="product.rating >= star"
             class="w-4 h-4 text-yellow-400 fill-current"
@@ -291,7 +290,6 @@
             />
           </svg>
 
-          <!-- Half Star -->
           <svg
             *ngIf="product.rating >= star - 0.5 && product.rating < star"
             class="w-4 h-4 text-yellow-400 fill-current"
@@ -303,7 +301,6 @@
             />
           </svg>
 
-          <!-- Empty Star -->
           <svg
             *ngIf="product.rating < star - 0.5"
             class="w-4 h-4 text-gray-300 fill-current"

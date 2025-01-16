@@ -120,7 +120,7 @@ export class CollectionComponent {
 onSortOrderChange(event: Event): void {
   const target = event.target as HTMLSelectElement;
   const order = target.value as 'asc' | 'desc' | ''; 
-  this.sortOrder = order ? [order] : [];  // Đảm bảo không có giá trị mặc định
+  this.sortOrder = order ? [order] : [];  
   this.applyFiltersAndSort();
 }
 

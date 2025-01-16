@@ -50,7 +50,7 @@ export class UserHeaderComponent {
   }
   onItemClick(itemType: string): void {
     if (!this.isLoggedIn) {
-      this.alertMessage = `You must be logged in to view your ${itemType}.`; // Hiển thị thông báo chung
+      this.alertMessage = `You must be logged in to view your ${itemType}.`; 
       setTimeout(() => {
         this.alertMessage = null; 
       }, 3000);

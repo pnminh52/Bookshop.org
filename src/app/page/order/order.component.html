@@ -1,8 +1,6 @@
-<!-- order.component.html -->
 <div class="container mx-auto p-4">
   <h1 class="text-3xl font-bold mb-8">Danh sách đơn hàng</h1>
 
-  <!-- Danh sách đơn hàng -->
   <div *ngIf="orders.length > 0; else noOrders">
     <table class="min-w-full table-auto border-collapse">
       <thead>
@@ -30,23 +28,11 @@
         </tr>
 
       
-        <!-- <tr *ngFor="let order of orders">
-          <td colspan="5" class="px-4 py-2 border-t">
-            <h3 class="text-lg font-semibold">Chi tiết đơn hàng:</h3>
-            <div *ngFor="let item of order.items" class="mt-2">
-              <div class="flex items-center">
-                <img class="w-20 h-auto mr-2" [src]="item.image_url" alt="Item image">
-                <p>{{ item.title }}</p>
-                <p>x{{ item.quantity }}</p>
-              </div>
-            </div>
-          </td>
-        </tr> -->
+
       </tbody>
     </table>
   </div>
 
-  <!-- Không có đơn hàng -->
   <ng-template #noOrders>
     <p class="text-center text-lg">Bạn chưa có đơn hàng nào.</p>
   </ng-template>

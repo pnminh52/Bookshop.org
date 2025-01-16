@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartService } from '../../cart.service'; // Import CartService
+import { CartService } from '../../cart.service'; 
 import { Product } from '../../type/Products';
 import { Router } from '@angular/router';
 
@@ -16,7 +16,7 @@ export class CartComponent {
  
 
   constructor(private cartService: CartService, private router: Router) {
-    this.cartItems = this.cartService.getCartItems(); // Lấy danh sách sản phẩm từ service
+    this.cartItems = this.cartService.getCartItems(); 
   }
 
   
@@ -39,6 +39,6 @@ export class CartComponent {
     return this.cartService.getTotal();
   }
   proceedToCheckout(): void {
-    this.router.navigate(['/checkout']); // Chuyển hướng đến trang Checkout
+    this.router.navigate(['/checkout']); 
   }
 }

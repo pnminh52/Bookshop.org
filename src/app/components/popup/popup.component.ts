@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog'; // Inject dữ liệu từ dialog
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog'; 
 import { NgModule } from '@angular/core';
 @Component({
   selector: 'app-popup',
@@ -14,10 +14,10 @@ export class PopupComponent {
   ) {}
 
   onCancel(): void {
-    this.dialogRef.close('cancel'); // Đóng popup và trả 'cancel'
+    this.dialogRef.close('cancel'); 
   }
 
   onConfirm(): void {
-    this.dialogRef.close('confirm'); // Đóng popup và trả 'confirm'
+    this.dialogRef.close('confirm'); 
   }
 }

@@ -13,7 +13,7 @@ const routes: Routes = [
   standalone: true,
   templateUrl: './search.component.html',
   imports: [CommonModule, FormsModule,RouterModule],
-  styleUrls: ['./search.component.css'], // Use styleUrls instead of styleUrl
+  styleUrls: ['./search.component.css'], 
 })
 export class SearchComponent {
   searchTerm: string = '';
