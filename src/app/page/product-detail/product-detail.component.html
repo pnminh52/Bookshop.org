@@ -59,23 +59,25 @@
           </svg>
           
           </ng-container>
-          <a class="pl-3" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
+          <a class="pl-2" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
         </div>
-          <div><strong>{{ comment.fullName }}:</strong> 
-            <div *ngIf="comment.comment.length <= 100">
+        <div>
+          <strong class="block">{{ comment.fullName }}:</strong> 
+          <p *ngIf="comment.comment.length <= 100" class="break-words">
+            {{ comment.comment }}
+          </p>
+          <div *ngIf="comment.comment.length > 100">
+            <p *ngIf="!comment.expanded" class="break-words">
+              {{ comment.comment | slice:0:100 }}...
+              <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
+            </p>
+            <p *ngIf="comment.expanded" class="break-words">
               {{ comment.comment }}
-            </div>
-            <div *ngIf="comment.comment.length > 100">
-              <div *ngIf="!comment.expanded">
-                {{ comment.comment | slice:0:100 }}...
-                <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
-              </div>
-              <div *ngIf="comment.expanded">
-                {{ comment.comment }}
-                <a (click)="comment.expanded = false" class="cursor-pointer font-semibold">Thu gọn</a>
-              </div>
-            </div>
+              <a (click)="comment.expanded = false" class="cursor-pointer font-semibold">Thu gọn</a>
+            </p>
           </div>
+        </div>
+        
         </div>
       </div>
     </div>

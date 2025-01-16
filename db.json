@@ -922,7 +922,24 @@
       "id": 2
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "6b6a",
+      "title": "Goodnight Punpun, Vol. 1",
+      "price": 24.99,
+      "price_after_discount": 23.24,
+      "category": "Manga",
+      "author": "Inio Asano",
+      "description": "A dark coming-of-age tale where slice-of-life slices back.\nThis is Punpun Onodera's coming-of-age story. His parents' marriage is falling apart. His dad goes to jail, and his mom goes to the hospital. He has to live with his loser uncle. He has a crush on a girl who lives in a weird cult. Punpun tries talking with God about his problems, but God is a jerk. Punpun keeps hoping things will get better, but they really, really don't.\nMeet Punpun Punyama. He's an average kid in an average town.\nHe wants to win a Nobel Prize and save the world.\nHe wants the girl he has a crush on to like him back.\nHe wants to find some porn.\nThat's what he wants, but what does he get...?",
+      "image_url": "https://images-us.bookshop.org/ingram/9781421586205.jpg?height=1200&v=v2",
+      "rating": 4.8,
+      "discount": 10,
+      "stock": 40,
+      "category_id": "3",
+      "publish_date": "2025-01-12",
+      "quantity": 1
+    }
+  ],
   "comments": [
     {
       "productId": "6b6a",
