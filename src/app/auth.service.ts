@@ -4,7 +4,7 @@ import { Observable, BehaviorSubject, EMPTY, throwError } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators'; 
 import { CartService } from './cart.service'; 
 import { Router } from '@angular/router';
-import { user } from '../../src/app/type/Auth';
+import { user } from 'type/Auth';
 
 @Injectable({
   providedIn: 'root'
