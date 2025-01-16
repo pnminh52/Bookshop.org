@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
-import { ListComponent } from './server/product/list/list.component';
-import { AddComponent } from './server/product/add/add.component';
-import { EditComponent } from './server/product/edit/edit.component';
+
 import { RegisterComponent } from './page/register/register.component';
 import { LoginComponent } from './page/login/login.component';
 import { HomepageComponent } from './page/homepage/homepage.component';
@@ -18,6 +16,10 @@ import { WishlistComponent } from './page/wishlist/wishlist.component';
 import { ProfileComponent } from './page/profile/profile.component';
 import { AudiobooksComponent } from './page/audiobooks/audiobooks.component';
 import { DashboardComponent } from './server/dashboard/dashboard.component';
+import { EditProductComponent } from './server/product/edit-product/edit-product.component';
+import { AddProductComponent } from './server/product/add-product/add-product.component';
+import { ListProductComponent } from './server/product/list-product/list-product.component';
+import { ListUserComponent } from './server/user/list-user/list-user.component';
 
 export const routes: Routes = [
   {
@@ -28,17 +30,21 @@ export const routes: Routes = [
         component: DashboardComponent,
       },
       {
-        path: 'list',
-        component: ListComponent,
+        path: 'list-product',
+        component: ListProductComponent,
       },
       {
-        path: 'addproduct',
-        component: AddComponent,
+        path: 'add-product',
+        component: AddProductComponent,
       },
       {
-        path: 'edit/:id',
-        component: EditComponent,
+        path: 'edit-product/:id',
+        component: EditProductComponent,
       },
+      {
+        path: 'list-user',
+        component: ListUserComponent
+      }
     ],
   },
   {

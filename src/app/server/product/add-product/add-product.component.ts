@@ -7,13 +7,13 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-add',
+  selector: 'app-add-product',
   standalone: true,
   imports: [ReactiveFormsModule, NgIf, CommonModule, RouterLink],
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  templateUrl: './add-product.component.html',
+  styleUrl: './add-product.component.css'
 })
-export class AddComponent {
+export class AddProductComponent {
   productService = inject(ProductService);
   router = inject(Router);
 

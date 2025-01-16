@@ -5,13 +5,13 @@ import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-list-product',
   standalone: true,
   imports: [RouterLink, NgFor],
-  templateUrl: './list.component.html',
-  styleUrl: './list.component.css'
+  templateUrl: './list-product.component.html',
+  styleUrl: './list-product.component.css'
 })
-export class ListComponent {
+export class ListProductComponent {
   productService = inject(ProductService);
   products: Product[] = [];
   currentPage = 1;

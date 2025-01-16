@@ -5,15 +5,14 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-
 @Component({
-  selector: 'app-edit',
+  selector: 'app-edit-product',
   standalone: true,
   imports: [ReactiveFormsModule, NgIf, CommonModule],
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  templateUrl: './edit-product.component.html',
+  styleUrl: './edit-product.component.css'
 })
-export class EditComponent implements OnInit {
+export class EditProductComponent {
   productService = inject(ProductService);
   router = inject(Router);
   route = inject(ActivatedRoute);

@@ -1221,7 +1221,8 @@
       "id": "87fa",
       "email": "elyz.thedev@gmail.com",
       "password": "111111",
-      "role": "admin"
+      "role": "admin",
+      "status": "active"
     },
     {
       "id": "b53c",
@@ -1238,7 +1239,8 @@
       "password": "111111",
       "role": "user",
       "orderHistory": [],
-      "avatar": "https://i.pinimg.com/736x/19/e0/77/19e07757602c172c633abff094e6c38d.jpg"
+      "avatar": "https://i.pinimg.com/736x/19/e0/77/19e07757602c172c633abff094e6c38d.jpg",
+      "status": "active"
     },
     {
       "id": "SV-PJoW",
@@ -1255,7 +1257,8 @@
       "password": "111111",
       "role": "user",
       "orderHistory": [],
-      "avatar": "https://i.pinimg.com/736x/5e/6b/ee/5e6beeb749ec884b9dc6ac4dd2657142.jpg"
+      "avatar": "https://i.pinimg.com/736x/5e/6b/ee/5e6beeb749ec884b9dc6ac4dd2657142.jpg",
+      "status": "active"
     }
   ],
   "orders": [
@@ -1283,7 +1286,7 @@
       "paymentMethod": "PayPal",
       "date": "2025-01-15T09:58:39.913Z",
       "status": "Cancelled",
-      "id": 1
+      "id": "1"
     },
     {
       "userId": "b53c",
@@ -1309,7 +1312,7 @@
       "paymentMethod": "Cash on Delivery",
       "date": "2025-01-15T12:12:15.086Z",
       "status": "Cancelled",
-      "id": 2
+      "id": "2"
     }
   ],
   "wishlist": [
@@ -1328,6 +1331,36 @@
       "category_id": "3",
       "publish_date": "2025-01-12",
       "quantity": 1
+    },
+    {
+      "id": "7ae1",
+      "title": "Goodbye, Eri",
+      "price": 14.99,
+      "price_after_discount": 13.94,
+      "category": "Manga",
+      "author": "Tatsuki Fujimoto",
+      "description": "An explosive story from the mad genius behind Chainsaw Man and Look Back!\nYoung filmmaker Yuta contemplates suicide after the death of his mother, but a chance meeting with a mysterious girl will alter his life in an explosive way.\nFrom the mad genius behind Chainsaw Man and Look Back comes a new story about coping with loss.\nYuta's moviemaking career started with a request from his mother to record her final moments. After her death, Yuta meets a mysterious girl named Eri, who takes his life in new directions. The two begin creating a movie together, but Eri is harboring an explosive secret.",
+      "image_url": "https://images-us.bookshop.org/ingram/9781974738939.jpg?height=1200&v=v2-27d32873556342390078c9e5ee09855f",
+      "rating": 4.6,
+      "discount": 10,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2025-01-12"
+    },
+    {
+      "id": "8cf8",
+      "title": "One Piece, Vol. 108",
+      "price": 11.99,
+      "price_after_discount": 11.15,
+      "category": "Manga",
+      "author": "Eiichiro Oda",
+      "description": "Join Monkey D. Luffy and his swashbuckling crew in their search for the ultimate treasure, One Piece!\nAs a child, Monkey D. Luffy dreamed of becoming King of the Pirates. But his life changed when he accidentally gained the power to stretch like rubber...at the cost of never being able to swim again! Years later, Luffy sets off in search of the One Piece, said to be the greatest treasure in the world...\nAs Luffy and crew try to escape Egghead, the Navy's armada surrounds the island. Leading the charge are Admiral Kizaru and a member of the mysterious Five Elders. Can the Straw Hats survive as the greatest battle in the world is about to break out?",
+      "image_url": "https://images-us.bookshop.org/ingram/9781974752225.jpg?height=1200&v=v2-437c32f1255c1fc71df730fa36e07454",
+      "rating": 4.5,
+      "discount": 5,
+      "stock": 50,
+      "category_id": "5",
+      "publish_date": "2025-01-12"
     }
   ],
   "comments": [
@@ -1339,7 +1372,7 @@
       "rating": 4,
       "createdAt": "2025-01-16T12:56:25.093Z",
       "avatar": "https://i.pinimg.com/736x/19/e0/77/19e07757602c172c633abff094e6c38d.jpg",
-      "id": 1
+      "id": "1"
     }
   ]
 }

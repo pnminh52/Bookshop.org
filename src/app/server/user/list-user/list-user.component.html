@@ -1,0 +1,45 @@
+<div *ngIf="loading">Loading...</div>
+
+<div *ngIf="users.length > 0; else noUsers">
+  <table class="table-auto w-full border-collapse">
+    <thead>
+      <tr>
+        <th class="px-4 py-2 border">Full Name</th>
+        <th class="px-4 py-2 border">Email</th>
+        <th class="px-4 py-2 border">Phone Number</th>
+        <th class="px-4 py-2 border">Role</th>
+        <th class="px-4 py-2 border">Status</th>
+        <th class="px-4 py-2 border">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td class="px-4 py-2 border">{{ user.fullName }}</td>
+        <td class="px-4 py-2 border">{{ user.email }}</td>
+        <td class="px-4 py-2 border">{{ user.phoneNumber }}</td>
+        <td class="px-4 py-2 border">{{ user.role }}</td>
+        <td class="px-4 py-2 border">{{ user.status }}</td>
+
+        <td class="px-4 py-2 border">
+          <span [ngClass]="{ 'text-green-500': user.status === 'active', 'text-red-500': user.status === 'inactive' }">
+            {{ user.status | titlecase }}
+          </span>
+        </td>
+        <td class="px-4 py-2 border">
+            <button 
+  (click)="toggleStatus(user.id, 'inactive')" 
+  class="bg-red-500 text-white px-4 py-2 rounded">Disable</button>
+<button 
+  (click)="toggleStatus(user.id, 'active')" 
+  class="bg-green-500 text-white px-4 py-2 rounded">Enable</button>
+
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noUsers>
+  <p>{{ error || 'No users found.' }}</p>
+</ng-template>

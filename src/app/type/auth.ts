@@ -14,4 +14,5 @@ export type user = {
   role: string;
   orderHistory: any[];
   avatar: string;
+  status: 'active' | 'inactive';
 }
