@@ -2,23 +2,22 @@
     "version": 2,
     "builds": [
       {
-        "src": "angular.json",
-        "use": "@vercel/angular"
+        "src": "dist/web208-angular-base/index.html",
+        "use": "@vercel/static"
       },
       {
-        "src": "db.json",
+        "src": "api/index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "/api/db.json"
+        "dest": "api/index.js"
       },
       {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "dist/web208-angular-base/index.html"
       }
     ]
   }
-  
