@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "dist/web208-angular-base/index.html",
+        "src": "dist/web208-angular-base/browser/index.html",
         "use": "@vercel/static"
       },
       {
@@ -17,7 +17,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "dist/web208-angular-base/index.html"
+        "dest": "dist/web208-angular-base/browser/index.html"
       }
     ]
   }
