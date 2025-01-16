@@ -1256,43 +1256,35 @@
       "email": "3@gmail.com",
       "password": "111111",
       "role": "user",
-      "orderHistory": [],
+      "orderHistory": [
+        {
+          "userId": "SV-PJoW",
+          "items": [
+            {
+              "id": "c294",
+              "title": "Letters to a Young Poet",
+              "price": 7,
+              "price_after_discount": 5.74,
+              "category": "Fiction",
+              "author": "Rainer Maria Rilke",
+              "description": "Facsimile of 1943 Edition. Born in 1875, the great German lyric poet Rainer Maria Rilke published his first collection of poems in 1898 and went on to become renowned for his delicate depiction of the workings of the human heart. Drawn by some sympathetic note in his poems, young people often wrote to Rilke with their problems and hopes. From 1903 to 1908 Rilke wrote a series of remarkable responses to a young, would-be poet on poetry and on surviving as a sensitive observer in a harsh world. Those letters, ten in all, remain a fresh source of inspiration and insight to the poetic sensibility to this day.",
+              "image_url": "https://images-us.bookshop.org/ingram/9781946963130.jpg?height=1200&v=v2-61b0ff27cae8a4e06539c18b9a856d07",
+              "rating": 4.9,
+              "discount": 10,
+              "stock": 30,
+              "category_id": "3",
+              "publish_date": "2025-01-14",
+              "quantity": 1
+            }
+          ],
+          "total": 5.74,
+          "paymentMethod": "Cash on Delivery",
+          "date": "2025-01-16T17:22:32.216Z",
+          "status": "completed"
+        }
+      ],
       "avatar": "https://i.pinimg.com/736x/5e/6b/ee/5e6beeb749ec884b9dc6ac4dd2657142.jpg",
       "status": "active"
-    },
-    {
-      "id": "e4fd",
-      "fullName": "Phạm Nhật Minh",
-      "phoneNumber": "0934557882",
-      "address": {
-        "streetAddress": "Hà Nam",
-        "city": "Ha Noi",
-        "state": "California",
-        "postalCode": "989898",
-        "country": "Việt Nam"
-      },
-      "email": "4@gmail.com",
-      "password": "111111",
-      "role": "user",
-      "orderHistory": [],
-      "avatar": "https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg",
-      "status": "inactive"
-    },
-    {
-      "id": "64ab",
-      "fullName": "Phạm Nhật Minh",
-      "phoneNumber": "0934557882",
-      "address": {
-        "streetAddress": "Hà Nam",
-        "city": "Ha Noi",
-        "state": "California",
-        "postalCode": "989898",
-        "country": "Việt Nam"
-      },
-      "email": "5@gmail.com",
-      "password": "111111",
-      "role": "user",
-      "status": "inactive"
     }
   ],
   "orders": [
@@ -1347,54 +1339,64 @@
       "date": "2025-01-15T12:12:15.086Z",
       "status": "Cancelled",
       "id": "2"
+    },
+    {
+      "id": "37d3",
+      "userId": "SV-PJoW",
+      "items": [
+        {
+          "id": "c294",
+          "title": "Letters to a Young Poet",
+          "price": 7,
+          "price_after_discount": 5.74,
+          "category": "Fiction",
+          "author": "Rainer Maria Rilke",
+          "description": "Facsimile of 1943 Edition. Born in 1875, the great German lyric poet Rainer Maria Rilke published his first collection of poems in 1898 and went on to become renowned for his delicate depiction of the workings of the human heart. Drawn by some sympathetic note in his poems, young people often wrote to Rilke with their problems and hopes. From 1903 to 1908 Rilke wrote a series of remarkable responses to a young, would-be poet on poetry and on surviving as a sensitive observer in a harsh world. Those letters, ten in all, remain a fresh source of inspiration and insight to the poetic sensibility to this day.",
+          "image_url": "https://images-us.bookshop.org/ingram/9781946963130.jpg?height=1200&v=v2-61b0ff27cae8a4e06539c18b9a856d07",
+          "rating": 4.9,
+          "discount": 10,
+          "stock": 30,
+          "category_id": "3",
+          "publish_date": "2025-01-14",
+          "quantity": 1
+        }
+      ],
+      "total": 5.74,
+      "paymentMethod": "Cash on Delivery",
+      "date": "2025-01-16T17:22:32.216Z",
+      "status": "Cancelled"
     }
   ],
   "wishlist": [
     {
-      "id": "6b6a",
-      "title": "Goodnight Punpun, Vol. 1",
-      "price": 24.99,
-      "price_after_discount": 23.24,
-      "category": "Manga",
-      "author": "Inio Asano",
-      "description": "A dark coming-of-age tale where slice-of-life slices back.\nThis is Punpun Onodera's coming-of-age story. His parents' marriage is falling apart. His dad goes to jail, and his mom goes to the hospital. He has to live with his loser uncle. He has a crush on a girl who lives in a weird cult. Punpun tries talking with God about his problems, but God is a jerk. Punpun keeps hoping things will get better, but they really, really don't.\nMeet Punpun Punyama. He's an average kid in an average town.\nHe wants to win a Nobel Prize and save the world.\nHe wants the girl he has a crush on to like him back.\nHe wants to find some porn.\nThat's what he wants, but what does he get...?",
-      "image_url": "https://images-us.bookshop.org/ingram/9781421586205.jpg?height=1200&v=v2",
-      "rating": 4.8,
-      "discount": 10,
-      "stock": 40,
-      "category_id": "3",
-      "publish_date": "2025-01-12",
-      "quantity": 1
-    },
-    {
-      "id": "7ae1",
-      "title": "Goodbye, Eri",
-      "price": 14.99,
-      "price_after_discount": 13.94,
-      "category": "Manga",
-      "author": "Tatsuki Fujimoto",
-      "description": "An explosive story from the mad genius behind Chainsaw Man and Look Back!\nYoung filmmaker Yuta contemplates suicide after the death of his mother, but a chance meeting with a mysterious girl will alter his life in an explosive way.\nFrom the mad genius behind Chainsaw Man and Look Back comes a new story about coping with loss.\nYuta's moviemaking career started with a request from his mother to record her final moments. After her death, Yuta meets a mysterious girl named Eri, who takes his life in new directions. The two begin creating a movie together, but Eri is harboring an explosive secret.",
-      "image_url": "https://images-us.bookshop.org/ingram/9781974738939.jpg?height=1200&v=v2-27d32873556342390078c9e5ee09855f",
-      "rating": 4.6,
-      "discount": 10,
+      "id": "25",
+      "title": "Teaching to Transgress: Education as the Practice of Freedom",
+      "price": 48.95,
+      "price_after_discount": 47.67,
+      "category": "Education",
+      "author": "Bell Hooks",
+      "description": "Mô tả sách 4",
+      "image_url": "https://images-us.bookshop.org/ingram/9780415908085.jpg?height=1200&v=v2",
+      "rating": 4.3,
+      "discount": 15,
       "stock": 40,
       "category_id": "4",
-      "publish_date": "2025-01-12"
+      "publish_date": "2024-01-20"
     },
     {
-      "id": "8cf8",
-      "title": "One Piece, Vol. 108",
-      "price": 11.99,
-      "price_after_discount": 11.15,
-      "category": "Manga",
-      "author": "Eiichiro Oda",
-      "description": "Join Monkey D. Luffy and his swashbuckling crew in their search for the ultimate treasure, One Piece!\nAs a child, Monkey D. Luffy dreamed of becoming King of the Pirates. But his life changed when he accidentally gained the power to stretch like rubber...at the cost of never being able to swim again! Years later, Luffy sets off in search of the One Piece, said to be the greatest treasure in the world...\nAs Luffy and crew try to escape Egghead, the Navy's armada surrounds the island. Leading the charge are Admiral Kizaru and a member of the mysterious Five Elders. Can the Straw Hats survive as the greatest battle in the world is about to break out?",
-      "image_url": "https://images-us.bookshop.org/ingram/9781974752225.jpg?height=1200&v=v2-437c32f1255c1fc71df730fa36e07454",
-      "rating": 4.5,
-      "discount": 5,
-      "stock": 50,
-      "category_id": "5",
-      "publish_date": "2025-01-12"
+      "id": "c294",
+      "title": "Letters to a Young Poet",
+      "price": 7,
+      "price_after_discount": 5.74,
+      "category": "Fiction",
+      "author": "Rainer Maria Rilke",
+      "description": "Facsimile of 1943 Edition. Born in 1875, the great German lyric poet Rainer Maria Rilke published his first collection of poems in 1898 and went on to become renowned for his delicate depiction of the workings of the human heart. Drawn by some sympathetic note in his poems, young people often wrote to Rilke with their problems and hopes. From 1903 to 1908 Rilke wrote a series of remarkable responses to a young, would-be poet on poetry and on surviving as a sensitive observer in a harsh world. Those letters, ten in all, remain a fresh source of inspiration and insight to the poetic sensibility to this day.",
+      "image_url": "https://images-us.bookshop.org/ingram/9781946963130.jpg?height=1200&v=v2-61b0ff27cae8a4e06539c18b9a856d07",
+      "rating": 4.9,
+      "discount": 10,
+      "stock": 30,
+      "category_id": "3",
+      "publish_date": "2025-01-14"
     }
   ],
   "comments": [

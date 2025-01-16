@@ -19,20 +19,43 @@ export class AuthService {
   constructor(
     private cartService: CartService, 
     private router: Router 
-  ) {}
+  ) {
+    this.checkAccountStatus();
+  }
+
   getUsers(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/users`);
+  }
+
+  private checkAccountStatus(): void {
+    const currentUser = JSON.parse(localStorage.getItem('user') || '{}');
+    if (currentUser && currentUser.status === 'inactive') {
+      alert('Tài khoản của bạn đã bị khóa. Bạn sẽ được đăng xuất ngay lập tức.');
+      this.logout();  
+    }
   }
 
   toggleUserStatus(userId: string, status: 'active' | 'inactive'): Observable<user> {
     return this.http.patch<user>(`${this.apiUrl}/users/${userId}`, { status }).pipe(
       map((updatedUser) => {
-        console.log('Updated User:', updatedUser); // Kiểm tra kết quả cập nhật
+        console.log('Updated User:', updatedUser);
+        const currentUser = JSON.parse(localStorage.getItem('user') || '{}');
+        if (currentUser.id === updatedUser.id) {
+          localStorage.setItem('user', JSON.stringify(updatedUser)); 
+          if (updatedUser.status === 'inactive') {
+            alert('Tài khoản của bạn đã bị khóa. Bạn sẽ được đăng xuất ngay lập tức.');
+            this.logout();
+          }
+          this.isLoggedInSubject.next(updatedUser.status === 'active'); 
+        }
         return updatedUser;
+      }),
+      catchError((error) => {
+        console.error('Error toggling user status:', error);
+        return throwError(() => new Error('Không thể cập nhật trạng thái người dùng'));
       })
     );
   }
-  
 
   getUserInfoById(userId: string): Observable<user> {
     return this.http.get<user>(`${this.apiUrl}/users/${userId}`).pipe(
@@ -80,10 +103,13 @@ export class AuthService {
       map(users => {
         if (users.length > 0) {
           const user = users[0];
+          // Kiểm tra trạng thái tài khoản
           if (user.status === 'inactive') {
             alert('Tài khoản của bạn đã bị khóa. Vui lòng liên hệ quản trị viên.');
-            return [];
+            this.logout();  
+            return []; 
           }
+
           localStorage.setItem('user', JSON.stringify(user));
           localStorage.setItem('userId', user.id);
           localStorage.setItem('role', user.role);
@@ -99,7 +125,7 @@ export class AuthService {
         return throwError(() => new Error('Đăng nhập thất bại'));
       })
     );
-  } 
+  }
 
   private checkLoginStatus(): boolean {
     return !!localStorage.getItem('user');
@@ -109,7 +135,7 @@ export class AuthService {
     localStorage.removeItem('user');
     localStorage.removeItem('userId');
     localStorage.removeItem('role');
-    this.isLoggedInSubject.next(false);
+    this.isLoggedInSubject.next(false);  
     this.cartService.clearCart();
     this.router.navigate(['/login']); 
     return EMPTY;
