@@ -5,6 +5,7 @@ import { throwError } from 'rxjs';
 import { switchMap, map } from 'rxjs/operators'; 
 import { CartService } from './cart.service'; 
 import { Router } from '@angular/router';
+import { user } from './type/Auth';
 import { WishlistService } from './wishlist.service';
 
 @Injectable({
@@ -21,7 +22,10 @@ export class AuthService {
     private cartService: CartService, 
     private router: Router 
   ) {}
-
+  getUserInfoById(userId: string): Observable<user> {
+    return this.http.get<user>(`${this.apiUrl}/users/${userId}`);
+  }
+  
 
   register(data: any): Observable<any> {
     return this.http.get<any[]>(`${this.apiUrl}/users?email=${data.email}`).pipe(

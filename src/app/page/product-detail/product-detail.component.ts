@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Data } from '@angular/router';
 import { ProductService } from '../../product.service';
 import { Product } from '../../type/Products';
 import { CommonModule } from '@angular/common';
@@ -21,8 +21,10 @@ export class ProductDetailComponent implements OnInit {
   userId: string | null = null;
   comments: Comment[] = [];
   newComment: string = '';
+  newCreateAt: Date=new Date();
   newRating: number = 0;
   newFullName: string = '';
+  newAvatar: string=''
   successMessage: string | null = null;
   alertMessage: string | null = null;
   constructor(
@@ -40,6 +42,7 @@ export class ProductDetailComponent implements OnInit {
     this.authService.getUserInfo().subscribe({
       next: (data) => {
         this.newFullName = data.fullName;
+        this.newAvatar = data.avatar;
       },
       error: (err) => {
         console.error('Error fetching user info:', err);
@@ -86,14 +89,14 @@ export class ProductDetailComponent implements OnInit {
         next: (wishlist) => {
           const isProductInWishlist = wishlist.some(item => item.id === this.product?.id);
           if (isProductInWishlist) {
-            this.alertMessage = 'This product are already in your wishlist!';  // Set success message
+            this.alertMessage = 'This product are already in your wishlist!'; 
             setTimeout(() => {
               this.alertMessage = null; 
             }, 3000);
           } else {
             this.wishlistService.addToWishlist(this.userId!, this.product!).subscribe({
               next: (response) => {
-                this.successMessage = 'Product added to wishlist successfully!';  // Set success message
+                this.successMessage = 'Product added to wishlist successfully!';  
                 setTimeout(() => {
                   this.successMessage = null; 
                 }, 3000);
@@ -111,13 +114,33 @@ export class ProductDetailComponent implements OnInit {
     this.commentService.getComments(productId).subscribe({
       next: (data) => {
         console.log('Fetched comments:', data);
-        this.comments = data; // Cập nhật danh sách comment
+        this.comments = data.map((comment: Comment) => {
+          if (comment.userId && this.userId) {
+            this.authService.getUserInfoById(comment.userId).subscribe({
+              next: (userData) => {
+                // Cập nhật avatar người dùng từ bảng users vào comment
+                comment.avatar = userData.avatar;
+              },
+              error: (err) => {
+                console.error('Error fetching user info for comment avatar:', err);
+              }
+            });
+          }
+  
+          if (comment.createdAt) {
+            comment.createdAt = new Date(comment.createdAt);
+          } else {
+            comment.createdAt = new Date();
+          }
+          return comment;
+        });
       },
       error: (err) => {
         console.error('Error fetching comments:', err);
       }
     });
   }
+  
   
   
   addComment(): void {
@@ -130,13 +153,19 @@ export class ProductDetailComponent implements OnInit {
     } else if (this.newRating <= 0) {
       alert('Đánh giá phải lớn hơn 0');
     } else {
-      const comment: Comment = {
+      this.newCreateAt=new Date();
+const avatar = this.newAvatar || 'default-avatar-url';
+            const comment: Comment = {
         productId: this.product.id,
         userId: this.userId,
-        fullName: this.newFullName, // Sử dụng giá trị newFullName từ localStorage
+        fullName: this.newFullName, 
         comment: this.newComment,
-        rating: this.newRating
+        rating: this.newRating,
+        createdAt: this.newCreateAt,
+        avatar: avatar     
+        
       };
+      console.log(this.newAvatar);
   
       this.commentService.addComment(comment).subscribe({
         next: (response) => {

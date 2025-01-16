@@ -6,4 +6,6 @@ export interface Comment {
     rating: number;
     createdAt?: Date;
     fullName: string
+    avatar: string
+    imageUrl?: string;
   }

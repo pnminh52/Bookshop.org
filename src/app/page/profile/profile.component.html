@@ -1,1 +1,46 @@
-<p>profile works!</p>
+<div class="profile-container">
+    <div class="profile-header">
+      <h2>Profile</h2>
+      <button (click)="startEditing()">Edit</button>
+    </div>
+  
+    <div class="profile-info" *ngIf="!isEditing">
+      <div class="avatar">
+        <img class="w-[300px] h-[300px] rounded-full object-cover" [src]="user.avatar || 'default-avatar.jpg'" alt="Avatar" />
+      </div>
+      <div class="info">
+        <p><strong>Full Name:</strong> {{ user.fullName }}</p>
+        <p><strong>Phone Number:</strong> {{ user.phoneNumber }}</p>
+        <p><strong>Address:</strong> {{ user.address.streetAddress }}, {{ user.address.city }}, {{ user.address.state }}, {{ user.address.country }}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="isEditing">
+      <div class="avatar-upload">
+        <label>Avatar URL:</label>
+        <input type="text" [(ngModel)]="user.avatar" placeholder="Enter avatar URL" />
+        <div *ngIf="user.avatar">
+          <p>Preview:</p>
+          <img [src]="user.avatar" alt="Preview" class="avatar-preview rounded-full w-[300px] h-[300px]" />
+        </div>
+      </div>
+  
+      <div class="profile-form">
+        <label>Full Name:</label>
+        <input title="input" [(ngModel)]="user.fullName" />
+        <label>Phone Number:</label>
+        <input title="input" [(ngModel)]="user.phoneNumber" />
+        <label>Address:</label>
+        <input title="input" [(ngModel)]="user.address.streetAddress" />
+        <input title="input" [(ngModel)]="user.address.city" />
+        <input title="input" [(ngModel)]="user.address.state" />
+        <input title="input" [(ngModel)]="user.address.country" />
+      </div>
+  
+      <div class="action-buttons">
+        <button (click)="saveChanges()">Save</button>
+        <button (click)="cancelEditing()">Cancel</button>
+      </div>
+    </div>
+  </div>
+  

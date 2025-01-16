@@ -33,16 +33,48 @@
     </div>
      <!-- Comments Section -->
   <div class="mt-8">
-    <h2 class="text-xl font-semibold">Bình luận</h2>
+    <h2 class="text-xl font-semibold">Comment section example: </h2>
     <div *ngFor="let comment of comments" class="border-b py-2">
-      <p> {{ comment.rating }} </p>
-      <p><strong> {{ comment.fullName }}:</strong> {{ comment.comment }}</p>
+      <div class="flex items-center gap-4">
+        <img class="object-cover w-[50px] h-[50px] rounded-full" [src]="comment.avatar" alt="Avatar">
+        <div class="space-y-1">
+          <div class="flex">
+            <!-- Rating stars -->
+            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+              <svg
+              *ngIf="star <= comment.rating"
+              class="w-4 h-4 text-yellow-400 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+              />
+            </svg>
+            <svg
+            *ngIf="comment.rating < star - 0.5"
+            class="w-4 h-4 text-gray-300 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+            />
+          </svg>
+          
+          </ng-container>
+          <a class="pl-3" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
+        </div>
+          <div><strong>{{ comment.fullName }}:</strong> {{ comment.comment }}</div>
+        </div>
+      </div>
     </div>
 
     <!-- Add Comment Form -->
     <div class="mt-4">
       <h3 class="text-lg font-semibold">Thêm bình luận</h3>
       <textarea [(ngModel)]="newComment" placeholder="Nhập bình luận của bạn" class="w-full border p-2"></textarea>
+     
       <input type="number" [(ngModel)]="newRating" min="1" max="5" placeholder="Đánh giá (1-5)" class="border p-2 mt-2" />
       <button (click)="addComment()" class="bg-blue-500 text-white p-2 mt-2">Gửi bình luận</button>
     </div>
