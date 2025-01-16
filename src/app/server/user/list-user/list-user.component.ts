@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export class ListUserComponent implements OnInit {
   users: user[] = [];
   loading = false;
+  filteredUsers: user[] = [];
   error: string | null = null;
 
   constructor(private authService: AuthService) {}
@@ -27,6 +28,7 @@ export class ListUserComponent implements OnInit {
       (users) => {
         console.log('Users:', users); 
         this.users = users;
+        this.filteredUsers = this.users.filter((user) => user.role !== 'admin');  // Lọc sau khi nhận dữ liệu
         this.loading = false;
       },
       (error) => {
@@ -43,6 +45,7 @@ export class ListUserComponent implements OnInit {
         const index = this.users.findIndex((user) => user.id === userId);
         if (index !== -1) {
           this.users[index] = updatedUser;
+          this.filteredUsers = this.users.filter((user) => user.role !== 'admin');  // Cập nhật lại filter khi có sự thay đổi
         }
       },
       (error) => {
@@ -50,5 +53,4 @@ export class ListUserComponent implements OnInit {
       }
     );
   }
-  
 }

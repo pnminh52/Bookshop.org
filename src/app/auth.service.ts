@@ -44,6 +44,7 @@ export class AuthService {
   }
 
   register(data: any): Observable<any> {
+    data.status='active'
     return this.http.get<any[]>(`${this.apiUrl}/users?email=${data.email}`).pipe(
       switchMap((existingUsers) => {
         if (existingUsers.length > 0) {

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CommentService {
-  private apiUrl = 'http://localhost:3000/comments'; // Điều chỉnh URL API của bạn
+  private apiUrl = 'http://localhost:3000/comments'; 
   constructor(private http: HttpClient) {}
   getComments(productId: string): Observable<any> {
     return this.http.get(`${this.apiUrl}?productId=${productId}`);

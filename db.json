@@ -1259,6 +1259,40 @@
       "orderHistory": [],
       "avatar": "https://i.pinimg.com/736x/5e/6b/ee/5e6beeb749ec884b9dc6ac4dd2657142.jpg",
       "status": "active"
+    },
+    {
+      "id": "e4fd",
+      "fullName": "Phạm Nhật Minh",
+      "phoneNumber": "0934557882",
+      "address": {
+        "streetAddress": "Hà Nam",
+        "city": "Ha Noi",
+        "state": "California",
+        "postalCode": "989898",
+        "country": "Việt Nam"
+      },
+      "email": "4@gmail.com",
+      "password": "111111",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg",
+      "status": "inactive"
+    },
+    {
+      "id": "64ab",
+      "fullName": "Phạm Nhật Minh",
+      "phoneNumber": "0934557882",
+      "address": {
+        "streetAddress": "Hà Nam",
+        "city": "Ha Noi",
+        "state": "California",
+        "postalCode": "989898",
+        "country": "Việt Nam"
+      },
+      "email": "5@gmail.com",
+      "password": "111111",
+      "role": "user",
+      "status": "inactive"
     }
   ],
   "orders": [
