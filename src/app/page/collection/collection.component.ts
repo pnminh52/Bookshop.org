@@ -20,7 +20,7 @@ export class CollectionComponent {
   selectedRelease: string = '';
   selectedStock: string = ''; 
   filteredProducts: Product[] = [];
-  categories: string[] = ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy', 'Education']; 
+  categories: string[] = ['Fiction', 'History', 'Manga', 'Romance', 'Horror', 'Fantasy', 'Education', 'Light Novel']; 
   priceRanges: { label: string, min: number, max: number }[] = [
     { label: '5$ - 15$', min: 5, max:15  },
     { label: '15$ - 25$', min: 15, max:20  },
@@ -30,7 +30,7 @@ export class CollectionComponent {
   ];
   isLoading = true;
   currentPage = 1;
-  itemsPerPage = 60;
+  itemsPerPage = 30;
   totalPages = 0;
 
   get paginatedProducts() {

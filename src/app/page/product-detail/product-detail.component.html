@@ -62,7 +62,7 @@
           <a class="pl-2" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
         </div>
         <div>
-          <strong class="block">{{ comment.fullName }}:</strong> 
+          <strong class="block">{{ comment.fullName }}</strong> 
           <p *ngIf="comment.comment.length <= 100" class="break-words">
             {{ comment.comment }}
           </p>
