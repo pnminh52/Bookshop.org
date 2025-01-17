@@ -19,4 +19,5 @@ export interface Product {
   publish_date: string;
   quantity:number;
   createdAt?: Date;
+  type:string;
 }

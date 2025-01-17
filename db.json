@@ -2,6 +2,7 @@
   "products": [
     {
       "id": "2",
+      "type": "book",
       "title": "Rosarita",
       "price": 20.46,
       "price_after_discount": 22,
@@ -17,6 +18,7 @@
     },
     {
       "id": "5",
+      "type": "book",
       "title": "Beg, Borrow, or Steal",
       "price": 28,
       "price_after_discount": 26.04,
@@ -32,6 +34,7 @@
     },
     {
       "id": "9",
+      "type": "book",
       "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
       "price": 29.99,
       "price_after_discount": 27.89,
@@ -47,6 +50,7 @@
     },
     {
       "id": "10",
+      "type": "book",
       "title": "Imogen, Obviously",
       "price": 15.99,
       "price_after_discount": 14.87,
@@ -62,6 +66,7 @@
     },
     {
       "id": "11",
+      "type": "book",
       "title": "A Thousand Heartbeats",
       "price": 15.99,
       "price_after_discount": 14.87,
@@ -77,6 +82,7 @@
     },
     {
       "id": "12",
+      "type": "book",
       "title": "Make the Season Bright",
       "price": 19,
       "price_after_discount": 17.67,
@@ -92,6 +98,7 @@
     },
     {
       "id": "13",
+      "type": "book",
       "title": "Blame It on the Mistletoe",
       "price": 10.99,
       "price_after_discount": 10.22,
@@ -107,6 +114,7 @@
     },
     {
       "id": "14",
+      "type": "book",
       "title": "The Book of Yokai, Expanded Second Edition: Mysterious Creatures of Japanese Folklore",
       "price": 45,
       "price_after_discount": 41.58,
@@ -122,6 +130,7 @@
     },
     {
       "id": "15",
+      "type": "book",
       "title": "Servant of Earth",
       "price": 29,
       "price_after_discount": 26.67,
@@ -137,6 +146,7 @@
     },
     {
       "id": "16",
+      "type": "book",
       "title": "The Scarlet Alchemist (Original)",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -152,6 +162,7 @@
     },
     {
       "id": "17",
+      "type": "book",
       "title": "The Wood at Midwinter",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -167,6 +178,7 @@
     },
     {
       "id": "18",
+      "type": "book",
       "title": "The Last Dragon of the East",
       "price": 17.99,
       "price_after_discount": 16.73,
@@ -182,6 +194,7 @@
     },
     {
       "id": "19",
+      "type": "book",
       "title": "Spitting Gold",
       "price": 27.99,
       "price_after_discount": 26.03,
@@ -197,6 +210,7 @@
     },
     {
       "id": "20",
+      "type": "book",
       "title": "The Nurse's Secret: A Thrilling Historical Novel of the Dark Side of Gilded Age New York City",
       "price": 16.95,
       "price_after_discount": 15.76,
@@ -212,6 +226,7 @@
     },
     {
       "id": "21",
+      "type": "book",
       "title": "Last House Before the Mountain",
       "price": 26,
       "price_after_discount": 24.18,
@@ -227,6 +242,7 @@
     },
     {
       "id": "22",
+      "type": "book",
       "title": "Horseman, Pass by",
       "price": 14.95,
       "price_after_discount": 13.9,
@@ -242,6 +258,7 @@
     },
     {
       "id": "22",
+      "type": "book",
       "title": "Hester",
       "price": 27.99,
       "price_after_discount": 26.03,
@@ -257,6 +274,7 @@
     },
     {
       "id": "23",
+      "type": "book",
       "title": "Kristin Lavransdatter: The Complete Trilogy",
       "price": 39.99,
       "price_after_discount": 36.03,
@@ -272,6 +290,7 @@
     },
     {
       "id": "24",
+      "type": "book",
       "title": "The Island of Sea Women",
       "price": 18,
       "price_after_discount": 16.74,
@@ -287,6 +306,7 @@
     },
     {
       "id": "25",
+      "type": "book",
       "title": "Teaching to Transgress: Education as the Practice of Freedom",
       "price": 48.95,
       "price_after_discount": 47.67,
@@ -302,6 +322,7 @@
     },
     {
       "id": "26",
+      "type": "book",
       "title": "The Teacher Wars: A History of America's Most Embattled Profession",
       "price": 19,
       "price_after_discount": 17.67,
@@ -317,6 +338,7 @@
     },
     {
       "id": "27",
+      "type": "book",
       "title": "Waiting for Superman: How We Can Save America's Failing Public Schools",
       "price": 15.95,
       "price_after_discount": 14.83,
@@ -332,6 +354,7 @@
     },
     {
       "id": "28",
+      "type": "book",
       "title": "Ghosts in the Schoolyard: Racism and School Closings on Chicago's South Side",
       "price": 19,
       "price_after_discount": 17.67,
@@ -347,6 +370,7 @@
     },
     {
       "id": "29",
+      "type": "book",
       "title": "Radical Possibilities: Public Policy, Urban Education, and A New Social Movement",
       "price": 65.49,
       "price_after_discount": 64,
@@ -362,6 +386,7 @@
     },
     {
       "id": "30",
+      "type": "book",
       "title": "Other People's Children: Cultural Conflict in the Classroom",
       "price": 17.95,
       "price_after_discount": 16.69,
@@ -377,6 +402,7 @@
     },
     {
       "id": "669d",
+      "type": "book",
       "title": "Unromance",
       "price": 17.99,
       "price_after_discount": 16.73,
@@ -392,6 +418,7 @@
     },
     {
       "id": "5b31",
+      "type": "book",
       "title": "What Happened to the McCrays?",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -407,6 +434,7 @@
     },
     {
       "id": "2595",
+      "type": "book",
       "title": "We Lived on the Horizon",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -422,6 +450,7 @@
     },
     {
       "id": "8f86",
+      "type": "book",
       "title": "Beautiful Ugly",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -437,6 +466,7 @@
     },
     {
       "id": "2dd4",
+      "type": "book",
       "title": "The In-Between Bookstore",
       "price": 28,
       "price_after_discount": 26.04,
@@ -452,6 +482,7 @@
     },
     {
       "id": "fcc3",
+      "type": "book",
       "title": "The Favorites",
       "price": 28,
       "price_after_discount": 26.04,
@@ -467,6 +498,7 @@
     },
     {
       "id": "f57a",
+      "type": "book",
       "title": "Babel: Or the Necessity of Violence: An Arcane History of the Oxford Translators' Revolution",
       "price": 20,
       "price_after_discount": 18.6,
@@ -482,6 +514,7 @@
     },
     {
       "id": "c294",
+      "type": "book",
       "title": "Letters to a Young Poet",
       "price": 7,
       "price_after_discount": 5.74,
@@ -497,6 +530,7 @@
     },
     {
       "id": "a224",
+      "type": "book",
       "title": "The City and Its Uncertain Walls",
       "price": 35,
       "price_after_discount": 32.55,
@@ -512,6 +546,7 @@
     },
     {
       "id": "1bc8",
+      "type": "book",
       "title": "The Frozen River: A GMA Book Club Pick",
       "price": 28,
       "price_after_discount": 26.04,
@@ -527,6 +562,7 @@
     },
     {
       "id": "be1f",
+      "type": "book",
       "title": "The Odyssey",
       "price": 18.95,
       "price_after_discount": 17.62,
@@ -542,6 +578,7 @@
     },
     {
       "id": "b54d",
+      "type": "book",
       "title": "Intermezzo",
       "price": 29,
       "price_after_discount": 26.97,
@@ -557,6 +594,7 @@
     },
     {
       "id": "9ed5",
+      "type": "book",
       "title": "Frieren: Beyond Journey's End, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -572,6 +610,7 @@
     },
     {
       "id": "2e36",
+      "type": "book",
       "title": "Delicious in Dungeon, Vol. 2: Volume 2",
       "price": 15,
       "price_after_discount": 13.95,
@@ -587,6 +626,7 @@
     },
     {
       "id": "01b0",
+      "type": "book",
       "title": "Neon Genesis Evangelion 3-In-1 Edition, Vol. 1: Includes Vols. 1, 2 & 3 (Original)",
       "price": 24.99,
       "price_after_discount": 23.24,
@@ -602,6 +642,7 @@
     },
     {
       "id": "7ae1",
+      "type": "book",
       "title": "Goodbye, Eri",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -617,6 +658,7 @@
     },
     {
       "id": "8cf8",
+      "type": "book",
       "title": "One Piece, Vol. 108",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -632,6 +674,7 @@
     },
     {
       "id": "14be",
+      "type": "book",
       "title": "Look Back",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -647,6 +690,7 @@
     },
     {
       "id": "6b6a",
+      "type": "book",
       "title": "Goodnight Punpun, Vol. 1",
       "price": 24.99,
       "price_after_discount": 23.24,
@@ -662,6 +706,7 @@
     },
     {
       "id": "5dd2",
+      "type": "book",
       "title": "Bocchi the Rock!, Vol. 1",
       "price": 15,
       "price_after_discount": 13.95,
@@ -677,6 +722,7 @@
     },
     {
       "id": "d306",
+      "type": "book",
       "title": "Spy X Family, Vol. 7",
       "price": 9.99,
       "price_after_discount": 9.29,
@@ -692,6 +738,7 @@
     },
     {
       "id": "0241",
+      "type": "book",
       "title": "The Fragrant Flower Blooms with Dignity 3",
       "price": 13.99,
       "price_after_discount": 13.01,
@@ -707,6 +754,7 @@
     },
     {
       "id": "b6a9",
+      "type": "book",
       "title": "One Piece, Vol. 100",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -722,6 +770,7 @@
     },
     {
       "id": "7a0b",
+      "type": "book",
       "title": "The Iliad",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -737,6 +786,7 @@
     },
     {
       "id": "880b",
+      "type": "book",
       "title": "The Book of Love",
       "price": 31,
       "price_after_discount": 28.83,
@@ -752,6 +802,7 @@
     },
     {
       "id": "3e35",
+      "type": "book",
       "title": "Mexican Gothic",
       "price": 17,
       "price_after_discount": 15.81,
@@ -767,6 +818,7 @@
     },
     {
       "id": "0f00",
+      "type": "book",
       "title": "Phantasma",
       "price": 18.99,
       "price_after_discount": 17.66,
@@ -782,6 +834,7 @@
     },
     {
       "id": "8155",
+      "type": "book",
       "title": "Slewfoot: A Tale of Bewitchery",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -797,6 +850,7 @@
     },
     {
       "id": "984a",
+      "type": "book",
       "title": "Frankenstein (Revised)",
       "price": 10,
       "price_after_discount": 9.3,
@@ -811,6 +865,7 @@
       "publish_date": "2025-01-14"
     },
     {
+      "type": "book",
       "title": "Fire Punch, Vol. 1",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -826,6 +881,7 @@
       "id": "r00SjAh"
     },
     {
+      "type": "book",
       "title": "Fire Punch, Vol. 5",
       "price": 14.99,
       "price_after_discount": 13.49,
@@ -841,6 +897,7 @@
       "id": "nBUeM9T"
     },
     {
+      "type": "book",
       "title": "Spy X Family, Vol. 13",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -856,6 +913,7 @@
       "id": "wWF1p8D"
     },
     {
+      "type": "book",
       "title": "One Piece, Vol. 107",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -871,6 +929,7 @@
       "id": "eSKJ5fq"
     },
     {
+      "type": "book",
       "title": "Spy X Family, Vol. 11",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -886,6 +945,7 @@
       "id": "atbm0p2"
     },
     {
+      "type": "book",
       "title": "Spy X Family, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -901,6 +961,7 @@
       "id": "X4INFXE"
     },
     {
+      "type": "book",
       "title": "Chainsaw Man, Vol. 16",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -916,6 +977,7 @@
       "id": "4EDqmwS"
     },
     {
+      "type": "book",
       "title": "Chainsaw Man, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -931,6 +993,7 @@
       "id": "ENLDojL"
     },
     {
+      "type": "book",
       "title": "Chainsaw Man, Vol. 13",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -946,6 +1009,7 @@
       "id": "U7Sd51t"
     },
     {
+      "type": "book",
       "title": "Chainsaw Man, Vol. 12",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -961,6 +1025,7 @@
       "id": "emDKUjZ"
     },
     {
+      "type": "book",
       "title": "Delicious in Dungeon, Vol. 14: Volume 14",
       "price": 15,
       "price_after_discount": 13.95,
@@ -976,6 +1041,7 @@
       "id": "LychpxW"
     },
     {
+      "type": "book",
       "title": "Delicious in Dungeon, Vol. 7: Volume 7",
       "price": 15,
       "price_after_discount": 13.95,
@@ -991,6 +1057,7 @@
       "id": "hQNj9nP"
     },
     {
+      "type": "book",
       "title": "Delicious in Dungeon, Vol. 8: Volume 8",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1006,6 +1073,7 @@
       "id": "zbpa4aY"
     },
     {
+      "type": "book",
       "title": "Delicious in Dungeon, Vol. 13: Volume 13",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1021,6 +1089,7 @@
       "id": "tne-yt_"
     },
     {
+      "type": "book",
       "title": "Bocchi the Rock!, Vol. 3: Volume 3",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1036,6 +1105,7 @@
       "id": "w0H2WF8"
     },
     {
+      "type": "book",
       "title": "Bocchi the Rock!, Vol. 4",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1051,6 +1121,7 @@
       "id": "3La6RTQ"
     },
     {
+      "type": "book",
       "title": "Bocchi the Rock!, Vol. 5",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1066,6 +1137,7 @@
       "id": "9YTw_zn"
     },
     {
+      "type": "book",
       "title": "Bocchi the Rock!, Vol. 6: Volume 6",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1081,6 +1153,7 @@
       "id": "evVApEo"
     },
     {
+      "type": "book",
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 1",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1096,6 +1169,7 @@
       "id": "ObMsIo6"
     },
     {
+      "type": "book",
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 2",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1111,6 +1185,7 @@
       "id": "tBgfRAt"
     },
     {
+      "type": "book",
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 3: Volume 3",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1126,6 +1201,7 @@
       "id": "VCp8luS"
     },
     {
+      "type": "book",
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4: Volume 4",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1141,6 +1217,7 @@
       "id": "-VmGUUS"
     },
     {
+      "type": "book",
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 6: Volume 6",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1156,6 +1233,7 @@
       "id": "KVXZCvm"
     },
     {
+      "type": "book",
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 5",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1171,6 +1249,7 @@
       "id": "n6SH8ES"
     },
     {
+      "type": "book",
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4.5",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1186,6 +1265,7 @@
       "id": "aeD8aNz"
     },
     {
+      "type": "book",
       "title": "Steins;gate 0 Volume 1",
       "price": 24.99,
       "price_after_discount": 23.24,
@@ -1207,6 +1287,7 @@
       "category": "Light Novel",
       "author": "Nitroplus",
       "description": "The world line shifts, and Rintaro Okabe inexplicably finds himself waking up in the future. The year? 2036. The world looks exactly as he'd been warned about; a hellish landscape rife with death and destruction. After witnessing this grim fate, Rintaro stands tall and steels his heart, resolved to put an end to this future once and for all.\nThe heroes of Steins;Gate return for a new time-altering story set in an alternate world where the Future Gadget Lab members failed in their original mission. Can one final chance lead to a happy ending?",
+      "type": "book",
       "image_url": "https://images-us.bookshop.org/ingram/9781772942118.jpg?height=1200&v=v2",
       "rating": 4.8,
       "discount": "7.00",
@@ -1262,6 +1343,7 @@
           "items": [
             {
               "id": "c294",
+              "type": "book",
               "title": "Letters to a Young Poet",
               "price": 7,
               "price_after_discount": 5.74,
@@ -1287,6 +1369,7 @@
           "items": [
             {
               "id": "9ed5",
+              "type": "book",
               "title": "Frieren: Beyond Journey's End, Vol. 1",
               "price": 11.99,
               "price_after_discount": 11.15,
@@ -1312,6 +1395,7 @@
           "items": [
             {
               "id": "2e36",
+              "type": "book",
               "title": "Delicious in Dungeon, Vol. 2: Volume 2",
               "price": 15,
               "price_after_discount": 13.95,
@@ -1328,6 +1412,7 @@
             },
             {
               "id": "9",
+              "type": "book",
               "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
               "price": 29.99,
               "price_after_discount": 27.89,
@@ -1355,88 +1440,11 @@
   ],
   "orders": [
     {
-      "userId": "b53c",
-      "items": [
-        {
-          "id": "0241",
-          "title": "The Fragrant Flower Blooms with Dignity 3",
-          "price": 13.99,
-          "price_after_discount": 13.01,
-          "category": "Manga",
-          "author": "Saka Mikami",
-          "description": "Two rival schools stand next door to each other: one for elite ladies, one for good-for-nothing boys. But one of those boys might just be a naturally chivalrous diamond in the rough, and one of those girls might be a little more open-minded than is proper...\nThis cute and twisty manga spin on Romeo and Juliet is the latest hit in Japan, coming to print from a successful digital-first release!\nDespite the hostile rivalry between their schools, after spending time together, Rintaro and Kaoruko have begun to feel comfortable around each other. However, even with their growing bond, the barriers between the two schools are so high that Rintaro finds himself at a loss with his friends. The secret of his relationship is putting up walls between them. And so, Rintaro calls Kaoruko and her friend Subaru to a meeting, hoping to find a solution...",
-          "image_url": "https://images-us.bookshop.org/ingram/9798888771402.jpg?height=1200&v=v2-3c493626234f26d53f24783a87bd90e8",
-          "rating": 4.8,
-          "discount": 3,
-          "stock": 30,
-          "category_id": "3",
-          "publish_date": "2025-01-12",
-          "quantity": 3
-        }
-      ],
-      "total": 39.03,
-      "paymentMethod": "PayPal",
-      "date": "2025-01-15T09:58:39.913Z",
-      "status": "Cancelled",
-      "id": "1"
-    },
-    {
-      "userId": "b53c",
-      "items": [
-        {
-          "id": "c294",
-          "title": "Letters to a Young Poet",
-          "price": 7,
-          "price_after_discount": 5.74,
-          "category": "Fiction",
-          "author": "Rainer Maria Rilke",
-          "description": "Facsimile of 1943 Edition. Born in 1875, the great German lyric poet Rainer Maria Rilke published his first collection of poems in 1898 and went on to become renowned for his delicate depiction of the workings of the human heart. Drawn by some sympathetic note in his poems, young people often wrote to Rilke with their problems and hopes. From 1903 to 1908 Rilke wrote a series of remarkable responses to a young, would-be poet on poetry and on surviving as a sensitive observer in a harsh world. Those letters, ten in all, remain a fresh source of inspiration and insight to the poetic sensibility to this day.",
-          "image_url": "https://images-us.bookshop.org/ingram/9781946963130.jpg?height=1200&v=v2-61b0ff27cae8a4e06539c18b9a856d07",
-          "rating": 4.9,
-          "discount": 10,
-          "stock": 30,
-          "category_id": "3",
-          "publish_date": "2025-01-14",
-          "quantity": 1
-        }
-      ],
-      "total": 5.74,
-      "paymentMethod": "Cash on Delivery",
-      "date": "2025-01-15T12:12:15.086Z",
-      "status": "Cancelled",
-      "id": "2"
-    },
-    {
-      "id": "37d3",
-      "userId": "SV-PJoW",
-      "items": [
-        {
-          "id": "c294",
-          "title": "Letters to a Young Poet",
-          "price": 7,
-          "price_after_discount": 5.74,
-          "category": "Fiction",
-          "author": "Rainer Maria Rilke",
-          "description": "Facsimile of 1943 Edition. Born in 1875, the great German lyric poet Rainer Maria Rilke published his first collection of poems in 1898 and went on to become renowned for his delicate depiction of the workings of the human heart. Drawn by some sympathetic note in his poems, young people often wrote to Rilke with their problems and hopes. From 1903 to 1908 Rilke wrote a series of remarkable responses to a young, would-be poet on poetry and on surviving as a sensitive observer in a harsh world. Those letters, ten in all, remain a fresh source of inspiration and insight to the poetic sensibility to this day.",
-          "image_url": "https://images-us.bookshop.org/ingram/9781946963130.jpg?height=1200&v=v2-61b0ff27cae8a4e06539c18b9a856d07",
-          "rating": 4.9,
-          "discount": 10,
-          "stock": 30,
-          "category_id": "3",
-          "publish_date": "2025-01-14",
-          "quantity": 1
-        }
-      ],
-      "total": 5.74,
-      "paymentMethod": "Cash on Delivery",
-      "date": "2025-01-16T17:22:32.216Z",
-      "status": "Cancelled"
-    },
-    {
       "userId": "SV-PJoW",
       "items": [
         {
           "id": "9ed5",
+          "type": "book",
           "title": "Frieren: Beyond Journey's End, Vol. 1",
           "price": 11.99,
           "price_after_discount": 11.15,
@@ -1463,6 +1471,7 @@
       "items": [
         {
           "id": "2e36",
+          "type": "book",
           "title": "Delicious in Dungeon, Vol. 2: Volume 2",
           "price": 15,
           "price_after_discount": 13.95,
@@ -1479,6 +1488,7 @@
         },
         {
           "id": "9",
+          "type": "book",
           "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
           "price": 29.99,
           "price_after_discount": 27.89,
@@ -1505,6 +1515,7 @@
   "wishlist": [
     {
       "id": "9ed5",
+      "type": "book",
       "title": "Frieren: Beyond Journey's End, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -1521,6 +1532,7 @@
     },
     {
       "id": "2e36",
+      "type": "book",
       "title": "Delicious in Dungeon, Vol. 2: Volume 2",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1535,6 +1547,5 @@
       "publish_date": "2025-01-12"
     }
   ],
-  "comments": [
-  ]
+  "comments": []
 }

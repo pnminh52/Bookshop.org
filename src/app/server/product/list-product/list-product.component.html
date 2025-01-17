@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <div class="container mx-auto max-w-screen-xl">
-  <button routerLink="/admin/addproduct" title="addproduct" class="px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
+  <button routerLink="/admin/add-product" title="addproduct" class="px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
     ProductAdd
   </button>
 
@@ -9,6 +9,7 @@
       <tr class="bg-white">
         <th class="border border-gray-600 px-4 py-2 text-center">Id</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Title</th>
+        <th class="border border-gray-600 px-4 py-2 text-center">Type</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Author</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Price</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Rating</th>
@@ -22,6 +23,7 @@
       <tr *ngFor="let product of paginatedProducts" class="hover:bg-gray-100">
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.id }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.title }}</td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.type }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.author }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.price }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.rating }}</td>
@@ -31,7 +33,7 @@
         </td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.category }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">
-          <a [routerLink]="['/admin/edit', product.id]" class="text-blue-500 mx-2">
+          <a [routerLink]="['/admin/edit-product', product.id]" class="text-blue-500 mx-2">
             <i class="fa fa-edit"></i>
           </a>
           <button title="delete button" (click)="handleDelete(product.id)" class="text-red-500">

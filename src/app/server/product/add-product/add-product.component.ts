@@ -25,6 +25,7 @@ export class AddProductComponent {
     author: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
     image_url: new FormControl('', [Validators.required]),
+    type: new FormControl('', [Validators.required]),
     rating: new FormControl(0, [Validators.required]),
     discount: new FormControl(0, [Validators.required]),
     stock: new FormControl(0, [Validators.required]),
