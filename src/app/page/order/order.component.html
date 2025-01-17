@@ -7,9 +7,9 @@
         <tr>
           <th class="px-4 py-2 border-b">Mã đơn hàng</th>
           <th class="px-4 py-2 border-b">Ngày đặt</th>
-          <th class="px-4 py-2 border-b">Tổng tiền</th>
+          <th class="px-4 py-2 border-b">Tổng tiền</th>          
+          <th class="px-4 py-2 border-b">Phương thức thanh toán</th>
           <th class="px-4 py-2 border-b">Trạng thái</th>
-          <th class="px-4 py-2 border-b">Hành động</th>
         </tr>
       </thead>
       <tbody>
@@ -17,9 +17,10 @@
           <td class="px-4 py-2 border-b">{{ order.id }}</td>
           <td class="px-4 py-2 border-b">{{ order.date }}</td>
           <td class="px-4 py-2 border-b">{{ order.total }}</td>
+          <td class="px-4 py-2 border-b">{{ order.paymentMethod }}</td>
           <td class="px-4 py-2 border-b">{{ order.status }}</td>
           <td class="px-4 py-2 border-b">
-            <button *ngIf="order.status === 'Pending'" 
+            <button *ngIf="order.status === 'Pending' || order.status === 'Processing'" 
                     (click)="cancelOrder(order.id)" 
                     class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
               Hủy đơn hàng

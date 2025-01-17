@@ -35,10 +35,19 @@ export class OrderService {
   getUserOrders(userId: string): Observable<any> {
     return this.http.get(`${this.apiUrl}?userId=${userId}`);
   }
-  updateOrderStatus(orderId: string, newStatus: string): Observable<any> {
+  updateOrderStatus(orderId: string, newStatus: string, reason?: string): Observable<any> {
     const url = `${this.apiUrl}/${orderId}`;
-    return this.http.patch(url, { status: newStatus });
+    return this.http.patch(url, { status: newStatus, reason });
   }
+  
+  
+  getAllOrders(): Observable<any>{
+    return this.http.get(this.apiUrl);
+  }
+  getOrderById(orderId: string):Observable<any>{
+    return this.http.get(`${this.apiUrl}/${orderId}`);
+  } 
+
   
 
 }

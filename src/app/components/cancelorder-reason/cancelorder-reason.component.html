@@ -1,0 +1,10 @@
+<h2 class="text-xl font-bold">Chọn lý do hủy đơn hàng</h2>
+<div class="mt-4">
+  <label *ngFor="let reason of reasons" class="block">
+    <input type="radio" name="reason" [value]="reason" [(ngModel)]="selectedReason"> {{ reason }}
+  </label>
+</div>
+<div class="mt-6 text-right">
+  <button (click)="closeDialog()" class="bg-gray-300 px-4 py-2 rounded">Hủy</button>
+  <button (click)="confirm()" [disabled]="!selectedReason" class="bg-blue-500 text-white px-4 py-2 rounded ml-2">Xác nhận</button>
+</div>

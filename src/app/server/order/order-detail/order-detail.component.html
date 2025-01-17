@@ -1,0 +1,34 @@
+<div class="order-detail p-6">
+    <h2 class="text-2xl font-semibold mb-4">Order Details</h2>
+    <div *ngIf="order" class="border border-gray-200 rounded-lg p-4">
+      <p><strong>Order ID:</strong> {{ order.id }}</p>
+      <p><strong>User ID:</strong> {{ order.userId }}</p>
+      <p><strong>Total:</strong> {{ order.total | currency }}</p>
+      <p><strong>Payment Method:</strong> {{ order.paymentMethod }}</p>
+      <p><strong>Date:</strong> {{ order.date | date:'medium' }}</p>
+      <p><strong>Status:</strong> {{ order.status }}</p>
+  
+      <h3 class="text-xl font-semibold mt-4">Items:</h3>
+      <div *ngFor="let item of order.items" class="border-t border-gray-200 pt-2 mt-2">
+        <p><strong>Title:</strong> {{ item.title }}</p>
+        <p><strong>Price:</strong> {{ item.price | currency }}</p>
+        <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+        <p><strong>Category:</strong> {{ item.category }}</p>
+        <p><strong>Author:</strong> {{ item.author }}</p>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+      </div>
+  
+      <div *ngIf="order.status !== 'Cancelled'" class="mt-4">
+        <label for="status">Change Status:</label>
+        <select [(ngModel)]="selectedStatus" id="status" class="border px-4 py-2 rounded-md">
+          <option value="Pending">Pending</option>
+          <option value="Processing">Processing</option>
+          <option value="Shipped">Shipped</option>
+          <option value="Delivered">Delivered</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+        <button (click)="updateOrderStatus()" class="mt-2 px-4 py-2 bg-indigo-500 text-white rounded-md">Update Status</button>
+      </div>
+    </div>
+  </div>
+  

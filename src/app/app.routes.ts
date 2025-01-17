@@ -20,6 +20,8 @@ import { EditProductComponent } from './server/product/edit-product/edit-product
 import { AddProductComponent } from './server/product/add-product/add-product.component';
 import { ListProductComponent } from './server/product/list-product/list-product.component';
 import { ListUserComponent } from './server/user/list-user/list-user.component';
+import { OrderListComponent } from './server/order/order-list/order-list.component';
+import { OrderDetailComponent } from './server/order/order-detail/order-detail.component';
 
 export const routes: Routes = [
   {
@@ -44,7 +46,16 @@ export const routes: Routes = [
       {
         path: 'list-user',
         component: ListUserComponent
+      },
+      {
+        path: 'list-order',
+        component: OrderListComponent
+      },
+      {
+        path: 'order-detail/:id',
+        component: OrderDetailComponent
       }
+
     ],
   },
   {

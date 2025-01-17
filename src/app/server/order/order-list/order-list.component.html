@@ -1,0 +1,31 @@
+<div class="order-list p-6">
+  <h2 class="text-2xl font-semibold mb-4">Order List</h2>
+  <div class="overflow-x-auto">
+    <table class="min-w-full border-collapse border border-gray-200">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="border border-gray-300 text-center items-center px-4 py-2 ">Order ID</th>
+          <th class="border border-gray-300 text-center items-center px-4 py-2 ">User ID</th>
+          <th class="border border-gray-300 text-center items-center px-4 py-2 ">Total</th>
+          <th class="border border-gray-300 text-center items-center px-4 py-2 ">Payment Method</th>
+          <th class="border border-gray-300 text-center items-center px-4 py-2 ">Date</th>
+          <th class="border border-gray-300 text-center items-center px-4 py-2 ">Status</th>
+          <th class="border border-gray-300 text-center items-center px-4 py-2 ">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders" class="hover:bg-gray-50">
+          <td class="border border-gray-300 text-center items-center px-4 py-2">{{ order.id }}</td>
+          <td class="border border-gray-300 text-center items-center px-4 py-2">{{ order.userId }}</td>
+          <td class="border border-gray-300 text-center items-center px-4 py-2">{{ order.total | currency }}</td>
+          <td class="border border-gray-300 text-center items-center px-4 py-2">{{ order.paymentMethod }}</td>
+          <td class="border border-gray-300 text-center items-center px-4 py-2">{{ order.date | date:'medium' }}</td>
+          <td class="border border-gray-300 text-center items-center px-4 py-2">{{ order.status }}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center items">
+            <button [routerLink]="['/admin/order-detail', order.id]" class="px-4 py-2 bg-indigo-500 text-white rounded-md">Order details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

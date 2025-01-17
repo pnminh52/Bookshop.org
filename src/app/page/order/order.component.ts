@@ -3,6 +3,7 @@ import { OrderService } from '../../order.service';
 import { CommonModule } from '@angular/common';
 import { PopupComponent } from '../../components/popup/popup.component'; 
 import { MatDialog } from '@angular/material/dialog'; 
+import { CancelorderReasonComponent } from 'src/app/components/cancelorder-reason/cancelorder-reason.component';
 @Component({
   standalone: true,
   selector: 'app-order',
@@ -13,6 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class OrderComponent implements OnInit {
   orders: any[] = [];
   user: any = null;
+  hasCancelledOrders: boolean = false;
 
   constructor(
     private orderService: OrderService, 
@@ -25,6 +27,7 @@ export class OrderComponent implements OnInit {
       this.orderService.getUserOrders(this.user.id).subscribe({
         next: (orders) => {
           this.orders = orders.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+          this.hasCancelledOrders = this.orders.some(order => order.status === 'Cancelled'); // Cập nhật biến
         },
         error: (error) => {
           console.error('Lỗi khi lấy danh sách đơn hàng:', error);
@@ -34,22 +37,13 @@ export class OrderComponent implements OnInit {
   }
 
   cancelOrder(orderId: string) {
-    this.dialog.open(PopupComponent, { 
-      data: {
-        message: 'Bạn có chắc chắn muốn hủy đơn hàng này?'
-      }
-    }).afterClosed().subscribe(result => {
-      if (result === 'confirm') {
-        this.orderService.updateOrderStatus(orderId, 'Cancelled').subscribe({
-          next: () => {
-            this.orders = this.orders.map(order =>
-              order.id === orderId ? { ...order, status: 'Cancelled' } : order
-            );
-            alert('Đơn hàng đã được hủy thành công!');
-          },
-          error: (error) => {
-            alert('Có lỗi xảy ra khi hủy đơn hàng.');
-          }
+    this.dialog.open(CancelorderReasonComponent).afterClosed().subscribe(reason => {
+      if (reason) {
+        this.orderService.updateOrderStatus(orderId, 'Cancelled', reason).subscribe(() => {
+          this.orders = this.orders.map(order =>
+            order.id === orderId ? { ...order, status: 'Cancelled' } : order
+          );
+          alert('Đơn hàng đã được hủy thành công với lý do: ' + reason);
         });
       }
     });

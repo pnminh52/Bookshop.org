@@ -72,12 +72,12 @@
           />
         </a>
         <a
-          routerLink="/"
+          routerLink="/admin/list-order"
           class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          Accounts
+          Order
           <hr
             class="absolute bottom-0 left-0 w-full h-[0.px] bg-red-500 opacity-0 transition-opacity duration-300"
           />
@@ -121,14 +121,12 @@
           }"
         >
           <ul class="mt-3 ml-3 space-y-6">
-            <li class="w-full h-8">
-              <a routerLink="/contact" (click)="closeSidebar()"> Contact </a>
-            </li>
+          
 
             <li *ngIf="isLoggedIn" class="w-full h-8">
               <a
                 (click)="closeSidebar()"
-                routerLink="/order"
+                routerLink="/admin/list-order"
                 class="cursor-pointer"
                 >Order</a
               >
