@@ -1,52 +1,101 @@
 <style>
-    .title {
-      font-family: "Prata", serif;
-      font-weight: 300;
-      font-style: normal;
-    }
-    .loader-spinner {
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #573BAE;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite;
-}
+  .title {
+    font-family: "Prata", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .loader-spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #573bae;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-  </style>
-  <!-- <div *ngIf="isLoading"> <div class="loader-spinner flex text-center mx-auto justify-center items-center mt-12"></div></div>
+</style>
+<!-- <div *ngIf="isLoading"> <div class="loader-spinner flex text-center mx-auto justify-center items-center mt-12"></div></div>
 
   <div *ngIf="!isLoading"> -->
-  <div class="container max-w-screen-xl mx-auto py-3 font-medium">
-    <div class="mb-2 mt-2">
-      <p class="text-2xl mb-0 title">Our New Books Collection</p>
-      <p class="text-sm  font-normal text-gray-500">
-        Discover the latest additions to our book collection. Whether you're searching for an exciting new read or the perfect gift, our thoughtfully curated selection has something for every reader. Start exploring today and find your next great adventure—stories that inspire, educate, and entertain await you!
-      </p>
+<div class="hp-skinny-hero">
+  <div class="skinny-hero">
+    <a
+      class="skinny-hero-link"
+    >
+      <picture>
+        <source
+          media="(max-width: 640px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/15/31760_SkinnyHero_The-Let-Them-Theory_01_15_25r2-mobile.jpg
+          "
+        />
+        <source
+          media="(min-width: 641px)"
+          srcset="
+            //dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/15/31760_SkinnyHero_The-Let-Them-Theory_01_15_25r2.jpg
+          "
+        />
+        <img
+          class="lp-lazy ResolveComplete"
+          src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&amp;set=key%5Bresolve.width%5D,value%5B600%5D&amp;set=key%5Bresolve.height%5D,value%5B10000%5D&amp;set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&amp;set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&amp;set=key%5Bresolve.format%5D,value%5Bwebp%5D&amp;source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/15/31760_SkinnyHero_The-Let-Them-Theory_01_15_25r2.jpg%5D&amp;scale=options%5Blimit%5D,size%5B600x10000%5D&amp;sink=format%5Bwebp%5D"
+          data-resolvesrc="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/15/31760_SkinnyHero_The-Let-Them-Theory_01_15_25r2.jpg"
+          alt="What if the key to happiness, success and love was as simple as two words? Shop Now "
+          id="resolve_24"
+        />
+        <noscript
+          ><img
+            src="//dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/15/31760_SkinnyHero_The-Let-Them-Theory_01_15_25r2.jpg"
+            alt="What if the key to happiness, success and love was as simple as two words? Shop Now"
+        /></noscript>
+      </picture>
+    </a>
+  </div>
+</div>
+<!-- <div class="container max-w-screen-xl mx-auto py-3 font-medium">
+  <div class="mb-2 mt-2">
+    <p class="text-2xl mb-0 title">Our New Books Collection</p>
+    <p class="text-sm font-normal text-gray-500">
+      Discover the latest additions to our book collection. Whether you're
+      searching for an exciting new read or the perfect gift, our thoughtfully
+      curated selection has something for every reader. Start exploring today
+      and find your next great adventure—stories that inspire, educate, and
+      entertain await you!
+    </p>
+  </div>
+  <div class="flex gap-4">
+    <div class="mb-4 font-normal py-1 border-b border-black">
+      <select
+        title="sortPrice"
+        id="sortOrder"
+        (change)="onSortOrderChange($event)"
+      >
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
     </div>
-    <div class="flex gap-4">
-      <div class="mb-4 font-normal py-1 border-b border-black">
-        <select title="sortPrice" id="sortOrder" (change)="onSortOrderChange($event)">
-          <option value="asc">Low to High</option>
-          <option value="desc">High to Low</option>
-        </select>
-      </div>
-      
-      <div class="mb-4 font-normal py-1 border-b border-black">
-        <select title="sortCategory" id="category" (change)="onCategoryChange($event)">
-          <option value="">All Categories</option>
-          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>z
-        </select>
-      </div>
+
+    <div class="mb-4 font-normal py-1 border-b border-black">
+      <select
+        title="sortCategory"
+        id="category"
+        (change)="onCategoryChange($event)"
+      >
+        <option value="">All Categories</option>
+        <option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </option>
+        z
+      </select>
     </div>
+  </div>
   <div class="grid grid-cols-2 md:grid-cols-6 mb-0">
     <div *ngFor="let product of filteredProducts" class="cursor-pointer p-1">
       <div class="relative inline-block group">
@@ -73,7 +122,7 @@
               d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
             />
           </svg>
-  
+
           <svg
             *ngIf="product.rating >= star - 0.5 && product.rating < star"
             class="w-4 h-4 text-yellow-400 fill-current"
@@ -84,7 +133,7 @@
               d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
             />
           </svg>
-  
+
           <svg
             *ngIf="product.rating < star - 0.5"
             class="w-4 h-4 text-gray-300 fill-current"
@@ -96,19 +145,19 @@
             />
           </svg>
         </ng-container>
-  
-        <a class="text-gray-400 font-thin ml-2">({{product.rating}}/5)</a>
+
+        <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
       </div>
       <div class="flex gap-2 items-center">
         <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
         <p class="text-md font-normal text-red-500 self-center">
           <s>{{ product.price }}$</s>
         </p>
-        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">-{{product.discount}}%</p>
+        <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+          -{{ product.discount }}%
+        </p>
       </div>
     </div>
   </div>
-  </div>
+</div> -->
 <!-- </div> -->
-  
-  
