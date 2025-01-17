@@ -1514,23 +1514,6 @@
   ],
   "wishlist": [
     {
-      "id": "9ed5",
-      "type": "book",
-      "title": "Frieren: Beyond Journey's End, Vol. 1",
-      "price": 11.99,
-      "price_after_discount": 11.15,
-      "category": "Manga",
-      "author": "Kanehito Yamada",
-      "description": "The adventure is over but life goes on for an elf mage just beginning to learn what living is all about.\nElf mage Frieren and her courageous fellow adventurers have defeated the Demon King and brought peace to the land. But Frieren will long outlive the rest of her former party. How will she come to understand what life means to the people around her?\nDecades after their victory, the funeral of one her friends confronts Frieren with her own near immortality. Frieren sets out to fulfill the last wishes of her comrades and finds herself beginning a new adventure...",
-      "image_url": "https://images-us.bookshop.org/ingram/9781974725762.jpg?height=1200&v=v2",
-      "rating": 4.5,
-      "discount": 5,
-      "stock": 40,
-      "category_id": "4",
-      "publish_date": "2025-01-10",
-      "quantity": 1
-    },
-    {
       "id": "2e36",
       "type": "book",
       "title": "Delicious in Dungeon, Vol. 2: Volume 2",
@@ -1544,7 +1527,8 @@
       "discount": 5,
       "stock": 40,
       "category_id": "4",
-      "publish_date": "2025-01-12"
+      "publish_date": "2025-01-12",
+      "userId": "b53c"
     }
   ],
   "comments": []

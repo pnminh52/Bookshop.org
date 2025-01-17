@@ -39,8 +39,8 @@ export class UserHeaderComponent {
     this.wishlistService
       .getWishlistItemsObservable()
       .subscribe((wishlistItems: Product[]) => {
-        this.wishlistItemCount = this.isLoggedIn ? wishlistItems.length : 0;
-      });
+        this.wishlistItemCount = wishlistItems.length
+            });
 
     // // Theo dõi thay đổi trong giỏ hàng
     this.cartService
@@ -72,14 +72,31 @@ export class UserHeaderComponent {
   ngOnInit(): void {
     this.authService.isLoggedIn$.subscribe((status) => {
       this.isLoggedIn = status;
+      if (this.isLoggedIn) {
+        this.loadWishlist();
+      } else {
+        this.wishlistItemCount = 0; 
+      }
     });
-    setInterval(()=>{
-      this.currentIndex=(this.currentIndex+1) % this.slideshowText.length
-    }, 3000)
-  }
 
+    setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.slideshowText.length;
+    }, 3000);
+  }
+  loadWishlist(): void {
+    if (this.isLoggedIn) {
+      const userId = localStorage.getItem('userId');
+      if (userId) {
+        this.wishlistService.getWishlist(userId).subscribe((wishlist: Product[]) => {
+          this.wishlistItemCount = wishlist.length; 
+        });
+      }
+    }
+  }
   logout(): void {
-    this.authService.logout().subscribe(() => {});
+    this.authService.logout().subscribe(() => {
+      this.wishlistItemCount = 0;
+    });
   }
 
   toggleSidebar() {

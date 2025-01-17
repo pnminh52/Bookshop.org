@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WishlistService } from '../../wishlist.service';
 import { Product } from '../../type/Products';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-wishlist',
@@ -15,42 +16,41 @@ export class WishlistComponent implements OnInit {
   wishlist: Product[] = [];
   successMessage: string | null = null; 
 
-  constructor(private wishlistService: WishlistService) {}
+  constructor(private wishlistService: WishlistService, private router: Router) {}
 
   ngOnInit(): void {
     this.userId = localStorage.getItem('userId');
-    console.log('User ID:', this.userId); 
-    this.loadWishlist();
+    if (!this.userId) {
+      this.router.navigate(['/login']);
+    } else {
+      console.log('User ID:', this.userId);
+      this.loadWishlist();
+    }
   }
 
   loadWishlist(): void {
     if (this.userId) {
       this.wishlistService.getWishlist(this.userId).subscribe({
         next: (data: any) => {
-          console.log('Raw Data:', data);  
+          console.log('Raw Data:', data);
           
           if (data && Array.isArray(data)) {
-            this.wishlist = data; 
-            console.log('Mapped Wishlist:', this.wishlist);
+            this.wishlist = data;
           } else {
-            console.error('Dữ liệu không hợp lệ:', data);
           }
-        },
-        error: (err) => {
-          console.error('Lỗi khi tải danh sách wishlist:', err);
         }
       });
     }
   }
-  
+
   removeFromWishlist(productId: string): void {
     if (this.userId) {
       this.wishlistService.removeFromWishlist(this.userId, productId).subscribe({
         next: () => {
           this.wishlist = this.wishlist.filter(product => product.id !== productId);
-          this.successMessage = 'Product removed from wishlist successfully!'; 
+          this.successMessage = 'Product removed from wishlist successfully!';
           setTimeout(() => {
-            this.successMessage = null; 
+            this.successMessage = null;
           }, 3000);
         },
         error: (err) => {
@@ -59,5 +59,4 @@ export class WishlistComponent implements OnInit {
       });
     }
   }
-  
 }

@@ -24,7 +24,10 @@ export class WishlistService {
   }
 
   addToWishlist(userId: string, product: Product): Observable<Product> {
-    return this.http.post<Product>(`${this.apiUrl}?userId=${userId}`, product).pipe(
+    // Thêm userId vào product trước khi gửi lên API
+    const productWithUserId = { ...product, userId };
+
+    return this.http.post<Product>(`${this.apiUrl}`, productWithUserId).pipe(
       tap(() => this.updateWishlist(userId))
     );
   }
