@@ -30,7 +30,7 @@ export class CollectionComponent {
   ];
   isLoading = true;
   currentPage = 1;
-  itemsPerPage = 30;
+  itemsPerPage = 60;
   totalPages = 0;
 
   get paginatedProducts() {
@@ -148,7 +148,7 @@ onSortOrderChange(event: Event): void {
         (this.sortOrder[0] === 'asc' ? 'Price increase' : 'Price decrease') 
         : '',  
       release: this.selectedRelease ? 
-        (this.selectedRelease === 'oldest' ? 'Oldest release' : 'Newest release') 
+        (this.selectedRelease === 'oldest' ? 'Oldest' : 'Newest') 
         : '',
   
     };

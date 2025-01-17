@@ -21,6 +21,12 @@ export class UserHeaderComponent {
   isLoggedIn: boolean = false;
   isSidebarVisible = false;
   alertMessage: string | null = null;
+  slideshowText: string[] = [
+    'Every purchase supports our local bookstores!',
+    'Explore more books with amazing discounts!',
+    'Join our book club for exclusive offers!'
+  ];
+  currentIndex: number = 0;
 
   constructor(
     private wishlistService: WishlistService,
@@ -67,6 +73,9 @@ export class UserHeaderComponent {
     this.authService.isLoggedIn$.subscribe((status) => {
       this.isLoggedIn = status;
     });
+    setInterval(()=>{
+      this.currentIndex=(this.currentIndex+1) % this.slideshowText.length
+    }, 3000)
   }
 
   logout(): void {
