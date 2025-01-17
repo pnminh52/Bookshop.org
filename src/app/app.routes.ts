@@ -22,6 +22,8 @@ import { ListProductComponent } from './server/product/list-product/list-product
 import { ListUserComponent } from './server/user/list-user/list-user.component';
 import { OrderListComponent } from './server/order/order-list/order-list.component';
 import { OrderDetailComponent } from './server/order/order-detail/order-detail.component';
+import { CommentListComponent } from './server/comment/comment-list/comment-list.component';
+import { CommentEditComponent } from './server/comment/comment-edit/comment-edit.component';
 
 export const routes: Routes = [
   {
@@ -54,6 +56,14 @@ export const routes: Routes = [
       {
         path: 'order-detail/:id',
         component: OrderDetailComponent
+      },
+      {
+        path: 'list-comment',
+        component: CommentListComponent
+      },
+      {
+        path: 'edit-comment/:id',
+        component: CommentEditComponent
       }
 
     ],

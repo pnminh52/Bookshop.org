@@ -61,7 +61,7 @@
           />
         </a>
         <a
-          routerLink="/"
+          routerLink="/admin/list-comment"
           class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
@@ -129,6 +129,30 @@
                 routerLink="/admin/list-order"
                 class="cursor-pointer"
                 >Order</a
+              >
+            </li>
+            <li *ngIf="isLoggedIn" class="w-full h-8">
+              <a
+                (click)="closeSidebar()"
+                routerLink="/admin/list-user"
+                class="cursor-pointer"
+                >user</a
+              >
+            </li>
+            <li *ngIf="isLoggedIn" class="w-full h-8">
+              <a
+                (click)="closeSidebar()"
+                routerLink="/admin/list-comment"
+                class="cursor-pointer"
+                >comment</a
+              >
+            </li>
+            <li *ngIf="isLoggedIn" class="w-full h-8">
+              <a
+                (click)="closeSidebar()"
+                routerLink="/admin/list-product"
+                class="cursor-pointer"
+                >product</a
               >
             </li>
 

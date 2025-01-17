@@ -7,6 +7,7 @@ export interface Comment {
     createdAt?: Date;
     fullName: string
     avatar: string
-    imageUrl?: string;
+    image_url?: string;
     expanded?: boolean;
+    hidden?: boolean;
   }

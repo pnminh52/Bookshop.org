@@ -1,0 +1,38 @@
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-8">Danh sách sản phẩm có comment</h1>
+  
+    <div *ngIf="productsWithComments.length > 0; else noProducts">
+      <table class="min-w-full table-auto border-collapse">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 border-b">Mã sản phẩm</th>
+            <th class="px-4 py-2 border-b">Tên sản phẩm</th>
+            <th class="px-4 py-2 border-b">image</th>
+            <th class="px-4 py-2 border-b">Số lượng comment</th>
+            <th class="px-4 py-2 border-b">Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productsWithComments">
+            <td class="px-4 py-2 border-b">{{ product.id }}</td>
+            <td class="px-4 py-2 border-b truncate">{{ product.title }}</td>
+            <td class="px-4 py-2 border-b">
+              <img [src]="product.image_url" alt="Product Image" class="h-16 w-16 object-cover" />
+            </td>      
+            <td class="px-4 py-2 border-b">{{ product.comments.length }}</td>
+  
+            <td class="px-4 py-2 border-b">
+              <button [routerLink]="['/admin/edit-comment', product.id]" 
+                      class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Xem chi tiết
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <ng-template #noProducts>
+      <p class="text-center text-lg">Không có sản phẩm nào có comment.</p>
+    </ng-template>
+</div>

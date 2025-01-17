@@ -1,0 +1,37 @@
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-8">Quản lý Comment</h1>
+    
+    <div *ngIf="comments.length > 0; else noComments">
+      <table class="min-w-full table-auto border-collapse">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 border-b">Người dùng</th>
+            <th class="px-4 py-2 border-b">Comment</th>
+            <th class="px-4 py-2 border-b">Rating</th>
+            <th class="px-4 py-2 border-b">Trạng thái</th>
+            <th class="px-4 py-2 border-b">Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let comment of comments">
+            <td class="px-4 py-2 border-b">{{ comment.fullName }}</td>
+            <td class="px-4 py-2 border-b">{{ comment.comment }}</td>
+            <td class="px-4 py-2 border-b">{{ comment.rating }}</td>
+            <td class="px-4 py-2 border-b">{{ comment.hidden ? 'Ẩn' : 'Hiển thị' }}</td>
+            <td class="px-4 py-2 border-b">
+              <button 
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                (click)="toggleCommentVisibility(comment)">
+                {{ comment.hidden ? 'Hiện' : 'Ẩn' }}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <ng-template #noComments>
+      <p class="text-center text-lg">Không có comment nào.</p>
+    </ng-template>
+  </div>
+  

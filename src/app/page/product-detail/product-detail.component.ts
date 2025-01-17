@@ -117,19 +117,16 @@ export class ProductDetailComponent implements OnInit {
   loadComments(productId: string): void {
     console.log('Fetching comments for product:', productId);
     this.commentService.getComments(productId).subscribe({
-      next: (data) => {
+      next: (data: Comment[]) => { 
         console.log('Fetched comments:', data);
-        this.comments = data.map((comment: Comment) => {
+        this.comments = data.filter((comment: Comment) => !comment.hidden).map((comment: Comment) => { // Đặt kiểu Comment cho comment
           if (comment.userId && this.userId) {
             this.authService.getUserInfoById(comment.userId).subscribe({
               next: (userData) => {
                 comment.avatar = userData.avatar;
               },
               error: (err) => {
-                console.error(
-                  'Error fetching user info for comment avatar:',
-                  err
-                );
+                console.error('Error fetching user info for comment avatar:', err);
               },
             });
           }
@@ -147,7 +144,6 @@ export class ProductDetailComponent implements OnInit {
       },
     });
   }
-
   addComment(): void {
     if (!this.product) {
       alert('Sản phẩm không tồn tại');

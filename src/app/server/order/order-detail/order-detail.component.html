@@ -7,15 +7,17 @@
       <p><strong>Payment Method:</strong> {{ order.paymentMethod }}</p>
       <p><strong>Date:</strong> {{ order.date | date:'medium' }}</p>
       <p><strong>Status:</strong> {{ order.status }}</p>
+      <p><strong>Reason:</strong> {{ order.reason }}</p>
+
   
       <h3 class="text-xl font-semibold mt-4">Items:</h3>
       <div *ngFor="let item of order.items" class="border-t border-gray-200 pt-2 mt-2">
         <p><strong>Title:</strong> {{ item.title }}</p>
+        <p><Strong>Image:</Strong><img src={{item.image_url}} alt=""></p>
         <p><strong>Price:</strong> {{ item.price | currency }}</p>
         <p><strong>Quantity:</strong> {{ item.quantity }}</p>
         <p><strong>Category:</strong> {{ item.category }}</p>
         <p><strong>Author:</strong> {{ item.author }}</p>
-        <p><strong>Description:</strong> {{ item.description }}</p>
       </div>
   
       <div *ngIf="order.status !== 'Cancelled'" class="mt-4">
