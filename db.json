@@ -1512,6 +1512,24 @@
       "reason": "Không cần nữa"
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "2e36",
+      "type": "book",
+      "title": "Delicious in Dungeon, Vol. 2: Volume 2",
+      "price": 15,
+      "price_after_discount": 13.95,
+      "category": "Manga",
+      "author": "Ryoko Kui",
+      "description": "With the possibility of starvation as a constant companion, Laios's party continues advancing deeper into the dungeon. The adventurers have made it to the third floor, but only rotting zombies, ghastly spirits, living paintings, and golems await them--all of which are absolutely inedible. The party has come this far by adapting and learning how to live off the dubious bounties of the dungeon. But how will they manage when even the meanest monster won't make a decent meal?",
+      "image_url": "https://images-us.bookshop.org/ingram/9780316473057.jpg?height=1200&v=v2",
+      "rating": 4.6,
+      "discount": 5,
+      "stock": 40,
+      "category_id": "4",
+      "publish_date": "2025-01-12",
+      "userId": "b53c"
+    }
+  ],
   "comments": []
 }

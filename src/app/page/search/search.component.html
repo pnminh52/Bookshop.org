@@ -6,6 +6,11 @@
   />
   
   <button (click)="search()">Submit</button> 
+
+  <p class="text-lg font-normal mb-0">
+    There is {{ countBooks() }} result about:
+  </p>
+
   <div *ngIf="products.length > 0" class="product-list">
     <div *ngFor="let product of products" class="product-item">
       <a [routerLink]="['/productDetails', product.id]">
@@ -20,4 +25,4 @@
   <div *ngIf="products.length === 0" class="no-results">
     No products found.
   </div>
-</div>
+ </div>

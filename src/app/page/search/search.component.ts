@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 const routes: Routes = [
   { path: 'product/:id', component: ProductDetailComponent },
-  // Các route khác...
 ];
 @Component({
   selector: 'app-search',
@@ -20,7 +19,9 @@ export class SearchComponent {
   products: any[] = [];
 
   constructor(private productService: ProductService) {}
-
+  countBooks():number{
+    return this.products.length
+  }
   search() {
     if (this.searchTerm) {
       this.productService.getAll().subscribe((data: any) => {
