@@ -1,7 +1,8 @@
 <style>
     p,
     h1,
-    a {
+    a,
+    .title {
       font-family: "Prata", serif;
       font-weight: 400;
       font-style: normal;
@@ -9,14 +10,16 @@
     .active-link hr {
      opacity: 1;
   }
-  
   </style>
   <header>
+
     <div *ngIf="alertMessage" class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md  z-50">
       {{ alertMessage }}
     </div>
     
     <div class="fixed top-0 left-0 w-full bg-white z-50">
+      <div class="h-10 title text-white bg-[#573BAE] flex text-center items-center justify-center cursor-pointer">
+        $35,567,722.78 raised for local bookstores    </div>
       <div
       class="container max-w-screen-xl h-16 mx-auto flex items-center justify-between py-3 font-medium"
     >
@@ -202,7 +205,7 @@
         </div>
         <div
           [ngClass]="{
-            'fixed top-16 left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
+            'fixed top-[104px] left-0 bg-white w-full h-full sm:hidden gap-5 text-sm text-gray-700 transition-transform duration-300 ease-in-out': true,
             'transform-none': isSidebarVisible,
             'transform -translate-x-full': !isSidebarVisible
           }"
