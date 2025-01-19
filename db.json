@@ -1922,11 +1922,30 @@
       "total": 13.94,
       "paymentMethod": "Cash on Delivery",
       "date": "2025-01-19T15:04:05.377Z",
-      "status": "Pending",
+      "status": "Shipped",
       "id": "W-LYw_5"
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "title": "Steins;gate 0 Volume 2",
+      "price": 24.99,
+      "price_after_discount": 23.24,
+      "category": "Light Novel",
+      "author": "Nitroplus",
+      "description": "The world line shifts, and Rintaro Okabe inexplicably finds himself waking up in the future. The year? 2036. The world looks exactly as he'd been warned about; a hellish landscape rife with death and destruction. After witnessing this grim fate, Rintaro stands tall and steels his heart, resolved to put an end to this future once and for all.\nThe heroes of Steins;Gate return for a new time-altering story set in an alternate world where the Future Gadget Lab members failed in their original mission. Can one final chance lead to a happy ending?",
+      "type": "book",
+      "image_url": "https://images-us.bookshop.org/ingram/9781772942118.jpg?height=1200&v=v2",
+      "rating": 4.8,
+      "discount": "7.00",
+      "stock": 32,
+      "category_id": "2",
+      "publish_date": "2025-01-16",
+      "id": "QWz-b5E",
+      "quantity": 1,
+      "userId": "SV-PJoW"
+    }
+  ],
   "comments": [
     {
       "productId": "14be",

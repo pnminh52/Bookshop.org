@@ -57,7 +57,7 @@ export class AddProductComponent {
       this.productService.addProduct(this.addForm.value).subscribe({
         next: () => {
           alert('Product added successfully');
-          this.router.navigate(['/list-product']); 
+          this.router.navigate(['/admin/list-product']);
         },
         error: (err) => {
           console.error('Error adding product:', err);
@@ -67,4 +67,5 @@ export class AddProductComponent {
       console.log("Form is invalid");
     }
   }
+  
 }
