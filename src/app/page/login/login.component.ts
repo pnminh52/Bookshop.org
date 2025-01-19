@@ -14,6 +14,8 @@ import { RouterLink } from '@angular/router';
 })
 export class LoginComponent {
   authService = inject(AuthService);
+  successMessage: string | null = null;
+  alertMessage: string | null = null;
   router = inject(Router);
 isAdmin=false
   loginForm: FormGroup = new FormGroup({
@@ -33,23 +35,25 @@ isAdmin=false
       next: (response) => {
         if (response.length > 0) {
           const user = response[0];
-          alert('Đăng nhập thành công!');
-            localStorage.setItem('user', JSON.stringify(user));
+          this.successMessage = 'Login successfully, redirecting...';
+          localStorage.setItem('user', JSON.stringify(user));
           if (user.role === 'admin') {
             localStorage.setItem('role', 'admin');
             this.isAdmin = true;
-            this.router.navigate(['/admin/']);
+            setTimeout(() => {
+              this.router.navigate(['/admin/']);
+            }, 1000);  
           } else {
-            this.router.navigate(['/']);
+            setTimeout(() => {
+              this.router.navigate(['/']);
+            }, 1000); 
           }
         } else {
-          alert('Tài khoản hoặc mật khẩu không đúng!');
-        }
+          this.alertMessage = 'Incorrect username or password!';        }
       },
       error: (err: any) => {
         console.log(err);
-        alert('Đã xảy ra lỗi, vui lòng thử lại!');
-      }
+        this.alertMessage = 'An error occurred, please try again!';      }
     });
   }
   

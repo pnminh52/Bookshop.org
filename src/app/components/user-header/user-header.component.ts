@@ -19,6 +19,7 @@ export class UserHeaderComponent {
   cartItemCount: number = 0;
   wishlistItemCount: number = 0;
   isLoggedIn: boolean = false;
+  successMessage: string | null = null;
   isSidebarVisible = false;
   alertMessage: string | null = null;
   slideshowText: string[] = [
@@ -97,6 +98,10 @@ export class UserHeaderComponent {
     this.authService.logout().subscribe(() => {
       this.wishlistItemCount = 0;
     });
+    this.successMessage = 'Logout successfully!';
+    setTimeout(() => {
+      this.successMessage = null; 
+    }, 3000);
   }
 
   toggleSidebar() {

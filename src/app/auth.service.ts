@@ -137,7 +137,7 @@ export class AuthService {
     localStorage.removeItem('role');
     this.isLoggedInSubject.next(false);  
     this.cartService.clearCart();
-    this.router.navigate(['/login']); 
+    this.router.navigate(['/']); 
     return EMPTY;
   }
 
