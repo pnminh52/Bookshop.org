@@ -135,6 +135,10 @@ export class ProductDetailComponent implements OnInit {
   }
   
   likeComment(comment: Comment): void {
+    if (!this.checkLogin()) {
+      return; 
+    }
+
     if (this.dislikedComments.has(comment.productId)) {
       comment.dislikeCount--;
       this.dislikedComments.delete(comment.productId);
@@ -157,6 +161,10 @@ export class ProductDetailComponent implements OnInit {
   
 
   dislikeComment(comment: Comment): void {
+    if (!this.checkLogin()) {
+      return;
+    }
+  
     if (this.likedComments.has(comment.productId)) {
       comment.likeCount--;
       this.likedComments.delete(comment.productId);

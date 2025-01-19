@@ -1939,6 +1939,18 @@
       "id": 6,
       "likeCount": 2,
       "dislikeCount": 2
+    },
+    {
+      "productId": "7ae1",
+      "userId": "b53c",
+      "fullName": "Username1",
+      "comment": "new comment 1 ",
+      "rating": 2,
+      "createdAt": "2025-01-19T16:16:09.359Z",
+      "avatar": "https://i.pinimg.com/736x/19/e0/77/19e07757602c172c633abff094e6c38d.jpg",
+      "likeCount": 2,
+      "dislikeCount": 0,
+      "id": 7
     }
   ]
 }
