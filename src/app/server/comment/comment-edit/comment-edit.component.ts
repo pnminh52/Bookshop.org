@@ -3,13 +3,14 @@ import { CommentService } from 'src/app/comment.service';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Comment } from 'type/Comment';
 
 @Component({
   selector: 'app-comment-edit',
   templateUrl: './comment-edit.component.html',
   styleUrls: ['./comment-edit.component.css'],
   standalone: true,
-  imports:[CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule]
 })
 export class CommentEditComponent implements OnInit {
   comments: any[] = []; 
@@ -33,8 +34,7 @@ export class CommentEditComponent implements OnInit {
 
   toggleCommentVisibility(comment: any): void {
     comment.hidden = !comment.hidden;
-  
-    this.commentService.updateComment(comment).subscribe({
+    this.commentService.updateComment(comment.id, { hidden: comment.hidden }).subscribe({
       next: (updatedComment) => {
         console.log('Comment visibility updated:', updatedComment);
       },
@@ -43,5 +43,4 @@ export class CommentEditComponent implements OnInit {
       }
     });
   }
-  
 }

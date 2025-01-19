@@ -10,4 +10,6 @@ export interface Comment {
     image_url?: string;
     expanded?: boolean;
     hidden?: boolean;
+    likeCount: number;
+    dislikeCount: number;
   }

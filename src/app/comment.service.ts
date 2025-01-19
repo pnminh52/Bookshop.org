@@ -20,7 +20,14 @@ export class CommentService {
   getAllComments(): Observable<Comment[]> {
     return this.http.get<Comment[]>(`${this.apiUrl}`);
   }
-  updateComment(comment: any):Observable<any>{
-    return this.http.put(`${this.apiUrl}/${comment.id}`, comment);
+updateComment(commentId: string, updateData: any): Observable<any> {
+  return this.http.patch(`${this.apiUrl}/${commentId}`, updateData);
+}
+ 
+  likeComment(commentId: string): Observable<any> {
+    return this.http.patch(`${this.apiUrl}/${commentId}`, { likeCount: 1 });
+  }
+  dislikeComment(commentId: string, dislikeCount: number): Observable<any> {
+    return this.http.patch(`${this.apiUrl}/${commentId}`, { dislikeCount: dislikeCount + 1 });
   }
 }

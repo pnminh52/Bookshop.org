@@ -63,18 +63,29 @@
         </div>
         <div>
           <strong class="block">{{ comment.fullName }}</strong> 
-          <p *ngIf="comment.comment.length <= 100" class="break-words">
+          <a *ngIf="comment.comment.length <= 100" class="break-words">
             {{ comment.comment }}
-          </p>
+          </a>
           <div *ngIf="comment.comment.length > 100">
-            <p *ngIf="!comment.expanded" class="break-words">
+            <a *ngIf="!comment.expanded" class="break-words">
               {{ comment.comment | slice:0:100 }}...
               <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
-            </p>
-            <p *ngIf="comment.expanded" class="break-words">
+            </a>
+            <a *ngIf="comment.expanded" class="break-words">
               {{ comment.comment }}
               <a (click)="comment.expanded = false" class="cursor-pointer font-semibold">Thu gọn</a>
-            </p>
+            </a>
+          </div>
+          <div class="flex items-center gap-2 mt-0">
+            <button (click)="likeComment(comment)" class="text-gray-500 hover:text-blue-500">
+              <svg viewBox="0 0 24 24" class="w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
+              {{ comment.likeCount }}
+            </button>
+            <button (click)="dislikeComment(comment)" class="text-gray-500 hover:text-red-500">
+              <svg viewBox="0 0 24 24" class="rotate-180 w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
+
+              {{ comment.dislikeCount }}
+            </button>
           </div>
         </div>
         

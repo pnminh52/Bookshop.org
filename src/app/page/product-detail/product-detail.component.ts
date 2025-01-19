@@ -27,6 +27,8 @@ export class ProductDetailComponent implements OnInit {
   newAvatar: string = '';
   successMessage: string | null = null;
   alertMessage: string | null = null;
+  likedComments: Set<string> = new Set();
+  dislikedComments: Set<string> = new Set();
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -117,33 +119,85 @@ export class ProductDetailComponent implements OnInit {
   loadComments(productId: string): void {
     console.log('Fetching comments for product:', productId);
     this.commentService.getComments(productId).subscribe({
-      next: (data: Comment[]) => { 
+      next: (data: Comment[]) => {
         console.log('Fetched comments:', data);
-        this.comments = data.filter((comment: Comment) => !comment.hidden).map((comment: Comment) => { // Đặt kiểu Comment cho comment
-          if (comment.userId && this.userId) {
-            this.authService.getUserInfoById(comment.userId).subscribe({
-              next: (userData) => {
-                comment.avatar = userData.avatar;
-              },
-              error: (err) => {
-                console.error('Error fetching user info for comment avatar:', err);
-              },
-            });
-          }
-          if (comment.createdAt) {
-            comment.createdAt = new Date(comment.createdAt);
-          } else {
-            comment.createdAt = new Date();
-          }
+        this.comments = data.filter((comment: Comment) => !comment.hidden).map((comment: Comment) => {
+          // Ensure like/dislike counts are initialized if not already
+          comment.likeCount = comment.likeCount || 0;
+          comment.dislikeCount = comment.dislikeCount || 0; 
           return comment;
         });
-        this.comments = this.comments.map(comment => ({ ...comment, expanded: false }));
       },
       error: (err) => {
         console.error('Error fetching comments:', err);
       },
     });
   }
+  
+  likeComment(comment: Comment): void {
+    if (this.dislikedComments.has(comment.productId)) {
+      comment.dislikeCount--;
+      this.dislikedComments.delete(comment.productId);
+    }
+  
+    if (this.likedComments.has(comment.productId)) {
+      comment.likeCount--;
+      this.likedComments.delete(comment.productId);
+    } else {
+      comment.likeCount++;
+      this.likedComments.add(comment.productId);
+    }
+  
+    if (comment.id !== undefined) { 
+      this.updateComment(comment);
+    } else {
+      console.error('Comment ID is undefined');
+    }
+  }
+  
+
+  dislikeComment(comment: Comment): void {
+    if (this.likedComments.has(comment.productId)) {
+      comment.likeCount--;
+      this.likedComments.delete(comment.productId);
+    }
+  
+    if (this.dislikedComments.has(comment.productId)) {
+      comment.dislikeCount--;
+      this.dislikedComments.delete(comment.productId);
+    } else {
+      comment.dislikeCount++;
+      this.dislikedComments.add(comment.productId);
+    }
+  
+    if (comment.id !== undefined) {  
+      this.updateComment(comment);
+    } else {
+      console.error('Comment ID is undefined');
+    }
+  }
+  
+
+  updateComment(comment: Comment): void {
+    if (comment.id) {
+      const updateData = {
+        likeCount: comment.likeCount,
+        dislikeCount: comment.dislikeCount
+      };
+      this.commentService.updateComment(comment.id, updateData).subscribe({
+        next: (updatedComment) => {
+          console.log('Comment updated:', updatedComment);
+        },
+        error: (err) => {
+          console.error('Error updating comment:', err);
+        }
+      });
+    } else {
+      console.error('Comment ID is undefined');
+    }
+  }
+  
+  
   addComment(): void {
     if (!this.product) {
       alert('Sản phẩm không tồn tại');
@@ -164,6 +218,8 @@ export class ProductDetailComponent implements OnInit {
         rating: this.newRating,
         createdAt: this.newCreateAt,
         avatar: avatar,
+        likeCount: 0,
+        dislikeCount: 0
       };
       this.commentService.addComment(comment).subscribe({
         next: (response) => {
