@@ -41,12 +41,13 @@
         <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-[#573BAE] opacity-0 transition-opacity duration-300"/>
      </a>
      
-        <a routerLink="/collection" class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
-        routerLinkActive="active-link" 
-        [routerLinkActiveOptions]="{exact: true}">
-          Collection
-          <hr class="absolute bottom-0 left-0 w-full h-[0.px] bg-[#573BAE] opacity-0 transition-opacity duration-300"/>
-        </a>
+     <a routerLink="/collection" class="hidden text-[#573BAE] sm:inline-block hover:no-underline hover:text-[#573BAE] relative hover:none"
+     routerLinkActive="active-link" 
+     [routerLinkActiveOptions]="{exact: true}">
+     Collection
+     <hr class="absolute bottom-0 left-0 w-full h-[0px] bg-[#573BAE] opacity-0 transition-opacity duration-300"/>
+   </a>
+   
         <a routerLink="/new" class="hidden sm:inline-block hover:no-underline hover:text-inherit relative"
         routerLinkActive="active-link" 
         [routerLinkActiveOptions]="{exact: true}">
@@ -210,7 +211,7 @@
          
       
        
-            <li class="    w-full h-8">
+            <li class="  text-[#573BAE]  w-full h-8">
               <a routerLink="/collection" (click)="closeSidebar()">
                 Collection
               </a>

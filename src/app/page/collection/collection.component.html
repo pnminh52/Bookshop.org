@@ -22,14 +22,14 @@
   }
 </style>
 
-<div *ngIf="isLoading">
+<!-- <div *ngIf="isLoading">
   <div
     class="loader-spinner flex text-center mx-auto justify-center items-center mt-10"
   ></div>
 </div>
 
-<div *ngIf="!isLoading">
-  <div class="skinny-hero focus">
+<div *ngIf="!isLoading"> -->
+  <div class="skinny-hero focus flex justify-center">
     <a class="skinny-hero-link">
       <picture>
         <source
@@ -73,7 +73,7 @@
     </div>
 
     <div class="mb-4">
-      <p class="text-lg font-normal mb-0">
+      <p class="title text-lg font-normal mb-0">
         There is {{ countBooks() }} books in collection
       </p>
 
@@ -154,7 +154,7 @@
     >
       <div class="flex justify-between items-center">
         <div class="filters-summary flex flex-wrap gap-1.5 items-center">
-          <a class="text-md font-normal text-black"> You have chosen: </a>
+          <a class="title text-md font-normal text-black"> You have chosen: </a>
 
           <!-- Category Filter -->
           <div
@@ -349,7 +349,7 @@
         Next
       </button>
     </div>
-    <div class="flex justify-center mt-2">
+    <div *ngIf="filteredProducts.length > 0" class="flex justify-center mt-2">
       <p class="text-md text-gray-500 font-normal mb-0">
         Page {{ currentPage }} of {{ totalPages }}
       </p>
@@ -387,4 +387,4 @@
       <p class="text-[#6b7179] font-normal">No books available!</p>
     </div>
   </div>
-</div>
+<!-- </div> -->
