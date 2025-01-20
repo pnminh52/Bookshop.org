@@ -2,7 +2,7 @@
   "products": [
     {
       "id": "2",
-      "type": "book",
+      
       "title": "Rosarita",
       "price": 20.46,
       "price_after_discount": 22,
@@ -18,7 +18,7 @@
     },
     {
       "id": "5",
-      "type": "book",
+      
       "title": "Beg, Borrow, or Steal",
       "price": 28,
       "price_after_discount": 26.04,
@@ -34,7 +34,7 @@
     },
     {
       "id": "9",
-      "type": "book",
+      
       "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
       "price": 29.99,
       "price_after_discount": 27.89,
@@ -50,7 +50,7 @@
     },
     {
       "id": "10",
-      "type": "book",
+      
       "title": "Imogen, Obviously",
       "price": 15.99,
       "price_after_discount": 14.87,
@@ -66,7 +66,7 @@
     },
     {
       "id": "11",
-      "type": "book",
+      
       "title": "A Thousand Heartbeats",
       "price": 15.99,
       "price_after_discount": 14.87,
@@ -82,7 +82,7 @@
     },
     {
       "id": "12",
-      "type": "book",
+      
       "title": "Make the Season Bright",
       "price": 19,
       "price_after_discount": 17.67,
@@ -98,7 +98,7 @@
     },
     {
       "id": "13",
-      "type": "book",
+      
       "title": "Blame It on the Mistletoe",
       "price": 10.99,
       "price_after_discount": 10.22,
@@ -114,7 +114,7 @@
     },
     {
       "id": "14",
-      "type": "book",
+      
       "title": "The Book of Yokai, Expanded Second Edition: Mysterious Creatures of Japanese Folklore",
       "price": 45,
       "price_after_discount": 41.58,
@@ -130,7 +130,7 @@
     },
     {
       "id": "15",
-      "type": "book",
+      
       "title": "Servant of Earth",
       "price": 29,
       "price_after_discount": 26.67,
@@ -146,7 +146,7 @@
     },
     {
       "id": "16",
-      "type": "book",
+      
       "title": "The Scarlet Alchemist (Original)",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -162,7 +162,7 @@
     },
     {
       "id": "17",
-      "type": "book",
+      
       "title": "The Wood at Midwinter",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -178,7 +178,7 @@
     },
     {
       "id": "18",
-      "type": "book",
+      
       "title": "The Last Dragon of the East",
       "price": 17.99,
       "price_after_discount": 16.73,
@@ -194,7 +194,7 @@
     },
     {
       "id": "19",
-      "type": "book",
+      
       "title": "Spitting Gold",
       "price": 27.99,
       "price_after_discount": 26.03,
@@ -210,7 +210,7 @@
     },
     {
       "id": "20",
-      "type": "book",
+      
       "title": "The Nurse's Secret: A Thrilling Historical Novel of the Dark Side of Gilded Age New York City",
       "price": 16.95,
       "price_after_discount": 15.76,
@@ -226,7 +226,7 @@
     },
     {
       "id": "21",
-      "type": "book",
+      
       "title": "Last House Before the Mountain",
       "price": 26,
       "price_after_discount": 24.18,
@@ -242,7 +242,7 @@
     },
     {
       "id": "22",
-      "type": "book",
+      
       "title": "Horseman, Pass by",
       "price": 14.95,
       "price_after_discount": 13.9,
@@ -258,7 +258,7 @@
     },
     {
       "id": "22",
-      "type": "book",
+      
       "title": "Hester",
       "price": 27.99,
       "price_after_discount": 26.03,
@@ -274,7 +274,7 @@
     },
     {
       "id": "23",
-      "type": "book",
+      
       "title": "Kristin Lavransdatter: The Complete Trilogy",
       "price": 39.99,
       "price_after_discount": 36.03,
@@ -290,7 +290,7 @@
     },
     {
       "id": "24",
-      "type": "book",
+      
       "title": "The Island of Sea Women",
       "price": 18,
       "price_after_discount": 16.74,
@@ -306,7 +306,7 @@
     },
     {
       "id": "25",
-      "type": "book",
+      
       "title": "Teaching to Transgress: Education as the Practice of Freedom",
       "price": 48.95,
       "price_after_discount": 47.67,
@@ -322,7 +322,7 @@
     },
     {
       "id": "26",
-      "type": "book",
+      
       "title": "The Teacher Wars: A History of America's Most Embattled Profession",
       "price": 19,
       "price_after_discount": 17.67,
@@ -338,7 +338,7 @@
     },
     {
       "id": "27",
-      "type": "book",
+      
       "title": "Waiting for Superman: How We Can Save America's Failing Public Schools",
       "price": 15.95,
       "price_after_discount": 14.83,
@@ -354,7 +354,7 @@
     },
     {
       "id": "28",
-      "type": "book",
+      
       "title": "Ghosts in the Schoolyard: Racism and School Closings on Chicago's South Side",
       "price": 19,
       "price_after_discount": 17.67,
@@ -370,7 +370,7 @@
     },
     {
       "id": "29",
-      "type": "book",
+      
       "title": "Radical Possibilities: Public Policy, Urban Education, and A New Social Movement",
       "price": 65.49,
       "price_after_discount": 64,
@@ -386,7 +386,7 @@
     },
     {
       "id": "30",
-      "type": "book",
+      
       "title": "Other People's Children: Cultural Conflict in the Classroom",
       "price": 17.95,
       "price_after_discount": 16.69,
@@ -402,7 +402,7 @@
     },
     {
       "id": "669d",
-      "type": "book",
+      
       "title": "Unromance",
       "price": 17.99,
       "price_after_discount": 16.73,
@@ -418,7 +418,7 @@
     },
     {
       "id": "5b31",
-      "type": "book",
+      
       "title": "What Happened to the McCrays?",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -434,7 +434,7 @@
     },
     {
       "id": "2595",
-      "type": "book",
+      
       "title": "We Lived on the Horizon",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -450,7 +450,7 @@
     },
     {
       "id": "8f86",
-      "type": "book",
+      
       "title": "Beautiful Ugly",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -466,7 +466,7 @@
     },
     {
       "id": "2dd4",
-      "type": "book",
+      
       "title": "The In-Between Bookstore",
       "price": 28,
       "price_after_discount": 26.04,
@@ -482,7 +482,7 @@
     },
     {
       "id": "fcc3",
-      "type": "book",
+      
       "title": "The Favorites",
       "price": 28,
       "price_after_discount": 26.04,
@@ -498,7 +498,7 @@
     },
     {
       "id": "f57a",
-      "type": "book",
+      
       "title": "Babel: Or the Necessity of Violence: An Arcane History of the Oxford Translators' Revolution",
       "price": 20,
       "price_after_discount": 18.6,
@@ -514,7 +514,7 @@
     },
     {
       "id": "c294",
-      "type": "book",
+      
       "title": "Letters to a Young Poet",
       "price": 7,
       "price_after_discount": 5.74,
@@ -530,7 +530,7 @@
     },
     {
       "id": "a224",
-      "type": "book",
+      
       "title": "The City and Its Uncertain Walls",
       "price": 35,
       "price_after_discount": 32.55,
@@ -546,7 +546,7 @@
     },
     {
       "id": "1bc8",
-      "type": "book",
+      
       "title": "The Frozen River: A GMA Book Club Pick",
       "price": 28,
       "price_after_discount": 26.04,
@@ -562,7 +562,7 @@
     },
     {
       "id": "be1f",
-      "type": "book",
+      
       "title": "The Odyssey",
       "price": 18.95,
       "price_after_discount": 17.62,
@@ -578,7 +578,7 @@
     },
     {
       "id": "b54d",
-      "type": "book",
+      
       "title": "Intermezzo",
       "price": 29,
       "price_after_discount": 26.97,
@@ -594,7 +594,7 @@
     },
     {
       "id": "9ed5",
-      "type": "book",
+      
       "title": "Frieren: Beyond Journey's End, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -610,7 +610,7 @@
     },
     {
       "id": "2e36",
-      "type": "book",
+      
       "title": "Delicious in Dungeon, Vol. 2: Volume 2",
       "price": 15,
       "price_after_discount": 13.95,
@@ -626,7 +626,7 @@
     },
     {
       "id": "01b0",
-      "type": "book",
+      
       "title": "Neon Genesis Evangelion 3-In-1 Edition, Vol. 1: Includes Vols. 1, 2 & 3 (Original)",
       "price": 24.99,
       "price_after_discount": 23.24,
@@ -642,7 +642,7 @@
     },
     {
       "id": "7ae1",
-      "type": "book",
+      
       "title": "Goodbye, Eri",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -658,7 +658,7 @@
     },
     {
       "id": "8cf8",
-      "type": "book",
+      
       "title": "One Piece, Vol. 108",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -674,7 +674,7 @@
     },
     {
       "id": "14be",
-      "type": "book",
+      
       "title": "Look Back",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -690,7 +690,7 @@
     },
     {
       "id": "6b6a",
-      "type": "book",
+      
       "title": "Goodnight Punpun, Vol. 1",
       "price": 24.99,
       "price_after_discount": 23.24,
@@ -706,7 +706,7 @@
     },
     {
       "id": "5dd2",
-      "type": "book",
+      
       "title": "Bocchi the Rock!, Vol. 1",
       "price": 15,
       "price_after_discount": 13.95,
@@ -722,7 +722,7 @@
     },
     {
       "id": "d306",
-      "type": "book",
+      
       "title": "Spy X Family, Vol. 7",
       "price": 9.99,
       "price_after_discount": 9.29,
@@ -738,7 +738,7 @@
     },
     {
       "id": "0241",
-      "type": "book",
+      
       "title": "The Fragrant Flower Blooms with Dignity 3",
       "price": 13.99,
       "price_after_discount": 13.01,
@@ -754,7 +754,7 @@
     },
     {
       "id": "b6a9",
-      "type": "book",
+      
       "title": "One Piece, Vol. 100",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -770,7 +770,7 @@
     },
     {
       "id": "7a0b",
-      "type": "book",
+      
       "title": "The Iliad",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -786,7 +786,7 @@
     },
     {
       "id": "880b",
-      "type": "book",
+      
       "title": "The Book of Love",
       "price": 31,
       "price_after_discount": 28.83,
@@ -802,7 +802,7 @@
     },
     {
       "id": "3e35",
-      "type": "book",
+      
       "title": "Mexican Gothic",
       "price": 17,
       "price_after_discount": 15.81,
@@ -818,7 +818,7 @@
     },
     {
       "id": "0f00",
-      "type": "book",
+      
       "title": "Phantasma",
       "price": 18.99,
       "price_after_discount": 17.66,
@@ -834,7 +834,7 @@
     },
     {
       "id": "8155",
-      "type": "book",
+      
       "title": "Slewfoot: A Tale of Bewitchery",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -850,7 +850,7 @@
     },
     {
       "id": "984a",
-      "type": "book",
+      
       "title": "Frankenstein (Revised)",
       "price": 10,
       "price_after_discount": 9.3,
@@ -865,7 +865,7 @@
       "publish_date": "2025-01-14"
     },
     {
-      "type": "book",
+      
       "title": "Fire Punch, Vol. 1",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -881,7 +881,7 @@
       "id": "r00SjAh"
     },
     {
-      "type": "book",
+      
       "title": "Spy X Family, Vol. 13",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -897,7 +897,7 @@
       "id": "wWF1p8D"
     },
     {
-      "type": "book",
+      
       "title": "One Piece, Vol. 107",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -913,7 +913,7 @@
       "id": "eSKJ5fq"
     },
     {
-      "type": "book",
+      
       "title": "Spy X Family, Vol. 11",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -929,7 +929,7 @@
       "id": "atbm0p2"
     },
     {
-      "type": "book",
+      
       "title": "Spy X Family, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -945,7 +945,7 @@
       "id": "X4INFXE"
     },
     {
-      "type": "book",
+      
       "title": "Chainsaw Man, Vol. 16",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -961,7 +961,7 @@
       "id": "4EDqmwS"
     },
     {
-      "type": "book",
+      
       "title": "Chainsaw Man, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -977,7 +977,7 @@
       "id": "ENLDojL"
     },
     {
-      "type": "book",
+      
       "title": "Chainsaw Man, Vol. 13",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -993,7 +993,7 @@
       "id": "U7Sd51t"
     },
     {
-      "type": "book",
+      
       "title": "Chainsaw Man, Vol. 12",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -1009,7 +1009,7 @@
       "id": "emDKUjZ"
     },
     {
-      "type": "book",
+      
       "title": "Delicious in Dungeon, Vol. 14: Volume 14",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1025,7 +1025,7 @@
       "id": "LychpxW"
     },
     {
-      "type": "book",
+      
       "title": "Delicious in Dungeon, Vol. 7: Volume 7",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1041,7 +1041,7 @@
       "id": "hQNj9nP"
     },
     {
-      "type": "book",
+      
       "title": "Delicious in Dungeon, Vol. 8: Volume 8",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1057,7 +1057,7 @@
       "id": "zbpa4aY"
     },
     {
-      "type": "book",
+      
       "title": "Delicious in Dungeon, Vol. 13: Volume 13",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1073,7 +1073,7 @@
       "id": "tne-yt_"
     },
     {
-      "type": "book",
+      
       "title": "Bocchi the Rock!, Vol. 3: Volume 3",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1089,7 +1089,7 @@
       "id": "w0H2WF8"
     },
     {
-      "type": "book",
+      
       "title": "Bocchi the Rock!, Vol. 4",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1105,7 +1105,7 @@
       "id": "3La6RTQ"
     },
     {
-      "type": "book",
+      
       "title": "Bocchi the Rock!, Vol. 5",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1121,7 +1121,7 @@
       "id": "9YTw_zn"
     },
     {
-      "type": "book",
+      
       "title": "Bocchi the Rock!, Vol. 6: Volume 6",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1137,7 +1137,7 @@
       "id": "evVApEo"
     },
     {
-      "type": "book",
+      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 1",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1153,7 +1153,7 @@
       "id": "ObMsIo6"
     },
     {
-      "type": "book",
+      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 2",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1169,7 +1169,7 @@
       "id": "tBgfRAt"
     },
     {
-      "type": "book",
+      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 3: Volume 3",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1185,7 +1185,7 @@
       "id": "VCp8luS"
     },
     {
-      "type": "book",
+      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4: Volume 4",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1201,7 +1201,7 @@
       "id": "-VmGUUS"
     },
     {
-      "type": "book",
+      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 6: Volume 6",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1217,7 +1217,7 @@
       "id": "KVXZCvm"
     },
     {
-      "type": "book",
+      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 5",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1233,7 +1233,7 @@
       "id": "n6SH8ES"
     },
     {
-      "type": "book",
+      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4.5",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1249,166 +1249,6 @@
       "id": "aeD8aNz"
     },
     {
-      "title": "Onyx Storm",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Fiction",
-      "author": "Rebecca Yarros",
-      "description": "After nearly eighteen months at Basgiath War College, Violet Sorrengail knows there's no more time for lessons. No more time for uncertainty.\n\nBecause the battle has truly begun, and with enemies closing in from outside their walls and within their ranks, it's impossible to know who to trust.\n\nNow, Violet must journey beyond the failing Aretian wards to seek allies from unfamiliar lands to stand with Navarre. The trip will test every bit of her wit, luck, and strength, but she will do anything to save what she loves—her dragons, her family, her home, and him.\n\nEven if it means keeping a secret so big, it could destroy everything.\n\nThey need an army. They need power. They need magic. And they need the one thing only Violet can find—the truth.  \nBut a storm is coming... and not everyone can survive its wrath.",
-      "image_url": "//prodimage.images-bn.com/pimages/2940191363981_p0_v4_s600x595.jpg",
-      "type": "audiobook",
-      "rating": 4.8,
-      "discount": "3.17",
-      "stock": 230,
-      "category_id": "6",
-      "publish_date": "2025-01-14",
-      "id": "HJqLOVc"
-    },
-    {
-      "title": "Greenlights",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Romance",
-      "author": "Matthew McConaughey",
-      "description": "#1 NEW YORK TIMES BESTSELLER • 6 MILLION COPIES SOLD WORLDWIDE! Now with exclusive new content from the paperback edition, this life-changing memoir has inspired millions of readers through the Academy Award–winning actor’s unflinching honesty, unconventional wisdom, and lessons learned the hard way about living with greater satisfaction.\n\n“The No. 1 celebrity memoir of the past 10 years.”—USA Today\n\n“McConaughey’s book invites us to grapple with the lessons of his life as he did—and to see that the point was never to win, but to understand.”—Mark Manson, author of *The Subtle Art of Not Giving a F*ck*\n\nI’ve been in this life for fifty years, been trying to work out its riddle for forty-two, and been keeping diaries of clues to that riddle for the last thirty-five. Notes about successes and failures, joys and sorrows, things that made me marvel, and things that made me laugh out loud. How to be fair. How to have less stress. How to have fun. How to hurt people less. How to get hurt less. How to be a good man. How to have meaning in life. How to be more me.\n\nRecently, I worked up the courage to sit down with those diaries. I found stories I experienced, lessons I learned and forgot, poems, prayers, prescriptions, beliefs about what matters, some great photographs, and a whole bunch of bumper stickers. I found a reliable theme, an approach to living that gave me more satisfaction, at the time, and still: If you know how, and when, to deal with life’s challenges—how to get relative with the inevitable—you can enjoy a state of success I call “catching greenlights.”\n\nSo I took a one-way ticket to the desert and wrote this book: an album, a record, a story of my life so far. This is fifty years of my sights and seens, felts and figured-outs, cools and shamefuls. Graces, truths, and beauties of brutality. Getting away withs, getting caughts, and getting wets while trying to dance between the raindrops.\n\nHopefully, it’s medicine that tastes good, a couple of aspirin instead of the infirmary, a spaceship to Mars without needing your pilot’s license, going to church without having to be born again, and laughing through the tears.\n\nIt’s a love letter. To life.\n\nIt’s also a guide to catching more greenlights—and to realizing that the yellows and reds eventually turn green too.\n\nGood luck.",
-      "type": "audiobook",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9780593294185.jpg",
-      "rating": 4.8,
-      "discount": "3.17",
-      "stock": 127,
-      "category_id": "6",
-      "publish_date": "2025-01-10",
-      "id": "YQvGyWt"
-    },
-    {
-      "title": "The Coworker",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Romance",
-      "author": " Freida McFadden",
-      "description": "Two women. An office filled with secrets. One terrible crime that can't be taken back.\n\nDawn Schiff is strange.\n\nAt least, everyone thinks so at Vixed, the nutritional supplement company where Dawn works as an accountant. She never says the right thing. She has no friends. And she is always at her desk at precisely 8:45 a.m.\n\nSo when Dawn doesn't show up to the office one morning, her coworker Natalie Farrell―beautiful, popular, top sales rep five years running―is surprised. Then she receives an unsettling, anonymous phone call that changes everything…\n\nIt turns out Dawn wasn't just an awkward outsider―she was being targeted by someone close. And now Natalie is irrevocably tied to Dawn as she finds herself caught in a twisted game of cat and mouse that leaves her wondering: who's the real victim?\n\nBut one thing is incredibly clear: somebody hated Dawn Schiff.\n\nEnough to kill.\n\nThe Coworker is a tense, unputdownable thriller from New York Times bestselling author Freida McFadden that explores the dark ways the past can echo through the present―with deadly consequences.",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9781666646078.jpg",
-      "type": "audiobook",
-      "rating": 4.6,
-      "discount": "3.17",
-      "stock": 116,
-      "category_id": "6",
-      "publish_date": "2025-01-12",
-      "id": "VkDvBsV"
-    },
-    {
-      "title": "Local Woman Missing",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Romance",
-      "author": " Mary Kubica",
-      "description": "\"Dark and twisty, with white-knuckle tension and jaw-dropping surprises.\" —Riley Sager, New York Times bestselling author of Home Before Dark\n\nIn this smart and chilling thriller, master of suspense Mary Kubica, author of Just the Nicest Couple, takes domestic secrets to a whole new level, showing that some people will stop at nothing to keep the truth buried.\n\nPeople don't just disappear without a trace…\n\nShelby Tebow is the first to go missing. Not long after, Meredith Dickey and her six-year-old daughter, Delilah, vanish just blocks away from where Shelby was last seen, striking fear into their once-peaceful community. Are these incidents connected? After an elusive search that yields more questions than answers, the case eventually goes cold.\n\nNow, eleven years later, Delilah shockingly returns. Everyone wants to know what happened to her, but no one is prepared for what they'll find…\n\nDon't miss Mary Kubica's chilling upcoming novel, She's Not Sorry, where an ICU nurse accidentally uncovers a patient's frightening past...\n\nLook for these other edge-of-your-seat thrillers by New York Times bestselling author Mary Kubica:\n- The Good Girl\n- Pretty Baby\n- Don’t You Cry\n- Every Last Lie\n- When the Lights Go Out\n- The Other Mrs.\n- Just The Nicest Couple\n- She's Not Sorry",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9781488211690.jpg",
-      "type": "audiobook",
-      "rating": 4.6,
-      "discount": "3.17",
-      "stock": 129,
-      "category_id": "6",
-      "publish_date": "2025-01-09",
-      "id": "c8XeyaJ"
-    },
-    {
-      "title": "Never Lie",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Romance",
-      "author": " Freida McFadden",
-      "description": "Newlyweds Tricia and Ethan are searching for the house of their dreams. But when they visit the remote manor that once belonged to Dr. Adrienne Hale, a renowned psychiatrist who vanished without a trace four years earlier, a violent winter storm traps them at the estate… with no chance of escape until the blizzard comes to an end. In search of a book to keep her entertained until the snow abates, Tricia happens upon a secret room. One that contains audio transcripts from every single patient Dr. Hale has ever interviewed. As Tricia listens to the cassette tapes, she learns about the terrifying chain of events leading up to Dr. Hale’s mysterious disappearance. Tricia plays the tapes one by one, late into the night. With each one, another shocking piece of the puzzle falls into place, and Dr. Adrienne Hale’s web of lies slowly unravels. And then Tricia reaches the final cassette. The one that reveals the entire horrifying truth.",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9781666626063.jpg",
-      "type": "audiobook",
-      "rating": 4.7,
-      "discount": "3.17",
-      "stock": 112,
-      "category_id": "6",
-      "publish_date": "2025-01-08",
-      "id": "_phD8J7"
-    },
-    {
-      "title": "The Most",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Romance",
-      "author": "Jessica Anthony",
-      "description": "From “one of our most thrilling and singular innovators on the page” (Laura Van Den Berg), a tightly wound, consuming tale about a 1950s American housewife who decides to get into the pool in her family’s apartment complex one morning and won’t come out.\n \nIt is an unseasonably warm Sunday in November 1957. Katheen, a college tennis champion turned Delaware housewife, decides not to join her flagrantly handsome life insurance salesman husband, Virgil, or their two young boys, at church. Instead, she takes a dip in the kidney-shaped swimming pool of their apartment complex. And then she won’t come out.\n \nA riveting, single-sitting read set over the course of eight hours, THE MOST breaches the shimmering surface of a seemingly idyllic mid-century marriage, immersing us in the unspoken truth beneath. As Sputnik 2 orbits the earth carrying Laika, the doomed Soviet dog, Kathleen and Virgil hurtle towards each other until they arrive at a reckoning that will either shatter their marriage, or transform it, at last, into something real.",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9781668641422.jpg",
-      "type": "audiobook",
-      "rating": 4.5,
-      "discount": "3.17",
-      "stock": 111,
-      "category_id": "6",
-      "publish_date": "2025-01-10",
-      "id": "b49tmbY"
-    },
-    {
-      "title": "Where the Darkness Goes",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Horror",
-      "author": "Kiersten Modglin",
-      "description": "Tessa Becker has several reasons to never return to her hometown:\nShe will have to face the man who shattered her heart.\nShe is terrified to confront her ailing mother’s condition.\nThat is where the murders happened.\n\nTessa Becker must return home for one reason and one reason alone:\nSomeone else is dead and it’s time to finally learn the truth.\n\nEver since the first murder, Tessa’s once charming and safe hometown has been infected with suspicion and fear. Back then accusations were made in whispers, but without proof, the killer still walks free. And now it’s possible they’ve struck again.\n\nIf things weren’t complicated enough, Tessa finds herself forced to stay with the one man she had hoped to avoid. Years ago, Garrett Campbell held her heart until he crushed it. Now, he’s a stranger. He’s also her brother’s best friend.\n\nIn an all-too-familiar place filled with secrets and devastating loss—surrounded by people and memories she’d rather forget—Tessa will have to discover the truth about what happened back then, and the threat it poses to the town and the ones she loves most before it’s too late.\n\nSeamlessly blurring the edges of psychological thriller and romantic suspense, million-copy bestselling author Kiersten Modglin’s latest romantic thriller will have you hopelessly falling in love and obsessively searching for answers all in one breath.",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9781666686258.jpg",
-      "type": "audiobook",
-      "rating": 4.5,
-      "discount": "3.17",
-      "stock": 112,
-      "category_id": "6",
-      "publish_date": "2025-01-05",
-      "id": "no-0aeA"
-    },
-    {
-      "title": "The God of the Woods: A Novel",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Fantasy",
-      "author": "Liz Moore",
-      "description": "'Riveting from page one to the last breathless word.'—Rebecca Makkai, New York Times bestselling author of I Have Some Questions For You\n\n“Brilliant, riveting .. an epic mystery, a family saga and a survival guide...I loved this book.” —Miranda Cowley Heller, #1 New York Times bestselling author of The Paper Palace\n\nWhen a teenager vanishes from her Adirondack summer camp, two worlds collide\n\nEarly morning, August 1975: a camp counselor discovers an empty bunk. Its occupant, Barbara Van Laar, has gone missing. Barbara isn’t just any thirteen-year-old: she’s the daughter of the family that owns the summer camp and employs most of the region’s residents. And this isn’t the first time a Van Laar child has disappeared. Barbara’s older brother similarly vanished fourteen years ago, never to be found.\n\nAs a panicked search begins, a thrilling drama unfolds. Chasing down the layered secrets of the Van Laar family and the blue-collar community working in its shadow, Moore’s multi-threaded story invites readers into a rich and gripping dynasty of secrets and second chances. It is Liz Moore’s most ambitious and wide-reaching novel yet.\n\n\n* This audiobook edition includes a downloadable PDF that contains a map from the book.",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9780593867792.jpg",
-      "type": "audiobook",
-      "rating": 4.7,
-      "discount": "3.17",
-      "stock": 112,
-      "category_id": "6",
-      "publish_date": "2025-01-14",
-      "id": "UndUOql"
-    },
-    {
-      "title": "The Briar Club: A Novel",
-      "price": 24,
-      "price_after_discount": 23.24,
-      "category": "Fantasy",
-      "author": "Kate Quinn",
-      "description": "The New York Times bestselling author of The Diamond Eye and The Rose Code returns with a haunting and powerful story of female friendships and secrets in a Washington, DC, boardinghouse during the McCarthy era.\n\nWashington, DC, 1950. Everyone keeps to themselves at Briarwood House, a down-at-the-heels all-female boardinghouse in the heart of the nation’s capital where secrets hide behind white picket fences. But when the lovely, mysterious widow Grace March moves into the attic room, she draws her oddball collection of neighbors into unlikely friendship: poised English beauty Fliss, whose facade of perfect wife and mother covers gaping inner wounds; policeman’s daughter Nora, who finds herself entangled with a shadowy gangster; frustrated baseball star Beatrice, whose career has come to an end along with the women’s baseball league of WWII; and poisonous, gung-ho Arlene, who has thrown herself into McCarthy’s Red Scare.\n\nGrace’s weekly attic-room dinner parties and window-brewed sun tea become a healing balm on all their lives, but she hides a terrible secret of her own. When a shocking act of violence tears the house apart, the Briar Club women must decide once and for all: who is the true enemy in their midst?\n\nCapturing the paranoia of the McCarthy era and evoking the changing roles for women in postwar America, The Briar Club is an intimate and thrilling novel of secrets and loyalty put to the test.\n\nIncludes a bonus conversation with Kate Quinn, Saskia Maarleveld, and Tessa Woodward, editor of The Briar Club.",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9780063244771.jpg",
-      "type": "audiobook",
-      "rating": 4.6,
-      "discount": "3.17",
-      "stock": 98,
-      "category_id": "6",
-      "publish_date": "2025-01-12",
-      "id": "sMlXq2N"
-    },
-    {
-      "title": "The Gift: A Short Story",
-      "price": 24,
-      "price_after_discount": 22.8,
-      "category": "Romance",
-      "author": "Freida McFadden",
-      "description": "It’s Christmas Eve and Stella Hansen is broke. She is so broke that despite working two jobs, she can’t even afford a present for her husband on their first Christmas as man and wife. But then a mysterious storekeeper at a pawn shop offers Stella an intriguing trade. Stella wants more than anything to buy her husband the Christmas gift of his dreams. But will it come at a terrible price?",
-      "image_url": "https://covers.audiobooks.com/images/covers/full/9781666651416.jpg",
-      "type": "audiobook",
-      "rating": 4.6,
-      "discount": "5.00",
-      "stock": 89,
-      "category_id": "6",
-      "publish_date": "2025-01-12",
-      "id": "caUD9JK"
-    },
-    {
       "title": "Chainsaw Man, Vol. 5",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -1416,7 +1256,7 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nIt's Chainsaw vs. Sword as the bloody battle for Denji's heart heats up. Denji is going to have to pull out all the stops against this crafty opponent. And when the dust settles, how will Special Division 4 move on from their losses?",
       "image_url": "https://images-us.bookshop.org/ingram/9781974719228.jpg?height=1200&v=v2",
-      "type": "book",
+      
       "rating": 4.6,
       "discount": "7.01",
       "stock": 120,
@@ -1432,7 +1272,7 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nA mysterious devil is demanding Denji's heart! But will the devil hunters from Division 4 agree to this deal to save themselves? Or will Denji have to do what Denji does best--turn into a chainsaw and carve up everything that gets in his way?!",
       "image_url": "https://images-us.bookshop.org/ingram/9781974709953.jpg?height=1200&v=v2",
-      "type": "book",
+      
       "rating": 4.6,
       "discount": "7.01",
       "stock": 120,
@@ -1448,7 +1288,7 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nA new girl named Reze has shown up and swept innocent Denji right off his feet. But is Reze exactly what she seems? (Spoiler: Nope!) Is Denji about to find happiness once and for all? (Spoiler: Nope!) Prepare for the storm of all storms when Chainsaw Man looks for true love!",
       "image_url": "https://images-us.bookshop.org/ingram/9781974720712.jpg?height=1200&v=v2",
-      "type": "book",
+      
       "rating": 4.5,
       "discount": "7.01",
       "stock": 120,
@@ -1464,7 +1304,7 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nDenji's gotten too famous! After a news program broadcasts Chainsaw Man's heroics, the whole world now wants in on the action! Can Denji's new protection detail keep him safe from all the talented assassins that have assembled in Japan to take him down?!",
       "image_url": "https://images-us.bookshop.org/ingram/9781974720965.jpg?height=1200&v=v2",
-      "type": "book",
+      
       "rating": 4.6,
       "discount": "7.01",
       "stock": 122,
@@ -1479,7 +1319,7 @@
       "category": "Manga",
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nHaving been forced to kill a friend, Denji finds that his brain has turned to mush from despair. Without the motivation to keep going, he seeks help from Makima. But Makima is not what she appears, and Denji's pain is only just beginning.",
-      "type": "book",
+      
       "image_url": "https://images-us.bookshop.org/ingram/9781974725359.jpg?height=500&v=v2",
       "rating": 4.5,
       "discount": "7.01",
@@ -1496,7 +1336,7 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nAsa and Denji are going on a date to the aquarium! Asa just wants to seduce Denji to turn him into a weapon, but Denji might have other ideas. Will they ruin the date with their extreme social awkwardness, or will a surprise attack by a devil be the culprit?",
       "image_url": "https://images-us.bookshop.org/ingram/9781974743582.jpg?height=1200&v=v2-de30c859cec391813151369a5e19be92",
-      "type": "book",
+      
       "rating": 4.5,
       "discount": "7.01",
       "stock": 140,
@@ -1512,7 +1352,7 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nIn order to achieve the greatest goal in human history--to touch a boob--Denji will risk everything in a fight against the dangerous Bat Devil. But will getting what he wants actually make him happy...?",
       "image_url": "https://images-us.bookshop.org/ingram/9781974709946.jpg?height=1200&v=v2",
-      "type": "book",
+      
       "rating": 4.5,
       "discount": "7.01",
       "stock": 302,
@@ -1549,7 +1389,7 @@
           "items": [
             {
               "id": "2e36",
-              "type": "book",
+              
               "title": "Delicious in Dungeon, Vol. 2: Volume 2",
               "price": 15,
               "price_after_discount": 13.95,
@@ -1566,7 +1406,7 @@
             },
             {
               "id": "b54d",
-              "type": "book",
+              
               "title": "Intermezzo",
               "price": 29,
               "price_after_discount": 26.97,
@@ -1592,7 +1432,7 @@
           "items": [
             {
               "id": "14be",
-              "type": "book",
+              
               "title": "Look Back",
               "price": 14.99,
               "price_after_discount": 13.94,
@@ -1637,7 +1477,7 @@
           "items": [
             {
               "id": "c294",
-              "type": "book",
+              
               "title": "Letters to a Young Poet",
               "price": 7,
               "price_after_discount": 5.74,
@@ -1663,7 +1503,7 @@
           "items": [
             {
               "id": "9ed5",
-              "type": "book",
+              
               "title": "Frieren: Beyond Journey's End, Vol. 1",
               "price": 11.99,
               "price_after_discount": 11.15,
@@ -1689,7 +1529,7 @@
           "items": [
             {
               "id": "2e36",
-              "type": "book",
+              
               "title": "Delicious in Dungeon, Vol. 2: Volume 2",
               "price": 15,
               "price_after_discount": 13.95,
@@ -1706,7 +1546,7 @@
             },
             {
               "id": "9",
-              "type": "book",
+              
               "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
               "price": 29.99,
               "price_after_discount": 27.89,
@@ -1738,7 +1578,7 @@
       "items": [
         {
           "id": "9ed5",
-          "type": "book",
+          
           "title": "Frieren: Beyond Journey's End, Vol. 1",
           "price": 11.99,
           "price_after_discount": 11.15,
@@ -1765,7 +1605,7 @@
       "items": [
         {
           "id": "2e36",
-          "type": "book",
+          
           "title": "Delicious in Dungeon, Vol. 2: Volume 2",
           "price": 15,
           "price_after_discount": 13.95,
@@ -1782,7 +1622,7 @@
         },
         {
           "id": "9",
-          "type": "book",
+          
           "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
           "price": 29.99,
           "price_after_discount": 27.89,
@@ -1810,7 +1650,7 @@
       "items": [
         {
           "id": "2e36",
-          "type": "book",
+          
           "title": "Delicious in Dungeon, Vol. 2: Volume 2",
           "price": 15,
           "price_after_discount": 13.95,
@@ -1827,7 +1667,7 @@
         },
         {
           "id": "b54d",
-          "type": "book",
+          
           "title": "Intermezzo",
           "price": 29,
           "price_after_discount": 26.97,
@@ -1855,7 +1695,7 @@
       "items": [
         {
           "id": "14be",
-          "type": "book",
+          
           "title": "Look Back",
           "price": 14.99,
           "price_after_discount": 13.94,

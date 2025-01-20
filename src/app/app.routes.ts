@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-
 import { RegisterComponent } from './page/register/register.component';
 import { LoginComponent } from './page/login/login.component';
 import { HomepageComponent } from './page/homepage/homepage.component';
@@ -14,7 +13,6 @@ import { OrderComponent } from './page/order/order.component';
 import { SearchComponent } from './page/search/search.component';
 import { WishlistComponent } from './page/wishlist/wishlist.component';
 import { ProfileComponent } from './page/profile/profile.component';
-import { AudiobooksComponent } from './page/audiobooks/audiobooks.component';
 import { DashboardComponent } from './server/dashboard/dashboard.component';
 import { EditProductComponent } from './server/product/edit-product/edit-product.component';
 import { AddProductComponent } from './server/product/add-product/add-product.component';
@@ -24,6 +22,7 @@ import { OrderListComponent } from './server/order/order-list/order-list.compone
 import { OrderDetailComponent } from './server/order/order-detail/order-detail.component';
 import { CommentListComponent } from './server/comment/comment-list/comment-list.component';
 import { CommentEditComponent } from './server/comment/comment-edit/comment-edit.component';
+import { SpecialofferComponent } from './page/specialoffer/specialoffer.component';
 
 export const routes: Routes = [
   {
@@ -89,8 +88,8 @@ export const routes: Routes = [
     component: NewComponent,
   },
   {
-    path: 'audiobooks',
-    component: AudiobooksComponent,
+    path: 'specialOffer',
+    component: SpecialofferComponent,
   },
   {
     path: 'contact',

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AudiobooksComponent } from './audiobooks.component';
+import { SpecialofferComponent } from './specialoffer.component';
 
-describe('AudiobooksComponent', () => {
-  let component: AudiobooksComponent;
-  let fixture: ComponentFixture<AudiobooksComponent>;
+describe('SpecialofferComponent', () => {
+  let component: SpecialofferComponent;
+  let fixture: ComponentFixture<SpecialofferComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AudiobooksComponent]
+      imports: [SpecialofferComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AudiobooksComponent);
+    fixture = TestBed.createComponent(SpecialofferComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

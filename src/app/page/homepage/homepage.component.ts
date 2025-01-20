@@ -24,7 +24,7 @@ export class HomepageComponent implements OnInit {
   historyCategory: Product[] = [];
   educationCategory: Product[] = [];
   mangaCategory: Product[] = [];
-  fictionCategory: Product[]=[]
+  fictionCategory: Product[] = [];
   successMessage: string | null = null;
   alertMessage: string | null = null;
   currentIndex: number = 0;
@@ -39,23 +39,16 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.loadProducts();
     this.userId = localStorage.getItem('userId');
-    setTimeout(()=>{
-      this.isLoading=false;
-
-    },2000)
-    
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
   }
 
   loadProducts(): void {
     this.productService.getAll().subscribe({
       next: (data) => {
         this.products = data;
-        this.filterRomanceCategory();
-        this.filterFantasyCategory();
-        this.filterHistoryCategory();
-        this.filterEducationCategory();
-        this.filterFictionCategory();
-        this.filterMangaCategory();
+        this.sortAndFilterCategories();
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -63,35 +56,24 @@ export class HomepageComponent implements OnInit {
     });
   }
 
-  filterRomanceCategory(): void {
-    this.romanceCategory = this.products
-      .filter((product) => product.category === 'Romance')
-      .slice(0, 6);
+  sortAndFilterCategories(): void {
+    this.sortAndFilterCategory('Romance', this.romanceCategory);
+    this.sortAndFilterCategory('Fantasy', this.fantasyCategory);
+    this.sortAndFilterCategory('History', this.historyCategory);
+    this.sortAndFilterCategory('Education', this.educationCategory);
+    this.sortAndFilterCategory('Fiction', this.fictionCategory);
+    this.sortAndFilterCategory('Manga', this.mangaCategory);
   }
-  filterFantasyCategory(): void {
-    this.fantasyCategory = this.products
-      .filter((product) => product.category === 'Fantasy')
-      .slice(0, 6);
-  }
-  filterHistoryCategory(): void {
-    this.historyCategory = this.products
-      .filter((product) => product.category === 'History')
-      .slice(0, 6);
-  }
-  filterEducationCategory(): void {
-    this.educationCategory = this.products
-      .filter((product) => product.category === 'Education')
-      .slice(0, 6);
-  }
-  filterFictionCategory(): void {
-    this.fictionCategory = this.products
-      .filter((product) => product.category === 'Fiction')
-      .slice(0, 6);
-  }
-  filterMangaCategory(): void {
-    this.mangaCategory = this.products
-      .filter((product) => product.category === 'Manga')
-      .slice(0, 6);
+
+  sortAndFilterCategory(category: string, targetArray: Product[]): void {
+    targetArray.splice(0, targetArray.length, 
+      ...this.products
+        .filter((product) => product.category === category)
+        .sort((a, b) => 
+          new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()
+        )
+        .slice(0, 6)
+    );
   }
 
   addToWishlist(product: Product): void {
