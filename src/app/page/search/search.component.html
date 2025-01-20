@@ -7,13 +7,15 @@
   
   <button (click)="search()">Submit</button> 
 
-  <p class="text-lg font-normal mb-0">
-    There is {{ countBooks() }} result about:
-  </p>
+  <div *ngIf="products.length > 0" class="results-info">
+    <p class="text-lg font-normal mb-0">
+      There is {{ countBooks() }} result about:
+    </p>
+  </div>
 
   <div *ngIf="products.length > 0" class="product-list">
     <div *ngFor="let product of products" class="product-item">
-      <a [routerLink]="['/productDetails', product.id]">
+      <a [routerLink]="['/product', product.id]">
         <img [src]="product.image_url" alt="Product Image" />
         <h3>{{ product.title }}</h3>
       </a>
@@ -22,7 +24,9 @@
     </div>
   </div>
 
-  <div *ngIf="products.length === 0" class="no-results">
-    No products found.
+  <div *ngIf="isSearchInitiated && products.length === 0" class="no-results">
+    <p class="text-lg font-normal mb-0">
+      No products found.
+    </p>
   </div>
- </div>
+</div>
