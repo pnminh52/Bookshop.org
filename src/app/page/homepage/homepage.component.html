@@ -305,6 +305,44 @@
     </div>
   </div>
 </div>
+<div class="container max-w-screen-lg mx-auto grid grid-cols-1 gap-[16px] mb-[16px] roun sm:grid-cols-3">
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/16/31805_PCS_StephanieGarber_01_16_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_PCS_A1_BOGO50-Paperbacks_01_14_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_PCS_A2_30OffHardcover_01_14_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 3">
+  </div>
+</div>
+<div class="relative w-full overflow-hidden">
+  <!-- Slider Container with flex-row to display images in a row -->
+  <div class="flex transition-transform duration-500" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+    <div *ngFor="let image of images" class="flex-shrink-0 w-full">
+      <img title="img" [src]="image.src" [alt]="image.alt" />
+    </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <button (click)="prevSlide()" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded">
+    Prev
+  </button>
+  <button (click)="nextSlide()" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded">
+    Next
+  </button>
+
+  <!-- Dots Navigation -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <div *ngFor="let image of images; let i = index" 
+         (click)="goToSlide(i)" 
+         class="w-3 h-3 rounded-full bg-white cursor-pointer" 
+         [class.bg-gray-800]="i === currentIndex">
+    </div>
+  </div>
+</div>
+
+
 <div class="hp-skinny-hero">
   <div class="skinny-hero">
     <a
@@ -440,6 +478,17 @@
     </div>
   </div>
 </div>
+<div class="container max-w-screen-lg mx-auto grid grid-cols-1 gap-[16px] mb-[16px] roun sm:grid-cols-3">
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_PCS_A1_BookClub_01_07_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_PCS_A2_Discover_01_07_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_PCS_A3_YA_BookClub_01_07_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 3">
+  </div>
+</div>
 <div class="skinny-hero">
   <a
     class="skinny-hero-link"
@@ -573,6 +622,17 @@
     </div>
   </div>
 </div>
+<div class="container max-w-screen-lg mx-auto grid grid-cols-1 gap-[16px] mb-[16px] roun sm:grid-cols-3">
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_PCS_C2_OMP_12_01_07_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_PCS_C2_Lindsay_Currie_Guest_Post_01_14_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/14/31616_PCS_C3_Grady_Hendrix_01_14_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 3">
+  </div>
+</div>
 <div class="skinny-hero">
   <a
     class="skinny-hero-link"
@@ -704,6 +764,17 @@
         </p>
       </div>
     </div>
+  </div>
+</div>
+<div class="container max-w-screen-lg mx-auto grid grid-cols-1 gap-[16px] mb-[16px] roun sm:grid-cols-3">
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/BNApp/PromoCarousel/2025/01/31542_PCL2_2_Puzzle_Month_01_01_25.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 1">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2025/01/07/31575_PCS_D2_CopycatConundrum_01_07_25_r2.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 2">
+  </div>
+  <div class="grid-item">
+    <img class="rounded-lg cursor-pointer" src="https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/12/26/31467_PCS_A3_KidsPWP_TinyTRex_12_26_24.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D" alt="Image 3">
   </div>
 </div>
 <div class="skinny-hero focus">
