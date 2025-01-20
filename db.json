@@ -1926,44 +1926,7 @@
       "id": "W-LYw_5"
     }
   ],
-  "wishlist": [
-    {
-      "title": "Steins;gate 0 Volume 2",
-      "price": 24.99,
-      "price_after_discount": 23.24,
-      "category": "Light Novel",
-      "author": "Nitroplus",
-      "description": "The world line shifts, and Rintaro Okabe inexplicably finds himself waking up in the future. The year? 2036. The world looks exactly as he'd been warned about; a hellish landscape rife with death and destruction. After witnessing this grim fate, Rintaro stands tall and steels his heart, resolved to put an end to this future once and for all.\nThe heroes of Steins;Gate return for a new time-altering story set in an alternate world where the Future Gadget Lab members failed in their original mission. Can one final chance lead to a happy ending?",
-      "type": "book",
-      "image_url": "https://images-us.bookshop.org/ingram/9781772942118.jpg?height=1200&v=v2",
-      "rating": 4.8,
-      "discount": "7.00",
-      "stock": 32,
-      "category_id": "2",
-      "publish_date": "2025-01-16",
-      "id": "QWz-b5E",
-      "quantity": 1,
-      "userId": "SV-PJoW"
-    },
-    {
-      "id": "X4INFXE",
-      "type": "book",
-      "title": "Spy X Family, Vol. 1",
-      "price": 11.99,
-      "price_after_discount": 11.15,
-      "category": "Manga",
-      "author": "Tatsuya Endo",
-      "description": "An action-packed comedy about a fake family that includes a spy, an assassin and a telepath!\nMaster spy Twilight is unparalleled when it comes to going undercover on dangerous missions for the betterment of the world. But when he receives the ultimate assignment--to get married and have a kid--he may finally be in over his head!\nNot one to depend on others, Twilight has his work cut out for him procuring both a wife and a child for his mission to infiltrate an elite private school. What he doesn't know is that the wife he's chosen is an assassin and the child he's adopted is a telepath!",
-      "image_url": "https://images-us.bookshop.org/ingram/9781974715466.jpg?height=1200&v=v2",
-      "rating": 4.7,
-      "discount": "7.01",
-      "stock": 42,
-      "category_id": "2",
-      "publish_date": "2024-11-12",
-      "quantity": 1,
-      "userId": "SV-PJoW"
-    }
-  ],
+  "wishlist": [],
   "comments": [
     {
       "productId": "14be",
