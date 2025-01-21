@@ -66,16 +66,19 @@ export class CollectionComponent {
   renderProduct(): void {
     this.productService.getAll().subscribe({
       next: (data) => {
-        this.products = data.filter(product=>product.type === 'book'); 
-        this.filteredProducts = this.products; 
-        this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage); 
-        this.applyFiltersAndSort(); 
+        console.log('Fetched data:', data); 
+        this.products = data; 
+        this.filteredProducts = this.products;
+        this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
+        this.applyFiltersAndSort();
       },
       error: (err) => {
         console.error('Error fetching products:', err);
       },
     });
   }
+  
+  
 
   applyFiltersAndSort(): void {
     let filtered = this.selectedCategory
