@@ -1,45 +1,75 @@
-
+<style>
+    .title {
+    font-family: "Prata", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+</style>
 <div *ngIf="successMessage" class="fixed bottom-4 right-4 bg-green-500 px-4 py-3 text-white rounded-md shadow-md z-50">
   {{ successMessage }}
 </div>
 <div *ngIf="alertMessage" class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50">
   {{ alertMessage }}
 </div>
-<div *ngIf="product" class="container mx-auto p-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div *ngIf="product" class="container max-w-screen-lg mx-auto p-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
-        <img [src]="product.image_url" alt="{{ product.title }}" class="w-auto h-auto object-cover">
+        <img [src]="product.image_url" alt="{{ product.title }}" class="w-auto h-[700px] object-cover">
       </div>
   
       <div>
-        <h1 class="text-3xl font-bold mb-4">{{ product.title }}</h1>
-        <p class="text-gray-600 mb-4">{{ product.author }}</p>
-        <p class="text-lg mb-4">{{ product.description }}</p>
-        <div class="flex items-center gap-4 mb-4">
+       <div>
+        <p class="title text-3xl mb-0">{{ product.title }}</p>
+        <p class="text-gray-600">{{ product.author }} (Author)</p>
+       </div>
+      <div>
+        <p class="text-xs mb-1">FORMAT</p>
+        <div class="border-[1.5px] border-[#573BA3] rounded-lg">
+          <p>Soft cover</p>
+     
+        <div class="flex items-center gap-4 ">
+          
           <p class="text-2xl font-semibold">{{ product.price_after_discount }}</p>
           <p class="text-lg text-red-500 line-through">{{ product.price }}</p>
         </div>
+      </div>
+      </div>
+        <h1>Description</h1>
+        <p class="text-lg mb-4">{{ product.description }}</p>
         <div class="flex gap-4">
-          <button (click)="addToCart()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
-            Add to Cart
+          <button (click)="addToCart()" class="bg-blue-500 uppercase text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+            Pre-Order
           </button>
-          <button (click)="addToWishlist()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+          <button (click)="addToWishlist()" class="bg-blue-500 uppercase text-white px-6 py-2 rounded-lg hover:bg-blue-600">
             Add to Wishlist
           </button>
         </div>
       </div>
     </div>
-  <div class="mt-8">
-    <h2 class="text-xl font-semibold">Comment section example: </h2>
-    <div *ngFor="let comment of comments" class="border-b py-2">
-      <div class="flex  gap-2">
-        <img class="object-cover w-[50px] h-[50px] rounded-full" [src]="comment.avatar" alt="Avatar">
-        <div class="space-y-1">
-          <div class="flex">
-            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+ 
+  </div>
+  <div class="container max-w-screen-xl mx-auto p-4">
+    <div class="mt-8">
+      <h2 *ngIf="comments.length>0" class="text-xl font-semibold">Comment section example: </h2>
+      <div *ngFor="let comment of comments" class="border-b py-2">
+        <div class="flex  gap-2">
+          <img class="object-cover w-[50px] h-[50px] rounded-full" [src]="comment.avatar" alt="Avatar">
+          <div class="space-y-1">
+            <div class="flex">
+              <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                <svg
+                *ngIf="star <= comment.rating"
+                class="w-4 h-4 text-yellow-400 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+                />
+              </svg>
               <svg
-              *ngIf="star <= comment.rating"
-              class="w-4 h-4 text-yellow-400 fill-current"
+              *ngIf="comment.rating < star - 0.5"
+              class="w-4 h-4 text-gray-300 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -47,60 +77,50 @@
                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
               />
             </svg>
-            <svg
-            *ngIf="comment.rating < star - 0.5"
-            class="w-4 h-4 text-gray-300 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-            />
-          </svg>
-          
-          </ng-container>
-          <a class="pl-2" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
-        </div>
-        <div>
-          <strong class="block">{{ comment.fullName }}</strong> 
-          <a *ngIf="comment.comment.length <= 100" class="break-words">
-            {{ comment.comment }}
-          </a>
-          <div *ngIf="comment.comment.length > 100">
-            <a *ngIf="!comment.expanded" class="break-words">
-              {{ comment.comment | slice:0:100 }}...
-              <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
-            </a>
-            <a *ngIf="comment.expanded" class="break-words">
+            
+            </ng-container>
+            <a class="pl-2" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
+          </div>
+          <div>
+            <strong class="block">{{ comment.fullName }}</strong> 
+            <a *ngIf="comment.comment.length <= 100" class="break-words">
               {{ comment.comment }}
-              <a (click)="comment.expanded = false" class="cursor-pointer font-semibold">Thu gọn</a>
             </a>
+            <div *ngIf="comment.comment.length > 100">
+              <a *ngIf="!comment.expanded" class="break-words">
+                {{ comment.comment | slice:0:100 }}...
+                <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
+              </a>
+              <a *ngIf="comment.expanded" class="break-words">
+                {{ comment.comment }}
+                <a (click)="comment.expanded = false" class="cursor-pointer font-semibold">Thu gọn</a>
+              </a>
+            </div>
+            <div class="flex items-center gap-2 mt-0">
+              <button (click)="likeComment(comment)" class="text-gray-500 hover:text-blue-500">
+                <svg viewBox="0 0 24 24" class="w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
+                {{ comment.likeCount }}
+              </button>
+              <button (click)="dislikeComment(comment)" class="text-gray-500 hover:text-red-500">
+                <svg viewBox="0 0 24 24" class="rotate-180 w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
+  
+                {{ comment.dislikeCount }}
+              </button>
+            </div>
           </div>
-          <div class="flex items-center gap-2 mt-0">
-            <button (click)="likeComment(comment)" class="text-gray-500 hover:text-blue-500">
-              <svg viewBox="0 0 24 24" class="w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
-              {{ comment.likeCount }}
-            </button>
-            <button (click)="dislikeComment(comment)" class="text-gray-500 hover:text-red-500">
-              <svg viewBox="0 0 24 24" class="rotate-180 w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
-
-              {{ comment.dislikeCount }}
-            </button>
+          
           </div>
-        </div>
-        
         </div>
       </div>
+  
+      <div class="mt-4">
+        <h3 class="text-lg font-semibold">Thêm bình luận</h3>
+        <textarea [(ngModel)]="newComment" placeholder="Nhập bình luận của bạn" class="w-full border p-2"></textarea>
+       
+        <input type="number" [(ngModel)]="newRating" min="1" max="5" placeholder="Đánh giá (1-5)" class="border p-2 mt-2" />
+        <button (click)="addComment()" class="bg-blue-500 text-white p-2 mt-2">Gửi bình luận</button>
+      </div>
     </div>
-
-    <div class="mt-4">
-      <h3 class="text-lg font-semibold">Thêm bình luận</h3>
-      <textarea [(ngModel)]="newComment" placeholder="Nhập bình luận của bạn" class="w-full border p-2"></textarea>
-     
-      <input type="number" [(ngModel)]="newRating" min="1" max="5" placeholder="Đánh giá (1-5)" class="border p-2 mt-2" />
-      <button (click)="addComment()" class="bg-blue-500 text-white p-2 mt-2">Gửi bình luận</button>
-    </div>
-  </div>
   </div>
   
   <div *ngIf="!product" class="text-center py-8">
