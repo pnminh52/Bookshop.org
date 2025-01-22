@@ -42,7 +42,16 @@ export class ProductDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.loadProductDetails();
+    this.route.paramMap.subscribe((params) => {
+      const productId = params.get('id');
+      if (productId) {
+        this.loadProductDetails(productId);
+      } else {
+        console.error('Product ID is not available');
+      }
+    });
+  
+    // Fetch user info (unchanged)
     this.userId = localStorage.getItem('userId');
     this.authService.getUserInfo().subscribe({
       next: (data) => {
@@ -54,43 +63,26 @@ export class ProductDetailComponent implements OnInit {
       },
     });
   }
-
-  loadProductDetails(): void {
-    const productId = this.route.snapshot.paramMap.get('id');
-    if (productId) {
-      this.productService.getProductById(productId).subscribe({
-        next: (data) => {
-          this.product = data;
-          this.loadComments(productId);
-          if (this.product.category) {
-            this.loadRelatedProducts(this.product.category);
-          }
-          if (this.product.category) {
-            this.loadNewRelatedProducts(this.product.category);
-          }
-        },
-        error: (err) => {
-          console.error('Error fetching product details:', err);
-        },
-      });
-    }
+  loadProductDetails(productId: string): void {
+    this.productService.getProductById(productId).subscribe({
+      next: (data) => {
+        this.product = data;
+        this.loadComments(productId);
+        if (this.product?.category) {
+          this.loadRelatedProducts(this.product.category);
+          this.loadNewRelatedProducts(this.product.category);
+        }
+      },
+      error: (err) => {
+        console.error('Error fetching product details:', err);
+      },
+    });
   }
   loadRelatedProducts(category: string): void {
     this.productService.getProductsByCategory(category).subscribe({
       next: (products) => {
-        this.relatedProducts = products.filter(product => product.id !== this.product?.id).slice(0,6);
-      },
-      error: (err) => {
-        console.error('Error fetching related products:', err);
-      },
-    });
-  }
-  loadNewRelatedProducts(category: string): void {
-    this.productService.getProductsByCategory(category).subscribe({
-      next: (products) => {
-        this.newRelatedProducts = products
+        this.relatedProducts = products
           .filter(product => product.id !== this.product?.id)
-          .sort((a, b) => new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()) // Sort by publish_date (desc)
           .slice(0, 6);
       },
       error: (err) => {
@@ -98,6 +90,21 @@ export class ProductDetailComponent implements OnInit {
       },
     });
   }
+  
+  loadNewRelatedProducts(category: string): void {
+    this.productService.getProductsByCategory(category).subscribe({
+      next: (products) => {
+        this.newRelatedProducts = products
+          .filter(product => product.id !== this.product?.id)
+          .sort((a, b) => new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime())
+          .slice(0, 6);
+      },
+      error: (err) => {
+        console.error('Error fetching related products:', err);
+      },
+    });
+  }
+  
   
   
   addToCart(): void {
