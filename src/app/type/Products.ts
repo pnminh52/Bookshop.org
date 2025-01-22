@@ -21,4 +21,6 @@ export interface Product {
   createdAt?: Date;
   type:string;
   author_detail: string;
+  pages: number;
+  language:string;
 }

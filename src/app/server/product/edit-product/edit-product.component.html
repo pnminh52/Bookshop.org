@@ -105,6 +105,41 @@
       </small>
     </div>
     <div class="form-group">
+      <label for="pages">Pages</label>
+      <input 
+        type="number" 
+        class="form-control" 
+        id="pages" 
+        placeholder="Enter number of pages" 
+        formControlName="pages"
+      />
+      <small class="text-danger text-small" 
+        *ngIf="addForm.controls['pages'].errors?.['required'] && addForm.controls['pages'].touched">
+        Pages are required
+      </small>
+      <small class="text-danger text-small" 
+        *ngIf="addForm.controls['pages'].errors?.['min'] && addForm.controls['pages'].touched">
+        Pages must be greater than 0
+      </small>
+    </div>
+    
+    <div class="form-group">
+      <label for="language">Language</label>
+      <select 
+        class="form-control" 
+        id="language" 
+        formControlName="language"
+      >
+        <option value="English">English</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+      </select>
+      <small class="text-danger text-small" 
+        *ngIf="addForm.controls['language'].errors?.['required'] && addForm.controls['language'].touched">
+        Language is required
+      </small>
+    </div>
+    <div class="form-group">
       <label for="image_url">Image URL</label>
       <input 
         type="text" 

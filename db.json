@@ -1264,10 +1264,13 @@
     {
       "title": "Chainsaw Man, Vol. 2",
       "price": 11.99,
+      "pages": 192,
+      "language": "English",
       "price_after_discount": 11.15,
       "category": "Manga",
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nIn order to achieve the greatest goal in human history--to touch a boob--Denji will risk everything in a fight against the dangerous Bat Devil. But will getting what he wants actually make him happy...?",
+      "author_detail": "Tatsuki Fujimoto won Honorable Mention in the November 2013 Shueisha Crown Newcomers' Awards for his debut one-shot story Love is Blind. His first series Fire Punch ran for eight volumes. Chainsaw Man began serialization in 2018 in Weekly Shonen Jump.",
       "image_url": "https://images-us.bookshop.org/ingram/9781974709946.jpg?height=1200&v=v2",
       "rating": 4.5,
       "discount": "7.01",
