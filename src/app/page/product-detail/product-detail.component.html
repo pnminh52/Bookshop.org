@@ -22,17 +22,62 @@
         <p class="title text-3xl mb-0">{{ product.title }}</p>
         <p class="text-gray-600">{{ product.author }} (Author)</p>
        </div>
-      <div>
-        <div class="border-[1.5px] border-[#573BA3] rounded-lg">
-          <p>Soft cover</p>
+<div>
+  <div class="flex gap-2 items-center">
+    <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+    <p class="text-md font-normal text-red-500 self-center">
+      <s>{{ product.price }}$</s>
+    </p>
+    <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+      -{{ product.discount }}%
+    </p>
+  </div>
+</div>
+<div class="flex gap-4">
+  
+  <div class="flex mt-1 mb-1">
+    <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+      <svg
+        *ngIf="product.rating >= star"
+        class="w-4 h-4 text-yellow-400 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+        />
+      </svg>
+
+      <svg
+        *ngIf="product.rating >= star - 0.5 && product.rating < star"
+        class="w-4 h-4 text-yellow-400 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+        />
+      </svg>
+
+      <svg
+        *ngIf="product.rating < star - 0.5"
+        class="w-4 h-4 text-gray-300 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+        />
+      </svg>
+    </ng-container>
+
+    <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+  </div>
+ 
+</div>
      
-        <div class="flex items-center gap-4 ">
-          
-          <p class="text-2xl font-semibold">{{ product.price_after_discount }}</p>
-          <p class="text-lg text-red-500 line-through">{{ product.price }}</p>
-        </div>
-      </div>
-      </div>
+      
+
      <div class="mt-4">
       <p class="title text-xl mb-0">Description</p>
       <p class="text-gray-600 mb-4">{{ product.description }}</p>
@@ -82,7 +127,7 @@
   <div class="container max-w-screen-xl mx-auto p-4">
     <div class="mt-8">
       <h2 *ngIf="comments.length>0" class="text-xl font-semibold">Comment section example: </h2>
-      <div *ngFor="let comment of comments" class="border-b py-2">
+      <div *ngFor="let comment of comments" class=" py-2">
         <div class="flex  gap-2">
           <img class="object-cover w-[50px] h-[50px] rounded-full" [src]="comment.avatar" alt="Avatar">
           <div class="space-y-1">
@@ -114,12 +159,12 @@
           </div>
           <div>
             <strong class="block">{{ comment.fullName }}</strong> 
-            <a *ngIf="comment.comment.length <= 100" class="break-words">
+            <a *ngIf="comment.comment.length <= 400" class="break-words">
               {{ comment.comment }}
             </a>
-            <div *ngIf="comment.comment.length > 100">
+            <div *ngIf="comment.comment.length > 400">
               <a *ngIf="!comment.expanded" class="break-words">
-                {{ comment.comment | slice:0:100 }}...
+                {{ comment.comment | slice:0:400 }}...
                 <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
               </a>
               <a *ngIf="comment.expanded" class="break-words">
@@ -154,82 +199,6 @@
     </div>
 
     
-    <!-- Display Related Products -->
-    <div *ngIf="relatedProducts.length > 0">
-      <h2 class="title mb-0">Related Books</h2>
-      <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
-        <div *ngFor="let product of relatedProducts" class="cursor-pointer p-1">
-          <div class="relative inline-block group">
-            <p
-              *ngIf="product.rating >= 4.7"
-              class="rounded-br-lg absolute top-0 left-0 bg-[#9C141D] text-white text-xs font-normal px-2 py-1"
-            >
-              Top Rated
-            </p>
-            <img
-              [src]="product.image_url"
-              [routerLink]="['/productDetails', product.id]"
-              alt="{{ product.title }}"
-              class="w-auto h-auto object-cover rounded-md mb-1"
-            />
-          </div>
-    
-          <p class="text-lg font-normal title mb-0 mt-0 truncate">
-            {{ product.title }}
-          </p>
-          <p class="text-md text-gray-500 font-normal mb-0">
-            {{ product.author }} (Author)
-          </p>
-          <div class="flex mt-1 mb-1">
-            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-              <svg
-                *ngIf="product.rating >= star"
-                class="w-4 h-4 text-yellow-400 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-                />
-              </svg>
-    
-              <svg
-                *ngIf="product.rating >= star - 0.5 && product.rating < star"
-                class="w-4 h-4 text-yellow-400 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-                />
-              </svg>
-    
-              <svg
-                *ngIf="product.rating < star - 0.5"
-                class="w-4 h-4 text-gray-300 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-                />
-              </svg>
-            </ng-container>
-    
-            <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-          </div>
-          <div class="flex gap-2 items-center">
-            <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
-            <p class="text-md font-normal text-red-500 self-center">
-              <s>{{ product.price }}$</s>
-            </p>
-            <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-              -{{ product.discount }}%
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
     <div *ngIf="newRelatedProducts.length > 0">
       <h2 class="title mb-0">Bookshop Introduction</h2>
       <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">

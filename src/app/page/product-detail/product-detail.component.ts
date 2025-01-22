@@ -21,7 +21,6 @@ export class ProductDetailComponent implements OnInit {
   product: Product | undefined;
   userId: string | null = null;
   comments: Comment[] = [];
-  relatedProducts: Product[] = [];
   newRelatedProducts: Product[]=[];
   newComment: string = '';
   newCreateAt: Date = new Date();
@@ -69,7 +68,6 @@ export class ProductDetailComponent implements OnInit {
         this.product = data;
         this.loadComments(productId);
         if (this.product?.category) {
-          this.loadRelatedProducts(this.product.category);
           this.loadNewRelatedProducts(this.product.category);
         }
       },
@@ -78,18 +76,7 @@ export class ProductDetailComponent implements OnInit {
       },
     });
   }
-  loadRelatedProducts(category: string): void {
-    this.productService.getProductsByCategory(category).subscribe({
-      next: (products) => {
-        this.relatedProducts = products
-          .filter(product => product.id !== this.product?.id)
-          .slice(0, 6);
-      },
-      error: (err) => {
-        console.error('Error fetching related products:', err);
-      },
-    });
-  }
+
   
   loadNewRelatedProducts(category: string): void {
     this.productService.getProductsByCategory(category).subscribe({
