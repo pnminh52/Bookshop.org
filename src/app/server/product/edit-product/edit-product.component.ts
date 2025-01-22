@@ -77,7 +77,7 @@ export class EditProductComponent {
       this.productService.edit(this.productId, this.addForm.value).subscribe({
         next: () => {
           alert('Product updated successfully');
-          this.router.navigate(['/admin/list']);
+          this.router.navigate(['/admin/list-product']);
         }
       });
     } else {

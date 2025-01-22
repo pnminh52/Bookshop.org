@@ -3,20 +3,23 @@ import { ProductService } from '../../../product.service';
 import { Product } from '../../../type/Products';
 import { RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-product',
   standalone: true,
-  imports: [RouterLink, NgFor],
+  imports: [RouterLink, NgFor, NgIf, FormsModule],
   templateUrl: './list-product.component.html',
-  styleUrl: './list-product.component.css'
+  styleUrls: ['./list-product.component.css']
 })
 export class ListProductComponent {
   productService = inject(ProductService);
   products: Product[] = [];
+  filteredProducts: Product[] = [];
   currentPage = 1;
   itemsPerPage = 5;
   totalPages = 0;
+  searchQuery: string = '';
 
   ngOnInit() {
     this.loadProducts();
@@ -26,7 +29,8 @@ export class ListProductComponent {
     this.productService.getAll().subscribe({
       next: (products) => {
         this.products = products.reverse();
-        this.totalPages = Math.ceil(this.products.length / this.itemsPerPage);
+        this.filteredProducts = this.products; // Initialize filtered products
+        this.updateTotalPages();
       },
       error: (err) => {
         console.log(err);
@@ -37,7 +41,7 @@ export class ListProductComponent {
   get paginatedProducts() {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
-    return this.products.slice(startIndex, endIndex);
+    return this.filteredProducts.slice(startIndex, endIndex);
   }
 
   changePage(page: number) {
@@ -57,5 +61,22 @@ export class ListProductComponent {
         }
       });
     }
+  }
+
+  onSearch() {
+    if (this.searchQuery.trim()) {
+      this.filteredProducts = this.products.filter(product =>
+        product.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+        product.author.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    } else {
+      this.filteredProducts = this.products;
+    }
+    this.updateTotalPages();  // Update total pages based on filtered products
+  }
+
+  updateTotalPages() {
+    this.totalPages = Math.ceil(this.filteredProducts.length / this.itemsPerPage);
+    this.currentPage = 1; // Reset to the first page after search
   }
 }

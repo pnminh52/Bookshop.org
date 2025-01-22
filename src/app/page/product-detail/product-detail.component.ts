@@ -9,10 +9,11 @@ import { CommentService } from '../../comment.service';
 import { Comment } from '../../type/Comment';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../auth.service';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css'],
 })
@@ -20,6 +21,8 @@ export class ProductDetailComponent implements OnInit {
   product: Product | undefined;
   userId: string | null = null;
   comments: Comment[] = [];
+  relatedProducts: Product[] = [];
+  newRelatedProducts: Product[]=[];
   newComment: string = '';
   newCreateAt: Date = new Date();
   newRating: number = 0;
@@ -59,6 +62,12 @@ export class ProductDetailComponent implements OnInit {
         next: (data) => {
           this.product = data;
           this.loadComments(productId);
+          if (this.product.category) {
+            this.loadRelatedProducts(this.product.category);
+          }
+          if (this.product.category) {
+            this.loadNewRelatedProducts(this.product.category);
+          }
         },
         error: (err) => {
           console.error('Error fetching product details:', err);
@@ -66,6 +75,31 @@ export class ProductDetailComponent implements OnInit {
       });
     }
   }
+  loadRelatedProducts(category: string): void {
+    this.productService.getProductsByCategory(category).subscribe({
+      next: (products) => {
+        this.relatedProducts = products.filter(product => product.id !== this.product?.id).slice(0,6);
+      },
+      error: (err) => {
+        console.error('Error fetching related products:', err);
+      },
+    });
+  }
+  loadNewRelatedProducts(category: string): void {
+    this.productService.getProductsByCategory(category).subscribe({
+      next: (products) => {
+        this.newRelatedProducts = products
+          .filter(product => product.id !== this.product?.id)
+          .sort((a, b) => new Date(b.publish_date).getTime() - new Date(a.publish_date).getTime()) // Sort by publish_date (desc)
+          .slice(0, 6);
+      },
+      error: (err) => {
+        console.error('Error fetching related products:', err);
+      },
+    });
+  }
+  
+  
   addToCart(): void {
     if (this.checkLogin() && this.product) {
       this.cartService.addToCart(this.product);
