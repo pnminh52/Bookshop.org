@@ -2,7 +2,6 @@
   "products": [
     {
       "id": "2",
-      
       "title": "Rosarita",
       "price": 20.46,
       "price_after_discount": 22,
@@ -18,7 +17,6 @@
     },
     {
       "id": "5",
-      
       "title": "Beg, Borrow, or Steal",
       "price": 28,
       "price_after_discount": 26.04,
@@ -34,7 +32,6 @@
     },
     {
       "id": "9",
-      
       "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
       "price": 29.99,
       "price_after_discount": 27.89,
@@ -50,7 +47,6 @@
     },
     {
       "id": "10",
-      
       "title": "Imogen, Obviously",
       "price": 15.99,
       "price_after_discount": 14.87,
@@ -66,7 +62,6 @@
     },
     {
       "id": "11",
-      
       "title": "A Thousand Heartbeats",
       "price": 15.99,
       "price_after_discount": 14.87,
@@ -82,7 +77,6 @@
     },
     {
       "id": "12",
-      
       "title": "Make the Season Bright",
       "price": 19,
       "price_after_discount": 17.67,
@@ -98,7 +92,6 @@
     },
     {
       "id": "13",
-      
       "title": "Blame It on the Mistletoe",
       "price": 10.99,
       "price_after_discount": 10.22,
@@ -114,7 +107,6 @@
     },
     {
       "id": "14",
-      
       "title": "The Book of Yokai, Expanded Second Edition: Mysterious Creatures of Japanese Folklore",
       "price": 45,
       "price_after_discount": 41.58,
@@ -130,7 +122,6 @@
     },
     {
       "id": "15",
-      
       "title": "Servant of Earth",
       "price": 29,
       "price_after_discount": 26.67,
@@ -146,7 +137,6 @@
     },
     {
       "id": "16",
-      
       "title": "The Scarlet Alchemist (Original)",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -162,7 +152,6 @@
     },
     {
       "id": "17",
-      
       "title": "The Wood at Midwinter",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -178,7 +167,6 @@
     },
     {
       "id": "18",
-      
       "title": "The Last Dragon of the East",
       "price": 17.99,
       "price_after_discount": 16.73,
@@ -194,7 +182,6 @@
     },
     {
       "id": "19",
-      
       "title": "Spitting Gold",
       "price": 27.99,
       "price_after_discount": 26.03,
@@ -210,7 +197,6 @@
     },
     {
       "id": "20",
-      
       "title": "The Nurse's Secret: A Thrilling Historical Novel of the Dark Side of Gilded Age New York City",
       "price": 16.95,
       "price_after_discount": 15.76,
@@ -226,7 +212,6 @@
     },
     {
       "id": "21",
-      
       "title": "Last House Before the Mountain",
       "price": 26,
       "price_after_discount": 24.18,
@@ -242,7 +227,6 @@
     },
     {
       "id": "22",
-      
       "title": "Horseman, Pass by",
       "price": 14.95,
       "price_after_discount": 13.9,
@@ -258,7 +242,6 @@
     },
     {
       "id": "22",
-      
       "title": "Hester",
       "price": 27.99,
       "price_after_discount": 26.03,
@@ -274,7 +257,6 @@
     },
     {
       "id": "23",
-      
       "title": "Kristin Lavransdatter: The Complete Trilogy",
       "price": 39.99,
       "price_after_discount": 36.03,
@@ -290,7 +272,6 @@
     },
     {
       "id": "24",
-      
       "title": "The Island of Sea Women",
       "price": 18,
       "price_after_discount": 16.74,
@@ -306,7 +287,6 @@
     },
     {
       "id": "25",
-      
       "title": "Teaching to Transgress: Education as the Practice of Freedom",
       "price": 48.95,
       "price_after_discount": 47.67,
@@ -322,7 +302,6 @@
     },
     {
       "id": "26",
-      
       "title": "The Teacher Wars: A History of America's Most Embattled Profession",
       "price": 19,
       "price_after_discount": 17.67,
@@ -338,7 +317,6 @@
     },
     {
       "id": "27",
-      
       "title": "Waiting for Superman: How We Can Save America's Failing Public Schools",
       "price": 15.95,
       "price_after_discount": 14.83,
@@ -354,7 +332,6 @@
     },
     {
       "id": "28",
-      
       "title": "Ghosts in the Schoolyard: Racism and School Closings on Chicago's South Side",
       "price": 19,
       "price_after_discount": 17.67,
@@ -370,7 +347,6 @@
     },
     {
       "id": "29",
-      
       "title": "Radical Possibilities: Public Policy, Urban Education, and A New Social Movement",
       "price": 65.49,
       "price_after_discount": 64,
@@ -386,7 +362,6 @@
     },
     {
       "id": "30",
-      
       "title": "Other People's Children: Cultural Conflict in the Classroom",
       "price": 17.95,
       "price_after_discount": 16.69,
@@ -402,7 +377,6 @@
     },
     {
       "id": "669d",
-      
       "title": "Unromance",
       "price": 17.99,
       "price_after_discount": 16.73,
@@ -418,7 +392,6 @@
     },
     {
       "id": "5b31",
-      
       "title": "What Happened to the McCrays?",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -434,7 +407,6 @@
     },
     {
       "id": "2595",
-      
       "title": "We Lived on the Horizon",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -450,7 +422,6 @@
     },
     {
       "id": "8f86",
-      
       "title": "Beautiful Ugly",
       "price": 28.99,
       "price_after_discount": 26.96,
@@ -466,7 +437,6 @@
     },
     {
       "id": "2dd4",
-      
       "title": "The In-Between Bookstore",
       "price": 28,
       "price_after_discount": 26.04,
@@ -482,7 +452,6 @@
     },
     {
       "id": "fcc3",
-      
       "title": "The Favorites",
       "price": 28,
       "price_after_discount": 26.04,
@@ -498,7 +467,6 @@
     },
     {
       "id": "f57a",
-      
       "title": "Babel: Or the Necessity of Violence: An Arcane History of the Oxford Translators' Revolution",
       "price": 20,
       "price_after_discount": 18.6,
@@ -514,7 +482,6 @@
     },
     {
       "id": "c294",
-      
       "title": "Letters to a Young Poet",
       "price": 7,
       "price_after_discount": 5.74,
@@ -530,7 +497,6 @@
     },
     {
       "id": "a224",
-      
       "title": "The City and Its Uncertain Walls",
       "price": 35,
       "price_after_discount": 32.55,
@@ -546,7 +512,6 @@
     },
     {
       "id": "1bc8",
-      
       "title": "The Frozen River: A GMA Book Club Pick",
       "price": 28,
       "price_after_discount": 26.04,
@@ -562,7 +527,6 @@
     },
     {
       "id": "be1f",
-      
       "title": "The Odyssey",
       "price": 18.95,
       "price_after_discount": 17.62,
@@ -578,7 +542,6 @@
     },
     {
       "id": "b54d",
-      
       "title": "Intermezzo",
       "price": 29,
       "price_after_discount": 26.97,
@@ -594,7 +557,6 @@
     },
     {
       "id": "9ed5",
-      
       "title": "Frieren: Beyond Journey's End, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -610,7 +572,6 @@
     },
     {
       "id": "2e36",
-      
       "title": "Delicious in Dungeon, Vol. 2: Volume 2",
       "price": 15,
       "price_after_discount": 13.95,
@@ -626,7 +587,6 @@
     },
     {
       "id": "01b0",
-      
       "title": "Neon Genesis Evangelion 3-In-1 Edition, Vol. 1: Includes Vols. 1, 2 & 3 (Original)",
       "price": 24.99,
       "price_after_discount": 23.24,
@@ -642,7 +602,6 @@
     },
     {
       "id": "7ae1",
-      
       "title": "Goodbye, Eri",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -658,7 +617,6 @@
     },
     {
       "id": "8cf8",
-      
       "title": "One Piece, Vol. 108",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -674,7 +632,6 @@
     },
     {
       "id": "14be",
-      
       "title": "Look Back",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -690,7 +647,6 @@
     },
     {
       "id": "6b6a",
-      
       "title": "Goodnight Punpun, Vol. 1",
       "price": 24.99,
       "price_after_discount": 23.24,
@@ -706,7 +662,6 @@
     },
     {
       "id": "5dd2",
-      
       "title": "Bocchi the Rock!, Vol. 1",
       "price": 15,
       "price_after_discount": 13.95,
@@ -722,7 +677,6 @@
     },
     {
       "id": "d306",
-      
       "title": "Spy X Family, Vol. 7",
       "price": 9.99,
       "price_after_discount": 9.29,
@@ -738,7 +692,6 @@
     },
     {
       "id": "0241",
-      
       "title": "The Fragrant Flower Blooms with Dignity 3",
       "price": 13.99,
       "price_after_discount": 13.01,
@@ -753,24 +706,23 @@
       "publish_date": "2025-01-12"
     },
     {
-      "id": "b6a9",
-      
       "title": "One Piece, Vol. 100",
       "price": 11.99,
       "price_after_discount": 11.15,
       "category": "Manga",
       "author": "Eiichiro Oda",
       "description": "Join Monkey D. Luffy and his swashbuckling crew in their search for the ultimate treasure, One Piece!\nAs a child, Monkey D. Luffy dreamed of becoming King of the Pirates. But his life changed when he accidentally gained the power to stretch like rubber...at the cost of never being able to swim again! Years, later, Luffy sets off in search of the One Piece, said to be the greatest treasure in the world...\nThe big powers converge as Luffy, Law, and Kid face off against Kaido and Big Mom. Is there any hope of victory against this ultimate alliance?! Onigashima quakes with power as some of the fiercest pirates in the world go head-to-head!!",
+      "author_detail": "Eiichiro Oda began his manga career at the age of 17, when his one-shot cowboy manga Wanted! won second place in the coveted Tezuka manga awards. Oda went on to work as an assistant to some of the biggest manga artists in the industry, including Nobuhiro Watsuki, before winning the Hop Step Award for new artists. His pirate adventure One Piece, which debuted in Weekly Shonen Jump magazine in 1997, quickly became one of the most popular manga in Japan.",
       "image_url": "https://images-us.bookshop.org/ingram/9781974732173.jpg?height=1200&v=v2-9ca184023c71bc768118503f29b2139d",
       "rating": 4.8,
       "discount": 3,
       "stock": 40,
       "category_id": "2",
-      "publish_date": "2025-01-14"
+      "publish_date": "2025-01-14",
+      "id": "b6a9"
     },
     {
       "id": "7a0b",
-      
       "title": "The Iliad",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -786,7 +738,6 @@
     },
     {
       "id": "880b",
-      
       "title": "The Book of Love",
       "price": 31,
       "price_after_discount": 28.83,
@@ -802,7 +753,6 @@
     },
     {
       "id": "3e35",
-      
       "title": "Mexican Gothic",
       "price": 17,
       "price_after_discount": 15.81,
@@ -818,7 +768,6 @@
     },
     {
       "id": "0f00",
-      
       "title": "Phantasma",
       "price": 18.99,
       "price_after_discount": 17.66,
@@ -834,7 +783,6 @@
     },
     {
       "id": "8155",
-      
       "title": "Slewfoot: A Tale of Bewitchery",
       "price": 19.99,
       "price_after_discount": 18.59,
@@ -850,7 +798,6 @@
     },
     {
       "id": "984a",
-      
       "title": "Frankenstein (Revised)",
       "price": 10,
       "price_after_discount": 9.3,
@@ -865,7 +812,6 @@
       "publish_date": "2025-01-14"
     },
     {
-      
       "title": "Fire Punch, Vol. 1",
       "price": 14.99,
       "price_after_discount": 13.94,
@@ -881,7 +827,6 @@
       "id": "r00SjAh"
     },
     {
-      
       "title": "Spy X Family, Vol. 13",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -897,7 +842,6 @@
       "id": "wWF1p8D"
     },
     {
-      
       "title": "One Piece, Vol. 107",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -913,7 +857,6 @@
       "id": "eSKJ5fq"
     },
     {
-      
       "title": "Spy X Family, Vol. 11",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -929,7 +872,6 @@
       "id": "atbm0p2"
     },
     {
-      
       "title": "Spy X Family, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -945,7 +887,6 @@
       "id": "X4INFXE"
     },
     {
-      
       "title": "Chainsaw Man, Vol. 16",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -961,7 +902,6 @@
       "id": "4EDqmwS"
     },
     {
-      
       "title": "Chainsaw Man, Vol. 1",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -977,7 +917,6 @@
       "id": "ENLDojL"
     },
     {
-      
       "title": "Chainsaw Man, Vol. 13",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -993,7 +932,6 @@
       "id": "U7Sd51t"
     },
     {
-      
       "title": "Chainsaw Man, Vol. 12",
       "price": 11.99,
       "price_after_discount": 11.15,
@@ -1009,7 +947,6 @@
       "id": "emDKUjZ"
     },
     {
-      
       "title": "Delicious in Dungeon, Vol. 14: Volume 14",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1025,7 +962,6 @@
       "id": "LychpxW"
     },
     {
-      
       "title": "Delicious in Dungeon, Vol. 7: Volume 7",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1041,7 +977,6 @@
       "id": "hQNj9nP"
     },
     {
-      
       "title": "Delicious in Dungeon, Vol. 8: Volume 8",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1057,7 +992,6 @@
       "id": "zbpa4aY"
     },
     {
-      
       "title": "Delicious in Dungeon, Vol. 13: Volume 13",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1073,7 +1007,6 @@
       "id": "tne-yt_"
     },
     {
-      
       "title": "Bocchi the Rock!, Vol. 3: Volume 3",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1089,7 +1022,6 @@
       "id": "w0H2WF8"
     },
     {
-      
       "title": "Bocchi the Rock!, Vol. 4",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1105,7 +1037,6 @@
       "id": "3La6RTQ"
     },
     {
-      
       "title": "Bocchi the Rock!, Vol. 5",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1121,7 +1052,6 @@
       "id": "9YTw_zn"
     },
     {
-      
       "title": "Bocchi the Rock!, Vol. 6: Volume 6",
       "price": 15,
       "price_after_discount": 13.95,
@@ -1137,7 +1067,6 @@
       "id": "evVApEo"
     },
     {
-      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 1",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1153,7 +1082,6 @@
       "id": "ObMsIo6"
     },
     {
-      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 2",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1169,7 +1097,6 @@
       "id": "tBgfRAt"
     },
     {
-      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 3: Volume 3",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1185,7 +1112,6 @@
       "id": "VCp8luS"
     },
     {
-      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4: Volume 4",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1201,7 +1127,6 @@
       "id": "-VmGUUS"
     },
     {
-      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 6: Volume 6",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1217,7 +1142,6 @@
       "id": "KVXZCvm"
     },
     {
-      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 5",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1233,7 +1157,6 @@
       "id": "n6SH8ES"
     },
     {
-      
       "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4.5",
       "price": 16,
       "price_after_discount": 14.88,
@@ -1256,7 +1179,6 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nIt's Chainsaw vs. Sword as the bloody battle for Denji's heart heats up. Denji is going to have to pull out all the stops against this crafty opponent. And when the dust settles, how will Special Division 4 move on from their losses?",
       "image_url": "https://images-us.bookshop.org/ingram/9781974719228.jpg?height=1200&v=v2",
-      
       "rating": 4.6,
       "discount": "7.01",
       "stock": 120,
@@ -1272,7 +1194,6 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nA mysterious devil is demanding Denji's heart! But will the devil hunters from Division 4 agree to this deal to save themselves? Or will Denji have to do what Denji does best--turn into a chainsaw and carve up everything that gets in his way?!",
       "image_url": "https://images-us.bookshop.org/ingram/9781974709953.jpg?height=1200&v=v2",
-      
       "rating": 4.6,
       "discount": "7.01",
       "stock": 120,
@@ -1288,7 +1209,6 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nA new girl named Reze has shown up and swept innocent Denji right off his feet. But is Reze exactly what she seems? (Spoiler: Nope!) Is Denji about to find happiness once and for all? (Spoiler: Nope!) Prepare for the storm of all storms when Chainsaw Man looks for true love!",
       "image_url": "https://images-us.bookshop.org/ingram/9781974720712.jpg?height=1200&v=v2",
-      
       "rating": 4.5,
       "discount": "7.01",
       "stock": 120,
@@ -1304,7 +1224,6 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nDenji's gotten too famous! After a news program broadcasts Chainsaw Man's heroics, the whole world now wants in on the action! Can Denji's new protection detail keep him safe from all the talented assassins that have assembled in Japan to take him down?!",
       "image_url": "https://images-us.bookshop.org/ingram/9781974720965.jpg?height=1200&v=v2",
-      
       "rating": 4.6,
       "discount": "7.01",
       "stock": 122,
@@ -1319,7 +1238,6 @@
       "category": "Manga",
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nHaving been forced to kill a friend, Denji finds that his brain has turned to mush from despair. Without the motivation to keep going, he seeks help from Makima. But Makima is not what she appears, and Denji's pain is only just beginning.",
-      
       "image_url": "https://images-us.bookshop.org/ingram/9781974725359.jpg?height=500&v=v2",
       "rating": 4.5,
       "discount": "7.01",
@@ -1336,7 +1254,6 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nAsa and Denji are going on a date to the aquarium! Asa just wants to seduce Denji to turn him into a weapon, but Denji might have other ideas. Will they ruin the date with their extreme social awkwardness, or will a surprise attack by a devil be the culprit?",
       "image_url": "https://images-us.bookshop.org/ingram/9781974743582.jpg?height=1200&v=v2-de30c859cec391813151369a5e19be92",
-      
       "rating": 4.5,
       "discount": "7.01",
       "stock": 140,
@@ -1352,7 +1269,6 @@
       "author": "Tatsuki Fujimoto",
       "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nIn order to achieve the greatest goal in human history--to touch a boob--Denji will risk everything in a fight against the dangerous Bat Devil. But will getting what he wants actually make him happy...?",
       "image_url": "https://images-us.bookshop.org/ingram/9781974709946.jpg?height=1200&v=v2",
-      
       "rating": 4.5,
       "discount": "7.01",
       "stock": 302,
@@ -1389,7 +1305,6 @@
           "items": [
             {
               "id": "2e36",
-              
               "title": "Delicious in Dungeon, Vol. 2: Volume 2",
               "price": 15,
               "price_after_discount": 13.95,
@@ -1406,7 +1321,6 @@
             },
             {
               "id": "b54d",
-              
               "title": "Intermezzo",
               "price": 29,
               "price_after_discount": 26.97,
@@ -1432,7 +1346,6 @@
           "items": [
             {
               "id": "14be",
-              
               "title": "Look Back",
               "price": 14.99,
               "price_after_discount": 13.94,
@@ -1477,7 +1390,6 @@
           "items": [
             {
               "id": "c294",
-              
               "title": "Letters to a Young Poet",
               "price": 7,
               "price_after_discount": 5.74,
@@ -1503,7 +1415,6 @@
           "items": [
             {
               "id": "9ed5",
-              
               "title": "Frieren: Beyond Journey's End, Vol. 1",
               "price": 11.99,
               "price_after_discount": 11.15,
@@ -1529,7 +1440,6 @@
           "items": [
             {
               "id": "2e36",
-              
               "title": "Delicious in Dungeon, Vol. 2: Volume 2",
               "price": 15,
               "price_after_discount": 13.95,
@@ -1546,7 +1456,6 @@
             },
             {
               "id": "9",
-              
               "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
               "price": 29.99,
               "price_after_discount": 27.89,
@@ -1578,7 +1487,6 @@
       "items": [
         {
           "id": "9ed5",
-          
           "title": "Frieren: Beyond Journey's End, Vol. 1",
           "price": 11.99,
           "price_after_discount": 11.15,
@@ -1605,7 +1513,6 @@
       "items": [
         {
           "id": "2e36",
-          
           "title": "Delicious in Dungeon, Vol. 2: Volume 2",
           "price": 15,
           "price_after_discount": 13.95,
@@ -1622,7 +1529,6 @@
         },
         {
           "id": "9",
-          
           "title": "Y2K: How the 2000s Became Everything (Essays on the Future That Never Was)",
           "price": 29.99,
           "price_after_discount": 27.89,
@@ -1650,7 +1556,6 @@
       "items": [
         {
           "id": "2e36",
-          
           "title": "Delicious in Dungeon, Vol. 2: Volume 2",
           "price": 15,
           "price_after_discount": 13.95,
@@ -1667,7 +1572,6 @@
         },
         {
           "id": "b54d",
-          
           "title": "Intermezzo",
           "price": 29,
           "price_after_discount": 26.97,
@@ -1695,7 +1599,6 @@
       "items": [
         {
           "id": "14be",
-          
           "title": "Look Back",
           "price": 14.99,
           "price_after_discount": 13.94,

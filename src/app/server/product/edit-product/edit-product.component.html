@@ -91,7 +91,19 @@
         Description is Required
       </small>
     </div>
-  
+    <div class="form-group">
+      <label for="author_detail">Author details</label>
+      <textarea 
+        class="form-control" 
+        id="author_detail" 
+        placeholder="Enter author details" 
+        formControlName="author_detail"
+      ></textarea>
+      <small class="text-danger text-small" 
+        *ngIf="addForm.controls['author_detail'].errors?.['required'] && addForm.controls['author_detail'].touched">
+        Author details is Required
+      </small>
+    </div>
     <div class="form-group">
       <label for="image_url">Image URL</label>
       <input 

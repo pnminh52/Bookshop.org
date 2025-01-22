@@ -20,4 +20,5 @@ export interface Product {
   quantity:number;
   createdAt?: Date;
   type:string;
+  author_detail: string;
 }

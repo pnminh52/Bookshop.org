@@ -9,7 +9,6 @@
       <tr class="bg-white">
         <th class="border border-gray-600 px-4 py-2 text-center">Id</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Title</th>
-        <th class="border border-gray-600 px-4 py-2 text-center">Type</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Author</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Price</th>
         <th class="border border-gray-600 px-4 py-2 text-center">Rating</th>
@@ -23,7 +22,6 @@
       <tr *ngFor="let product of paginatedProducts" class="hover:bg-gray-100">
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.id }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.title }}</td>
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.type }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.author }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.price }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.rating }}</td>

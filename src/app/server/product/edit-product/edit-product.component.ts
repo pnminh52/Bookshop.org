@@ -30,6 +30,7 @@ export class EditProductComponent {
       category: new FormControl('', [Validators.required]),
       author: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
+      author_detail: new FormControl('', [Validators.required]),
       image_url: new FormControl('', [Validators.required]),
       rating: new FormControl(0, [Validators.required]),
       discount: new FormControl(0, [Validators.required]),
