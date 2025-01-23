@@ -10,6 +10,7 @@ import { user } from 'type/Auth';
   providedIn: 'root'
 })
 export class AuthService {
+  recentlyViewedProducts: any[] = []; 
   apiUrl = 'http://localhost:3000';
   http = inject(HttpClient);
 
@@ -103,13 +104,13 @@ export class AuthService {
       map(users => {
         if (users.length > 0) {
           const user = users[0];
-          // Kiểm tra trạng thái tài khoản
           if (user.status === 'inactive') {
             alert('Tài khoản của bạn đã bị khóa. Vui lòng liên hệ quản trị viên.');
             this.logout();  
             return []; 
           }
-
+          localStorage.removeItem('recentlyViewedProducts');
+          this.recentlyViewedProducts = [];
           localStorage.setItem('user', JSON.stringify(user));
           localStorage.setItem('userId', user.id);
           localStorage.setItem('role', user.role);
@@ -135,6 +136,8 @@ export class AuthService {
     localStorage.removeItem('user');
     localStorage.removeItem('userId');
     localStorage.removeItem('role');
+    localStorage.removeItem('recentlyViewedProducts');
+    this.recentlyViewedProducts = [];
     this.isLoggedInSubject.next(false);  
     this.cartService.clearCart();
     this.router.navigate(['/']); 

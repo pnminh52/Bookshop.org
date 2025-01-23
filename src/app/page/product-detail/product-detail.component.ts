@@ -32,6 +32,7 @@ export class ProductDetailComponent implements OnInit {
   likedComments: Set<string> = new Set();
   dislikedComments: Set<string> = new Set();
   recentlyViewedProducts: any[] = [];
+  isLoggedIn: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -42,6 +43,9 @@ export class ProductDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.authService.isLoggedIn$.subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn;
+    });
     const viewed = localStorage.getItem('recentlyViewedProducts');
     this.recentlyViewedProducts = viewed ? JSON.parse(viewed) : [];
     this.route.paramMap.subscribe((params) => {
@@ -64,18 +68,31 @@ export class ProductDetailComponent implements OnInit {
     });
   }
   viewProduct(product: Product): void {
+    if (!this.isLoggedIn) return;
+  
     const viewed = localStorage.getItem('recentlyViewedProducts');
     let products: Product[] = viewed ? JSON.parse(viewed) : [];
+  
+    // Check if the product is already in the list
     const productExists = products.some((p: Product) => p.id === product.id);
+  
     if (!productExists) {
-      products.push(product); 
+      // Add the new product to the top of the list (index 0)
+      products.unshift(product);
+      
+      // Limit the list to the last 10 products
       if (products.length > 10) {
-        products.shift();
+        products.pop(); 
       }
-      localStorage.setItem('recentlyViewedProducts', JSON.stringify(products));
+    } else {
+      products = products.filter(p => p.id !== product.id);
+      products.unshift(product);
     }
+  
+    localStorage.setItem('recentlyViewedProducts', JSON.stringify(products));
     this.recentlyViewedProducts = products;
   }
+  
   loadProductDetails(productId: string): void {
     this.productService.getProductById(productId).subscribe({
       next: (data) => {
