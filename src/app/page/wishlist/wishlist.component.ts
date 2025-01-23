@@ -3,11 +3,13 @@ import { WishlistService } from '../../wishlist.service';
 import { Product } from '../../type/Products';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-wishlist',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './wishlist.component.html',
   styleUrls: ['./wishlist.component.css']
 })
@@ -15,6 +17,7 @@ export class WishlistComponent implements OnInit {
   userId: string | null = null;
   wishlist: Product[] = [];
   successMessage: string | null = null; 
+  alertMessage: string | null = null;
 
   constructor(private wishlistService: WishlistService, private router: Router) {}
 
