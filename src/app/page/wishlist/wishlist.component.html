@@ -1,18 +1,36 @@
-<!-- Thông báo khi xóa thành công sản phẩm -->
 <div *ngIf="successMessage" class="alert alert-success">
   {{ successMessage }}
 </div>
 
-
 <div *ngIf="wishlist.length > 0; else noWishlist">
   <h2>Wishlist</h2>
-  <ul>
-    <li *ngFor="let item of wishlist">
-      <img class="w-[50%] h-auto" src={{item.image_url}} alt="">
-      {{ item.title }} by {{ item.author }} ({{ item.price_after_discount }} USD)
-      <button (click)="removeFromWishlist(item.id)">Remove</button> 
-    </li>
-  </ul>
+  <table class="table-auto w-full border-collapse">
+    <thead>
+      <tr>
+        <th class="px-4 py-2 border">Image</th>
+        <th class="px-4 py-2 border">Title</th>
+        <th class="px-4 py-2 border">Author</th>
+        <th class="px-4 py-2 border">Price</th>
+        <th class="px-4 py-2 border">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of wishlist">
+        <td class="px-4 py-2 border">
+          <img class="w-auto h-[300px]" [src]="item.image_url" alt="Product Image">
+        </td>
+        <td class="px-4 py-2 border">{{ item.title }}</td>
+        <td class="px-4 py-2 border">{{ item.author }}</td>
+        <td class="px-4 py-2 border">{{ item.price_after_discount }} USD</td>
+        <td class="px-4 py-2 border">
+          <button>Add to cart</button>
+          <button (click)="removeFromWishlist(item.id)" class="bg-red-500 text-white px-2 py-1 rounded">
+            Remove
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <ng-template #noWishlist>
