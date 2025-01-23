@@ -31,6 +31,7 @@ export class ProductDetailComponent implements OnInit {
   alertMessage: string | null = null;
   likedComments: Set<string> = new Set();
   dislikedComments: Set<string> = new Set();
+  recentlyViewedProducts: any[] = [];
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -41,6 +42,8 @@ export class ProductDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    const viewed = localStorage.getItem('recentlyViewedProducts');
+    this.recentlyViewedProducts = viewed ? JSON.parse(viewed) : [];
     this.route.paramMap.subscribe((params) => {
       const productId = params.get('id');
       if (productId) {
@@ -49,8 +52,6 @@ export class ProductDetailComponent implements OnInit {
         console.error('Product ID is not available');
       }
     });
-  
-    // Fetch user info (unchanged)
     this.userId = localStorage.getItem('userId');
     this.authService.getUserInfo().subscribe({
       next: (data) => {
@@ -62,10 +63,26 @@ export class ProductDetailComponent implements OnInit {
       },
     });
   }
+  viewProduct(product: Product): void {
+    const viewed = localStorage.getItem('recentlyViewedProducts');
+    let products: Product[] = viewed ? JSON.parse(viewed) : [];
+    const productExists = products.some((p: Product) => p.id === product.id);
+    if (!productExists) {
+      products.push(product); 
+      if (products.length > 10) {
+        products.shift();
+      }
+      localStorage.setItem('recentlyViewedProducts', JSON.stringify(products));
+    }
+    this.recentlyViewedProducts = products;
+  }
   loadProductDetails(productId: string): void {
     this.productService.getProductById(productId).subscribe({
       next: (data) => {
-        this.product = data;
+        this.product = data;  
+        if (this.product) {
+          this.viewProduct(this.product);
+        }
         this.loadComments(productId);
         if (this.product?.category) {
           this.loadNewRelatedProducts(this.product.category);
@@ -75,7 +92,7 @@ export class ProductDetailComponent implements OnInit {
         console.error('Error fetching product details:', err);
       },
     });
-  }
+  } 
 
   
   loadNewRelatedProducts(category: string): void {

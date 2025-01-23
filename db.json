@@ -1663,7 +1663,25 @@
       "id": "W-LYw_5"
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "id": "14be",
+      "title": "Look Back",
+      "price": 14.99,
+      "price_after_discount": 13.94,
+      "category": "Manga",
+      "author": "Tatsuki Fujimoto",
+      "description": "A heart-wrenching single-volume story about the struggles of being an artist, from the creator of Chainsaw Man.\nThe overly confident Fujino and the shut-in Kyomoto couldn't be more different, but a love of drawing manga brings these two small-town girls together. A poignant story of growing up and moving forward that only Tatsuki Fujimoto, the creator of Chainsaw Man, could have crafted.\nThe overly confident Fujino and the shut-in Kyomoto couldn't be more different, but a love of drawing manga brings these two small-town girls together. A poignant story of growing up and moving forward that only Tatsuki Fujimoto, the creator of Chainsaw Man, could have crafted.",
+      "image_url": "https://images-us.bookshop.org/ingram/9781974734641.jpg?height=1200&v=v2-631f27551f71079a6b66f9ffb31c7cde",
+      "rating": 4.7,
+      "discount": 5,
+      "stock": 40,
+      "category_id": "6",
+      "publish_date": "2025-01-15",
+      "quantity": 1,
+      "userId": "SV-PJoW"
+    }
+  ],
   "comments": [
     {
       "id": "98a5",
