@@ -20,10 +20,13 @@ export class AddProductComponent {
   addForm: FormGroup = new FormGroup({
     title: new FormControl('', [Validators.required]),
     price: new FormControl('', [Validators.required, Validators.min(0)]),
+    pages: new FormControl('', [Validators.required, Validators.min(1)]), 
+    language: new FormControl('English', [Validators.required]),
     price_after_discount: new FormControl('', [Validators.required, Validators.min(0)]),
     category: new FormControl('', [Validators.required]),
     author: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
+    author_detail: new FormControl('', [Validators.required]),
     image_url: new FormControl('', [Validators.required]),
     rating: new FormControl(0, [Validators.required]),
     discount: new FormControl(0, [Validators.required]),
