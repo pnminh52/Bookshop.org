@@ -33,6 +33,8 @@ export class ProductDetailComponent implements OnInit {
   dislikedComments: Set<string> = new Set();
   recentlyViewedProducts: any[] = [];
   isLoggedIn: boolean = false;
+  descriptionVisible: boolean = false;
+  aboutAuthorVisible: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -298,6 +300,14 @@ export class ProductDetailComponent implements OnInit {
           this.newRating = 0;
         },
       });
+    }
+  }
+
+  toggleDropdown(section: string): void {
+    if (section === 'description') {
+      this.descriptionVisible = !this.descriptionVisible;
+    } else if (section === 'aboutAuthor') {
+      this.aboutAuthorVisible = !this.aboutAuthorVisible;
     }
   }
 }
