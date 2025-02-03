@@ -777,6 +777,42 @@
       "stock": 182,
       "category_id": "3",
       "publish_date": "2025-01-25"
+    },
+    {
+      "title": "One-Punch Man, Vol. 5",
+      "price": 9.99,
+      "pages": 192,
+      "language": "English",
+      "price_after_discount": 9.29,
+      "category": "Manga",
+      "author": "One",
+      "description": "Life gets pretty boring when you can beat the snot out of any villain with just one punch.\n\nNothing about Saitama passes the eyeball test when it comes to superheroes, from his lifeless expression to his bald head to his unimpressive physique. However, this average-looking guy has a not-so-average problem—he just can’t seem to find an opponent strong enough to take on!\n\nTo stop a Demon-level crisis, Saitama and company head toward the action. However, even Class-S heroes prove to be no match for the Deep Sea King! In order to protect the good citizens, our heroes will need to summon all of their courage and confront this threat!",
+      "author_detail": "Manga creator ONE began One-Punch Man as a webcomic, which quickly went viral, garnering over 10 million hits. In addition to One-Punch Man, ONE writes and draws the series Mob Psycho 100 and Makai no Ossan.\n\nA highly decorated and skilled artist best known for his work on Eyeshield 21, Yusuke Murata won the 122nd Hop Step Award (1995) for Partner and placed second in the 51st Akatsuka Award (1998) for Samui Hanashi.",
+      "image_url": "https://images-us.bookshop.org/ingram/9781421569543.jpg?width=384&v=v2",
+      "rating": 4.6,
+      "discount": "7.01",
+      "stock": 192,
+      "category_id": "3",
+      "publish_date": "2025-01-25",
+      "id": "471d"
+    },
+    {
+      "id": "f254",
+      "title": "One-Punch Man, Vol. 4",
+      "price": 9.99,
+      "pages": 192,
+      "language": "English",
+      "price_after_discount": 9.29,
+      "category": "Manga",
+      "author": "One",
+      "description": "Life gets pretty boring when you can beat the snot out of any villain with just one punch.\n\nNothing about Saitama passes the eyeball test when it comes to superheroes, from his lifeless expression to his bald head to his unimpressive physique. However, this average-looking guy has a not-so-average problem—he just can’t seem to find an opponent strong enough to take on!\n\nSaitama is now a certified hero! And with that title comes great responsibility—he’s required to perform one heroic deed per week. While Saitama makes the rounds to meet his quota, an incoming threat from outer space is screeching toward Earth...",
+      "author_detail": "Manga creator ONE began One-Punch Man as a webcomic, which quickly went viral, garnering over 10 million hits. In addition to One-Punch Man, ONE writes and draws the series Mob Psycho 100 and Makai no Ossan.\n\nA highly decorated and skilled artist best known for his work on Eyeshield 21, Yusuke Murata won the 122nd Hop Step Award (1995) for Partner and placed second in the 51st Akatsuka Award (1998) for Samui Hanashi.",
+      "image_url": "https://images-us.bookshop.org/ingram/9781421569208.jpg?width=384&v=v2",
+      "rating": 4.8,
+      "discount": "7.01",
+      "stock": 122,
+      "category_id": "3",
+      "publish_date": "2025-01-20"
     }
   ],
   "users": [
