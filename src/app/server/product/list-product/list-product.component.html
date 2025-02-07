@@ -45,13 +45,25 @@
     </tbody>
   </table>
 
-  <div class="flex justify-center gap-6 items-center mt-4">
-    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 disabled:opacity-50">
-      Previous
+  <div class="flex justify-center items-center mt-4">
+    <button
+      (click)="changePage(currentPage - 1)"
+      [disabled]="currentPage === 1"
+      class="px-3 py-2 rounded-l-full bg-gray-300 text-gray-800 disabled:opacity-50"
+    >
+      Prev
     </button>
-    <span class="text-gray-700">Page {{ currentPage }} of {{ totalPages }}</span>
-    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 disabled:opacity-50">
+    <button
+      (click)="changePage(currentPage + 1)"
+      [disabled]="currentPage === totalPages"
+      class="px-3 py-2 rounded-r-full bg-gray-300 text-gray-800 disabled:opacity-50"
+    >
       Next
     </button>
+  </div>
+  <div>
+    <p class="text-md flex mt-2 justify-center text-gray-500 font-normal mb-0">
+      Page {{ currentPage }} of {{ totalPages }}
+    </p>
   </div>
 </div>
