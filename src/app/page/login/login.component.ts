@@ -40,9 +40,7 @@ isAdmin=false
           if (user.role === 'admin') {
             localStorage.setItem('role', 'admin');
             this.isAdmin = true;
-            setTimeout(() => {
               this.router.navigate(['/admin/']);
-            }, 1000);  
           } else {
             setTimeout(() => {
               this.router.navigate(['/']);
