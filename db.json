@@ -1017,6 +1017,186 @@
       ],
       "avatar": "https://i.pinimg.com/736x/5e/6b/ee/5e6beeb749ec884b9dc6ac4dd2657142.jpg",
       "status": "active"
+    },
+    {
+      "id": "user001",
+      "fullName": "John Doe",
+      "phoneNumber": "0912345678",
+      "address": {
+        "streetAddress": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10001",
+        "country": "USA"
+      },
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user002",
+      "fullName": "Jane Smith",
+      "phoneNumber": "0987654321",
+      "address": {
+        "streetAddress": "456 Elm St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "postalCode": "90001",
+        "country": "USA"
+      },
+      "email": "janesmith@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user003",
+      "fullName": "Michael Johnson",
+      "phoneNumber": "0976543210",
+      "address": {
+        "streetAddress": "789 Oak St",
+        "city": "Chicago",
+        "state": "IL",
+        "postalCode": "60601",
+        "country": "USA"
+      },
+      "email": "michaelj@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user004",
+      "fullName": "Emily Davis",
+      "phoneNumber": "0965432109",
+      "address": {
+        "streetAddress": "321 Maple St",
+        "city": "Houston",
+        "state": "TX",
+        "postalCode": "77001",
+        "country": "USA"
+      },
+      "email": "emilyd@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user005",
+      "fullName": "David Wilson",
+      "phoneNumber": "0954321098",
+      "address": {
+        "streetAddress": "654 Birch St",
+        "city": "Phoenix",
+        "state": "AZ",
+        "postalCode": "85001",
+        "country": "USA"
+      },
+      "email": "davidw@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/men/5.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user006",
+      "fullName": "Sarah Brown",
+      "phoneNumber": "0943210987",
+      "address": {
+        "streetAddress": "987 Cedar St",
+        "city": "San Diego",
+        "state": "CA",
+        "postalCode": "92101",
+        "country": "USA"
+      },
+      "email": "sarahb@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/women/6.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user007",
+      "fullName": "James Taylor",
+      "phoneNumber": "0932109876",
+      "address": {
+        "streetAddress": "159 Spruce St",
+        "city": "San Francisco",
+        "state": "CA",
+        "postalCode": "94101",
+        "country": "USA"
+      },
+      "email": "jamest@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/men/7.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user008",
+      "fullName": "Laura White",
+      "phoneNumber": "0921098765",
+      "address": {
+        "streetAddress": "753 Redwood St",
+        "city": "Seattle",
+        "state": "WA",
+        "postalCode": "98101",
+        "country": "USA"
+      },
+      "email": "lauraw@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/women/8.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user009",
+      "fullName": "Robert Lee",
+      "phoneNumber": "0910987654",
+      "address": {
+        "streetAddress": "852 Cherry St",
+        "city": "Denver",
+        "state": "CO",
+        "postalCode": "80201",
+        "country": "USA"
+      },
+      "email": "robertl@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/men/9.jpg",
+      "status": "active"
+    },
+    {
+      "id": "user010",
+      "fullName": "Olivia Martin",
+      "phoneNumber": "0909876543",
+      "address": {
+        "streetAddress": "951 Pine St",
+        "city": "Boston",
+        "state": "MA",
+        "postalCode": "02101",
+        "country": "USA"
+      },
+      "email": "oliviam@example.com",
+      "password": "password123",
+      "role": "user",
+      "orderHistory": [],
+      "avatar": "https://randomuser.me/api/portraits/women/10.jpg",
+      "status": "active"
     }
   ],
   "orders": [
@@ -1191,93 +1371,6 @@
       "category_id": "4",
       "publish_date": "2024-01-20",
       "userId": "87fa"
-    },
-    {
-      "id": "LychpxW",
-      "title": "Delicious in Dungeon, Vol. 14: Volume 14",
-      "price": 15,
-      "price_after_discount": 13.95,
-      "category": "Manga",
-      "author": "Ryoko Kui",
-      "description": "It's eat or be eaten...literally!Laios's plan to overcome the demon seems to have worked--but at great physical cost to his monstrous form. As the dungeon crumbles around them, his friends are forced to leave him behind in a race to escape. Even with the demon out of the picture, the people of the Golden Country are still trapped in the dungeon depths, and Falin remains a chimera. Plus, all this running around is really working up an appetite...! Join our heroes for the ultimate feast in the final volume of Delicious in Dungeon!",
-      "image_url": "https://images-us.bookshop.org/ingram/9798855400359.jpg?height=1200&v=v2-a6ebac38741e85c21cb67664049aca62",
-      "rating": 4.5,
-      "discount": "7.00",
-      "stock": 32,
-      "category_id": "2",
-      "publish_date": "2025-01-12",
-      "userId": "SV-PJoW"
-    },
-    {
-      "id": "ocK6fOl",
-      "title": "Chainsaw Man, Vol. 7",
-      "price": 11.99,
-      "pages": 192,
-      "language": "English",
-      "price_after_discount": 11.15,
-      "category": "Manga",
-      "author": "Tatsuki Fujimoto",
-      "description": "Broke young man + chainsaw demon = Chainsaw Man!\nDenji was a small-time devil hunter just trying to survive in a harsh world. After being killed on a job, he is revived by his pet devil Pochita and becomes something new and dangerous--Chainsaw Man!\nDenji's gotten too famous! After a news program broadcasts Chainsaw Man's heroics, the whole world now wants in on the action! Can Denji's new protection detail keep him safe from all the talented assassins that have assembled in Japan to take him down?!",
-      "author_detail": "Tatsuki Fujimoto won Honorable Mention in the November 2013 Shueisha Crown Newcomers' Awards for his debut one-shot story Love is Blind. His first series Fire Punch ran for eight volumes. Chainsaw Man began serialization in 2018 in Weekly Shonen Jump.",
-      "image_url": "https://images-us.bookshop.org/ingram/9781974720965.jpg?height=1200&v=v2",
-      "rating": 4.6,
-      "discount": "7.01",
-      "stock": 122,
-      "category_id": "3",
-      "publish_date": "2025-01-16",
-      "userId": "SV-PJoW"
-    },
-    {
-      "id": "b6a9",
-      "title": "One Piece, Vol. 100",
-      "price": 11.99,
-      "price_after_discount": 11.15,
-      "category": "Manga",
-      "author": "Eiichiro Oda",
-      "description": "Join Monkey D. Luffy and his swashbuckling crew in their search for the ultimate treasure, One Piece!\nAs a child, Monkey D. Luffy dreamed of becoming King of the Pirates. But his life changed when he accidentally gained the power to stretch like rubber...at the cost of never being able to swim again! Years, later, Luffy sets off in search of the One Piece, said to be the greatest treasure in the world...\nThe big powers converge as Luffy, Law, and Kid face off against Kaido and Big Mom. Is there any hope of victory against this ultimate alliance?! Onigashima quakes with power as some of the fiercest pirates in the world go head-to-head!!",
-      "author_detail": "Eiichiro Oda began his manga career at the age of 17, when his one-shot cowboy manga Wanted! won second place in the coveted Tezuka manga awards. Oda went on to work as an assistant to some of the biggest manga artists in the industry, including Nobuhiro Watsuki, before winning the Hop Step Award for new artists. His pirate adventure One Piece, which debuted in Weekly Shonen Jump magazine in 1997, quickly became one of the most popular manga in Japan.",
-      "image_url": "https://images-us.bookshop.org/ingram/9781974732173.jpg?height=1200&v=v2-9ca184023c71bc768118503f29b2139d",
-      "rating": 4.8,
-      "discount": 3,
-      "stock": 40,
-      "category_id": "2",
-      "publish_date": "2025-01-14",
-      "userId": "SV-PJoW"
-    },
-    {
-      "id": "3La6RTQ",
-      "title": "Bocchi the Rock!, Vol. 4",
-      "price": 15,
-      "pages": 136,
-      "language": "English",
-      "price_after_discount": 13.95,
-      "category": "Manga",
-      "author": "Aki Hamazi",
-      "description": "Kessoku Band has successfully cleared the first round of auditions for the Unidentified Riot music festival, but this is no time to rest on their laurels. The next step is a death knell for introverts everywhere-a popularity contest! Every vote in the online poll matters when they're trying to stand on the same stage as powerhouses like SIDEROS, so Bocchi will need to call in a favor from all the...friends she has? Um, is this the end of the line for Hitori Gotoh?!",
-      "author_detail": "The author of *Bocchi the Rock!* is **Aki Hamaji**. This manga, which blends comedy, music, and slice-of-life elements, follows the story of Hitori Bocchi, a socially awkward girl who dreams of being a successful musician. Throughout the series, she navigates her struggles with social interaction, friendships, and her journey in a band, all while trying to overcome her fears and insecurities. \n\nAki Hamaji’s writing and art style bring a unique charm to the series, making it a standout in the genre of music-themed slice-of-life manga.",
-      "image_url": "https://images-us.bookshop.org/ingram/9781975378066.jpg?height=1200&v=v2-c8ea2cac401946cb4ecfbd79e14009d2",
-      "rating": 4.7,
-      "discount": "7.00",
-      "stock": 34,
-      "category_id": "3",
-      "publish_date": "2025-02-12",
-      "userId": "SV-PJoW"
-    },
-    {
-      "id": "14be",
-      "title": "Look Back",
-      "price": 14.99,
-      "price_after_discount": 13.94,
-      "category": "Manga",
-      "author": "Tatsuki Fujimoto",
-      "description": "A heart-wrenching single-volume story about the struggles of being an artist, from the creator of Chainsaw Man.\nThe overly confident Fujino and the shut-in Kyomoto couldn't be more different, but a love of drawing manga brings these two small-town girls together. A poignant story of growing up and moving forward that only Tatsuki Fujimoto, the creator of Chainsaw Man, could have crafted.\nThe overly confident Fujino and the shut-in Kyomoto couldn't be more different, but a love of drawing manga brings these two small-town girls together. A poignant story of growing up and moving forward that only Tatsuki Fujimoto, the creator of Chainsaw Man, could have crafted.",
-      "image_url": "https://images-us.bookshop.org/ingram/9781974734641.jpg?height=1200&v=v2-631f27551f71079a6b66f9ffb31c7cde",
-      "rating": 4.7,
-      "discount": 5,
-      "stock": 40,
-      "category_id": "6",
-      "publish_date": "2025-01-15",
-      "userId": "SV-PJoW"
     },
     {
       "id": "471d",
