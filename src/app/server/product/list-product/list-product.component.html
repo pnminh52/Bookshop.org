@@ -1,10 +1,20 @@
 <div class="container mx-auto max-w-screen-xl">
   <div class="flex gap-2">
-    <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="onSearch()" placeholder="Search..." class="px-4 py-2 rounded-md border border-gray-300" />
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (ngModelChange)="onSearch()"
+      placeholder="Search..."
+      class="px-4 py-2 rounded-md border border-gray-300"
+    />
 
-  <button routerLink="/admin/add-product" title="addproduct" class="px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
-    ProductAdd
-  </button>
+    <button
+      routerLink="/admin/add-product"
+      title="addproduct"
+      class="px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700"
+    >
+      ProductAdd
+    </button>
   </div>
 
   <table class="table-auto border-collapse w-full mt-4">
@@ -23,22 +33,43 @@
     </thead>
     <tbody>
       <tr *ngFor="let product of paginatedProducts" class="hover:bg-gray-100">
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.id }}</td>
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.title }}</td>
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.author }}</td>
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.price }}</td>
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.rating }}</td>
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.publish_date }}</td>
-        <td class="border border-gray-600 px-4 py-2 text-center">
-          <img class="w-1/2 mx-auto" [src]="product.image_url" alt=""/>
-        </td>
-        <td class="border border-gray-600 px-4 py-2 text-center align-middle">{{ product.category }}</td>
         <td class="border border-gray-600 px-4 py-2 text-center align-middle">
-          <a [routerLink]="['/admin/edit-product', product.id]" class="text-blue-500 mx-2">
-           Edit
+          {{ product.id }}
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">
+          {{ product.title }}
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">
+          {{ product.author }}
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">
+          {{ product.price }}
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">
+          {{ product.rating }}
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">
+          {{ product.publish_date }}
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center">
+          <img class="w-1/2 mx-auto" [src]="product.image_url" alt="" />
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">
+          {{ product.category }}
+        </td>
+        <td class="border border-gray-600 px-4 py-2 text-center align-middle">
+          <a
+            [routerLink]="['/admin/edit-product', product.id]"
+            class="text-blue-500 mx-2"
+          >
+            Edit
           </a>
-          <button title="delete button" (click)="handleDelete(product.id)" class="text-red-500">
-       Delete
+          <button
+            title="delete button"
+            (click)="handleDelete(product.id)"
+            class="text-red-500"
+          >
+            Delete
           </button>
         </td>
       </tr>
