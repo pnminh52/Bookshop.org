@@ -43,7 +43,16 @@ export class ProductDetailComponent implements OnInit {
     private commentService: CommentService,
     private authService: AuthService
   ) {}
+  hoverValue: number = 0;
+  stars: number[] = [1, 2, 3, 4, 5];
 
+  setRating(value: number) {
+    this.newRating = value;
+  }
+
+  hoverRating(value: number) {
+    this.hoverValue = value;
+  }
   ngOnInit(): void {
     this.authService.isLoggedIn$.subscribe((loggedIn) => {
       this.isLoggedIn = loggedIn;

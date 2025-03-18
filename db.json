@@ -1197,6 +1197,49 @@
       "orderHistory": [],
       "avatar": "https://randomuser.me/api/portraits/women/10.jpg",
       "status": "active"
+    },
+    {
+      "id": "b14d",
+      "fullName": "Phạm Nhật Minh",
+      "phoneNumber": "0934557882",
+      "address": {
+        "streetAddress": "Hà Nam",
+        "city": "Ha Noi",
+        "state": "California",
+        "postalCode": "989898",
+        "country": "Việt Nam"
+      },
+      "email": "11@gmail.com",
+      "password": "111111",
+      "role": "user",
+      "status": "active",
+      "orderHistory": [
+        {
+          "userId": "b14d",
+          "items": [
+            {
+              "id": "d306",
+              "title": "Spy X Family, Vol. 7",
+              "price": 9.99,
+              "price_after_discount": 9.29,
+              "category": "Manga",
+              "author": "Tatsuya Endo",
+              "description": "An action-packed comedy about a fake family that includes a spy, an assassin and a telepath!\nMaster spy Twilight is unparalleled when it comes to going undercover on dangerous missions for the betterment of the world. But when he receives the ultimate assignment--to get married and have a kid--he may finally be in over his head!\nAs Donovan Desmond is about to share a rare family moment with his son Damian, Twilight cuts in to meet his target face-to-face for the first time. Can Twilight find some way to endear himself to the inscrutable Donovan?",
+              "image_url": "https://images-us.bookshop.org/ingram/9781974728480.jpg?height=1200&v=v2-8890aabea175609ef152de49954b31ca",
+              "rating": 4.5,
+              "discount": 5,
+              "stock": 40,
+              "category_id": "2",
+              "publish_date": "2025-01-11",
+              "quantity": 7
+            }
+          ],
+          "total": 65.03,
+          "paymentMethod": "Credit Card",
+          "date": "2025-02-26T10:37:13.190Z",
+          "status": "completed"
+        }
+      ]
     }
   ],
   "orders": [
@@ -1337,6 +1380,33 @@
       "date": "2025-01-19T15:04:05.377Z",
       "status": "Shipped",
       "id": "W-LYw_5"
+    },
+    {
+      "id": "ee12",
+      "userId": "b14d",
+      "items": [
+        {
+          "id": "d306",
+          "title": "Spy X Family, Vol. 7",
+          "price": 9.99,
+          "price_after_discount": 9.29,
+          "category": "Manga",
+          "author": "Tatsuya Endo",
+          "description": "An action-packed comedy about a fake family that includes a spy, an assassin and a telepath!\nMaster spy Twilight is unparalleled when it comes to going undercover on dangerous missions for the betterment of the world. But when he receives the ultimate assignment--to get married and have a kid--he may finally be in over his head!\nAs Donovan Desmond is about to share a rare family moment with his son Damian, Twilight cuts in to meet his target face-to-face for the first time. Can Twilight find some way to endear himself to the inscrutable Donovan?",
+          "image_url": "https://images-us.bookshop.org/ingram/9781974728480.jpg?height=1200&v=v2-8890aabea175609ef152de49954b31ca",
+          "rating": 4.5,
+          "discount": 5,
+          "stock": 40,
+          "category_id": "2",
+          "publish_date": "2025-01-11",
+          "quantity": 7
+        }
+      ],
+      "total": 65.03,
+      "paymentMethod": "Credit Card",
+      "date": "2025-02-26T10:37:13.190Z",
+      "status": "Cancelled",
+      "reason": "Sai thông tin"
     }
   ],
   "wishlist": [
@@ -1404,6 +1474,19 @@
       "avatar": "https://i.pinimg.com/736x/5e/6b/ee/5e6beeb749ec884b9dc6ac4dd2657142.jpg",
       "likeCount": 1,
       "dislikeCount": 0
+    },
+    {
+      "id": "9375",
+      "productId": "d306",
+      "userId": "b14d",
+      "fullName": "Phạm Nhật Minh",
+      "comment": "asasasas",
+      "rating": 5,
+      "createdAt": "2025-02-26T10:36:08.081Z",
+      "avatar": "https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg",
+      "likeCount": 1,
+      "dislikeCount": 0,
+      "hidden": false
     }
   ]
 }

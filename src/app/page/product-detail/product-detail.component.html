@@ -1,130 +1,137 @@
 <style>
-    .title {
+  .title {
     font-family: "Prata", serif;
     font-weight: 300;
     font-style: normal;
   }
 </style>
-<div *ngIf="successMessage" class="fixed bottom-4 right-4 bg-green-500 px-4 py-3 text-white rounded-md shadow-md z-50">
+<div
+  *ngIf="successMessage"
+  class="fixed bottom-4 right-4 bg-green-500 px-4 py-3 text-white rounded-md shadow-md z-50"
+>
   {{ successMessage }}
 </div>
-<div *ngIf="alertMessage" class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50">
+<div
+  *ngIf="alertMessage"
+  class="fixed bottom-4 right-4 bg-red-500 px-4 py-3 text-white rounded-md shadow-md z-50"
+>
   {{ alertMessage }}
 </div>
 <div *ngIf="product" class="container max-w-screen-lg mx-auto p-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <img
+        [src]="product.image_url"
+        alt="{{ product.title }}"
+        class="w-auto h-[700px] object-cover"
+      />
+    </div>
+
+    <div>
       <div>
-        <img [src]="product.image_url" alt="{{ product.title }}" class="w-auto h-[700px] object-cover">
-      </div>
-  
-      <div>
-       <div>
-        <p class="title text-3xl mb-0">{{ product.title }}</p>
+        <p class="title text-3xl mb-0 truncate">{{ product.title }}</p>
         <p class="text-gray-600 mb-3">{{ product.author }} (Author)</p>
-       </div>
-<div>
-  <div class="flex gap-2 items-center">
-    <p class="text-3xl font-normal">{{ product.price_after_discount }}$</p>
-    <p class="text-lg font-normal text-red-500 self-center">
-      <s>{{ product.price }}$</s>
-    </p>
-    <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-      -{{ product.discount }}%
-    </p>
-  </div>
-</div>
-<div class="flex gap-4">
-  
-  <div class="flex mt-1 mb-1">
-    <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-      <svg
-        *ngIf="product.rating >= star"
-        class="w-4 h-4 text-yellow-400 fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-        />
-      </svg>
-
-      <svg
-        *ngIf="product.rating >= star - 0.5 && product.rating < star"
-        class="w-4 h-4 text-yellow-400 fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-        />
-      </svg>
-
-      <svg
-        *ngIf="product.rating < star - 0.5"
-        class="w-4 h-4 text-gray-300 fill-current"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-        />
-      </svg>
-    </ng-container>
-
-    <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-  </div>
- 
-</div>
-<div>
-  <div class="flex gap-2">
-    <p>Language:</p>
-    <p>{{product.language}}</p>
-  </div>
-  <div class="flex gap-2">
-    <p>Pages:</p>
-    <p>{{product.pages}}</p>
-  </div>
-</div>
-     
-<div>
-  <!-- Description Dropdown -->
-  <div class="border-b border-gray-300 mb-4">
-    <button
-      class="w-full text-left flex justify-between items-center py-2 font-semibold"
-      (click)="toggleDropdown('description')"
-    >
-      <span>Description</span>
-      <span>{{ descriptionVisible ? '−' : '+' }}</span>
-    </button>
-    <div *ngIf="descriptionVisible">
-      <p class="text-gray-600">{{ product.description }}</p>
-    </div>
-  </div>
-
-  <!-- About the Author Dropdown -->
-  <div class="border-b border-gray-300 mb-4">
-    <button
-      class="w-full text-left flex justify-between items-center py-2 font-semibold"
-      (click)="toggleDropdown('aboutAuthor')"
-    >
-      <span>About the Author</span>
-      <span>{{ aboutAuthorVisible ? '−' : '+' }}</span>
-    </button>
-    <div *ngIf="aboutAuthorVisible">
-      <p class="text-gray-600">{{product.author_detail}}</p>
-    </div>
-  </div>
-</div>
-
-
-
-   
-
-
-   
-        <div class="flex gap-4">
-          <button (click)="addToCart()" class="flex gap-2 justify-center items-center text-center bg-[#573BAE] uppercase text-white w-full py-2.5 rounded-full">
+      </div>
+      <div>
+        <div class="flex gap-2 items-center">
+          <p class="text-3xl font-normal">
+            {{ product.price_after_discount }}$
+          </p>
+          <p class="text-lg font-normal text-red-500 self-center">
+            <s>{{ product.price }}$</s>
+          </p>
+          <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+            -{{ product.discount }}%
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex mt-1 mb-1">
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
             <svg
+              *ngIf="product.rating >= star"
+              class="w-4 h-4 text-yellow-400 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+              />
+            </svg>
+
+            <svg
+              *ngIf="product.rating >= star - 0.5 && product.rating < star"
+              class="w-4 h-4 text-yellow-400 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+              />
+            </svg>
+
+            <svg
+              *ngIf="product.rating < star - 0.5"
+              class="w-4 h-4 text-gray-300 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+              />
+            </svg>
+          </ng-container>
+
+          <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+        </div>
+      </div>
+      <div class=" py-2 ">
+       
+          <p class="mb-0">Language: <span>{{ product.language }}</span></p>
+         
+       
+       
+          <p class="mt-1">Pages: <span> {{ product.pages }}</span></p>
+         
+       
+      </div>
+
+      <div class="py-2">
+        <!-- Description Dropdown -->
+        <div class=" mb-0">
+          <button
+            class="w-full text-left flex justify-between items-center py-2 font-semibold"
+            (click)="toggleDropdown('description')"
+          >
+            <span class="title text-2xl ">Description</span>
+            <span class="title text-2xl" >{{ descriptionVisible ? "−" : "+" }}</span>
+          </button>
+          <div *ngIf="descriptionVisible">
+            <p class="text-gray-600 mt-0 mb-0">{{ product.description }}</p>
+          </div>
+        </div>
+
+        <!-- About the Author Dropdown -->
+        <div class="border-b border-gray-300 mt-0">
+          <button
+            class="w-full text-left flex justify-between items-center py-2 font-semibold"
+            (click)="toggleDropdown('aboutAuthor')"
+          >
+            <span class="title text-2xl ">About the Author</span>
+            <span class="title text-2xl ">{{ aboutAuthorVisible ? "−" : "+" }}</span>
+          </button>
+          <div *ngIf="aboutAuthorVisible">
+            <p class="text-gray-600 mt-0">{{ product.author_detail }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-2">
+        <button
+          (click)="addToCart()"
+          class="flex gap-2 justify-center items-center text-center bg-[#573BAE] uppercase text-white w-full py-2.5 rounded-full"
+        >
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="none"
@@ -135,41 +142,51 @@
             <path d="M6 6h15l-1.5 9H6z"></path>
             <circle cx="9" cy="21" r="1"></circle>
             <circle cx="18" cy="21" r="1"></circle>
-          </svg>  Pre-Order
-          </button>
-          <button (click)="addToWishlist()" class="flex gap-2 justify-center items-center text-center bg-white uppercase text-[#573BAE] border-[1.5px] border-[#573BAE] w-full py-2.5 rounded-full">
-            <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-[24px] h-[24px] cursor-pointer"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
-          stroke="#573BAE"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></path>
-      </svg> Add to Wishlist
-          </button>
-        </div>
+          </svg>
+          Pre-Order
+        </button>
+        <button
+          (click)="addToWishlist()"
+          class="flex gap-2 justify-center items-center text-center bg-white uppercase text-[#573BAE] border-[1.5px] border-[#573BAE] w-full py-2.5 rounded-full"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-[24px] h-[24px] cursor-pointer"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+              stroke="#573BAE"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          Add to Wishlist
+        </button>
       </div>
     </div>
- 
   </div>
-  <div class="container max-w-screen-xl mx-auto p-4">
-    <div class="mt-8">
-      <h2 *ngIf="comments.length>0" class="text-xl font-semibold">Comment section example: </h2>
-      <div *ngFor="let comment of comments" class=" py-2">
-        <div class="flex  gap-2">
-          <img class="object-cover w-[50px] h-[50px] rounded-full" [src]="comment.avatar" alt="Avatar">
-          <div class="space-y-1">
-            <div class="flex">
-              <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-                <svg
+</div>
+<div class="container max-w-screen-xl mx-auto p-4">
+  <div class="mt-8">
+    <h2 *ngIf="comments.length > 0" class="text-xl font-semibold">
+      Comment section example:
+    </h2>
+    <div *ngFor="let comment of comments" class="py-2">
+      <div class="flex gap-2">
+        <img
+          class="object-cover w-[50px] h-[50px] rounded-full"
+          [src]="comment.avatar"
+          alt="Avatar"
+        />
+        <div class="space-y-1">
+          <div class="flex">
+            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+              <svg
                 *ngIf="star <= comment.rating"
                 class="w-4 h-4 text-yellow-400 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +197,262 @@
                 />
               </svg>
               <svg
-              *ngIf="comment.rating < star - 0.5"
+                *ngIf="comment.rating < star - 0.5"
+                class="w-4 h-4 text-gray-300 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+                />
+              </svg>
+            </ng-container>
+            <a class="pl-2" *ngIf="comment.createdAt">{{
+              comment.createdAt | date : "short"
+            }}</a>
+          </div>
+          <div>
+            <strong class="block">{{ comment.fullName }}</strong>
+            <a *ngIf="comment.comment.length <= 400" class="break-words">
+              {{ comment.comment }}
+            </a>
+            <div *ngIf="comment.comment.length > 400">
+              <a *ngIf="!comment.expanded" class="break-words">
+                {{ comment.comment | slice : 0 : 400 }}...
+                <a
+                  (click)="comment.expanded = true"
+                  class="cursor-pointer font-semibold"
+                  >Xem thêm</a
+                >
+              </a>
+              <a *ngIf="comment.expanded" class="break-words">
+                {{ comment.comment }}
+                <a
+                  (click)="comment.expanded = false"
+                  class="cursor-pointer font-semibold"
+                  >Thu gọn</a
+                >
+              </a>
+            </div>
+            <div class="flex items-center gap-2 mt-0">
+              <button
+                (click)="likeComment(comment)"
+                class="text-gray-500 hover:text-blue-500"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="w-[24px] h-[24px]"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g id="style=linear">
+                      <g id="like">
+                        <path
+                          id="vector"
+                          d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          id="rec"
+                          d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                {{ comment.likeCount }}
+              </button>
+              <button
+                (click)="dislikeComment(comment)"
+                class="text-gray-500 hover:text-red-500"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="rotate-180 w-[24px] h-[24px]"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g id="style=linear">
+                      <g id="like">
+                        <path
+                          id="vector"
+                          d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                        ></path>
+                        <path
+                          id="rec"
+                          d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+
+                {{ comment.dislikeCount }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <h3 class="text-lg font-semibold">Add comments</h3>
+      <textarea
+        [(ngModel)]="newComment"
+        placeholder="Add a comments in here!"
+        class="w-full border p-2"
+      ></textarea>
+
+      <!-- <input type="number" [(ngModel)]="newRating" min="1" max="5" placeholder="Đánh giá (1-5)" class="border p-2 mt-2" /> -->
+      <div class="flex  py-2 gap-2 items-center">
+        <div class="">
+          <span
+            *ngFor="let star of stars; let i = index"
+            (click)="setRating(i + 1)"
+            (mouseover)="hoverRating(i + 1)"
+            (mouseleave)="hoverRating(0)"
+            class="cursor-pointer text-2xl transition"
+            [ngClass]="{
+              'text-yellow-500':
+                i < hoverValue || (i < newRating && hoverValue === 0),
+              'text-gray-400': i >= hoverValue && i >= newRating
+            }"
+          >
+            ★
+          </span>
+        </div>
+
+        <button
+          (click)="addComment()"
+          class="text-[#573BAE] rounded-full bg-white border-[1.5px] border-[#573BAE] py-2 px-4 items-center flex gap-2"
+        >
+          <svg
+            viewBox="0 0 32 32"
+            version="1.1"
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+            fill="#573BAE"
+            stroke="#573BAE"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>comment-3</title>
+              <desc>Created with Sketch Beta.</desc>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+                sketch:type="MSPage"
+              >
+                <g
+                  id="Icon-Set"
+                  sketch:type="MSLayerGroup"
+                  transform="translate(-204.000000, -255.000000)"
+                  fill="#573BAE"
+                >
+                  <path
+                    d="M228,267 C226.896,267 226,267.896 226,269 C226,270.104 226.896,271 228,271 C229.104,271 230,270.104 230,269 C230,267.896 229.104,267 228,267 L228,267 Z M220,281 C218.832,281 217.704,280.864 216.62,280.633 L211.912,283.463 L211.975,278.824 C208.366,276.654 206,273.066 206,269 C206,262.373 212.268,257 220,257 C227.732,257 234,262.373 234,269 C234,275.628 227.732,281 220,281 L220,281 Z M220,255 C211.164,255 204,261.269 204,269 C204,273.419 206.345,277.354 210,279.919 L210,287 L217.009,282.747 C217.979,282.907 218.977,283 220,283 C228.836,283 236,276.732 236,269 C236,261.269 228.836,255 220,255 L220,255 Z M212,267 C210.896,267 210,267.896 210,269 C210,270.104 210.896,271 212,271 C213.104,271 214,270.104 214,269 C214,267.896 213.104,267 212,267 L212,267 Z M220,267 C218.896,267 218,267.896 218,269 C218,270.104 218.896,271 220,271 C221.104,271 222,270.104 222,269 C222,267.896 221.104,267 220,267 L220,267 Z"
+                    id="comment-3"
+                    sketch:type="MSShapeGroup"
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          Comment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="newRelatedProducts.length > 0">
+    <h2 class="title mb-0">Bookshop Introduction</h2>
+    <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
+      <div
+        *ngFor="let product of newRelatedProducts.slice(-6)"
+        class="cursor-pointer p-1"
+      >
+        <div class="relative inline-block group">
+          <p
+            *ngIf="product.rating >= 4.7"
+            class="rounded-br-lg absolute top-0 left-0 bg-[#9C141D] text-white text-xs font-normal px-2 py-1"
+          >
+            Top Rated
+          </p>
+          <img
+            [src]="product.image_url"
+            [routerLink]="['/productDetails', product.id]"
+            alt="{{ product.title }}"
+            class="w-auto h-auto object-cover rounded-md mb-1"
+          />
+        </div>
+
+        <p class="text-lg font-normal title mb-0 mt-0 truncate">
+          {{ product.title }}
+        </p>
+        <p class="text-md text-gray-500 font-normal mb-0">
+          {{ product.author }} (Author)
+        </p>
+        <div class="flex mt-1 mb-1">
+          <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+            <svg
+              *ngIf="product.rating >= star"
+              class="w-4 h-4 text-yellow-400 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+              />
+            </svg>
+
+            <svg
+              *ngIf="product.rating >= star - 0.5 && product.rating < star"
+              class="w-4 h-4 text-yellow-400 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
+              />
+            </svg>
+
+            <svg
+              *ngIf="product.rating < star - 0.5"
               class="w-4 h-4 text-gray-300 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -189,56 +461,30 @@
                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
               />
             </svg>
-            
-            </ng-container>
-            <a class="pl-2" *ngIf="comment.createdAt">{{ comment.createdAt | date: 'short' }}</a>
-          </div>
-          <div>
-            <strong class="block">{{ comment.fullName }}</strong> 
-            <a *ngIf="comment.comment.length <= 400" class="break-words">
-              {{ comment.comment }}
-            </a>
-            <div *ngIf="comment.comment.length > 400">
-              <a *ngIf="!comment.expanded" class="break-words">
-                {{ comment.comment | slice:0:400 }}...
-                <a (click)="comment.expanded = true" class="cursor-pointer font-semibold">Xem thêm</a>
-              </a>
-              <a *ngIf="comment.expanded" class="break-words">
-                {{ comment.comment }}
-                <a (click)="comment.expanded = false" class="cursor-pointer font-semibold">Thu gọn</a>
-              </a>
-            </div>
-            <div class="flex items-center gap-2 mt-0">
-              <button (click)="likeComment(comment)" class="text-gray-500 hover:text-blue-500">
-                <svg viewBox="0 0 24 24" class="w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
-                {{ comment.likeCount }}
-              </button>
-              <button (click)="dislikeComment(comment)" class="text-gray-500 hover:text-red-500">
-                <svg viewBox="0 0 24 24" class="rotate-180 w-[24px] h-[24px]" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="like"> <path id="vector" d="M7.66003 10.1022L11.76 4.00221C12.16 3.40221 13.16 3.00221 13.96 3.30221C14.86 3.60221 15.46 4.60221 15.26 5.50221L14.76 8.70221C14.66 9.40221 15.16 9.90221 15.76 9.90221H19.76C21.26 9.90221 22.1801 11.0522 21.66 12.5022C21.14 13.9522 20.6801 16.5522 19.26 18.8022C18.6102 19.8318 17.8975 20.5522 16.6801 20.5522C12.6801 20.5522 6.66003 20.5522 6.66003 20.5522" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10"></path> <path id="rec" d="M2.18005 10.5522C2.18005 9.99996 2.62777 9.55225 3.18005 9.55225H6.68005C7.23234 9.55225 7.68005 9.99996 7.68005 10.5522V20.5522H3.18005C2.62777 20.5522 2.18005 20.1045 2.18005 19.5522V10.5522Z" stroke="#000000" stroke-width="1.5"></path> </g> </g> </g></svg>
-  
-                {{ comment.dislikeCount }}
-              </button>
-            </div>
-          </div>
-          
-          </div>
+          </ng-container>
+
+          <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
+        </div>
+        <div class="flex gap-2 items-center">
+          <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+          <p class="text-md font-normal text-red-500 self-center">
+            <s>{{ product.price }}$</s>
+          </p>
+          <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
+            -{{ product.discount }}%
+          </p>
         </div>
       </div>
-  
-      <div class="mt-4">
-        <h3 class="text-lg font-semibold">Thêm bình luận</h3>
-        <textarea [(ngModel)]="newComment" placeholder="Nhập bình luận của bạn" class="w-full border p-2"></textarea>
-       
-        <input type="number" [(ngModel)]="newRating" min="1" max="5" placeholder="Đánh giá (1-5)" class="border p-2 mt-2" />
-        <button (click)="addComment()" class="bg-blue-500 text-white p-2 mt-2">Gửi bình luận</button>
-      </div>
     </div>
-
-    
-    <div *ngIf="newRelatedProducts.length > 0">
-      <h2 class="title mb-0">Bookshop Introduction</h2>
+  </div>
+  <div *ngIf="isLoggedIn">
+    <div *ngIf="recentlyViewedProducts.length > 0">
+      <h2 class="title mb-0">Recently Viewed Products</h2>
       <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
-        <div *ngFor="let product of newRelatedProducts.slice(-6)" class="cursor-pointer p-1">
+        <div
+          *ngFor="let product of recentlyViewedProducts"
+          class="cursor-pointer p-1"
+        >
           <div class="relative inline-block group">
             <p
               *ngIf="product.rating >= 4.7"
@@ -253,7 +499,7 @@
               class="w-auto h-auto object-cover rounded-md mb-1"
             />
           </div>
-    
+
           <p class="text-lg font-normal title mb-0 mt-0 truncate">
             {{ product.title }}
           </p>
@@ -272,7 +518,7 @@
                   d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
                 />
               </svg>
-    
+
               <svg
                 *ngIf="product.rating >= star - 0.5 && product.rating < star"
                 class="w-4 h-4 text-yellow-400 fill-current"
@@ -283,7 +529,7 @@
                   d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
                 />
               </svg>
-    
+
               <svg
                 *ngIf="product.rating < star - 0.5"
                 class="w-4 h-4 text-gray-300 fill-current"
@@ -295,11 +541,13 @@
                 />
               </svg>
             </ng-container>
-    
+
             <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
           </div>
           <div class="flex gap-2 items-center">
-            <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
+            <p class="text-xl font-normal">
+              {{ product.price_after_discount }}$
+            </p>
             <p class="text-md font-normal text-red-500 self-center">
               <s>{{ product.price }}$</s>
             </p>
@@ -310,86 +558,5 @@
         </div>
       </div>
     </div>
-    <div *ngIf="isLoggedIn">
-      <div *ngIf="recentlyViewedProducts.length > 0">
-        <h2 class="title mb-0">Recently Viewed Products</h2>
-        <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
-          <div *ngFor="let product of recentlyViewedProducts" class="cursor-pointer p-1">
-            <div class="relative inline-block group">
-              <p
-                *ngIf="product.rating >= 4.7"
-                class="rounded-br-lg absolute top-0 left-0 bg-[#9C141D] text-white text-xs font-normal px-2 py-1"
-              >
-                Top Rated
-              </p>
-              <img
-                [src]="product.image_url"
-                [routerLink]="['/productDetails', product.id]"
-                alt="{{ product.title }}"
-                class="w-auto h-auto object-cover rounded-md mb-1"
-              />
-            </div>
-      
-            <p class="text-lg font-normal title mb-0 mt-0 truncate">
-              {{ product.title }}
-            </p>
-            <p class="text-md text-gray-500 font-normal mb-0">
-              {{ product.author }} (Author)
-            </p>
-            <div class="flex mt-1 mb-1">
-              <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-                <svg
-                  *ngIf="product.rating >= star"
-                  class="w-4 h-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-                  />
-                </svg>
-      
-                <svg
-                  *ngIf="product.rating >= star - 0.5 && product.rating < star"
-                  class="w-4 h-4 text-yellow-400 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-                  />
-                </svg>
-      
-                <svg
-                  *ngIf="product.rating < star - 0.5"
-                  class="w-4 h-4 text-gray-300 fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.868 5.75h6.058c.969 0 1.371 1.24.588 1.81l-4.907 3.556 1.868 5.75c.3.921-.755 1.688-1.54 1.123l-4.907-3.556-4.907 3.556c-.785.565-1.84-.202-1.54-1.123l1.868-5.75-4.907-3.556c-.784-.57-.382-1.81.588-1.81h6.058l1.868-5.75z"
-                  />
-                </svg>
-              </ng-container>
-      
-              <a class="text-gray-400 font-thin ml-2">({{ product.rating }}/5)</a>
-            </div>
-            <div class="flex gap-2 items-center">
-              <p class="text-xl font-normal">{{ product.price_after_discount }}$</p>
-              <p class="text-md font-normal text-red-500 self-center">
-                <s>{{ product.price }}$</s>
-              </p>
-              <p class="px-2 py-1 text-xs text-red-500 bg-[#F7EED2]">
-                -{{ product.discount }}%
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   
-    
-    
-
-    
   </div>
+</div>
