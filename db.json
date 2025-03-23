@@ -1487,6 +1487,18 @@
       "likeCount": 1,
       "dislikeCount": 0,
       "hidden": false
+    },
+    {
+      "productId": "tBgfRAt",
+      "userId": "b14d",
+      "fullName": "Phạm Nhật Minh",
+      "comment": "great",
+      "rating": 5,
+      "createdAt": "2025-03-23T05:16:28.630Z",
+      "avatar": "https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg",
+      "likeCount": 0,
+      "dislikeCount": 0,
+      "id": "wmEgprn"
     }
   ]
 }

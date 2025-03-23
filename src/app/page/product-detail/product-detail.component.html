@@ -112,7 +112,7 @@
         </div>
 
         <!-- About the Author Dropdown -->
-        <div class="border-b border-gray-300 mt-0">
+        <div class="  mt-0">
           <button
             class="w-full text-left flex justify-between items-center py-2 font-semibold"
             (click)="toggleDropdown('aboutAuthor')"
@@ -173,8 +173,8 @@
 </div>
 <div class="container max-w-screen-xl mx-auto p-4">
   <div class="mt-8">
-    <h2 *ngIf="comments.length > 0" class="text-xl font-semibold">
-      Comment section example:
+    <h2 *ngIf="comments.length > 0" class="title mb-0">
+      Review about this book
     </h2>
     <div *ngFor="let comment of comments" class="py-2">
       <div class="flex gap-2">
@@ -222,7 +222,7 @@
                 <a
                   (click)="comment.expanded = true"
                   class="cursor-pointer font-semibold"
-                  >Xem thêm</a
+                  >More</a
                 >
               </a>
               <a *ngIf="comment.expanded" class="break-words">
@@ -230,11 +230,11 @@
                 <a
                   (click)="comment.expanded = false"
                   class="cursor-pointer font-semibold"
-                  >Thu gọn</a
+                  >Less</a
                 >
               </a>
             </div>
-            <div class="flex items-center gap-2 mt-0">
+            <div class="flex items-center gap-2 mt-0.5">
               <button
                 (click)="likeComment(comment)"
                 class="text-gray-500 hover:text-blue-500"
@@ -319,7 +319,7 @@
     </div>
 
     <div class="mt-4">
-      <h3 class="text-lg font-semibold">Add comments</h3>
+      <h2 class="title mb-1"> Comments</h2>
       <textarea
         [(ngModel)]="newComment"
         placeholder="Add a comments in here!"
@@ -399,8 +399,8 @@
     </div>
   </div>
 
-  <div *ngIf="newRelatedProducts.length > 0">
-    <h2 class="title mb-0">Bookshop Introduction</h2>
+  <div *ngIf="newRelatedProducts.length > 0" class="py-4">
+    <h2 class="title mb-1">Bookshop Introduction</h2>
     <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
       <div
         *ngFor="let product of newRelatedProducts.slice(-6)"
@@ -477,9 +477,9 @@
       </div>
     </div>
   </div>
-  <div *ngIf="isLoggedIn">
+  <div *ngIf="isLoggedIn" class="mb-4">
     <div *ngIf="recentlyViewedProducts.length > 0">
-      <h2 class="title mb-0">Recently Viewed Products</h2>
+      <h2 class="title mb-1">Recently Viewed Products</h2>
       <div class="grid grid-cols-2 md:grid-cols-6 mt-0 mb-0">
         <div
           *ngFor="let product of recentlyViewedProducts"
