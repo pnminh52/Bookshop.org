@@ -1,18 +1,36 @@
-<div class="profile-container">
+<style>
+  .title {
+  font-family: "Prata", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+</style>
+<div class="container mx-auto max-w-screen-xl ">
     <div class="profile-header">
-      <h2>Profile</h2>
-      <button (click)="startEditing()">Edit</button>
+      <div class="md:text-left mt-4 mb-4">
+        <p class="mb-0 text-xl title cursor-pointer">
+          Profile
+        </p>
+        <p class="text-sm font-normal text-gray-500">
+          Keep track of your favorite books and purchase them anytime.
+        </p>
+      </div>
+     
     </div>
   
-    <div class="profile-info" *ngIf="!isEditing">
+    <div class="grid grid-cols-2 gap-2" *ngIf="!isEditing">
       <div class="avatar">
-        <img class="w-[300px] h-[300px] rounded-full object-cover" [src]="user.avatar || 'https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg'" alt="Avatar" />
+        <img class="w-[200px] h-[200px] rounded-full object-cover" [src]="user.avatar || 'https://i.pinimg.com/736x/18/b5/b5/18b5b599bb873285bd4def283c0d3c09.jpg'" alt="Avatar" />
       </div>
-      <div class="info">
-        <p><strong>Full Name:</strong> {{ user.fullName }}</p>
-        <p><strong>Phone Number:</strong> {{ user.phoneNumber }}</p>
-        <p><strong>Address:</strong> {{ user.address.streetAddress }}, {{ user.address.city }}, {{ user.address.state }}, {{ user.address.country }}</p>
+      <div class="">
+        <p>Full name: {{ user.fullName }}</p>
+        <p>Phone number: {{ user.phoneNumber }}</p>
+        <p>Email: {{ user.email}}</p>
+        <p>Postal code: {{ user.address.postalCode }}</p>
+        <p>Address: {{ user.address.streetAddress }}, {{ user.address.city }}, {{ user.address.state }}, {{ user.address.country }}</p>
+        <button (click)="startEditing()">Edit</button>
       </div>
+
     </div>
   
     <div *ngIf="isEditing">
@@ -35,6 +53,7 @@
         <input title="input" [(ngModel)]="user.address.city" />
         <input title="input" [(ngModel)]="user.address.state" />
         <input title="input" [(ngModel)]="user.address.country" />
+        
       </div>
   
       <div class="action-buttons">

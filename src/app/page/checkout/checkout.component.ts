@@ -21,6 +21,7 @@ export class CheckoutComponent {
   cartItems: Product[] = [];
   total: number = 0;
   user: any = null;
+  successMessage: string | null = null; 
 
   constructor(
     private cartService: CartService,
@@ -47,8 +48,11 @@ export class CheckoutComponent {
         // Cập nhật orderHistory của người dùng
         this.orderService.updateUserOrderHistory(this.user.id, order).subscribe({
           next: (userResponse) => {
-            alert('Thanh toán thành công!');
-            this.router.navigate(['/']);
+            this.successMessage = 'Checkout successfully!';
+            setTimeout(() => {
+              this.successMessage = null;
+              this.router.navigate(['/']);
+            }, 2000);
             this.cartService.clearCart();
             
 

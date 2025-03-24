@@ -1238,6 +1238,153 @@
           "paymentMethod": "Credit Card",
           "date": "2025-02-26T10:37:13.190Z",
           "status": "completed"
+        },
+        {
+          "userId": "b14d",
+          "items": [
+            {
+              "id": "6b6a",
+              "title": "Goodnight Punpun, Vol. 1",
+              "price": 24.99,
+              "price_after_discount": 23.24,
+              "category": "Manga",
+              "author": "Inio Asano",
+              "description": "A dark coming-of-age tale where slice-of-life slices back.\nThis is Punpun Onodera's coming-of-age story. His parents' marriage is falling apart. His dad goes to jail, and his mom goes to the hospital. He has to live with his loser uncle. He has a crush on a girl who lives in a weird cult. Punpun tries talking with God about his problems, but God is a jerk. Punpun keeps hoping things will get better, but they really, really don't.\nMeet Punpun Punyama. He's an average kid in an average town.\nHe wants to win a Nobel Prize and save the world.\nHe wants the girl he has a crush on to like him back.\nHe wants to find some porn.\nThat's what he wants, but what does he get...?",
+              "image_url": "https://images-us.bookshop.org/ingram/9781421586205.jpg?height=1200&v=v2",
+              "rating": 4.8,
+              "discount": 10,
+              "stock": 40,
+              "category_id": "3",
+              "publish_date": "2025-01-12",
+              "quantity": 1
+            },
+            {
+              "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 1",
+              "price": 16,
+              "pages": 200,
+              "language": "English",
+              "price_after_discount": 14.88,
+              "category": "Light Novel",
+              "author": "Sunsunsun",
+              "description": "Alisa Mikhailovna Kujou is Seiren Private Academy's \"solitary princess.\" She's a half-Russian beauty with silver hair, at the top of her class, student council accountant, and...completely unapproachable. For some reason, she's also taken on the responsibility of reprimanding the slacker who sits next to her in class. Masachika Kuze is constantly frustrating her by falling asleep, forgetting his textbooks, and just being an overall unexemplary student. Or at least, that's how it looks from the outside. She may put on a tough act, but she doesn't mind Masachika as much as others would think. She even lets him call her by her nickname, Alya. Anyone hearing the comments she mutters in Russian under her breath might know how she really feels, but since none of her classmates understand the language, she's free to say whatever she likes! Except...there is one person who knows what she's saying. Masachika eavesdrops on her embarrassing revelations, pretending to be clueless, all the while wondering what her flirtatious comments actually mean!",
+              "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+              "image_url": "https://images-us.bookshop.org/ingram/9781975347840.jpg?height=1200&v=v2-0b48680387b9f375171838caae613290",
+              "rating": 4.5,
+              "discount": "7.00",
+              "stock": 50,
+              "category_id": "3",
+              "publish_date": "2025-01-14",
+              "id": "ObMsIo6",
+              "quantity": 1
+            }
+          ],
+          "total": 38.12,
+          "paymentMethod": "Cash on Delivery",
+          "date": "2025-03-23T10:11:34.613Z",
+          "status": "completed"
+        },
+        {
+          "userId": "b14d",
+          "items": [
+            {
+              "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4.5",
+              "price": 16,
+              "pages": 200,
+              "language": "English",
+              "price_after_discount": 14.88,
+              "category": "Light Novel",
+              "author": "Sunsunsun",
+              "description": "This collection of short stories captures special moments during the student council's summer vacation, and it may even answer some important questions: How will Sayaka react to the truth about Masachika and Yuki's relationship? What devious activities is Nonoa up to behind the scenes? Will Masachika pretend his intimate moment with Alya never happened? Why is it so easy for this group to get hypnotized? And is it really possible to punch a ghost?! To find out, follow along as they make summer memories!",
+              "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+              "image_url": "https://images-us.bookshop.org/ingram/9781975367619.jpg?height=1200&v=v2-88f0611bcdc67ce2ce7d92ff2f45f9c6",
+              "rating": 4.5,
+              "discount": "7.00",
+              "stock": 56,
+              "category_id": "3",
+              "publish_date": "2025-01-10",
+              "id": "aeD8aNz",
+              "quantity": 1
+            },
+            {
+              "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 2",
+              "price": 16,
+              "pages": 200,
+              "language": "English",
+              "price_after_discount": 14.88,
+              "category": "Light Novel",
+              "author": "Sunsunsun",
+              "description": "After saying some pretty embarrassing things to each other, Alya and Masachika are trying to figure out the nature of their changing relationship. Alya's feeling a bit flustered now that she's seeing more of his \"cool\" side, but she needs to clear her mind and be ready for rivals popping out of the woodwork. One of Masachika's childhood friends doesn't approve of her, and his former middle school election opponent throws down the gauntlet. The campaign to win the student council election begins in earnest with the first debate! Maybe some adversity will at least help to bring the two a little closer...",
+              "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+              "image_url": "https://images-us.bookshop.org/ingram/9781975347864.jpg?height=1200&v=v2-1c23a461dcf7f15d4e05c7d4b12a29f1",
+              "rating": 4.5,
+              "discount": "7.00",
+              "stock": 48,
+              "category_id": "3",
+              "publish_date": "2025-01-14",
+              "id": "tBgfRAt",
+              "quantity": 1
+            }
+          ],
+          "total": 29.76,
+          "paymentMethod": "Credit Card",
+          "date": "2025-03-23T10:12:56.389Z",
+          "status": "completed"
+        },
+        {
+          "userId": "b14d",
+          "items": [
+            {
+              "title": "Bocchi the Rock!, Vol. 4",
+              "price": 15,
+              "pages": 136,
+              "language": "English",
+              "price_after_discount": 13.95,
+              "category": "Manga",
+              "author": "Aki Hamazi",
+              "description": "Kessoku Band has successfully cleared the first round of auditions for the Unidentified Riot music festival, but this is no time to rest on their laurels. The next step is a death knell for introverts everywhere-a popularity contest! Every vote in the online poll matters when they're trying to stand on the same stage as powerhouses like SIDEROS, so Bocchi will need to call in a favor from all the...friends she has? Um, is this the end of the line for Hitori Gotoh?!",
+              "author_detail": "The author of *Bocchi the Rock!* is **Aki Hamaji**. This manga, which blends comedy, music, and slice-of-life elements, follows the story of Hitori Bocchi, a socially awkward girl who dreams of being a successful musician. Throughout the series, she navigates her struggles with social interaction, friendships, and her journey in a band, all while trying to overcome her fears and insecurities. \n\nAki Hamaji’s writing and art style bring a unique charm to the series, making it a standout in the genre of music-themed slice-of-life manga.",
+              "image_url": "https://images-us.bookshop.org/ingram/9781975378066.jpg?height=1200&v=v2-c8ea2cac401946cb4ecfbd79e14009d2",
+              "rating": 4.7,
+              "discount": "7.00",
+              "stock": 34,
+              "category_id": "3",
+              "publish_date": "2025-02-12",
+              "id": "3La6RTQ",
+              "quantity": 1
+            }
+          ],
+          "total": 13.95,
+          "paymentMethod": "Cash on Delivery",
+          "date": "2025-03-23T10:13:35.117Z",
+          "status": "completed"
+        },
+        {
+          "userId": "b14d",
+          "items": [
+            {
+              "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4.5",
+              "price": 16,
+              "pages": 200,
+              "language": "English",
+              "price_after_discount": 14.88,
+              "category": "Light Novel",
+              "author": "Sunsunsun",
+              "description": "This collection of short stories captures special moments during the student council's summer vacation, and it may even answer some important questions: How will Sayaka react to the truth about Masachika and Yuki's relationship? What devious activities is Nonoa up to behind the scenes? Will Masachika pretend his intimate moment with Alya never happened? Why is it so easy for this group to get hypnotized? And is it really possible to punch a ghost?! To find out, follow along as they make summer memories!",
+              "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+              "image_url": "https://images-us.bookshop.org/ingram/9781975367619.jpg?height=1200&v=v2-88f0611bcdc67ce2ce7d92ff2f45f9c6",
+              "rating": 4.5,
+              "discount": "7.00",
+              "stock": 56,
+              "category_id": "3",
+              "publish_date": "2025-01-10",
+              "id": "aeD8aNz",
+              "quantity": 1
+            }
+          ],
+          "total": 14.88,
+          "paymentMethod": "Cash on Delivery",
+          "date": "2025-03-23T10:14:33.228Z",
+          "status": "completed"
         }
       ]
     }
@@ -1407,6 +1554,157 @@
       "date": "2025-02-26T10:37:13.190Z",
       "status": "Cancelled",
       "reason": "Sai thông tin"
+    },
+    {
+      "userId": "b14d",
+      "items": [
+        {
+          "id": "6b6a",
+          "title": "Goodnight Punpun, Vol. 1",
+          "price": 24.99,
+          "price_after_discount": 23.24,
+          "category": "Manga",
+          "author": "Inio Asano",
+          "description": "A dark coming-of-age tale where slice-of-life slices back.\nThis is Punpun Onodera's coming-of-age story. His parents' marriage is falling apart. His dad goes to jail, and his mom goes to the hospital. He has to live with his loser uncle. He has a crush on a girl who lives in a weird cult. Punpun tries talking with God about his problems, but God is a jerk. Punpun keeps hoping things will get better, but they really, really don't.\nMeet Punpun Punyama. He's an average kid in an average town.\nHe wants to win a Nobel Prize and save the world.\nHe wants the girl he has a crush on to like him back.\nHe wants to find some porn.\nThat's what he wants, but what does he get...?",
+          "image_url": "https://images-us.bookshop.org/ingram/9781421586205.jpg?height=1200&v=v2",
+          "rating": 4.8,
+          "discount": 10,
+          "stock": 40,
+          "category_id": "3",
+          "publish_date": "2025-01-12",
+          "quantity": 1
+        },
+        {
+          "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 1",
+          "price": 16,
+          "pages": 200,
+          "language": "English",
+          "price_after_discount": 14.88,
+          "category": "Light Novel",
+          "author": "Sunsunsun",
+          "description": "Alisa Mikhailovna Kujou is Seiren Private Academy's \"solitary princess.\" She's a half-Russian beauty with silver hair, at the top of her class, student council accountant, and...completely unapproachable. For some reason, she's also taken on the responsibility of reprimanding the slacker who sits next to her in class. Masachika Kuze is constantly frustrating her by falling asleep, forgetting his textbooks, and just being an overall unexemplary student. Or at least, that's how it looks from the outside. She may put on a tough act, but she doesn't mind Masachika as much as others would think. She even lets him call her by her nickname, Alya. Anyone hearing the comments she mutters in Russian under her breath might know how she really feels, but since none of her classmates understand the language, she's free to say whatever she likes! Except...there is one person who knows what she's saying. Masachika eavesdrops on her embarrassing revelations, pretending to be clueless, all the while wondering what her flirtatious comments actually mean!",
+          "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+          "image_url": "https://images-us.bookshop.org/ingram/9781975347840.jpg?height=1200&v=v2-0b48680387b9f375171838caae613290",
+          "rating": 4.5,
+          "discount": "7.00",
+          "stock": 50,
+          "category_id": "3",
+          "publish_date": "2025-01-14",
+          "id": "ObMsIo6",
+          "quantity": 1
+        }
+      ],
+      "total": 38.12,
+      "paymentMethod": "Cash on Delivery",
+      "date": "2025-03-23T10:11:34.613Z",
+      "status": "Pending",
+      "id": "y-ImGsd"
+    },
+    {
+      "userId": "b14d",
+      "items": [
+        {
+          "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4.5",
+          "price": 16,
+          "pages": 200,
+          "language": "English",
+          "price_after_discount": 14.88,
+          "category": "Light Novel",
+          "author": "Sunsunsun",
+          "description": "This collection of short stories captures special moments during the student council's summer vacation, and it may even answer some important questions: How will Sayaka react to the truth about Masachika and Yuki's relationship? What devious activities is Nonoa up to behind the scenes? Will Masachika pretend his intimate moment with Alya never happened? Why is it so easy for this group to get hypnotized? And is it really possible to punch a ghost?! To find out, follow along as they make summer memories!",
+          "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+          "image_url": "https://images-us.bookshop.org/ingram/9781975367619.jpg?height=1200&v=v2-88f0611bcdc67ce2ce7d92ff2f45f9c6",
+          "rating": 4.5,
+          "discount": "7.00",
+          "stock": 56,
+          "category_id": "3",
+          "publish_date": "2025-01-10",
+          "id": "aeD8aNz",
+          "quantity": 1
+        },
+        {
+          "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 2",
+          "price": 16,
+          "pages": 200,
+          "language": "English",
+          "price_after_discount": 14.88,
+          "category": "Light Novel",
+          "author": "Sunsunsun",
+          "description": "After saying some pretty embarrassing things to each other, Alya and Masachika are trying to figure out the nature of their changing relationship. Alya's feeling a bit flustered now that she's seeing more of his \"cool\" side, but she needs to clear her mind and be ready for rivals popping out of the woodwork. One of Masachika's childhood friends doesn't approve of her, and his former middle school election opponent throws down the gauntlet. The campaign to win the student council election begins in earnest with the first debate! Maybe some adversity will at least help to bring the two a little closer...",
+          "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+          "image_url": "https://images-us.bookshop.org/ingram/9781975347864.jpg?height=1200&v=v2-1c23a461dcf7f15d4e05c7d4b12a29f1",
+          "rating": 4.5,
+          "discount": "7.00",
+          "stock": 48,
+          "category_id": "3",
+          "publish_date": "2025-01-14",
+          "id": "tBgfRAt",
+          "quantity": 1
+        }
+      ],
+      "total": 29.76,
+      "paymentMethod": "Credit Card",
+      "date": "2025-03-23T10:12:56.389Z",
+      "status": "Pending",
+      "id": "PAkW6Fm"
+    },
+    {
+      "userId": "b14d",
+      "items": [
+        {
+          "title": "Bocchi the Rock!, Vol. 4",
+          "price": 15,
+          "pages": 136,
+          "language": "English",
+          "price_after_discount": 13.95,
+          "category": "Manga",
+          "author": "Aki Hamazi",
+          "description": "Kessoku Band has successfully cleared the first round of auditions for the Unidentified Riot music festival, but this is no time to rest on their laurels. The next step is a death knell for introverts everywhere-a popularity contest! Every vote in the online poll matters when they're trying to stand on the same stage as powerhouses like SIDEROS, so Bocchi will need to call in a favor from all the...friends she has? Um, is this the end of the line for Hitori Gotoh?!",
+          "author_detail": "The author of *Bocchi the Rock!* is **Aki Hamaji**. This manga, which blends comedy, music, and slice-of-life elements, follows the story of Hitori Bocchi, a socially awkward girl who dreams of being a successful musician. Throughout the series, she navigates her struggles with social interaction, friendships, and her journey in a band, all while trying to overcome her fears and insecurities. \n\nAki Hamaji’s writing and art style bring a unique charm to the series, making it a standout in the genre of music-themed slice-of-life manga.",
+          "image_url": "https://images-us.bookshop.org/ingram/9781975378066.jpg?height=1200&v=v2-c8ea2cac401946cb4ecfbd79e14009d2",
+          "rating": 4.7,
+          "discount": "7.00",
+          "stock": 34,
+          "category_id": "3",
+          "publish_date": "2025-02-12",
+          "id": "3La6RTQ",
+          "quantity": 1
+        }
+      ],
+      "total": 13.95,
+      "paymentMethod": "Cash on Delivery",
+      "date": "2025-03-23T10:13:35.117Z",
+      "status": "Pending",
+      "id": "Poa9FFB"
+    },
+    {
+      "userId": "b14d",
+      "items": [
+        {
+          "title": "Alya Sometimes Hides Her Feelings in Russian, Vol. 4.5",
+          "price": 16,
+          "pages": 200,
+          "language": "English",
+          "price_after_discount": 14.88,
+          "category": "Light Novel",
+          "author": "Sunsunsun",
+          "description": "This collection of short stories captures special moments during the student council's summer vacation, and it may even answer some important questions: How will Sayaka react to the truth about Masachika and Yuki's relationship? What devious activities is Nonoa up to behind the scenes? Will Masachika pretend his intimate moment with Alya never happened? Why is it so easy for this group to get hypnotized? And is it really possible to punch a ghost?! To find out, follow along as they make summer memories!",
+          "author_detail": "Sunsunsun is a talented Japanese author, best known for their work on the Alya Sometimes Hides Her Feelings in Russian series. Combining humor, romance, and emotional depth, Sunsunsun has created a story that resonates with readers, especially through its relatable characters and intricate emotional dynamics.\n\nThe series follows Alya, a complex and endearing protagonist who navigates her feelings and relationships while hiding behind a facade of humor and intelligence. Each volume explores her journey, with moments of personal growth, challenges, and heartwarming connections, all told with Sunsunsun’s signature wit and charm.\n\nWith each new volume, Sunsunsun continues to captivate audiences with their ability to craft compelling narratives that balance lighthearted moments with serious themes. Their writing style is approachable yet layered, inviting readers into a world that feels both familiar and refreshingly unique.\n\nThe Alya Sometimes Hides Her Feelings in Russian series is a perfect blend of laughter, introspection, and romance, making it a beloved favorite for fans of light novels worldwide.",
+          "image_url": "https://images-us.bookshop.org/ingram/9781975367619.jpg?height=1200&v=v2-88f0611bcdc67ce2ce7d92ff2f45f9c6",
+          "rating": 4.5,
+          "discount": "7.00",
+          "stock": 56,
+          "category_id": "3",
+          "publish_date": "2025-01-10",
+          "id": "aeD8aNz",
+          "quantity": 1
+        }
+      ],
+      "total": 14.88,
+      "paymentMethod": "Cash on Delivery",
+      "date": "2025-03-23T10:14:33.228Z",
+      "status": "Pending",
+      "id": "G2MDPRI"
     }
   ],
   "wishlist": [
@@ -1460,23 +1758,6 @@
       "category_id": "3",
       "publish_date": "2025-01-25",
       "userId": "87fa"
-    },
-    {
-      "id": "6b6a",
-      "title": "Goodnight Punpun, Vol. 1",
-      "price": 24.99,
-      "price_after_discount": 23.24,
-      "category": "Manga",
-      "author": "Inio Asano",
-      "description": "A dark coming-of-age tale where slice-of-life slices back.\nThis is Punpun Onodera's coming-of-age story. His parents' marriage is falling apart. His dad goes to jail, and his mom goes to the hospital. He has to live with his loser uncle. He has a crush on a girl who lives in a weird cult. Punpun tries talking with God about his problems, but God is a jerk. Punpun keeps hoping things will get better, but they really, really don't.\nMeet Punpun Punyama. He's an average kid in an average town.\nHe wants to win a Nobel Prize and save the world.\nHe wants the girl he has a crush on to like him back.\nHe wants to find some porn.\nThat's what he wants, but what does he get...?",
-      "image_url": "https://images-us.bookshop.org/ingram/9781421586205.jpg?height=1200&v=v2",
-      "rating": 4.8,
-      "discount": 10,
-      "stock": 40,
-      "category_id": "3",
-      "publish_date": "2025-01-12",
-      "quantity": 1,
-      "userId": "b14d"
     }
   ],
   "comments": [
